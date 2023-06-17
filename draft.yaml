@@ -1,0 +1,106 @@
+models:
+  Currency:
+    id
+    Currency_name: string
+    Abbrevation: string
+    logo: text
+
+
+  wallet:
+    id
+    Qauntity: double
+    User_id: id foreign:users.id
+    currency_id: id foreign:currencies.id
+    timestamps
+    relationships:
+      belongsTo: User
+      hasMany: Currency
+
+
+  Account:
+    id
+    User_id: id foreign:users.id
+    Status: boolean default false
+    account_number: string:12
+    timestamps
+    relationships:
+      belongsTo: User
+
+
+  card:
+    id
+    Card_type: string
+    Card_number: integer
+    Holder_Name: string
+    Cvc: integer
+    Expire_Date: Date
+    User_id: id foreign:users.id
+    relationships:
+      belongsTo: User
+
+
+  currencyprice:
+    id
+    today_price: double
+    yesterday_price: double
+    percentage: double
+    Date_Time: date_time
+    currency_id: id foreign:currencies.id
+    timestamps
+    relationships:
+      hasMany: Currency
+
+  trade:
+    id
+    account_number: id foreign:accounts.id
+    currency_id_in: id foreign:currencies.id
+    currency_id_out: id foreign:currencies.id
+    price_id_in: id foreign:currencyprices.id
+    price_id_out: id foreign:currencyprices.id
+    Date_time : date_time
+    Status: boolean default false
+    quantity : double
+    relationships:
+      hasMany : Account, Currency 
+
+
+
+  buy:
+    id
+    account_number: id foreign:accounts.id
+    Date_time : date_time
+    currency_id_in : id foreign:currencies.id
+    currency_id_out : id foreign:currencies.id
+    quantity : double
+    timestamps
+    relationships:
+     hasMany: Account, Currency
+
+
+
+  transduction:
+    id
+    account_out: id foreign:accounts.id
+    account_in: id foreign:accounts.id
+    trade_id: id foreign:trade.id
+    timestamps
+    relationships:
+      hasMany: Account, Trade
+
+  send:
+    id
+    account_number: String
+    email: string
+    quantity: double
+    currency_id : id foreign:currencies.id
+    timestamps
+    relationships:
+    belongsTo:   Currency
+
+
+
+controllers:
+
+
+
+seeders: User,  Currency, wallet, Account, card, currencyprice, trade, buy, transduction , send

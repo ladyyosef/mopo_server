@@ -1,0 +1,3380 @@
+name: Endpoints
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/login
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: login
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: maude60@example.com
+        type: string
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: magni
+        type: string
+        custom: []
+    cleanBodyParameters:
+      email: maude60@example.com
+      password: magni
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+             token:"7|QJ2jbJiUqXfVH1PpqnYjFj0YXLiSneUMvrWfxWPF"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 400
+        content: |-
+          scenario = "user send a valid token"
+          "message": "You are already logged in"
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 401
+        content: |-
+          scenario = "Email or Password Wrong"{
+          "Message": "Email or Password Wrong"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 422
+        content: |-
+          scenario= "validation errors"{
+          "message": "The email field is required. (and 1 more error)",
+          "errors": {
+          "email": [
+          "The email field is required."
+          ],
+          "password": [
+          "The password field is required."
+          ]
+          }
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/login-admin
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: loginAdmin
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: vinnie57@example.org
+        type: string
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: error
+        type: string
+        custom: []
+    cleanBodyParameters:
+      email: vinnie57@example.org
+      password: error
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+             token:"8|8MxQJgQICxUG4L7UUbS91dovFpjGhZj8dDJA17c8"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 400
+        content: |-
+          scenario = "user send a valid token"
+          "message": "You are already logged in"
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 401
+        content: |-
+          scenario = "Email or Password Wrong"{
+          "Message": "Email or Password Wrong"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 422
+        content: |-
+          scenario= "validation errors"{
+          "message": "The email field is required. (and 1 more error)",
+          "errors": {
+          "email": [
+          "The email field is required."
+          ],
+          "password": [
+          "The password field is required."
+          ]
+          }
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/register
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: register
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      user_name:
+        name: user_name
+        description: ''
+        required: true
+        example: perspiciatis
+        type: string
+        custom: []
+      phone:
+        name: phone
+        description: ''
+        required: true
+        example: et
+        type: string
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: howe.jabari@example.net
+        type: string
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: autem
+        type: string
+        custom: []
+      postal_code:
+        name: postal_code
+        description: ''
+        required: true
+        example: nulla
+        type: string
+        custom: []
+      City:
+        name: City
+        description: ''
+        required: true
+        example: blanditiis
+        type: string
+        custom: []
+    cleanBodyParameters:
+      user_name: perspiciatis
+      phone: et
+      email: howe.jabari@example.net
+      password: autem
+      postal_code: nulla
+      City: blanditiis
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          token :"2|hH5oOB6k9zUOweZ63H0uYtN2zL6VD5Fj9lGjUs6Z"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 400
+        content: |-
+          scenario = "user send a valid token"
+          "message": "You are already logged in"
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 422
+        content: |-
+          scenario= "validation errors"{
+          "message": "The user name field is required. (and 5 more errors)",
+          "errors": {
+          "user_name": [
+          "The user name field is required."
+          ],
+          "phone": [
+          "The phone field is required."
+          ],
+          "email": [
+          "The email field is required."
+          ],
+          "password": [
+          "The password field is required."
+          ],
+          "postal_code": [
+          "The postal code field is required."
+          ],
+          "City": [
+          "The city field is required."
+          ]
+          }
+          }
+          *@response 401 scenario = "Email or Password Wrong"{
+          "Message": "Email or Password Wrong"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/logout
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: |-
+        logout
+        * @response 204
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: |-
+          scenario ="user not logged in"{
+          "message": "Unauthenticated."
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/account
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      account:
+        name: account
+        description: ''
+        required: false
+        example: 12
+        type: integer
+        custom: []
+    cleanQueryParameters:
+      account: 12
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          [
+           "data": [
+          {
+          "User_id": {
+          "user_name": "Ezequiel",
+          "email": "loma97@example.net",
+          "password": "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+          "phone": "518-597-0080",
+          "Profile_image": "0"
+          },
+          "account_number": "796315242092"
+          },
+          {
+          "User_id": {
+          "user_name": "Armando",
+          "email": "zroob@example.net",
+          "password": "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+          "phone": "+1-806-283-1694",
+          "Profile_image": "0"
+          },
+          "account_number": "711311369699"
+          },
+          {
+          "User_id": {
+          "user_name": "Kirk",
+          "email": "kleuschke@example.net",
+          "password": "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+          "phone": "+14423690885",
+          "Profile_image": "0"
+          },
+          "account_number": "258500839564"
+          },
+          {
+          "User_id": {
+          "user_name": "Donnie",
+          "email": "hickle.charley@example.com",
+          "password": "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+          "phone": "1-469-434-3584",
+          "Profile_image": "0"
+          },
+          "account_number": "887766668683"
+          },
+          ]
+
+          ]
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/account
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/account/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the account.'
+        required: true
+        example: eos
+        type: string
+        custom: []
+    cleanUrlParameters:
+      id: eos
+    queryParameters:
+      account:
+        name: account
+        description: int
+        required: true
+        example: quasi
+        type: string
+        custom: []
+    cleanQueryParameters:
+      account: quasi
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          [
+             "data": {
+          "User_id": {
+          "user_name": "Donnie",
+          "email": "hickle.charley@example.com",
+          "password": "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+          "phone": "1-469-434-3584",
+          "Profile_image": "0"
+          },
+          "account_number": "887766668683"
+           }
+          ]
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/account/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the account.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/account/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the account.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/user
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"user_name":"Admain admian","email":"admin@admin.com","password":"111aaa","phone":"0977584398","Profile_image":"C:\\Users\\LENOVO\\Downloads\\image1\\undraw_Designer_re_5v95 (1)"},{"user_name":"User userr ","email":"user@email.com","password":"123aa","phone":"0966433721","Profile_image":"C:\\Users\\LENOVO\\Downloads\\image1\\undraw_Designer_re_5v95 (1)"},{"user_name":"Reem Naif","email":"reemsalem@email.com","password":"111reem","phone":"09775290133","Profile_image":"C:\\Users\\LENOVO\\Downloads\\image1\\undraw_Multitasking_re_ffpb"},{"user_name":"Gillian","email":"carroll.una@example.net","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"248-740-4375","Profile_image":"0"},{"user_name":"Ollie","email":"cornelius79@example.net","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"1-952-972-0281","Profile_image":"0"},{"user_name":"Geovanny","email":"cummerata.lisandro@example.net","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"+1 (734) 593-9810","Profile_image":"0"},{"user_name":"Isabel","email":"jhoppe@example.org","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"(424) 897-1696","Profile_image":"0"},{"user_name":"Griffin","email":"braxton.legros@example.net","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"+1-726-499-7491","Profile_image":"0"},{"user_name":"Ezequiel","email":"loma97@example.net","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"518-597-0080","Profile_image":"0"},{"user_name":"Armando","email":"zroob@example.net","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"+1-806-283-1694","Profile_image":"0"},{"user_name":"Kirk","email":"kleuschke@example.net","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"+14423690885","Profile_image":"0"},{"user_name":"Donnie","email":"hickle.charley@example.com","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"1-469-434-3584","Profile_image":"0"},{"user_name":"Colby","email":"bhamill@example.com","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"+1-260-663-9988","Profile_image":"0"},{"user_name":"Chesley","email":"ydickinson@example.org","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"410.389.9311","Profile_image":"0"},{"user_name":"Marco","email":"reed91@example.net","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"1-248-203-4148","Profile_image":"0"},{"user_name":"Elmer","email":"iabbott@example.com","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"1-616-885-3504","Profile_image":"0"},{"user_name":"Rollin","email":"phyllis.bernhard@example.net","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"(351) 824-6887","Profile_image":"0"},{"user_name":"Paul","email":"corkery.elmore@example.com","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"+1.979.672.6066","Profile_image":"0"},{"user_name":"Timmy","email":"olin45@example.net","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"+1-480-965-6738","Profile_image":"0"},{"user_name":"Oceane","email":"qthiel@example.org","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"1-339-649-3234","Profile_image":"0"},{"user_name":"Dejon","email":"bradtke.lulu@example.com","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"(323) 903-8260","Profile_image":"0"},{"user_name":"Delia","email":"angelica.rohan@example.com","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"1-224-623-8166","Profile_image":"0"},{"user_name":"Eldred","email":"alf39@example.org","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"1-586-808-2407","Profile_image":"0"},{"user_name":"Tianna","email":"lvon@example.com","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"641-337-3490","Profile_image":"0"},{"user_name":"May","email":"eleannon@example.com","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"+1-251-340-4111","Profile_image":"0"},{"user_name":"Sandra","email":"delpha45@example.com","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"(681) 436-1742","Profile_image":"0"},{"user_name":"Thelma","email":"blehner@example.com","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"1-878-657-3943","Profile_image":"0"},{"user_name":"Jalyn","email":"treutel.araceli@example.org","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"+1-747-755-3879","Profile_image":"0"},{"user_name":"Ladarius","email":"zola.wisoky@example.com","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"1-334-963-0740","Profile_image":"0"},{"user_name":"Keenan","email":"constance.harvey@example.net","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"(848) 806-0129","Profile_image":"0"},{"user_name":"Zoey","email":"klesch@example.com","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"806.886.3452","Profile_image":"0"},{"user_name":"Delpha","email":"sokon@example.com","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"(315) 858-2903","Profile_image":"0"},{"user_name":"Laila","email":"darren39@example.com","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"+1-510-773-6179","Profile_image":"0"},{"user_name":"Stan","email":"ernestine.johnson@example.org","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"507-770-6273","Profile_image":"0"},{"user_name":"Julio","email":"tortiz@example.net","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"1-551-660-5570","Profile_image":"0"},{"user_name":"Donny","email":"ylebsack@example.org","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"1-731-632-9277","Profile_image":"0"},{"user_name":"Samantha","email":"nyah21@example.net","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"+12183353639","Profile_image":"0"},{"user_name":"Kendrick","email":"corwin.darrell@example.org","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"+1-425-703-1757","Profile_image":"0"},{"user_name":"Lyda","email":"lesch.arianna@example.com","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"(231) 369-7136","Profile_image":"0"},{"user_name":"Gladyce","email":"arnoldo83@example.com","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"803-358-7873","Profile_image":"0"},{"user_name":"Gertrude","email":"madilyn28@example.net","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"+1 (605) 561-2607","Profile_image":"0"},{"user_name":"Aditya","email":"tschultz@example.net","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"1-856-590-9903","Profile_image":"0"},{"user_name":"Ellis","email":"kamren.gislason@example.com","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"773.672.6748","Profile_image":"0"},{"user_name":"Eva","email":"qbogan@example.net","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"+1-405-929-2098","Profile_image":"0"},{"user_name":"Eldred","email":"stroman.winona@example.com","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"+1.239.766.8465","Profile_image":"0"},{"user_name":"Annetta","email":"tbradtke@example.net","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"862.622.8336","Profile_image":"0"},{"user_name":"Billie","email":"qlang@example.org","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"+15154893791","Profile_image":"0"},{"user_name":"Rosa","email":"hamill.ena@example.net","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"(224) 740-8865","Profile_image":"0"},{"user_name":"Annetta","email":"esraamnasour133@gmail.com","password":"$2y$10$\/b08aVRwFmZUfLjVs8y3A.oK2MUQ0dXwAtedbQfCihtSNwpjbaUa6","phone":"862.622.8336","Profile_image":null},{"user_name":"Annetta","email":"nourman282@gmail.com","password":"$2y$10$vfJd4wipsKnsk5Q0Wf63G.NpZAUL3zx.89ZhHBabFkUbFuDb3vVZy","phone":"862.622.8336","Profile_image":null},{"user_name":"nour mansour","email":"noure42@example.net","password":"$2y$10$a4JBhdbobg8uKZ7Rx.T3HO7Nuc.SF8OJIdHUU5xQlRS3Utl1L5fvy","phone":"+096957755","Profile_image":null},{"user_name":"nour mansour","email":"mansournour057@gmail.com","password":"$2y$10$pMjiHI1JAFNMLrf15MRQGeuZKdi6unOF4x2H0t..gvyCo\/LDWMUV6","phone":"+096957755","Profile_image":null},{"user_name":"nour mansour","email":"braamansour3@gmail.com","password":"$2y$10$wTJbRqKDj8IYU4ekEz\/lQ.3dXZ5oiu8CNuvncDUALCggmL2NnHbvW","phone":"+096957755","Profile_image":null}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '58'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/user
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/user/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the user.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"user_name":"Admain admian","email":"admin@admin.com","password":"111aaa","phone":"0977584398","Profile_image":"C:\\Users\\LENOVO\\Downloads\\image1\\undraw_Designer_re_5v95 (1)"}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '57'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/user/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the user.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/user/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the user.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/currency
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"logo":"0","Currency_name":"quis","Abbrevation":"enim"},{"logo":"0","Currency_name":"aut","Abbrevation":"non"},{"logo":"0","Currency_name":"eligendi","Abbrevation":"qui"},{"logo":"0","Currency_name":"qui","Abbrevation":"dolor"},{"logo":"0","Currency_name":"id","Abbrevation":"blanditiis"},{"logo":"0","Currency_name":"omnis","Abbrevation":"nihil"},{"logo":"0","Currency_name":"debitis","Abbrevation":"totam"},{"logo":"0","Currency_name":"a","Abbrevation":"ullam"},{"logo":"0","Currency_name":"nihil","Abbrevation":"soluta"},{"logo":"0","Currency_name":"vel","Abbrevation":"sapiente"},{"logo":"0","Currency_name":"sit","Abbrevation":"deleniti"},{"logo":"0","Currency_name":"itaque","Abbrevation":"nobis"},{"logo":"0","Currency_name":"ut","Abbrevation":"aut"},{"logo":"0","Currency_name":"quia","Abbrevation":"consectetur"},{"logo":"0","Currency_name":"excepturi","Abbrevation":"vel"},{"logo":"0","Currency_name":"dignissimos","Abbrevation":"impedit"},{"logo":"0","Currency_name":"voluptatum","Abbrevation":"ut"},{"logo":"0","Currency_name":"sit","Abbrevation":"dolor"},{"logo":"0","Currency_name":"natus","Abbrevation":"dolorem"},{"logo":"0","Currency_name":"iusto","Abbrevation":"beatae"},{"logo":"0","Currency_name":"et","Abbrevation":"qui"},{"logo":"0","Currency_name":"exercitationem","Abbrevation":"dolore"},{"logo":"0","Currency_name":"molestiae","Abbrevation":"veniam"},{"logo":"0","Currency_name":"ad","Abbrevation":"dicta"},{"logo":"0","Currency_name":"ipsum","Abbrevation":"provident"},{"logo":"0","Currency_name":"et","Abbrevation":"consequuntur"},{"logo":"0","Currency_name":"nihil","Abbrevation":"cum"},{"logo":"0","Currency_name":"similique","Abbrevation":"nihil"},{"logo":"0","Currency_name":"nostrum","Abbrevation":"similique"},{"logo":"0","Currency_name":"placeat","Abbrevation":"illum"},{"logo":"0","Currency_name":"saepe","Abbrevation":"aperiam"},{"logo":"0","Currency_name":"perspiciatis","Abbrevation":"laudantium"},{"logo":"0","Currency_name":"quia","Abbrevation":"labore"},{"logo":"0","Currency_name":"officia","Abbrevation":"molestiae"},{"logo":"0","Currency_name":"cum","Abbrevation":"omnis"},{"logo":"0","Currency_name":"voluptatem","Abbrevation":"non"},{"logo":"0","Currency_name":"vel","Abbrevation":"minus"},{"logo":"0","Currency_name":"aut","Abbrevation":"labore"},{"logo":"0","Currency_name":"tempore","Abbrevation":"quaerat"},{"logo":"0","Currency_name":"provident","Abbrevation":"doloribus"},{"logo":"0","Currency_name":"sit","Abbrevation":"error"},{"logo":"0","Currency_name":"est","Abbrevation":"reiciendis"},{"logo":"0","Currency_name":"et","Abbrevation":"corrupti"},{"logo":"0","Currency_name":"explicabo","Abbrevation":"reiciendis"},{"logo":"0","Currency_name":"eaque","Abbrevation":"quibusdam"},{"logo":"0","Currency_name":"ea","Abbrevation":"omnis"},{"logo":"0","Currency_name":"quibusdam","Abbrevation":"molestiae"},{"logo":"0","Currency_name":"assumenda","Abbrevation":"voluptatem"},{"logo":"0","Currency_name":"eligendi","Abbrevation":"animi"},{"logo":"0","Currency_name":"quis","Abbrevation":"nesciunt"},{"logo":"0","Currency_name":"ea","Abbrevation":"est"},{"logo":"0","Currency_name":"cum","Abbrevation":"officiis"},{"logo":"0","Currency_name":"ipsa","Abbrevation":"non"},{"logo":"0","Currency_name":"vero","Abbrevation":"corporis"},{"logo":"0","Currency_name":"totam","Abbrevation":"voluptates"},{"logo":"bitcoin-cryptocurrency-pile-close-up-1080x1620","Currency_name":"Bitcoin","Abbrevation":"BTC"},{"logo":"bitcoin-cryptocurrency-pile-close-up-1080x1620","Currency_name":"USDT","Abbrevation":"USDT"},{"logo":"bitcoin-cryptocurrency-pile-close-up-1080x1620","Currency_name":"Etherum","Abbrevation":"ETH"}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '56'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/currency
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      logo:
+        name: logo
+        description: ''
+        required: true
+        example: iure
+        type: string
+        custom: []
+      Currency_name:
+        name: Currency_name
+        description: ''
+        required: true
+        example: porro
+        type: string
+        custom: []
+      Abbrevation:
+        name: Abbrevation
+        description: ''
+        required: true
+        example: maxime
+        type: string
+        custom: []
+    cleanBodyParameters:
+      logo: iure
+      Currency_name: porro
+      Abbrevation: maxime
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/currency/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the currency.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"logo":"0","Currency_name":"quis","Abbrevation":"enim"}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '55'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/currency/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the currency.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/currency/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the currency.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/currencyprice
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"today_price":7921347169,"yesterday_price":5733025523,"percentage":"enim","Date_Time":"1987-09-14"},{"today_price":2771344614,"yesterday_price":2179833307,"percentage":"repellendus","Date_Time":"1996-09-14"},{"today_price":7676133460,"yesterday_price":3162415280,"percentage":"maxime","Date_Time":"2018-12-15"},{"today_price":7629975698,"yesterday_price":3431851833,"percentage":"repellat","Date_Time":"2021-10-18"},{"today_price":1345820004,"yesterday_price":7334743005,"percentage":"reprehenderit","Date_Time":"1992-05-10"},{"today_price":300,"yesterday_price":200,"percentage":"1.2","Date_Time":"2023-11-20"}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '54'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/currencyprice
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      today_price:
+        name: today_price
+        description: ''
+        required: true
+        example: consequuntur
+        type: string
+        custom: []
+      percentage:
+        name: percentage
+        description: ''
+        required: true
+        example: veniam
+        type: string
+        custom: []
+      yesterday_price:
+        name: yesterday_price
+        description: ''
+        required: true
+        example: facere
+        type: string
+        custom: []
+      Date_Time:
+        name: Date_Time
+        description: ''
+        required: true
+        example: corrupti
+        type: string
+        custom: []
+      currency_id:
+        name: currency_id
+        description: ''
+        required: true
+        example: amet
+        type: string
+        custom: []
+    cleanBodyParameters:
+      today_price: consequuntur
+      percentage: veniam
+      yesterday_price: facere
+      Date_Time: corrupti
+      currency_id: amet
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/currencyprice/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the currencyprice.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"today_price":7921347169,"yesterday_price":5733025523,"percentage":"enim","Date_Time":"1987-09-14","currency_id":{"logo":"0","Currency_name":"dignissimos","Abbrevation":"impedit"}}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '53'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/currencyprice/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the currencyprice.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/currencyprice/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the currencyprice.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/card
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"Card_number":-4231,"Holder_Name":"et","Cvc":-2798,"Card_image":"0","Expire_Date":"1979-03-19T00:00:00.000000Z","Wallet_id":{"Quantity":5085415823}},{"Card_number":2678,"Holder_Name":"vitae","Cvc":-1721,"Card_image":"0","Expire_Date":"1978-08-08T00:00:00.000000Z","Wallet_id":{"Quantity":5064800085}},{"Card_number":8095,"Holder_Name":"magnam","Cvc":-5318,"Card_image":"0","Expire_Date":"1995-07-24T00:00:00.000000Z","Wallet_id":{"Quantity":8584212287}},{"Card_number":-4585,"Holder_Name":"quo","Cvc":5078,"Card_image":"0","Expire_Date":"2000-02-28T00:00:00.000000Z","Wallet_id":{"Quantity":1697258223}}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '52'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/card
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      Card_image:
+        name: Card_image
+        description: ''
+        required: true
+        example: culpa
+        type: string
+        custom: []
+      Card_number:
+        name: Card_number
+        description: ''
+        required: true
+        example: ullam
+        type: string
+        custom: []
+      Holder_Name:
+        name: Holder_Name
+        description: ''
+        required: true
+        example: quae
+        type: string
+        custom: []
+      Cvc:
+        name: Cvc
+        description: ''
+        required: true
+        example: enim
+        type: string
+        custom: []
+      Expire_Date:
+        name: Expire_Date
+        description: ''
+        required: true
+        example: quo
+        type: string
+        custom: []
+      Wallet_id:
+        name: Wallet_id
+        description: ''
+        required: true
+        example: 4
+        type: integer
+        custom: []
+    cleanBodyParameters:
+      Card_image: culpa
+      Card_number: ullam
+      Holder_Name: quae
+      Cvc: enim
+      Expire_Date: quo
+      Wallet_id: 4
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/card/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the card.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"Card_number":-4231,"Holder_Name":"et","Cvc":-2798,"Card_image":"0","Expire_Date":"1979-03-19T00:00:00.000000Z"}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '51'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/card/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the card.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/card/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the card.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/send
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"currency_id":{"logo":"0","Currency_name":"quis","Abbrevation":"enim"},"email":"user133@gmail.com","quantity":112.399},{"currency_id":{"logo":"0","Currency_name":"eligendi","Abbrevation":"qui"},"email":"user453@gmail.com","quantity":123.455},{"currency_id":{"logo":"0","Currency_name":"qui","Abbrevation":"dolor"},"email":"user443@gmail.com","quantity":345.67},{"currency_id":{"logo":"0","Currency_name":"eligendi","Abbrevation":"qui"},"email":"waled44@gmail.com","quantity":10}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '50'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/send
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      account_number:
+        name: account_number
+        description: ''
+        required: true
+        example: laboriosam
+        type: string
+        custom: []
+      currency_id:
+        name: currency_id
+        description: ''
+        required: true
+        example: aut
+        type: string
+        custom: []
+      email:
+        name: email
+        description: ''
+        required: true
+        example: molestiae
+        type: string
+        custom: []
+      quantity:
+        name: quantity
+        description: ''
+        required: true
+        example: sequi
+        type: string
+        custom: []
+    cleanBodyParameters:
+      account_number: laboriosam
+      currency_id: aut
+      email: molestiae
+      quantity: sequi
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/send/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the send.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"currency_id":{"logo":"0","Currency_name":"quis","Abbrevation":"enim"},"email":"user133@gmail.com","quantity":112.399}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '49'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/send/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the send.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/send/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the send.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/wallet
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"Quantity":8736590411,"currency_id":{"logo":"0","Currency_name":"omnis","Abbrevation":"nihil"}},{"Quantity":5378403749,"currency_id":{"logo":"0","Currency_name":"debitis","Abbrevation":"totam"}},{"Quantity":84309531,"currency_id":{"logo":"0","Currency_name":"a","Abbrevation":"ullam"}},{"Quantity":7625544065,"currency_id":{"logo":"0","Currency_name":"nihil","Abbrevation":"soluta"}},{"Quantity":4021070638,"currency_id":{"logo":"0","Currency_name":"vel","Abbrevation":"sapiente"}},{"Quantity":5085415823,"currency_id":{"logo":"0","Currency_name":"sit","Abbrevation":"deleniti"}},{"Quantity":5064800085,"currency_id":{"logo":"0","Currency_name":"itaque","Abbrevation":"nobis"}},{"Quantity":8584212287,"currency_id":{"logo":"0","Currency_name":"ut","Abbrevation":"aut"}},{"Quantity":4658911467,"currency_id":{"logo":"0","Currency_name":"quia","Abbrevation":"consectetur"}},{"Quantity":1697258223,"currency_id":{"logo":"0","Currency_name":"excepturi","Abbrevation":"vel"}},{"Quantity":5401316781,"currency_id":{"logo":"0","Currency_name":"et","Abbrevation":"corrupti"}},{"Quantity":4765537574,"currency_id":{"logo":"0","Currency_name":"ea","Abbrevation":"omnis"}},{"Quantity":9009942458,"currency_id":{"logo":"0","Currency_name":"eligendi","Abbrevation":"animi"}},{"Quantity":4908700736,"currency_id":{"logo":"0","Currency_name":"cum","Abbrevation":"officiis"}},{"Quantity":1173619726,"currency_id":{"logo":"0","Currency_name":"totam","Abbrevation":"voluptates"}},{"Quantity":85,"currency_id":{"logo":"0","Currency_name":"qui","Abbrevation":"dolor"}}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '48'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/wallet
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      currency_id:
+        name: currency_id
+        description: ''
+        required: true
+        example: quia
+        type: string
+        custom: []
+      Quantity:
+        name: Quantity
+        description: ''
+        required: true
+        example: aut
+        type: string
+        custom: []
+      User_id:
+        name: User_id
+        description: ''
+        required: true
+        example: optio
+        type: string
+        custom: []
+    cleanBodyParameters:
+      currency_id: quia
+      Quantity: aut
+      User_id: optio
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/wallet/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the wallet.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"Quantity":8736590411,"currency_id":{"logo":"0","Currency_name":"omnis","Abbrevation":"nihil"}}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '47'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/wallet/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the wallet.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/wallet/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the wallet.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/trade
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"account_number":{"account_number":"573623800121"},"currency_id_in":{"logo":"0","Currency_name":"et","Abbrevation":"qui"},"currency_id_out":{"logo":"0","Currency_name":"exercitationem","Abbrevation":"dolore"},"price":9581396504,"quantity":3874805511},{"account_number":{"account_number":"596092913470"},"currency_id_in":{"logo":"0","Currency_name":"molestiae","Abbrevation":"veniam"},"currency_id_out":{"logo":"0","Currency_name":"ad","Abbrevation":"dicta"},"price":5568521737,"quantity":4946246060},{"account_number":{"account_number":"006328563817"},"currency_id_in":{"logo":"0","Currency_name":"ipsum","Abbrevation":"provident"},"currency_id_out":{"logo":"0","Currency_name":"et","Abbrevation":"consequuntur"},"price":24944306,"quantity":9686401760},{"account_number":{"account_number":"092957417865"},"currency_id_in":{"logo":"0","Currency_name":"nihil","Abbrevation":"cum"},"currency_id_out":{"logo":"0","Currency_name":"similique","Abbrevation":"nihil"},"price":5479035114,"quantity":3374613385},{"account_number":{"account_number":"468626694724"},"currency_id_in":{"logo":"0","Currency_name":"nostrum","Abbrevation":"similique"},"currency_id_out":{"logo":"0","Currency_name":"placeat","Abbrevation":"illum"},"price":1369525157,"quantity":6893024321},{"account_number":{"account_number":"097988405521"},"currency_id_in":{"logo":"0","Currency_name":"sit","Abbrevation":"error"},"currency_id_out":{"logo":"0","Currency_name":"est","Abbrevation":"reiciendis"},"price":3563100199,"quantity":4141194859},{"account_number":{"account_number":"480249471449"},"currency_id_in":{"logo":"0","Currency_name":"explicabo","Abbrevation":"reiciendis"},"currency_id_out":{"logo":"0","Currency_name":"eaque","Abbrevation":"quibusdam"},"price":2596054707,"quantity":6382356992},{"account_number":{"account_number":"850297625960"},"currency_id_in":{"logo":"0","Currency_name":"quibusdam","Abbrevation":"molestiae"},"currency_id_out":{"logo":"0","Currency_name":"assumenda","Abbrevation":"voluptatem"},"price":5732848395,"quantity":8747427695},{"account_number":{"account_number":"419337021422"},"currency_id_in":{"logo":"0","Currency_name":"quis","Abbrevation":"nesciunt"},"currency_id_out":{"logo":"0","Currency_name":"ea","Abbrevation":"est"},"price":7665686987,"quantity":7282685230},{"account_number":{"account_number":"970534005760"},"currency_id_in":{"logo":"0","Currency_name":"ipsa","Abbrevation":"non"},"currency_id_out":{"logo":"0","Currency_name":"vero","Abbrevation":"corporis"},"price":9627875130,"quantity":3355948288}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '46'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/trade
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      account_number:
+        name: account_number
+        description: ''
+        required: true
+        example: voluptatem
+        type: string
+        custom: []
+      currency_id_in:
+        name: currency_id_in
+        description: ''
+        required: true
+        example: quos
+        type: string
+        custom: []
+      currency_id_out:
+        name: currency_id_out
+        description: ''
+        required: true
+        example: ad
+        type: string
+        custom: []
+      price:
+        name: price
+        description: ''
+        required: true
+        example: ducimus
+        type: string
+        custom: []
+      quantity:
+        name: quantity
+        description: ''
+        required: true
+        example: voluptatibus
+        type: string
+        custom: []
+    cleanBodyParameters:
+      account_number: voluptatem
+      currency_id_in: quos
+      currency_id_out: ad
+      price: ducimus
+      quantity: voluptatibus
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/trade/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the trade.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"account_number":{"account_number":"573623800121"},"currency_id_in":{"logo":"0","Currency_name":"et","Abbrevation":"qui"},"currency_id_out":{"logo":"0","Currency_name":"exercitationem","Abbrevation":"dolore"},"price":9581396504,"quantity":3874805511}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '45'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/trade/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the trade.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/trade/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the trade.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/buy
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"account_number":{"account_number":"471066719132"},"currency_id_in":{"logo":"0","Currency_name":"saepe","Abbrevation":"aperiam"},"currency_id_out":{"logo":"0","Currency_name":"perspiciatis","Abbrevation":"laudantium"},"quantity":5228972619},{"account_number":{"account_number":"758278530996"},"currency_id_in":{"logo":"0","Currency_name":"quia","Abbrevation":"labore"},"currency_id_out":{"logo":"0","Currency_name":"officia","Abbrevation":"molestiae"},"quantity":7617425176},{"account_number":{"account_number":"787919623632"},"currency_id_in":{"logo":"0","Currency_name":"cum","Abbrevation":"omnis"},"currency_id_out":{"logo":"0","Currency_name":"voluptatem","Abbrevation":"non"},"quantity":7980539811},{"account_number":{"account_number":"397907426692"},"currency_id_in":{"logo":"0","Currency_name":"vel","Abbrevation":"minus"},"currency_id_out":{"logo":"0","Currency_name":"aut","Abbrevation":"labore"},"quantity":9062309897},{"account_number":{"account_number":"989517894608"},"currency_id_in":{"logo":"0","Currency_name":"tempore","Abbrevation":"quaerat"},"currency_id_out":{"logo":"0","Currency_name":"provident","Abbrevation":"doloribus"},"quantity":1637160537}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '44'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/buy
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      account_number:
+        name: account_number
+        description: ''
+        required: true
+        example: eligendi
+        type: string
+        custom: []
+      currency_id_in:
+        name: currency_id_in
+        description: ''
+        required: true
+        example: ut
+        type: string
+        custom: []
+      currency_id_out:
+        name: currency_id_out
+        description: ''
+        required: true
+        example: explicabo
+        type: string
+        custom: []
+      quantity:
+        name: quantity
+        description: ''
+        required: true
+        example: praesentium
+        type: string
+        custom: []
+    cleanBodyParameters:
+      account_number: eligendi
+      currency_id_in: ut
+      currency_id_out: explicabo
+      quantity: praesentium
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/buy/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the buy.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"currency_id_in":{"logo":"0","Currency_name":"saepe","Abbrevation":"aperiam"},"currency_id_out":{"logo":"0","Currency_name":"perspiciatis","Abbrevation":"laudantium"},"quantity":5228972619}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '43'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/buy/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the buy.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/buy/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the buy.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/transduction
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"User_out":{"user_name":"Ladarius","Profile_image":"0"},"User_in":{"user_name":"Keenan","Profile_image":"0"},"trade_id":{"price":3563100199,"quantity":4141194859}},{"User_out":{"user_name":"Laila","Profile_image":"0"},"User_in":{"user_name":"Stan","Profile_image":"0"},"trade_id":{"price":2596054707,"quantity":6382356992}},{"User_out":{"user_name":"Samantha","Profile_image":"0"},"User_in":{"user_name":"Kendrick","Profile_image":"0"},"trade_id":{"price":5732848395,"quantity":8747427695}},{"User_out":{"user_name":"Gertrude","Profile_image":"0"},"User_in":{"user_name":"Aditya","Profile_image":"0"},"trade_id":{"price":7665686987,"quantity":7282685230}},{"User_out":{"user_name":"Eldred","Profile_image":"0"},"User_in":{"user_name":"Annetta","Profile_image":"0"},"trade_id":{"price":9627875130,"quantity":3355948288}}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '42'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/transduction
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/transduction/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the transduction.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"User_out":{"user_name":"Ladarius","Profile_image":"0"},"User_in":{"user_name":"Keenan","Profile_image":"0"},"trade_id":{"price":3563100199,"quantity":4141194859}}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '41'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/transduction/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the transduction.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/transduction/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the transduction.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/bestCurrency
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/bestCurrency
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      currency_id:
+        name: currency_id
+        description: ''
+        required: true
+        example: deserunt
+        type: string
+        custom: []
+      User_id:
+        name: User_id
+        description: ''
+        required: true
+        example: modi
+        type: string
+        custom: []
+    cleanBodyParameters:
+      currency_id: deserunt
+      User_id: modi
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/bestCurrency/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the bestCurrency.'
+        required: true
+        example: possimus
+        type: string
+        custom: []
+    cleanUrlParameters:
+      id: possimus
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Call to a member function relationLoaded() on null",
+              "exception": "Error",
+              "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Resources\\ConditionallyLoadsAttributes.php",
+              "line": 257,
+              "trace": [
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\app\\Http\\Controllers\\Resources\\BestCurrencyResource.php",
+                      "line": 19,
+                      "function": "whenLoaded",
+                      "class": "Illuminate\\Http\\Resources\\Json\\JsonResource",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Resources\\Json\\JsonResource.php",
+                      "line": 108,
+                      "function": "toArray",
+                      "class": "App\\Http\\Controllers\\Resources\\BestCurrencyResource",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Resources\\Json\\ResourceResponse.php",
+                      "line": 39,
+                      "function": "resolve",
+                      "class": "Illuminate\\Http\\Resources\\Json\\JsonResource",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Resources\\Json\\JsonResource.php",
+                      "line": 244,
+                      "function": "toResponse",
+                      "class": "Illuminate\\Http\\Resources\\Json\\ResourceResponse",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 888,
+                      "function": "toResponse",
+                      "class": "Illuminate\\Http\\Resources\\Json\\JsonResource",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 875,
+                      "function": "toResponse",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "::"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 798,
+                      "function": "prepareResponse",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 141,
+                      "function": "Illuminate\\Routing\\{closure}",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+                      "line": 50,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+                      "line": 126,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+                      "line": 102,
+                      "function": "handleRequest",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+                      "line": 54,
+                      "function": "handleRequestUsingNamedLimiter",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 116,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 799,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 776,
+                      "function": "runRouteWithinStack",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 740,
+                      "function": "runRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 729,
+                      "function": "dispatchToRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+                      "line": 200,
+                      "function": "dispatch",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 141,
+                      "function": "Illuminate\\Foundation\\Http\\{closure}",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php",
+                      "line": 31,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php",
+                      "line": 40,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+                      "line": 27,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php",
+                      "line": 86,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php",
+                      "line": 62,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\HandleCors",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php",
+                      "line": 39,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\TrustProxies",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 116,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+                      "line": 175,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+                      "line": 144,
+                      "function": "sendRequestThroughRouter",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+                      "line": 299,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+                      "line": 287,
+                      "function": "callLaravelOrLumenRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+                      "line": 92,
+                      "function": "makeApiCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+                      "line": 45,
+                      "function": "makeResponseCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+                      "line": 35,
+                      "function": "makeResponseCallIfConditionsPass",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php",
+                      "line": 209,
+                      "function": "__invoke",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php",
+                      "line": 166,
+                      "function": "iterateThroughStrategies",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php",
+                      "line": 95,
+                      "function": "fetchResponses",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php",
+                      "line": 124,
+                      "function": "processRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php",
+                      "line": 71,
+                      "function": "extractEndpointsInfoFromLaravelApp",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php",
+                      "line": 49,
+                      "function": "extractEndpointsInfoAndWriteToDisk",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
+                      "line": 51,
+                      "function": "get",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+                      "line": 36,
+                      "function": "handle",
+                      "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php",
+                      "line": 41,
+                      "function": "Illuminate\\Container\\{closure}",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+                      "line": 93,
+                      "function": "unwrapIfClosure",
+                      "class": "Illuminate\\Container\\Util",
+                      "type": "::"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+                      "line": 37,
+                      "function": "callBoundMethod",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+                      "line": 661,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+                      "line": 194,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\Container",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\symfony\\console\\Command\\Command.php",
+                      "line": 312,
+                      "function": "execute",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+                      "line": 164,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Command\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\symfony\\console\\Application.php",
+                      "line": 1022,
+                      "function": "run",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\symfony\\console\\Application.php",
+                      "line": 314,
+                      "function": "doRunCommand",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\symfony\\console\\Application.php",
+                      "line": 168,
+                      "function": "doRun",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
+                      "line": 102,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+                      "line": 155,
+                      "function": "run",
+                      "class": "Illuminate\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\xampp\\htdocs\\www\\laravel\\NEWWITH\\artisan",
+                      "line": 37,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Console\\Kernel",
+                      "type": "->"
+                  }
+              ]
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '40'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/bestCurrency/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the bestCurrency.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/bestCurrency/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the bestCurrency.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 204
+        content: '{}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/User
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/getCurrencyPrice/{curName}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      curName:
+        name: curName
+        description: ''
+        required: true
+        example: nihil
+        type: string
+        custom: []
+    cleanUrlParameters:
+      curName: nihil
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: ''
+        headers:
+          content-type: 'text/html; charset=UTF-8'
+          cache-control: 'no-cache, private'
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '39'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
