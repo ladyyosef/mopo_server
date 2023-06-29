@@ -11,6 +11,7 @@ use App\Http\Controllers\CurrencyPriceCollection;
 use App\Http\Controllers\Resources\CurrencyResource;
 use App\Http\Controllers\Resources\CurrencyPriceResource;
 use App\Filters\V1\CurrencyFilter;
+use Illuminate\Support\Facades\DB;
 class CurrencyController extends Controller
 {
     /**
@@ -24,7 +25,6 @@ class CurrencyController extends Controller
            return CurrencyResource::collection(Currency::all());
         }
 
-        
         else{
           //CurrenceyPrice::where(['column','operator','value']) =>queryItem;
            return  CurrencyResource::collection(Currency::where($queryItem));
@@ -39,7 +39,11 @@ class CurrencyController extends Controller
     {
         return new CurrencyResource(Currency::create($request->all()));
     }
-    public function getCurrencyPrice(string $curName) {
+    /**
+     * Get a currency price and details from name of currency
+     */
+    public function getCurrencyPrice(string $curName)
+     {
 
         $xx = Currency::find(1);
         $xx = Currencyprice::find(1);
@@ -55,9 +59,7 @@ class CurrencyController extends Controller
      */
     public function show(Currency $currency)
     {
-
         return new CurrencyResource($currency);
-
     }
 
     /**
@@ -74,5 +76,18 @@ class CurrencyController extends Controller
     public function destroy(Currency $currency)
     {
         //
+    }
+    /**
+     * Search about Currency
+     */
+    public function Search(Request $request)
+    {
+        $currency = Currency::join('currencyprices','currencies.id', '=', 'currencyprices.currency_id')
+       ->where('Currency_name','Like','%'.$request->searchTerm.'%')
+        ->select ('currencies.Abbrevation','currencyprices.today_price',
+        'currencyprices.percentage','currencyprices.Date_Time')->get();
+
+         return response()->json($currency);
+
     }
 }

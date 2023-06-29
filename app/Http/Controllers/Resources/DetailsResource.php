@@ -15,7 +15,7 @@ class DetailsResource extends JsonResource
     public function toArray(Request $request): array
     {
         return[
-            'user_name' =>$this->user_name,
+            'Full_name' =>$this->Full_name,
             'Profile_image' =>$this->Profile_image,
         ];
     }

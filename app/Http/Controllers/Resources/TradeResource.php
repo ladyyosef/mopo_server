@@ -16,8 +16,8 @@ class TradeResource extends JsonResource
     {
       return[
         'account_number' => new AccountResource($this->whenLoaded('account')),
-        'currency_id_in'=> new CurrencyResource($this->whenLoaded('currency')),
-        'currency_id_out' => new CurrencyResource($this->whenLoaded('currencyOut')),
+        'currency_id_in'=> new DetailsCurrencyResource($this->whenLoaded('currency')),
+        'currency_id_out' => new DetailsCurrencyResource($this->whenLoaded('currencyOut')),
         'price' =>$this->price,
         'quantity' => $this->quantity,
     ];

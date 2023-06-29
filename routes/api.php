@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Model\User;
+use App\Http\Controllers\CurrencyController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -37,12 +39,11 @@ require_once  'api/Buy.php';
 require_once  'api/Transduction.php';
 
 require_once  'api/BestCurrency.php';
+
 Route::middleware('auth:sanctum')->get('/User', function (Request $request) {
     return $request->user();
 });
-
 Route::get('getCurrencyPrice/{curName}', [App\Http\Controllers\CurrencyController::class , 'getCurrencyPrice']);
-
 
 
 

@@ -19,7 +19,6 @@ return new class extends Migration
             $table->foreignId('currency_id_in')->constrained()->onDelete('cascade');
             $table->foreignId('currency_id_out')->constrained()->onDelete('cascade');
             $table->double('quantity');
-
             $table->timestamps();
         });
 

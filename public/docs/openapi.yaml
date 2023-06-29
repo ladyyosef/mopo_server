@@ -54,11 +54,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: maude60@example.com
+                  example: larson.will@example.net
                 password:
                   type: string
                   description: ''
-                  example: magni
+                  example: quas
               required:
                 - email
                 - password
@@ -110,11 +110,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: vinnie57@example.org
+                  example: jillian94@example.org
                 password:
                   type: string
                   description: ''
-                  example: error
+                  example: necessitatibus
               required:
                 - email
                 - password
@@ -146,7 +146,7 @@ paths:
             text/plain:
               schema:
                 type: string
-                example: "scenario= \"validation errors\"{\n\"message\": \"The user name field is required. (and 5 more errors)\",\n\"errors\": {\n\"user_name\": [\n\"The user name field is required.\"\n],\n\"phone\": [\n\"The phone field is required.\"\n],\n\"email\": [\n\"The email field is required.\"\n],\n\"password\": [\n\"The password field is required.\"\n],\n\"postal_code\": [\n\"The postal code field is required.\"\n],\n\"City\": [\n\"The city field is required.\"\n]\n}\n}\n*@response 401 scenario = \"Email or Password Wrong\"{\n\"Message\": \"Email or Password Wrong\"\n}"
+                example: "scenario= \"validation errors\"{\n\"message\": \"The user name field is required. (and 5 more errors)\",\n\"errors\": {\n\"Full_name\": [\n\"The full name field is required.\"\n],\n\"phone\": [\n\"The phone field is required.\"\n],\n\"email\": [\n\"The email field is required.\"\n],\n\"password\": [\n\"The password field is required.\"\n],\n\"postal_code\": [\n\"The postal code field is required.\"\n],\n\"City\": [\n\"The city field is required.\"\n],\n\"Nationality\": [\n\"The nationality field is required.\"\n],\n\"Birth_date\": [\n\"The birth date field is required.\"\n]\n}\n}\n*@response 401 scenario = \"Email or Password Wrong\"{\n\"Message\": \"Email or Password Wrong\"\n}"
       tags:
         - Endpoints
       requestBody:
@@ -156,37 +156,47 @@ paths:
             schema:
               type: object
               properties:
-                user_name:
+                Full_name:
                   type: string
-                  description: ''
-                  example: perspiciatis
+                  description: 'Must not be greater than 25 characters.'
+                  example: a
                 phone:
                   type: string
                   description: ''
-                  example: et
+                  example: deserunt
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: howe.jabari@example.net
+                  example: pconnelly@example.com
                 password:
                   type: string
-                  description: ''
-                  example: autem
+                  description: 'Must be at least 8 characters.'
+                  example: '2<u;SeCQ9>[_3DD#z'
                 postal_code:
                   type: string
                   description: ''
-                  example: nulla
+                  example: repellat
                 City:
                   type: string
                   description: ''
-                  example: blanditiis
+                  example: incidunt
+                Birth_date:
+                  type: string
+                  description: ''
+                  example: voluptatem
+                Nationality:
+                  type: string
+                  description: ''
+                  example: tempora
               required:
-                - user_name
+                - Full_name
                 - phone
                 - email
                 - password
                 - postal_code
                 - City
+                - Birth_date
+                - Nationality
       security: []
   /api/logout:
     post:
@@ -215,12 +225,12 @@ paths:
           in: query
           name: account
           description: ''
-          example: 12
+          example: 11
           required: false
           schema:
             type: integer
             description: ''
-            example: 12
+            example: 11
       responses:
         200:
           description: ''
@@ -251,12 +261,12 @@ paths:
           in: query
           name: account
           description: int
-          example: quasi
+          example: impedit
           required: true
           schema:
             type: string
             description: int
-            example: quasi
+            example: impedit
       responses:
         200:
           description: ''
@@ -291,7 +301,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the account.'
-        example: eos
+        example: quisquam
         required: true
         schema:
           type: string
@@ -311,651 +321,603 @@ paths:
                 example:
                   data:
                     -
-                      user_name: 'Admain admian'
+                      Full_name: null
                       email: admin@admin.com
                       password: 111aaa
                       phone: '0977584398'
                       Profile_image: 'C:\Users\LENOVO\Downloads\image1\undraw_Designer_re_5v95 (1)'
                     -
-                      user_name: 'User userr '
-                      email: user@email.com
+                      Full_name: null
+                      email: user@gmail.com
                       password: 123aa
                       phone: '0966433721'
                       Profile_image: 'C:\Users\LENOVO\Downloads\image1\undraw_Designer_re_5v95 (1)'
                     -
-                      user_name: 'Reem Naif'
-                      email: reemsalem@email.com
+                      Full_name: null
+                      email: reemsalem@gmail.com
                       password: 111reem
                       phone: '09775290133'
                       Profile_image: 'C:\Users\LENOVO\Downloads\image1\undraw_Multitasking_re_ffpb'
                     -
-                      user_name: Gillian
-                      email: carroll.una@example.net
+                      Full_name: null
+                      email: rose60@example.org
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: 248-740-4375
-                      Profile_image: '0'
+                      phone: 1-209-329-3657
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\d441ba3cda617f56f5c0819ed7cdbc9f.png'
                     -
-                      user_name: Ollie
-                      email: cornelius79@example.net
+                      Full_name: null
+                      email: bailey.kristin@example.net
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: 1-952-972-0281
-                      Profile_image: '0'
+                      phone: '+1 (320) 259-8445'
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\cdc6d19aa8c244bfee3ac6230b106122.png'
                     -
-                      user_name: Geovanny
-                      email: cummerata.lisandro@example.net
+                      Full_name: null
+                      email: frami.lulu@example.com
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: '+1 (734) 593-9810'
-                      Profile_image: '0'
+                      phone: '+1 (878) 786-1172'
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\ea7f3330e67553b6f7bb4413fb4f4c90.png'
                     -
-                      user_name: Isabel
-                      email: jhoppe@example.org
+                      Full_name: null
+                      email: wemmerich@example.net
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: '(424) 897-1696'
-                      Profile_image: '0'
+                      phone: '(743) 928-6719'
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\62724bdaf06b0190929d99fb6012914b.png'
                     -
-                      user_name: Griffin
-                      email: braxton.legros@example.net
+                      Full_name: null
+                      email: ondricka.lucious@example.net
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: +1-726-499-7491
-                      Profile_image: '0'
+                      phone: 786-588-1145
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\8ab308474a89c5cb2fb4df2245d99ba4.png'
                     -
-                      user_name: Ezequiel
-                      email: loma97@example.net
+                      Full_name: null
+                      email: olson.mara@example.net
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: 518-597-0080
-                      Profile_image: '0'
+                      phone: 934-505-2522
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\cc0eeee0d2af674bc6e2dd76fc3798b7.png'
                     -
-                      user_name: Armando
-                      email: zroob@example.net
+                      Full_name: null
+                      email: gturcotte@example.org
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: +1-806-283-1694
-                      Profile_image: '0'
+                      phone: 614.725.7673
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\7262dac3315e5782c10722ddcb35fee9.png'
                     -
-                      user_name: Kirk
-                      email: kleuschke@example.net
+                      Full_name: null
+                      email: shana.konopelski@example.org
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: '+14423690885'
-                      Profile_image: '0'
+                      phone: +1.352.495.6491
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\66de66ab559e159bfd4ab23bbecdfb54.png'
                     -
-                      user_name: Donnie
-                      email: hickle.charley@example.com
+                      Full_name: null
+                      email: ewald.wilderman@example.org
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: 1-469-434-3584
-                      Profile_image: '0'
+                      phone: +1.575.572.9478
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\d41cc18a9602506330d76dc695a4cb56.png'
                     -
-                      user_name: Colby
-                      email: bhamill@example.com
+                      Full_name: null
+                      email: aschulist@example.com
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: +1-260-663-9988
-                      Profile_image: '0'
+                      phone: 920.455.0186
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\7c68398a823414932e1a823e9cf534fd.png'
                     -
-                      user_name: Chesley
-                      email: ydickinson@example.org
+                      Full_name: null
+                      email: hazel12@example.net
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: 410.389.9311
-                      Profile_image: '0'
+                      phone: +1-248-279-9127
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\1545599d8381cb6f633a0af61b3c28c7.png'
                     -
-                      user_name: Marco
-                      email: reed91@example.net
+                      Full_name: null
+                      email: bbreitenberg@example.com
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: 1-248-203-4148
-                      Profile_image: '0'
+                      phone: +1-224-613-2035
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\17d576269372a96f6ced4953644ac1b5.png'
                     -
-                      user_name: Elmer
-                      email: iabbott@example.com
+                      Full_name: null
+                      email: kblanda@example.org
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: 1-616-885-3504
-                      Profile_image: '0'
+                      phone: 830.338.6248
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\5d37aa8f5710d7bc8e3607ccd6b5c524.png'
                     -
-                      user_name: Rollin
-                      email: phyllis.bernhard@example.net
+                      Full_name: null
+                      email: katelynn.keebler@example.net
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: '(351) 824-6887'
-                      Profile_image: '0'
+                      phone: 848-914-5451
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\b0842e02a48325d03e9de46e96b8e6b6.png'
                     -
-                      user_name: Paul
-                      email: corkery.elmore@example.com
+                      Full_name: null
+                      email: janie47@example.org
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: +1.979.672.6066
-                      Profile_image: '0'
+                      phone: +1-938-652-3029
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\5768a52e94ac9ae4e19c0188c22905b2.png'
                     -
-                      user_name: Timmy
-                      email: olin45@example.net
+                      Full_name: null
+                      email: hartmann.kendrick@example.com
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: +1-480-965-6738
-                      Profile_image: '0'
+                      phone: 1-480-825-1416
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\f8e765c92140a9d90e134e70f7ba2e8d.png'
                     -
-                      user_name: Oceane
-                      email: qthiel@example.org
+                      Full_name: null
+                      email: charles.price@example.net
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: 1-339-649-3234
-                      Profile_image: '0'
+                      phone: 318.827.3209
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\9b084d854dc2fb262949fe1a43f00974.png'
                     -
-                      user_name: Dejon
-                      email: bradtke.lulu@example.com
+                      Full_name: null
+                      email: wmonahan@example.com
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: '(323) 903-8260'
-                      Profile_image: '0'
+                      phone: 352-528-7313
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\b51f4380df88e263a49c5590e63c5bf5.png'
                     -
-                      user_name: Delia
-                      email: angelica.rohan@example.com
+                      Full_name: null
+                      email: charber@example.com
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: 1-224-623-8166
-                      Profile_image: '0'
+                      phone: 206-512-8751
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\551c08714128a743addd8a5a1d9c39c0.png'
                     -
-                      user_name: Eldred
-                      email: alf39@example.org
+                      Full_name: null
+                      email: bogan.jeramy@example.net
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: 1-586-808-2407
-                      Profile_image: '0'
+                      phone: 802-682-5645
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\213b0e443ae7122d57b7bfc8f4d06a4c.png'
                     -
-                      user_name: Tianna
-                      email: lvon@example.com
+                      Full_name: null
+                      email: gabriella.blick@example.net
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: 641-337-3490
-                      Profile_image: '0'
+                      phone: '+14588280741'
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\346f1092fed0f8384138bd63f7cb5547.png'
                     -
-                      user_name: May
-                      email: eleannon@example.com
+                      Full_name: null
+                      email: stehr.alexandro@example.org
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: +1-251-340-4111
-                      Profile_image: '0'
+                      phone: +1-251-632-7566
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\81e895d5558cabadf37ec263d9c531f3.png'
                     -
-                      user_name: Sandra
-                      email: delpha45@example.com
+                      Full_name: null
+                      email: schuppe.muriel@example.net
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: '(681) 436-1742'
-                      Profile_image: '0'
+                      phone: 463-500-3130
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\91ddeb7e984403f156334237e9a69fe7.png'
                     -
-                      user_name: Thelma
-                      email: blehner@example.com
+                      Full_name: null
+                      email: nmcdermott@example.org
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: 1-878-657-3943
-                      Profile_image: '0'
+                      phone: 283.904.7295
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\89be781d21d065251ada4338b2b172af.png'
                     -
-                      user_name: Jalyn
-                      email: treutel.araceli@example.org
+                      Full_name: null
+                      email: gerry.wolf@example.com
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: +1-747-755-3879
-                      Profile_image: '0'
+                      phone: +1.940.843.7889
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\4666307bcaa928e12bc8da67f94394a2.png'
                     -
-                      user_name: Ladarius
-                      email: zola.wisoky@example.com
+                      Full_name: null
+                      email: beau51@example.net
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: 1-334-963-0740
-                      Profile_image: '0'
+                      phone: 1-607-453-1965
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\e81ddd1b8edb00c768d280f8e985a8b3.png'
                     -
-                      user_name: Keenan
-                      email: constance.harvey@example.net
+                      Full_name: null
+                      email: stuart.cassin@example.com
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: '(848) 806-0129'
-                      Profile_image: '0'
+                      phone: '+19176349154'
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\2bbb10644afe6c20ead5a09c4ff93488.png'
                     -
-                      user_name: Zoey
-                      email: klesch@example.com
+                      Full_name: null
+                      email: jgaylord@example.com
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: 806.886.3452
-                      Profile_image: '0'
+                      phone: 1-520-772-0235
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\60e26012e0dae519d4aa832bced77432.png'
                     -
-                      user_name: Delpha
-                      email: sokon@example.com
+                      Full_name: null
+                      email: constantin.crooks@example.com
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: '(315) 858-2903'
-                      Profile_image: '0'
+                      phone: '(660) 323-6993'
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\2de9423542ea1694ff5bf8a0c69f1378.png'
                     -
-                      user_name: Laila
-                      email: darren39@example.com
+                      Full_name: null
+                      email: pvolkman@example.net
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: +1-510-773-6179
-                      Profile_image: '0'
+                      phone: 623.527.4807
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\6c9bcb9afea295e30cefaba65f1396e6.png'
                     -
-                      user_name: Stan
-                      email: ernestine.johnson@example.org
+                      Full_name: null
+                      email: granville.lynch@example.org
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: 507-770-6273
-                      Profile_image: '0'
+                      phone: +1-279-723-2669
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\df2882423e5f8d9aaa960b2fa62f62ff.png'
                     -
-                      user_name: Julio
-                      email: tortiz@example.net
+                      Full_name: null
+                      email: schroeder.kitty@example.org
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: 1-551-660-5570
-                      Profile_image: '0'
+                      phone: 540.524.7210
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\941a66fe1226223a85ac9c42f6c310e7.png'
                     -
-                      user_name: Donny
-                      email: ylebsack@example.org
+                      Full_name: null
+                      email: hickle.russel@example.org
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: 1-731-632-9277
-                      Profile_image: '0'
+                      phone: 520-557-0095
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\51bf8165d3ce06db25b8e6936fbb0901.png'
                     -
-                      user_name: Samantha
-                      email: nyah21@example.net
+                      Full_name: null
+                      email: darryl26@example.net
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: '+12183353639'
-                      Profile_image: '0'
+                      phone: 309-453-0064
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\80bb9b3baceb67a68e86cb0ea0c64475.png'
                     -
-                      user_name: Kendrick
-                      email: corwin.darrell@example.org
+                      Full_name: null
+                      email: augustus.rosenbaum@example.com
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: +1-425-703-1757
-                      Profile_image: '0'
+                      phone: 1-507-578-5952
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\28aa7d428968922c53ebecc3fda8fcbe.png'
                     -
-                      user_name: Lyda
-                      email: lesch.arianna@example.com
+                      Full_name: null
+                      email: camryn.beier@example.com
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: '(231) 369-7136'
-                      Profile_image: '0'
+                      phone: 618-342-7080
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\d1cb21bdea2b6dffba63c2b1ebb8ae88.png'
                     -
-                      user_name: Gladyce
-                      email: arnoldo83@example.com
+                      Full_name: null
+                      email: crooks.elena@example.com
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: 803-358-7873
-                      Profile_image: '0'
+                      phone: +1-732-257-8995
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\255a1eb1dd6495e4a25d9d3a90bd750e.png'
                     -
-                      user_name: Gertrude
-                      email: madilyn28@example.net
+                      Full_name: null
+                      email: allie15@example.net
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: '+1 (605) 561-2607'
-                      Profile_image: '0'
+                      phone: 380.782.2650
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\661fcb8447fa4c0e11fa6df09895b3de.png'
                     -
-                      user_name: Aditya
-                      email: tschultz@example.net
+                      Full_name: null
+                      email: schmitt.lola@example.com
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: 1-856-590-9903
-                      Profile_image: '0'
+                      phone: 1-804-213-1303
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\11e6e5a943736e4e3a8014d72fa160d3.png'
                     -
-                      user_name: Ellis
-                      email: kamren.gislason@example.com
+                      Full_name: null
+                      email: rachel12@example.com
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: 773.672.6748
-                      Profile_image: '0'
+                      phone: '(820) 609-7143'
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\f7be0e5a20a94591f6ed750d80879da6.png'
                     -
-                      user_name: Eva
-                      email: qbogan@example.net
+                      Full_name: null
+                      email: astrid.feest@example.com
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: +1-405-929-2098
-                      Profile_image: '0'
+                      phone: 214.664.5961
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\f21008f53971b8e7a7642c9740dfac89.png'
                     -
-                      user_name: Eldred
-                      email: stroman.winona@example.com
+                      Full_name: null
+                      email: lavon.mante@example.com
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: +1.239.766.8465
-                      Profile_image: '0'
+                      phone: 509-368-5827
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\5336e5fa7d515b163362a16fda757747.png'
                     -
-                      user_name: Annetta
-                      email: tbradtke@example.net
+                      Full_name: null
+                      email: bkunze@example.org
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: 862.622.8336
-                      Profile_image: '0'
+                      phone: +1.272.897.8559
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\4310ae59a59b83e47b218381a2163986.png'
                     -
-                      user_name: Billie
-                      email: qlang@example.org
+                      Full_name: null
+                      email: brandy10@example.org
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: '+15154893791'
-                      Profile_image: '0'
+                      phone: +1.747.953.7118
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\a0e0ca0c31656f4f8b108325aea7faca.png'
                     -
-                      user_name: Rosa
-                      email: hamill.ena@example.net
+                      Full_name: null
+                      email: giuseppe89@example.com
                       password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                      phone: '(224) 740-8865'
-                      Profile_image: '0'
+                      phone: 409-481-8646
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\5fa74b15461798a8f027e44e902d3547.png'
                     -
-                      user_name: Annetta
-                      email: esraamnasour133@gmail.com
-                      password: $2y$10$/b08aVRwFmZUfLjVs8y3A.oK2MUQ0dXwAtedbQfCihtSNwpjbaUa6
-                      phone: 862.622.8336
-                      Profile_image: null
-                    -
-                      user_name: Annetta
-                      email: nourman282@gmail.com
-                      password: $2y$10$vfJd4wipsKnsk5Q0Wf63G.NpZAUL3zx.89ZhHBabFkUbFuDb3vVZy
-                      phone: 862.622.8336
-                      Profile_image: null
-                    -
-                      user_name: 'nour mansour'
-                      email: noure42@example.net
-                      password: $2y$10$a4JBhdbobg8uKZ7Rx.T3HO7Nuc.SF8OJIdHUU5xQlRS3Utl1L5fvy
-                      phone: '+096957755'
-                      Profile_image: null
-                    -
-                      user_name: 'nour mansour'
-                      email: mansournour057@gmail.com
-                      password: $2y$10$pMjiHI1JAFNMLrf15MRQGeuZKdi6unOF4x2H0t..gvyCo/LDWMUV6
-                      phone: '+096957755'
-                      Profile_image: null
-                    -
-                      user_name: 'nour mansour'
-                      email: braamansour3@gmail.com
-                      password: $2y$10$wTJbRqKDj8IYU4ekEz/lQ.3dXZ5oiu8CNuvncDUALCggmL2NnHbvW
-                      phone: '+096957755'
+                      Full_name: null
+                      email: sami@gmail.com
+                      password: $2y$10$ajUwoisbae5QFqVZWubyQOaiiB42ZO7CTJVFXTMlhDkF1ODFoZRE6
+                      phone: +963-0977437096
                       Profile_image: null
                 properties:
                   data:
                     type: array
                     example:
                       -
-                        user_name: 'Admain admian'
+                        Full_name: null
                         email: admin@admin.com
                         password: 111aaa
                         phone: '0977584398'
                         Profile_image: 'C:\Users\LENOVO\Downloads\image1\undraw_Designer_re_5v95 (1)'
                       -
-                        user_name: 'User userr '
-                        email: user@email.com
+                        Full_name: null
+                        email: user@gmail.com
                         password: 123aa
                         phone: '0966433721'
                         Profile_image: 'C:\Users\LENOVO\Downloads\image1\undraw_Designer_re_5v95 (1)'
                       -
-                        user_name: 'Reem Naif'
-                        email: reemsalem@email.com
+                        Full_name: null
+                        email: reemsalem@gmail.com
                         password: 111reem
                         phone: '09775290133'
                         Profile_image: 'C:\Users\LENOVO\Downloads\image1\undraw_Multitasking_re_ffpb'
                       -
-                        user_name: Gillian
-                        email: carroll.una@example.net
+                        Full_name: null
+                        email: rose60@example.org
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: 248-740-4375
-                        Profile_image: '0'
+                        phone: 1-209-329-3657
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\d441ba3cda617f56f5c0819ed7cdbc9f.png'
                       -
-                        user_name: Ollie
-                        email: cornelius79@example.net
+                        Full_name: null
+                        email: bailey.kristin@example.net
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: 1-952-972-0281
-                        Profile_image: '0'
+                        phone: '+1 (320) 259-8445'
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\cdc6d19aa8c244bfee3ac6230b106122.png'
                       -
-                        user_name: Geovanny
-                        email: cummerata.lisandro@example.net
+                        Full_name: null
+                        email: frami.lulu@example.com
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: '+1 (734) 593-9810'
-                        Profile_image: '0'
+                        phone: '+1 (878) 786-1172'
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\ea7f3330e67553b6f7bb4413fb4f4c90.png'
                       -
-                        user_name: Isabel
-                        email: jhoppe@example.org
+                        Full_name: null
+                        email: wemmerich@example.net
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: '(424) 897-1696'
-                        Profile_image: '0'
+                        phone: '(743) 928-6719'
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\62724bdaf06b0190929d99fb6012914b.png'
                       -
-                        user_name: Griffin
-                        email: braxton.legros@example.net
+                        Full_name: null
+                        email: ondricka.lucious@example.net
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: +1-726-499-7491
-                        Profile_image: '0'
+                        phone: 786-588-1145
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\8ab308474a89c5cb2fb4df2245d99ba4.png'
                       -
-                        user_name: Ezequiel
-                        email: loma97@example.net
+                        Full_name: null
+                        email: olson.mara@example.net
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: 518-597-0080
-                        Profile_image: '0'
+                        phone: 934-505-2522
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\cc0eeee0d2af674bc6e2dd76fc3798b7.png'
                       -
-                        user_name: Armando
-                        email: zroob@example.net
+                        Full_name: null
+                        email: gturcotte@example.org
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: +1-806-283-1694
-                        Profile_image: '0'
+                        phone: 614.725.7673
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\7262dac3315e5782c10722ddcb35fee9.png'
                       -
-                        user_name: Kirk
-                        email: kleuschke@example.net
+                        Full_name: null
+                        email: shana.konopelski@example.org
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: '+14423690885'
-                        Profile_image: '0'
+                        phone: +1.352.495.6491
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\66de66ab559e159bfd4ab23bbecdfb54.png'
                       -
-                        user_name: Donnie
-                        email: hickle.charley@example.com
+                        Full_name: null
+                        email: ewald.wilderman@example.org
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: 1-469-434-3584
-                        Profile_image: '0'
+                        phone: +1.575.572.9478
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\d41cc18a9602506330d76dc695a4cb56.png'
                       -
-                        user_name: Colby
-                        email: bhamill@example.com
+                        Full_name: null
+                        email: aschulist@example.com
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: +1-260-663-9988
-                        Profile_image: '0'
+                        phone: 920.455.0186
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\7c68398a823414932e1a823e9cf534fd.png'
                       -
-                        user_name: Chesley
-                        email: ydickinson@example.org
+                        Full_name: null
+                        email: hazel12@example.net
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: 410.389.9311
-                        Profile_image: '0'
+                        phone: +1-248-279-9127
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\1545599d8381cb6f633a0af61b3c28c7.png'
                       -
-                        user_name: Marco
-                        email: reed91@example.net
+                        Full_name: null
+                        email: bbreitenberg@example.com
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: 1-248-203-4148
-                        Profile_image: '0'
+                        phone: +1-224-613-2035
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\17d576269372a96f6ced4953644ac1b5.png'
                       -
-                        user_name: Elmer
-                        email: iabbott@example.com
+                        Full_name: null
+                        email: kblanda@example.org
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: 1-616-885-3504
-                        Profile_image: '0'
+                        phone: 830.338.6248
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\5d37aa8f5710d7bc8e3607ccd6b5c524.png'
                       -
-                        user_name: Rollin
-                        email: phyllis.bernhard@example.net
+                        Full_name: null
+                        email: katelynn.keebler@example.net
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: '(351) 824-6887'
-                        Profile_image: '0'
+                        phone: 848-914-5451
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\b0842e02a48325d03e9de46e96b8e6b6.png'
                       -
-                        user_name: Paul
-                        email: corkery.elmore@example.com
+                        Full_name: null
+                        email: janie47@example.org
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: +1.979.672.6066
-                        Profile_image: '0'
+                        phone: +1-938-652-3029
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\5768a52e94ac9ae4e19c0188c22905b2.png'
                       -
-                        user_name: Timmy
-                        email: olin45@example.net
+                        Full_name: null
+                        email: hartmann.kendrick@example.com
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: +1-480-965-6738
-                        Profile_image: '0'
+                        phone: 1-480-825-1416
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\f8e765c92140a9d90e134e70f7ba2e8d.png'
                       -
-                        user_name: Oceane
-                        email: qthiel@example.org
+                        Full_name: null
+                        email: charles.price@example.net
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: 1-339-649-3234
-                        Profile_image: '0'
+                        phone: 318.827.3209
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\9b084d854dc2fb262949fe1a43f00974.png'
                       -
-                        user_name: Dejon
-                        email: bradtke.lulu@example.com
+                        Full_name: null
+                        email: wmonahan@example.com
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: '(323) 903-8260'
-                        Profile_image: '0'
+                        phone: 352-528-7313
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\b51f4380df88e263a49c5590e63c5bf5.png'
                       -
-                        user_name: Delia
-                        email: angelica.rohan@example.com
+                        Full_name: null
+                        email: charber@example.com
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: 1-224-623-8166
-                        Profile_image: '0'
+                        phone: 206-512-8751
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\551c08714128a743addd8a5a1d9c39c0.png'
                       -
-                        user_name: Eldred
-                        email: alf39@example.org
+                        Full_name: null
+                        email: bogan.jeramy@example.net
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: 1-586-808-2407
-                        Profile_image: '0'
+                        phone: 802-682-5645
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\213b0e443ae7122d57b7bfc8f4d06a4c.png'
                       -
-                        user_name: Tianna
-                        email: lvon@example.com
+                        Full_name: null
+                        email: gabriella.blick@example.net
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: 641-337-3490
-                        Profile_image: '0'
+                        phone: '+14588280741'
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\346f1092fed0f8384138bd63f7cb5547.png'
                       -
-                        user_name: May
-                        email: eleannon@example.com
+                        Full_name: null
+                        email: stehr.alexandro@example.org
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: +1-251-340-4111
-                        Profile_image: '0'
+                        phone: +1-251-632-7566
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\81e895d5558cabadf37ec263d9c531f3.png'
                       -
-                        user_name: Sandra
-                        email: delpha45@example.com
+                        Full_name: null
+                        email: schuppe.muriel@example.net
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: '(681) 436-1742'
-                        Profile_image: '0'
+                        phone: 463-500-3130
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\91ddeb7e984403f156334237e9a69fe7.png'
                       -
-                        user_name: Thelma
-                        email: blehner@example.com
+                        Full_name: null
+                        email: nmcdermott@example.org
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: 1-878-657-3943
-                        Profile_image: '0'
+                        phone: 283.904.7295
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\89be781d21d065251ada4338b2b172af.png'
                       -
-                        user_name: Jalyn
-                        email: treutel.araceli@example.org
+                        Full_name: null
+                        email: gerry.wolf@example.com
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: +1-747-755-3879
-                        Profile_image: '0'
+                        phone: +1.940.843.7889
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\4666307bcaa928e12bc8da67f94394a2.png'
                       -
-                        user_name: Ladarius
-                        email: zola.wisoky@example.com
+                        Full_name: null
+                        email: beau51@example.net
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: 1-334-963-0740
-                        Profile_image: '0'
+                        phone: 1-607-453-1965
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\e81ddd1b8edb00c768d280f8e985a8b3.png'
                       -
-                        user_name: Keenan
-                        email: constance.harvey@example.net
+                        Full_name: null
+                        email: stuart.cassin@example.com
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: '(848) 806-0129'
-                        Profile_image: '0'
+                        phone: '+19176349154'
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\2bbb10644afe6c20ead5a09c4ff93488.png'
                       -
-                        user_name: Zoey
-                        email: klesch@example.com
+                        Full_name: null
+                        email: jgaylord@example.com
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: 806.886.3452
-                        Profile_image: '0'
+                        phone: 1-520-772-0235
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\60e26012e0dae519d4aa832bced77432.png'
                       -
-                        user_name: Delpha
-                        email: sokon@example.com
+                        Full_name: null
+                        email: constantin.crooks@example.com
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: '(315) 858-2903'
-                        Profile_image: '0'
+                        phone: '(660) 323-6993'
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\2de9423542ea1694ff5bf8a0c69f1378.png'
                       -
-                        user_name: Laila
-                        email: darren39@example.com
+                        Full_name: null
+                        email: pvolkman@example.net
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: +1-510-773-6179
-                        Profile_image: '0'
+                        phone: 623.527.4807
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\6c9bcb9afea295e30cefaba65f1396e6.png'
                       -
-                        user_name: Stan
-                        email: ernestine.johnson@example.org
+                        Full_name: null
+                        email: granville.lynch@example.org
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: 507-770-6273
-                        Profile_image: '0'
+                        phone: +1-279-723-2669
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\df2882423e5f8d9aaa960b2fa62f62ff.png'
                       -
-                        user_name: Julio
-                        email: tortiz@example.net
+                        Full_name: null
+                        email: schroeder.kitty@example.org
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: 1-551-660-5570
-                        Profile_image: '0'
+                        phone: 540.524.7210
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\941a66fe1226223a85ac9c42f6c310e7.png'
                       -
-                        user_name: Donny
-                        email: ylebsack@example.org
+                        Full_name: null
+                        email: hickle.russel@example.org
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: 1-731-632-9277
-                        Profile_image: '0'
+                        phone: 520-557-0095
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\51bf8165d3ce06db25b8e6936fbb0901.png'
                       -
-                        user_name: Samantha
-                        email: nyah21@example.net
+                        Full_name: null
+                        email: darryl26@example.net
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: '+12183353639'
-                        Profile_image: '0'
+                        phone: 309-453-0064
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\80bb9b3baceb67a68e86cb0ea0c64475.png'
                       -
-                        user_name: Kendrick
-                        email: corwin.darrell@example.org
+                        Full_name: null
+                        email: augustus.rosenbaum@example.com
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: +1-425-703-1757
-                        Profile_image: '0'
+                        phone: 1-507-578-5952
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\28aa7d428968922c53ebecc3fda8fcbe.png'
                       -
-                        user_name: Lyda
-                        email: lesch.arianna@example.com
+                        Full_name: null
+                        email: camryn.beier@example.com
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: '(231) 369-7136'
-                        Profile_image: '0'
+                        phone: 618-342-7080
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\d1cb21bdea2b6dffba63c2b1ebb8ae88.png'
                       -
-                        user_name: Gladyce
-                        email: arnoldo83@example.com
+                        Full_name: null
+                        email: crooks.elena@example.com
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: 803-358-7873
-                        Profile_image: '0'
+                        phone: +1-732-257-8995
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\255a1eb1dd6495e4a25d9d3a90bd750e.png'
                       -
-                        user_name: Gertrude
-                        email: madilyn28@example.net
+                        Full_name: null
+                        email: allie15@example.net
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: '+1 (605) 561-2607'
-                        Profile_image: '0'
+                        phone: 380.782.2650
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\661fcb8447fa4c0e11fa6df09895b3de.png'
                       -
-                        user_name: Aditya
-                        email: tschultz@example.net
+                        Full_name: null
+                        email: schmitt.lola@example.com
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: 1-856-590-9903
-                        Profile_image: '0'
+                        phone: 1-804-213-1303
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\11e6e5a943736e4e3a8014d72fa160d3.png'
                       -
-                        user_name: Ellis
-                        email: kamren.gislason@example.com
+                        Full_name: null
+                        email: rachel12@example.com
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: 773.672.6748
-                        Profile_image: '0'
+                        phone: '(820) 609-7143'
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\f7be0e5a20a94591f6ed750d80879da6.png'
                       -
-                        user_name: Eva
-                        email: qbogan@example.net
+                        Full_name: null
+                        email: astrid.feest@example.com
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: +1-405-929-2098
-                        Profile_image: '0'
+                        phone: 214.664.5961
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\f21008f53971b8e7a7642c9740dfac89.png'
                       -
-                        user_name: Eldred
-                        email: stroman.winona@example.com
+                        Full_name: null
+                        email: lavon.mante@example.com
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: +1.239.766.8465
-                        Profile_image: '0'
+                        phone: 509-368-5827
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\5336e5fa7d515b163362a16fda757747.png'
                       -
-                        user_name: Annetta
-                        email: tbradtke@example.net
+                        Full_name: null
+                        email: bkunze@example.org
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: 862.622.8336
-                        Profile_image: '0'
+                        phone: +1.272.897.8559
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\4310ae59a59b83e47b218381a2163986.png'
                       -
-                        user_name: Billie
-                        email: qlang@example.org
+                        Full_name: null
+                        email: brandy10@example.org
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: '+15154893791'
-                        Profile_image: '0'
+                        phone: +1.747.953.7118
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\a0e0ca0c31656f4f8b108325aea7faca.png'
                       -
-                        user_name: Rosa
-                        email: hamill.ena@example.net
+                        Full_name: null
+                        email: giuseppe89@example.com
                         password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
-                        phone: '(224) 740-8865'
-                        Profile_image: '0'
+                        phone: 409-481-8646
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\5fa74b15461798a8f027e44e902d3547.png'
                       -
-                        user_name: Annetta
-                        email: esraamnasour133@gmail.com
-                        password: $2y$10$/b08aVRwFmZUfLjVs8y3A.oK2MUQ0dXwAtedbQfCihtSNwpjbaUa6
-                        phone: 862.622.8336
-                        Profile_image: null
-                      -
-                        user_name: Annetta
-                        email: nourman282@gmail.com
-                        password: $2y$10$vfJd4wipsKnsk5Q0Wf63G.NpZAUL3zx.89ZhHBabFkUbFuDb3vVZy
-                        phone: 862.622.8336
-                        Profile_image: null
-                      -
-                        user_name: 'nour mansour'
-                        email: noure42@example.net
-                        password: $2y$10$a4JBhdbobg8uKZ7Rx.T3HO7Nuc.SF8OJIdHUU5xQlRS3Utl1L5fvy
-                        phone: '+096957755'
-                        Profile_image: null
-                      -
-                        user_name: 'nour mansour'
-                        email: mansournour057@gmail.com
-                        password: $2y$10$pMjiHI1JAFNMLrf15MRQGeuZKdi6unOF4x2H0t..gvyCo/LDWMUV6
-                        phone: '+096957755'
-                        Profile_image: null
-                      -
-                        user_name: 'nour mansour'
-                        email: braamansour3@gmail.com
-                        password: $2y$10$wTJbRqKDj8IYU4ekEz/lQ.3dXZ5oiu8CNuvncDUALCggmL2NnHbvW
-                        phone: '+096957755'
+                        Full_name: null
+                        email: sami@gmail.com
+                        password: $2y$10$ajUwoisbae5QFqVZWubyQOaiiB42ZO7CTJVFXTMlhDkF1ODFoZRE6
+                        phone: +963-0977437096
                         Profile_image: null
                     items:
                       type: object
                       properties:
-                        user_name:
+                        Full_name:
                           type: string
-                          example: 'Admain admian'
+                          example: null
                         email:
                           type: string
                           example: admin@admin.com
@@ -995,7 +957,7 @@ paths:
                 type: object
                 example:
                   data:
-                    user_name: 'Admain admian'
+                    Full_name: null
                     email: admin@admin.com
                     password: 111aaa
                     phone: '0977584398'
@@ -1004,9 +966,9 @@ paths:
                   data:
                     type: object
                     properties:
-                      user_name:
+                      Full_name:
                         type: string
-                        example: 'Admain admian'
+                        example: null
                       email:
                         type: string
                         example: admin@admin.com
@@ -1051,8 +1013,8 @@ paths:
           type: integer
   /api/currency:
     get:
-      summary: 'Display a listing of the resource.'
-      operationId: displayAListingOfTheResource
+      summary: 'Search about Currency'
+      operationId: searchAboutCurrency
       description: ''
       parameters: []
       responses:
@@ -1061,489 +1023,35 @@ paths:
           content:
             application/json:
               schema:
-                type: object
+                type: array
+                items:
+                  type: object
                 example:
-                  data:
-                    -
-                      logo: '0'
-                      Currency_name: quis
-                      Abbrevation: enim
-                    -
-                      logo: '0'
-                      Currency_name: aut
-                      Abbrevation: non
-                    -
-                      logo: '0'
-                      Currency_name: eligendi
-                      Abbrevation: qui
-                    -
-                      logo: '0'
-                      Currency_name: qui
-                      Abbrevation: dolor
-                    -
-                      logo: '0'
-                      Currency_name: id
-                      Abbrevation: blanditiis
-                    -
-                      logo: '0'
-                      Currency_name: omnis
-                      Abbrevation: nihil
-                    -
-                      logo: '0'
-                      Currency_name: debitis
-                      Abbrevation: totam
-                    -
-                      logo: '0'
-                      Currency_name: a
-                      Abbrevation: ullam
-                    -
-                      logo: '0'
-                      Currency_name: nihil
-                      Abbrevation: soluta
-                    -
-                      logo: '0'
-                      Currency_name: vel
-                      Abbrevation: sapiente
-                    -
-                      logo: '0'
-                      Currency_name: sit
-                      Abbrevation: deleniti
-                    -
-                      logo: '0'
-                      Currency_name: itaque
-                      Abbrevation: nobis
-                    -
-                      logo: '0'
-                      Currency_name: ut
-                      Abbrevation: aut
-                    -
-                      logo: '0'
-                      Currency_name: quia
-                      Abbrevation: consectetur
-                    -
-                      logo: '0'
-                      Currency_name: excepturi
-                      Abbrevation: vel
-                    -
-                      logo: '0'
-                      Currency_name: dignissimos
-                      Abbrevation: impedit
-                    -
-                      logo: '0'
-                      Currency_name: voluptatum
-                      Abbrevation: ut
-                    -
-                      logo: '0'
-                      Currency_name: sit
-                      Abbrevation: dolor
-                    -
-                      logo: '0'
-                      Currency_name: natus
-                      Abbrevation: dolorem
-                    -
-                      logo: '0'
-                      Currency_name: iusto
-                      Abbrevation: beatae
-                    -
-                      logo: '0'
-                      Currency_name: et
-                      Abbrevation: qui
-                    -
-                      logo: '0'
-                      Currency_name: exercitationem
-                      Abbrevation: dolore
-                    -
-                      logo: '0'
-                      Currency_name: molestiae
-                      Abbrevation: veniam
-                    -
-                      logo: '0'
-                      Currency_name: ad
-                      Abbrevation: dicta
-                    -
-                      logo: '0'
-                      Currency_name: ipsum
-                      Abbrevation: provident
-                    -
-                      logo: '0'
-                      Currency_name: et
-                      Abbrevation: consequuntur
-                    -
-                      logo: '0'
-                      Currency_name: nihil
-                      Abbrevation: cum
-                    -
-                      logo: '0'
-                      Currency_name: similique
-                      Abbrevation: nihil
-                    -
-                      logo: '0'
-                      Currency_name: nostrum
-                      Abbrevation: similique
-                    -
-                      logo: '0'
-                      Currency_name: placeat
-                      Abbrevation: illum
-                    -
-                      logo: '0'
-                      Currency_name: saepe
-                      Abbrevation: aperiam
-                    -
-                      logo: '0'
-                      Currency_name: perspiciatis
-                      Abbrevation: laudantium
-                    -
-                      logo: '0'
-                      Currency_name: quia
-                      Abbrevation: labore
-                    -
-                      logo: '0'
-                      Currency_name: officia
-                      Abbrevation: molestiae
-                    -
-                      logo: '0'
-                      Currency_name: cum
-                      Abbrevation: omnis
-                    -
-                      logo: '0'
-                      Currency_name: voluptatem
-                      Abbrevation: non
-                    -
-                      logo: '0'
-                      Currency_name: vel
-                      Abbrevation: minus
-                    -
-                      logo: '0'
-                      Currency_name: aut
-                      Abbrevation: labore
-                    -
-                      logo: '0'
-                      Currency_name: tempore
-                      Abbrevation: quaerat
-                    -
-                      logo: '0'
-                      Currency_name: provident
-                      Abbrevation: doloribus
-                    -
-                      logo: '0'
-                      Currency_name: sit
-                      Abbrevation: error
-                    -
-                      logo: '0'
-                      Currency_name: est
-                      Abbrevation: reiciendis
-                    -
-                      logo: '0'
-                      Currency_name: et
-                      Abbrevation: corrupti
-                    -
-                      logo: '0'
-                      Currency_name: explicabo
-                      Abbrevation: reiciendis
-                    -
-                      logo: '0'
-                      Currency_name: eaque
-                      Abbrevation: quibusdam
-                    -
-                      logo: '0'
-                      Currency_name: ea
-                      Abbrevation: omnis
-                    -
-                      logo: '0'
-                      Currency_name: quibusdam
-                      Abbrevation: molestiae
-                    -
-                      logo: '0'
-                      Currency_name: assumenda
-                      Abbrevation: voluptatem
-                    -
-                      logo: '0'
-                      Currency_name: eligendi
-                      Abbrevation: animi
-                    -
-                      logo: '0'
-                      Currency_name: quis
-                      Abbrevation: nesciunt
-                    -
-                      logo: '0'
-                      Currency_name: ea
-                      Abbrevation: est
-                    -
-                      logo: '0'
-                      Currency_name: cum
-                      Abbrevation: officiis
-                    -
-                      logo: '0'
-                      Currency_name: ipsa
-                      Abbrevation: non
-                    -
-                      logo: '0'
-                      Currency_name: vero
-                      Abbrevation: corporis
-                    -
-                      logo: '0'
-                      Currency_name: totam
-                      Abbrevation: voluptates
-                    -
-                      logo: bitcoin-cryptocurrency-pile-close-up-1080x1620
-                      Currency_name: Bitcoin
-                      Abbrevation: BTC
-                    -
-                      logo: bitcoin-cryptocurrency-pile-close-up-1080x1620
-                      Currency_name: USDT
-                      Abbrevation: USDT
-                    -
-                      logo: bitcoin-cryptocurrency-pile-close-up-1080x1620
-                      Currency_name: Etherum
-                      Abbrevation: ETH
-                properties:
-                  data:
-                    type: array
-                    example:
-                      -
-                        logo: '0'
-                        Currency_name: quis
-                        Abbrevation: enim
-                      -
-                        logo: '0'
-                        Currency_name: aut
-                        Abbrevation: non
-                      -
-                        logo: '0'
-                        Currency_name: eligendi
-                        Abbrevation: qui
-                      -
-                        logo: '0'
-                        Currency_name: qui
-                        Abbrevation: dolor
-                      -
-                        logo: '0'
-                        Currency_name: id
-                        Abbrevation: blanditiis
-                      -
-                        logo: '0'
-                        Currency_name: omnis
-                        Abbrevation: nihil
-                      -
-                        logo: '0'
-                        Currency_name: debitis
-                        Abbrevation: totam
-                      -
-                        logo: '0'
-                        Currency_name: a
-                        Abbrevation: ullam
-                      -
-                        logo: '0'
-                        Currency_name: nihil
-                        Abbrevation: soluta
-                      -
-                        logo: '0'
-                        Currency_name: vel
-                        Abbrevation: sapiente
-                      -
-                        logo: '0'
-                        Currency_name: sit
-                        Abbrevation: deleniti
-                      -
-                        logo: '0'
-                        Currency_name: itaque
-                        Abbrevation: nobis
-                      -
-                        logo: '0'
-                        Currency_name: ut
-                        Abbrevation: aut
-                      -
-                        logo: '0'
-                        Currency_name: quia
-                        Abbrevation: consectetur
-                      -
-                        logo: '0'
-                        Currency_name: excepturi
-                        Abbrevation: vel
-                      -
-                        logo: '0'
-                        Currency_name: dignissimos
-                        Abbrevation: impedit
-                      -
-                        logo: '0'
-                        Currency_name: voluptatum
-                        Abbrevation: ut
-                      -
-                        logo: '0'
-                        Currency_name: sit
-                        Abbrevation: dolor
-                      -
-                        logo: '0'
-                        Currency_name: natus
-                        Abbrevation: dolorem
-                      -
-                        logo: '0'
-                        Currency_name: iusto
-                        Abbrevation: beatae
-                      -
-                        logo: '0'
-                        Currency_name: et
-                        Abbrevation: qui
-                      -
-                        logo: '0'
-                        Currency_name: exercitationem
-                        Abbrevation: dolore
-                      -
-                        logo: '0'
-                        Currency_name: molestiae
-                        Abbrevation: veniam
-                      -
-                        logo: '0'
-                        Currency_name: ad
-                        Abbrevation: dicta
-                      -
-                        logo: '0'
-                        Currency_name: ipsum
-                        Abbrevation: provident
-                      -
-                        logo: '0'
-                        Currency_name: et
-                        Abbrevation: consequuntur
-                      -
-                        logo: '0'
-                        Currency_name: nihil
-                        Abbrevation: cum
-                      -
-                        logo: '0'
-                        Currency_name: similique
-                        Abbrevation: nihil
-                      -
-                        logo: '0'
-                        Currency_name: nostrum
-                        Abbrevation: similique
-                      -
-                        logo: '0'
-                        Currency_name: placeat
-                        Abbrevation: illum
-                      -
-                        logo: '0'
-                        Currency_name: saepe
-                        Abbrevation: aperiam
-                      -
-                        logo: '0'
-                        Currency_name: perspiciatis
-                        Abbrevation: laudantium
-                      -
-                        logo: '0'
-                        Currency_name: quia
-                        Abbrevation: labore
-                      -
-                        logo: '0'
-                        Currency_name: officia
-                        Abbrevation: molestiae
-                      -
-                        logo: '0'
-                        Currency_name: cum
-                        Abbrevation: omnis
-                      -
-                        logo: '0'
-                        Currency_name: voluptatem
-                        Abbrevation: non
-                      -
-                        logo: '0'
-                        Currency_name: vel
-                        Abbrevation: minus
-                      -
-                        logo: '0'
-                        Currency_name: aut
-                        Abbrevation: labore
-                      -
-                        logo: '0'
-                        Currency_name: tempore
-                        Abbrevation: quaerat
-                      -
-                        logo: '0'
-                        Currency_name: provident
-                        Abbrevation: doloribus
-                      -
-                        logo: '0'
-                        Currency_name: sit
-                        Abbrevation: error
-                      -
-                        logo: '0'
-                        Currency_name: est
-                        Abbrevation: reiciendis
-                      -
-                        logo: '0'
-                        Currency_name: et
-                        Abbrevation: corrupti
-                      -
-                        logo: '0'
-                        Currency_name: explicabo
-                        Abbrevation: reiciendis
-                      -
-                        logo: '0'
-                        Currency_name: eaque
-                        Abbrevation: quibusdam
-                      -
-                        logo: '0'
-                        Currency_name: ea
-                        Abbrevation: omnis
-                      -
-                        logo: '0'
-                        Currency_name: quibusdam
-                        Abbrevation: molestiae
-                      -
-                        logo: '0'
-                        Currency_name: assumenda
-                        Abbrevation: voluptatem
-                      -
-                        logo: '0'
-                        Currency_name: eligendi
-                        Abbrevation: animi
-                      -
-                        logo: '0'
-                        Currency_name: quis
-                        Abbrevation: nesciunt
-                      -
-                        logo: '0'
-                        Currency_name: ea
-                        Abbrevation: est
-                      -
-                        logo: '0'
-                        Currency_name: cum
-                        Abbrevation: officiis
-                      -
-                        logo: '0'
-                        Currency_name: ipsa
-                        Abbrevation: non
-                      -
-                        logo: '0'
-                        Currency_name: vero
-                        Abbrevation: corporis
-                      -
-                        logo: '0'
-                        Currency_name: totam
-                        Abbrevation: voluptates
-                      -
-                        logo: bitcoin-cryptocurrency-pile-close-up-1080x1620
-                        Currency_name: Bitcoin
-                        Abbrevation: BTC
-                      -
-                        logo: bitcoin-cryptocurrency-pile-close-up-1080x1620
-                        Currency_name: USDT
-                        Abbrevation: USDT
-                      -
-                        logo: bitcoin-cryptocurrency-pile-close-up-1080x1620
-                        Currency_name: Etherum
-                        Abbrevation: ETH
-                    items:
-                      type: object
-                      properties:
-                        logo:
-                          type: string
-                          example: '0'
-                        Currency_name:
-                          type: string
-                          example: quis
-                        Abbrevation:
-                          type: string
-                          example: enim
+                  -
+                    Abbrevation: id
+                    today_price: 6150115735
+                    percentage: a
+                    Date_Time: '1994-04-26'
+                  -
+                    Abbrevation: aliquam
+                    today_price: 265330649
+                    percentage: rerum
+                    Date_Time: '1979-04-17'
+                  -
+                    Abbrevation: quod
+                    today_price: 8906319922
+                    percentage: esse
+                    Date_Time: '1982-03-31'
+                  -
+                    Abbrevation: ut
+                    today_price: 3123070538
+                    percentage: sint
+                    Date_Time: '1983-09-06'
+                  -
+                    Abbrevation: consequuntur
+                    today_price: 7933125112
+                    percentage: illo
+                    Date_Time: '2014-11-19'
       tags:
         - Endpoints
       security: []
@@ -1565,15 +1073,15 @@ paths:
                 logo:
                   type: string
                   description: ''
-                  example: iure
+                  example: rem
                 Currency_name:
                   type: string
                   description: ''
-                  example: porro
+                  example: qui
                 Abbrevation:
                   type: string
                   description: ''
-                  example: maxime
+                  example: modi
               required:
                 - logo
                 - Currency_name
@@ -1594,22 +1102,22 @@ paths:
                 type: object
                 example:
                   data:
-                    logo: '0'
-                    Currency_name: quis
-                    Abbrevation: enim
+                    logo: 'C:\Users\LENOVO\AppData\Local\Temp\e7c4c09ec1b289a47429a16165d72bf8.png'
+                    Currency_name: fugit
+                    Abbrevation: necessitatibus
                 properties:
                   data:
                     type: object
                     properties:
                       logo:
                         type: string
-                        example: '0'
+                        example: 'C:\Users\LENOVO\AppData\Local\Temp\e7c4c09ec1b289a47429a16165d72bf8.png'
                       Currency_name:
                         type: string
-                        example: quis
+                        example: fugit
                       Abbrevation:
                         type: string
-                        example: enim
+                        example: necessitatibus
       tags:
         - Endpoints
       security: []
@@ -1656,84 +1164,74 @@ paths:
                 example:
                   data:
                     -
-                      today_price: 7921347169
-                      yesterday_price: 5733025523
-                      percentage: enim
-                      Date_Time: '1987-09-14'
+                      today_price: 6150115735
+                      yesterday_price: 8213292452
+                      percentage: a
+                      Date_Time: '1994-04-26'
                     -
-                      today_price: 2771344614
-                      yesterday_price: 2179833307
-                      percentage: repellendus
-                      Date_Time: '1996-09-14'
+                      today_price: 265330649
+                      yesterday_price: 7415997133
+                      percentage: rerum
+                      Date_Time: '1979-04-17'
                     -
-                      today_price: 7676133460
-                      yesterday_price: 3162415280
-                      percentage: maxime
-                      Date_Time: '2018-12-15'
+                      today_price: 8906319922
+                      yesterday_price: 2283692733
+                      percentage: esse
+                      Date_Time: '1982-03-31'
                     -
-                      today_price: 7629975698
-                      yesterday_price: 3431851833
-                      percentage: repellat
-                      Date_Time: '2021-10-18'
+                      today_price: 3123070538
+                      yesterday_price: 1934143748
+                      percentage: sint
+                      Date_Time: '1983-09-06'
                     -
-                      today_price: 1345820004
-                      yesterday_price: 7334743005
-                      percentage: reprehenderit
-                      Date_Time: '1992-05-10'
-                    -
-                      today_price: 300
-                      yesterday_price: 200
-                      percentage: '1.2'
-                      Date_Time: '2023-11-20'
+                      today_price: 7933125112
+                      yesterday_price: 5882298567
+                      percentage: illo
+                      Date_Time: '2014-11-19'
                 properties:
                   data:
                     type: array
                     example:
                       -
-                        today_price: 7921347169
-                        yesterday_price: 5733025523
-                        percentage: enim
-                        Date_Time: '1987-09-14'
+                        today_price: 6150115735
+                        yesterday_price: 8213292452
+                        percentage: a
+                        Date_Time: '1994-04-26'
                       -
-                        today_price: 2771344614
-                        yesterday_price: 2179833307
-                        percentage: repellendus
-                        Date_Time: '1996-09-14'
+                        today_price: 265330649
+                        yesterday_price: 7415997133
+                        percentage: rerum
+                        Date_Time: '1979-04-17'
                       -
-                        today_price: 7676133460
-                        yesterday_price: 3162415280
-                        percentage: maxime
-                        Date_Time: '2018-12-15'
+                        today_price: 8906319922
+                        yesterday_price: 2283692733
+                        percentage: esse
+                        Date_Time: '1982-03-31'
                       -
-                        today_price: 7629975698
-                        yesterday_price: 3431851833
-                        percentage: repellat
-                        Date_Time: '2021-10-18'
+                        today_price: 3123070538
+                        yesterday_price: 1934143748
+                        percentage: sint
+                        Date_Time: '1983-09-06'
                       -
-                        today_price: 1345820004
-                        yesterday_price: 7334743005
-                        percentage: reprehenderit
-                        Date_Time: '1992-05-10'
-                      -
-                        today_price: 300
-                        yesterday_price: 200
-                        percentage: '1.2'
-                        Date_Time: '2023-11-20'
+                        today_price: 7933125112
+                        yesterday_price: 5882298567
+                        percentage: illo
+                        Date_Time: '2014-11-19'
                     items:
                       type: object
                       properties:
                         today_price:
                           type: integer
-                          example: 7921347169
+                          example: 6150115735
                         yesterday_price:
                           type: integer
-                          example: 5733025523
+                          example: 8213292452
                         percentage:
                           type: string
-                          example: enim
+                          example: a
                         Date_Time:
                           type: string
-                          example: '1987-09-14'
+                          example: '1994-04-26'
       tags:
         - Endpoints
       security: []
@@ -1755,23 +1253,23 @@ paths:
                 today_price:
                   type: string
                   description: ''
-                  example: consequuntur
+                  example: aperiam
                 percentage:
                   type: string
                   description: ''
-                  example: veniam
+                  example: enim
                 yesterday_price:
                   type: string
                   description: ''
-                  example: facere
+                  example: occaecati
                 Date_Time:
                   type: string
                   description: ''
-                  example: corrupti
+                  example: unde
                 currency_id:
                   type: string
                   description: ''
-                  example: amet
+                  example: consequuntur
               required:
                 - today_price
                 - percentage
@@ -1794,42 +1292,42 @@ paths:
                 type: object
                 example:
                   data:
-                    today_price: 7921347169
-                    yesterday_price: 5733025523
-                    percentage: enim
-                    Date_Time: '1987-09-14'
+                    today_price: 6150115735
+                    yesterday_price: 8213292452
+                    percentage: a
+                    Date_Time: '1994-04-26'
                     currency_id:
-                      logo: '0'
-                      Currency_name: dignissimos
-                      Abbrevation: impedit
+                      logo: 'C:\Users\LENOVO\AppData\Local\Temp\ec02bcbe625092dc76c2ad52219b36bd.png'
+                      Currency_name: fugit
+                      Abbrevation: id
                 properties:
                   data:
                     type: object
                     properties:
                       today_price:
                         type: integer
-                        example: 7921347169
+                        example: 6150115735
                       yesterday_price:
                         type: integer
-                        example: 5733025523
+                        example: 8213292452
                       percentage:
                         type: string
-                        example: enim
+                        example: a
                       Date_Time:
                         type: string
-                        example: '1987-09-14'
+                        example: '1994-04-26'
                       currency_id:
                         type: object
                         properties:
                           logo:
                             type: string
-                            example: '0'
+                            example: 'C:\Users\LENOVO\AppData\Local\Temp\ec02bcbe625092dc76c2ad52219b36bd.png'
                           Currency_name:
                             type: string
-                            example: dignissimos
+                            example: fugit
                           Abbrevation:
                             type: string
-                            example: impedit
+                            example: id
       tags:
         - Endpoints
       security: []
@@ -1876,97 +1374,113 @@ paths:
                 example:
                   data:
                     -
-                      Card_number: -4231
-                      Holder_Name: et
-                      Cvc: -2798
-                      Card_image: '0'
-                      Expire_Date: '1979-03-19T00:00:00.000000Z'
+                      Card_number: 3550
+                      Holder_Name: sit
+                      Cvc: 1791
+                      Card_image: 'C:\Users\LENOVO\AppData\Local\Temp\d440d7f54079bccc88b56b2d742d2b62.png'
+                      Expire_Date: '2017-02-15T00:00:00.000000Z'
                       Wallet_id:
-                        Quantity: 5085415823
+                        Quantity: 9763553672
                     -
-                      Card_number: 2678
-                      Holder_Name: vitae
-                      Cvc: -1721
-                      Card_image: '0'
-                      Expire_Date: '1978-08-08T00:00:00.000000Z'
+                      Card_number: -3844
+                      Holder_Name: perferendis
+                      Cvc: -9734
+                      Card_image: 'C:\Users\LENOVO\AppData\Local\Temp\d2b1c07239feaf9a1f2d6d0272bb07de.png'
+                      Expire_Date: '2019-11-21T00:00:00.000000Z'
                       Wallet_id:
-                        Quantity: 5064800085
+                        Quantity: 6696881510
                     -
-                      Card_number: 8095
-                      Holder_Name: magnam
-                      Cvc: -5318
-                      Card_image: '0'
-                      Expire_Date: '1995-07-24T00:00:00.000000Z'
+                      Card_number: -1704
+                      Holder_Name: consequatur
+                      Cvc: 7590
+                      Card_image: 'C:\Users\LENOVO\AppData\Local\Temp\cbb19fba50a619264fe51f2f2841d22a.png'
+                      Expire_Date: '1999-01-16T00:00:00.000000Z'
                       Wallet_id:
-                        Quantity: 8584212287
+                        Quantity: 7870099813
                     -
-                      Card_number: -4585
-                      Holder_Name: quo
-                      Cvc: 5078
-                      Card_image: '0'
-                      Expire_Date: '2000-02-28T00:00:00.000000Z'
+                      Card_number: -6341
+                      Holder_Name: eum
+                      Cvc: -8504
+                      Card_image: 'C:\Users\LENOVO\AppData\Local\Temp\1213843db7d4b51d029b39b64b0efd86.png'
+                      Expire_Date: '1991-12-25T00:00:00.000000Z'
                       Wallet_id:
-                        Quantity: 1697258223
+                        Quantity: 3234481179
+                    -
+                      Card_number: 4357
+                      Holder_Name: ut
+                      Cvc: 256
+                      Card_image: 'C:\Users\LENOVO\AppData\Local\Temp\b65d3d2947018cc332e5bdf94af360aa.png'
+                      Expire_Date: '2001-07-28T00:00:00.000000Z'
+                      Wallet_id:
+                        Quantity: 9460954306
                 properties:
                   data:
                     type: array
                     example:
                       -
-                        Card_number: -4231
-                        Holder_Name: et
-                        Cvc: -2798
-                        Card_image: '0'
-                        Expire_Date: '1979-03-19T00:00:00.000000Z'
+                        Card_number: 3550
+                        Holder_Name: sit
+                        Cvc: 1791
+                        Card_image: 'C:\Users\LENOVO\AppData\Local\Temp\d440d7f54079bccc88b56b2d742d2b62.png'
+                        Expire_Date: '2017-02-15T00:00:00.000000Z'
                         Wallet_id:
-                          Quantity: 5085415823
+                          Quantity: 9763553672
                       -
-                        Card_number: 2678
-                        Holder_Name: vitae
-                        Cvc: -1721
-                        Card_image: '0'
-                        Expire_Date: '1978-08-08T00:00:00.000000Z'
+                        Card_number: -3844
+                        Holder_Name: perferendis
+                        Cvc: -9734
+                        Card_image: 'C:\Users\LENOVO\AppData\Local\Temp\d2b1c07239feaf9a1f2d6d0272bb07de.png'
+                        Expire_Date: '2019-11-21T00:00:00.000000Z'
                         Wallet_id:
-                          Quantity: 5064800085
+                          Quantity: 6696881510
                       -
-                        Card_number: 8095
-                        Holder_Name: magnam
-                        Cvc: -5318
-                        Card_image: '0'
-                        Expire_Date: '1995-07-24T00:00:00.000000Z'
+                        Card_number: -1704
+                        Holder_Name: consequatur
+                        Cvc: 7590
+                        Card_image: 'C:\Users\LENOVO\AppData\Local\Temp\cbb19fba50a619264fe51f2f2841d22a.png'
+                        Expire_Date: '1999-01-16T00:00:00.000000Z'
                         Wallet_id:
-                          Quantity: 8584212287
+                          Quantity: 7870099813
                       -
-                        Card_number: -4585
-                        Holder_Name: quo
-                        Cvc: 5078
-                        Card_image: '0'
-                        Expire_Date: '2000-02-28T00:00:00.000000Z'
+                        Card_number: -6341
+                        Holder_Name: eum
+                        Cvc: -8504
+                        Card_image: 'C:\Users\LENOVO\AppData\Local\Temp\1213843db7d4b51d029b39b64b0efd86.png'
+                        Expire_Date: '1991-12-25T00:00:00.000000Z'
                         Wallet_id:
-                          Quantity: 1697258223
+                          Quantity: 3234481179
+                      -
+                        Card_number: 4357
+                        Holder_Name: ut
+                        Cvc: 256
+                        Card_image: 'C:\Users\LENOVO\AppData\Local\Temp\b65d3d2947018cc332e5bdf94af360aa.png'
+                        Expire_Date: '2001-07-28T00:00:00.000000Z'
+                        Wallet_id:
+                          Quantity: 9460954306
                     items:
                       type: object
                       properties:
                         Card_number:
                           type: integer
-                          example: -4231
+                          example: 3550
                         Holder_Name:
                           type: string
-                          example: et
+                          example: sit
                         Cvc:
                           type: integer
-                          example: -2798
+                          example: 1791
                         Card_image:
                           type: string
-                          example: '0'
+                          example: 'C:\Users\LENOVO\AppData\Local\Temp\d440d7f54079bccc88b56b2d742d2b62.png'
                         Expire_Date:
                           type: string
-                          example: '1979-03-19T00:00:00.000000Z'
+                          example: '2017-02-15T00:00:00.000000Z'
                         Wallet_id:
                           type: object
                           properties:
                             Quantity:
                               type: integer
-                              example: 5085415823
+                              example: 9763553672
       tags:
         - Endpoints
       security: []
@@ -1988,27 +1502,27 @@ paths:
                 Card_image:
                   type: string
                   description: ''
-                  example: culpa
+                  example: sint
                 Card_number:
                   type: string
                   description: ''
-                  example: ullam
+                  example: fuga
                 Holder_Name:
                   type: string
                   description: ''
-                  example: quae
+                  example: quas
                 Cvc:
                   type: string
                   description: ''
-                  example: enim
+                  example: quia
                 Expire_Date:
                   type: string
                   description: ''
-                  example: quo
+                  example: atque
                 Wallet_id:
                   type: integer
                   description: ''
-                  example: 4
+                  example: 17
               required:
                 - Card_image
                 - Card_number
@@ -2032,30 +1546,30 @@ paths:
                 type: object
                 example:
                   data:
-                    Card_number: -4231
-                    Holder_Name: et
-                    Cvc: -2798
-                    Card_image: '0'
-                    Expire_Date: '1979-03-19T00:00:00.000000Z'
+                    Card_number: 3550
+                    Holder_Name: sit
+                    Cvc: 1791
+                    Card_image: 'C:\Users\LENOVO\AppData\Local\Temp\d440d7f54079bccc88b56b2d742d2b62.png'
+                    Expire_Date: '2017-02-15T00:00:00.000000Z'
                 properties:
                   data:
                     type: object
                     properties:
                       Card_number:
                         type: integer
-                        example: -4231
+                        example: 3550
                       Holder_Name:
                         type: string
-                        example: et
+                        example: sit
                       Cvc:
                         type: integer
-                        example: -2798
+                        example: 1791
                       Card_image:
                         type: string
-                        example: '0'
+                        example: 'C:\Users\LENOVO\AppData\Local\Temp\d440d7f54079bccc88b56b2d742d2b62.png'
                       Expire_Date:
                         type: string
-                        example: '1979-03-19T00:00:00.000000Z'
+                        example: '2017-02-15T00:00:00.000000Z'
       tags:
         - Endpoints
       security: []
@@ -2103,64 +1617,50 @@ paths:
                   data:
                     -
                       currency_id:
-                        logo: '0'
-                        Currency_name: quis
-                        Abbrevation: enim
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\e7c4c09ec1b289a47429a16165d72bf8.png'
+                        Currency_name: fugit
+                        Abbrevation: necessitatibus
                       email: user133@gmail.com
                       quantity: 112.399
                     -
                       currency_id:
-                        logo: '0'
-                        Currency_name: eligendi
-                        Abbrevation: qui
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\acf7982597560fe52c01dd6aefcc78c9.png'
+                        Currency_name: quasi
+                        Abbrevation: officia
                       email: user453@gmail.com
                       quantity: 123.455
                     -
                       currency_id:
-                        logo: '0'
-                        Currency_name: qui
-                        Abbrevation: dolor
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\bd3ad7d9fd1cc150e62cf449b95c8ba0.png'
+                        Currency_name: illo
+                        Abbrevation: facilis
                       email: user443@gmail.com
                       quantity: 345.67
-                    -
-                      currency_id:
-                        logo: '0'
-                        Currency_name: eligendi
-                        Abbrevation: qui
-                      email: waled44@gmail.com
-                      quantity: 10
                 properties:
                   data:
                     type: array
                     example:
                       -
                         currency_id:
-                          logo: '0'
-                          Currency_name: quis
-                          Abbrevation: enim
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\e7c4c09ec1b289a47429a16165d72bf8.png'
+                          Currency_name: fugit
+                          Abbrevation: necessitatibus
                         email: user133@gmail.com
                         quantity: 112.399
                       -
                         currency_id:
-                          logo: '0'
-                          Currency_name: eligendi
-                          Abbrevation: qui
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\acf7982597560fe52c01dd6aefcc78c9.png'
+                          Currency_name: quasi
+                          Abbrevation: officia
                         email: user453@gmail.com
                         quantity: 123.455
                       -
                         currency_id:
-                          logo: '0'
-                          Currency_name: qui
-                          Abbrevation: dolor
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\bd3ad7d9fd1cc150e62cf449b95c8ba0.png'
+                          Currency_name: illo
+                          Abbrevation: facilis
                         email: user443@gmail.com
                         quantity: 345.67
-                      -
-                        currency_id:
-                          logo: '0'
-                          Currency_name: eligendi
-                          Abbrevation: qui
-                        email: waled44@gmail.com
-                        quantity: 10
                     items:
                       type: object
                       properties:
@@ -2169,13 +1669,13 @@ paths:
                           properties:
                             logo:
                               type: string
-                              example: '0'
+                              example: 'C:\Users\LENOVO\AppData\Local\Temp\e7c4c09ec1b289a47429a16165d72bf8.png'
                             Currency_name:
                               type: string
-                              example: quis
+                              example: fugit
                             Abbrevation:
                               type: string
-                              example: enim
+                              example: necessitatibus
                         email:
                           type: string
                           example: user133@gmail.com
@@ -2203,19 +1703,19 @@ paths:
                 account_number:
                   type: string
                   description: ''
-                  example: laboriosam
+                  example: sint
                 currency_id:
                   type: string
                   description: ''
-                  example: aut
+                  example: provident
                 email:
                   type: string
                   description: ''
-                  example: molestiae
+                  example: magni
                 quantity:
                   type: string
                   description: ''
-                  example: sequi
+                  example: quia
               required:
                 - account_number
                 - currency_id
@@ -2238,9 +1738,9 @@ paths:
                 example:
                   data:
                     currency_id:
-                      logo: '0'
-                      Currency_name: quis
-                      Abbrevation: enim
+                      logo: 'C:\Users\LENOVO\AppData\Local\Temp\e7c4c09ec1b289a47429a16165d72bf8.png'
+                      Currency_name: fugit
+                      Abbrevation: necessitatibus
                     email: user133@gmail.com
                     quantity: 112.399
                 properties:
@@ -2252,13 +1752,13 @@ paths:
                         properties:
                           logo:
                             type: string
-                            example: '0'
+                            example: 'C:\Users\LENOVO\AppData\Local\Temp\e7c4c09ec1b289a47429a16165d72bf8.png'
                           Currency_name:
                             type: string
-                            example: quis
+                            example: fugit
                           Abbrevation:
                             type: string
-                            example: enim
+                            example: necessitatibus
                       email:
                         type: string
                         example: user133@gmail.com
@@ -2311,219 +1811,207 @@ paths:
                 example:
                   data:
                     -
-                      Quantity: 8736590411
+                      Quantity: 4168043241
                       currency_id:
-                        logo: '0'
-                        Currency_name: omnis
-                        Abbrevation: nihil
-                    -
-                      Quantity: 5378403749
-                      currency_id:
-                        logo: '0'
-                        Currency_name: debitis
-                        Abbrevation: totam
-                    -
-                      Quantity: 84309531
-                      currency_id:
-                        logo: '0'
-                        Currency_name: a
-                        Abbrevation: ullam
-                    -
-                      Quantity: 7625544065
-                      currency_id:
-                        logo: '0'
-                        Currency_name: nihil
-                        Abbrevation: soluta
-                    -
-                      Quantity: 4021070638
-                      currency_id:
-                        logo: '0'
-                        Currency_name: vel
-                        Abbrevation: sapiente
-                    -
-                      Quantity: 5085415823
-                      currency_id:
-                        logo: '0'
-                        Currency_name: sit
-                        Abbrevation: deleniti
-                    -
-                      Quantity: 5064800085
-                      currency_id:
-                        logo: '0'
-                        Currency_name: itaque
-                        Abbrevation: nobis
-                    -
-                      Quantity: 8584212287
-                      currency_id:
-                        logo: '0'
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\ac66098f26a57fa32d90fcb7df27eda9.png'
                         Currency_name: ut
-                        Abbrevation: aut
+                        Abbrevation: nisi
                     -
-                      Quantity: 4658911467
+                      Quantity: 5462670580
                       currency_id:
-                        logo: '0'
-                        Currency_name: quia
-                        Abbrevation: consectetur
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\d96f149b9bffac0f188e54a50390a98e.png'
+                        Currency_name: inventore
+                        Abbrevation: molestiae
                     -
-                      Quantity: 1697258223
+                      Quantity: 1392938751
                       currency_id:
-                        logo: '0'
-                        Currency_name: excepturi
-                        Abbrevation: vel
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\ebf69e281b8947244f99d7e3e9d379d5.png'
+                        Currency_name: cumque
+                        Abbrevation: enim
                     -
-                      Quantity: 5401316781
+                      Quantity: 1374233463
                       currency_id:
-                        logo: '0'
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\e3d93f5f8ed47088d90155accea37e0e.png'
+                        Currency_name: rerum
+                        Abbrevation: accusamus
+                    -
+                      Quantity: 6334303867
+                      currency_id:
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\e6def63dea1fab7f3f91e380b60825eb.png'
+                        Currency_name: molestiae
+                        Abbrevation: eos
+                    -
+                      Quantity: 9763553672
+                      currency_id:
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\48f255f495b4298c6033967c131ce77c.png'
                         Currency_name: et
-                        Abbrevation: corrupti
+                        Abbrevation: magni
                     -
-                      Quantity: 4765537574
+                      Quantity: 6696881510
                       currency_id:
-                        logo: '0'
-                        Currency_name: ea
-                        Abbrevation: omnis
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\f010d493e55060de98b72302df2948e0.png'
+                        Currency_name: quidem
+                        Abbrevation: rerum
                     -
-                      Quantity: 9009942458
+                      Quantity: 7870099813
                       currency_id:
-                        logo: '0'
-                        Currency_name: eligendi
-                        Abbrevation: animi
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\1c11c88eb251fa56b10c5f6ef14294d1.png'
+                        Currency_name: quas
+                        Abbrevation: esse
                     -
-                      Quantity: 4908700736
+                      Quantity: 3234481179
                       currency_id:
-                        logo: '0'
-                        Currency_name: cum
-                        Abbrevation: officiis
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\2c3a606b58332ff5674d3f51a2b3093d.png'
+                        Currency_name: molestias
+                        Abbrevation: non
                     -
-                      Quantity: 1173619726
+                      Quantity: 9460954306
                       currency_id:
-                        logo: '0'
-                        Currency_name: totam
-                        Abbrevation: voluptates
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\f846921d59a3e9ab296f6687705a6783.png'
+                        Currency_name: aut
+                        Abbrevation: at
                     -
-                      Quantity: 85
+                      Quantity: 8630128655
                       currency_id:
-                        logo: '0'
-                        Currency_name: qui
-                        Abbrevation: dolor
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\399a80f220e6a64d22810cf2a642acf3.png'
+                        Currency_name: voluptas
+                        Abbrevation: explicabo
+                    -
+                      Quantity: 7072455555
+                      currency_id:
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\b3a866dc6a8f056a22d6a3598fbed43b.png'
+                        Currency_name: dolores
+                        Abbrevation: reprehenderit
+                    -
+                      Quantity: 5739875173
+                      currency_id:
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\9cfc5e2d401d06ffb63ba5fe0ff37d3c.png'
+                        Currency_name: culpa
+                        Abbrevation: quam
+                    -
+                      Quantity: 232787402
+                      currency_id:
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\4bf8307f4271d7698c7751a7154df97f.png'
+                        Currency_name: eveniet
+                        Abbrevation: adipisci
+                    -
+                      Quantity: 5613553284
+                      currency_id:
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\99c0f57421eefe52c631442acd1e9690.png'
+                        Currency_name: quasi
+                        Abbrevation: et
                 properties:
                   data:
                     type: array
                     example:
                       -
-                        Quantity: 8736590411
+                        Quantity: 4168043241
                         currency_id:
-                          logo: '0'
-                          Currency_name: omnis
-                          Abbrevation: nihil
-                      -
-                        Quantity: 5378403749
-                        currency_id:
-                          logo: '0'
-                          Currency_name: debitis
-                          Abbrevation: totam
-                      -
-                        Quantity: 84309531
-                        currency_id:
-                          logo: '0'
-                          Currency_name: a
-                          Abbrevation: ullam
-                      -
-                        Quantity: 7625544065
-                        currency_id:
-                          logo: '0'
-                          Currency_name: nihil
-                          Abbrevation: soluta
-                      -
-                        Quantity: 4021070638
-                        currency_id:
-                          logo: '0'
-                          Currency_name: vel
-                          Abbrevation: sapiente
-                      -
-                        Quantity: 5085415823
-                        currency_id:
-                          logo: '0'
-                          Currency_name: sit
-                          Abbrevation: deleniti
-                      -
-                        Quantity: 5064800085
-                        currency_id:
-                          logo: '0'
-                          Currency_name: itaque
-                          Abbrevation: nobis
-                      -
-                        Quantity: 8584212287
-                        currency_id:
-                          logo: '0'
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\ac66098f26a57fa32d90fcb7df27eda9.png'
                           Currency_name: ut
-                          Abbrevation: aut
+                          Abbrevation: nisi
                       -
-                        Quantity: 4658911467
+                        Quantity: 5462670580
                         currency_id:
-                          logo: '0'
-                          Currency_name: quia
-                          Abbrevation: consectetur
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\d96f149b9bffac0f188e54a50390a98e.png'
+                          Currency_name: inventore
+                          Abbrevation: molestiae
                       -
-                        Quantity: 1697258223
+                        Quantity: 1392938751
                         currency_id:
-                          logo: '0'
-                          Currency_name: excepturi
-                          Abbrevation: vel
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\ebf69e281b8947244f99d7e3e9d379d5.png'
+                          Currency_name: cumque
+                          Abbrevation: enim
                       -
-                        Quantity: 5401316781
+                        Quantity: 1374233463
                         currency_id:
-                          logo: '0'
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\e3d93f5f8ed47088d90155accea37e0e.png'
+                          Currency_name: rerum
+                          Abbrevation: accusamus
+                      -
+                        Quantity: 6334303867
+                        currency_id:
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\e6def63dea1fab7f3f91e380b60825eb.png'
+                          Currency_name: molestiae
+                          Abbrevation: eos
+                      -
+                        Quantity: 9763553672
+                        currency_id:
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\48f255f495b4298c6033967c131ce77c.png'
                           Currency_name: et
-                          Abbrevation: corrupti
+                          Abbrevation: magni
                       -
-                        Quantity: 4765537574
+                        Quantity: 6696881510
                         currency_id:
-                          logo: '0'
-                          Currency_name: ea
-                          Abbrevation: omnis
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\f010d493e55060de98b72302df2948e0.png'
+                          Currency_name: quidem
+                          Abbrevation: rerum
                       -
-                        Quantity: 9009942458
+                        Quantity: 7870099813
                         currency_id:
-                          logo: '0'
-                          Currency_name: eligendi
-                          Abbrevation: animi
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\1c11c88eb251fa56b10c5f6ef14294d1.png'
+                          Currency_name: quas
+                          Abbrevation: esse
                       -
-                        Quantity: 4908700736
+                        Quantity: 3234481179
                         currency_id:
-                          logo: '0'
-                          Currency_name: cum
-                          Abbrevation: officiis
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\2c3a606b58332ff5674d3f51a2b3093d.png'
+                          Currency_name: molestias
+                          Abbrevation: non
                       -
-                        Quantity: 1173619726
+                        Quantity: 9460954306
                         currency_id:
-                          logo: '0'
-                          Currency_name: totam
-                          Abbrevation: voluptates
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\f846921d59a3e9ab296f6687705a6783.png'
+                          Currency_name: aut
+                          Abbrevation: at
                       -
-                        Quantity: 85
+                        Quantity: 8630128655
                         currency_id:
-                          logo: '0'
-                          Currency_name: qui
-                          Abbrevation: dolor
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\399a80f220e6a64d22810cf2a642acf3.png'
+                          Currency_name: voluptas
+                          Abbrevation: explicabo
+                      -
+                        Quantity: 7072455555
+                        currency_id:
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\b3a866dc6a8f056a22d6a3598fbed43b.png'
+                          Currency_name: dolores
+                          Abbrevation: reprehenderit
+                      -
+                        Quantity: 5739875173
+                        currency_id:
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\9cfc5e2d401d06ffb63ba5fe0ff37d3c.png'
+                          Currency_name: culpa
+                          Abbrevation: quam
+                      -
+                        Quantity: 232787402
+                        currency_id:
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\4bf8307f4271d7698c7751a7154df97f.png'
+                          Currency_name: eveniet
+                          Abbrevation: adipisci
+                      -
+                        Quantity: 5613553284
+                        currency_id:
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\99c0f57421eefe52c631442acd1e9690.png'
+                          Currency_name: quasi
+                          Abbrevation: et
                     items:
                       type: object
                       properties:
                         Quantity:
                           type: integer
-                          example: 8736590411
+                          example: 4168043241
                         currency_id:
                           type: object
                           properties:
                             logo:
                               type: string
-                              example: '0'
+                              example: 'C:\Users\LENOVO\AppData\Local\Temp\ac66098f26a57fa32d90fcb7df27eda9.png'
                             Currency_name:
                               type: string
-                              example: omnis
+                              example: ut
                             Abbrevation:
                               type: string
-                              example: nihil
+                              example: nisi
       tags:
         - Endpoints
       security: []
@@ -2545,15 +2033,15 @@ paths:
                 currency_id:
                   type: string
                   description: ''
-                  example: quia
+                  example: sed
                 Quantity:
                   type: string
                   description: ''
-                  example: aut
+                  example: pariatur
                 User_id:
                   type: string
                   description: ''
-                  example: optio
+                  example: sed
               required:
                 - currency_id
                 - Quantity
@@ -2574,30 +2062,30 @@ paths:
                 type: object
                 example:
                   data:
-                    Quantity: 8736590411
+                    Quantity: 4168043241
                     currency_id:
-                      logo: '0'
-                      Currency_name: omnis
-                      Abbrevation: nihil
+                      logo: 'C:\Users\LENOVO\AppData\Local\Temp\ac66098f26a57fa32d90fcb7df27eda9.png'
+                      Currency_name: ut
+                      Abbrevation: nisi
                 properties:
                   data:
                     type: object
                     properties:
                       Quantity:
                         type: integer
-                        example: 8736590411
+                        example: 4168043241
                       currency_id:
                         type: object
                         properties:
                           logo:
                             type: string
-                            example: '0'
+                            example: 'C:\Users\LENOVO\AppData\Local\Temp\ac66098f26a57fa32d90fcb7df27eda9.png'
                           Currency_name:
                             type: string
-                            example: omnis
+                            example: ut
                           Abbrevation:
                             type: string
-                            example: nihil
+                            example: nisi
       tags:
         - Endpoints
       security: []
@@ -2645,268 +2133,228 @@ paths:
                   data:
                     -
                       account_number:
-                        account_number: '573623800121'
+                        account_number: '631433100064'
                       currency_id_in:
-                        logo: '0'
-                        Currency_name: et
-                        Abbrevation: qui
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\c4acd663f30bda41501cb43bbbead20e.png'
+                        Abbrevation: expedita
                       currency_id_out:
-                        logo: '0'
-                        Currency_name: exercitationem
-                        Abbrevation: dolore
-                      price: 9581396504
-                      quantity: 3874805511
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\6b0212ba1b769b44652d578b53e793dd.png'
+                        Abbrevation: et
+                      price: 8287331460
+                      quantity: 4465784260
                     -
                       account_number:
-                        account_number: '596092913470'
+                        account_number: '897487541449'
                       currency_id_in:
-                        logo: '0'
-                        Currency_name: molestiae
-                        Abbrevation: veniam
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\cc78cf51310f940d19834af81d85b498.png'
+                        Abbrevation: temporibus
                       currency_id_out:
-                        logo: '0'
-                        Currency_name: ad
-                        Abbrevation: dicta
-                      price: 5568521737
-                      quantity: 4946246060
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\8a03f6baa1913e34c738cc12e845abc4.png'
+                        Abbrevation: sed
+                      price: 3881628841
+                      quantity: 5918644687
                     -
                       account_number:
-                        account_number: '006328563817'
+                        account_number: '387122818417'
                       currency_id_in:
-                        logo: '0'
-                        Currency_name: ipsum
-                        Abbrevation: provident
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\92c7b7f3aaded2cae3b2cec953345ca1.png'
+                        Abbrevation: eum
                       currency_id_out:
-                        logo: '0'
-                        Currency_name: et
-                        Abbrevation: consequuntur
-                      price: 24944306
-                      quantity: 9686401760
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\35bf560084ce5466d4b4458f6e01a4e5.png'
+                        Abbrevation: saepe
+                      price: 1717615976
+                      quantity: 2289556894
                     -
                       account_number:
-                        account_number: '092957417865'
+                        account_number: '885384667390'
                       currency_id_in:
-                        logo: '0'
-                        Currency_name: nihil
-                        Abbrevation: cum
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\ec1aed334baead59e19231d9fe19840a.png'
+                        Abbrevation: doloremque
                       currency_id_out:
-                        logo: '0'
-                        Currency_name: similique
-                        Abbrevation: nihil
-                      price: 5479035114
-                      quantity: 3374613385
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\a1a25074b64ec1ce11547852fa97a116.png'
+                        Abbrevation: dolores
+                      price: 9368041147
+                      quantity: 8746741734
                     -
                       account_number:
-                        account_number: '468626694724'
+                        account_number: '338051858927'
                       currency_id_in:
-                        logo: '0'
-                        Currency_name: nostrum
-                        Abbrevation: similique
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\ce6551f36691c479cf58c79bdebebb65.png'
+                        Abbrevation: eos
                       currency_id_out:
-                        logo: '0'
-                        Currency_name: placeat
-                        Abbrevation: illum
-                      price: 1369525157
-                      quantity: 6893024321
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\e7f780c01b9d1955d4b0a688d6f04948.png'
+                        Abbrevation: adipisci
+                      price: 1162410519
+                      quantity: 2184789456
                     -
                       account_number:
-                        account_number: '097988405521'
+                        account_number: '920673369624'
                       currency_id_in:
-                        logo: '0'
-                        Currency_name: sit
-                        Abbrevation: error
-                      currency_id_out:
-                        logo: '0'
-                        Currency_name: est
-                        Abbrevation: reiciendis
-                      price: 3563100199
-                      quantity: 4141194859
-                    -
-                      account_number:
-                        account_number: '480249471449'
-                      currency_id_in:
-                        logo: '0'
-                        Currency_name: explicabo
-                        Abbrevation: reiciendis
-                      currency_id_out:
-                        logo: '0'
-                        Currency_name: eaque
-                        Abbrevation: quibusdam
-                      price: 2596054707
-                      quantity: 6382356992
-                    -
-                      account_number:
-                        account_number: '850297625960'
-                      currency_id_in:
-                        logo: '0'
-                        Currency_name: quibusdam
-                        Abbrevation: molestiae
-                      currency_id_out:
-                        logo: '0'
-                        Currency_name: assumenda
-                        Abbrevation: voluptatem
-                      price: 5732848395
-                      quantity: 8747427695
-                    -
-                      account_number:
-                        account_number: '419337021422'
-                      currency_id_in:
-                        logo: '0'
-                        Currency_name: quis
-                        Abbrevation: nesciunt
-                      currency_id_out:
-                        logo: '0'
-                        Currency_name: ea
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\8d4973814d8683a8f2f347fd2f7a8c85.png'
                         Abbrevation: est
-                      price: 7665686987
-                      quantity: 7282685230
+                      currency_id_out:
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\81cfbb4646498e5204d30d392252839c.png'
+                        Abbrevation: consectetur
+                      price: 6470199463
+                      quantity: 7775411935
                     -
                       account_number:
-                        account_number: '970534005760'
+                        account_number: '617907952767'
                       currency_id_in:
-                        logo: '0'
-                        Currency_name: ipsa
-                        Abbrevation: non
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\ef0126627a87edec80b1414f102cd32c.png'
+                        Abbrevation: quia
                       currency_id_out:
-                        logo: '0'
-                        Currency_name: vero
-                        Abbrevation: corporis
-                      price: 9627875130
-                      quantity: 3355948288
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\f29128a9cb90f2c96fbd3a71acec09f8.png'
+                        Abbrevation: sequi
+                      price: 2826498371
+                      quantity: 2650452220
+                    -
+                      account_number:
+                        account_number: '424684721050'
+                      currency_id_in:
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\31f0783c1f019505552817c52ce58396.png'
+                        Abbrevation: omnis
+                      currency_id_out:
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\b62091a58331a44dfb2a7abcad08ea90.png'
+                        Abbrevation: a
+                      price: 5200727928
+                      quantity: 4516295508
+                    -
+                      account_number:
+                        account_number: '006974163383'
+                      currency_id_in:
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\1d915f7f28746aac4cc92d5d4d04bd97.png'
+                        Abbrevation: iste
+                      currency_id_out:
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\583877926d3a8aa024ca2f975e94d9f2.png'
+                        Abbrevation: vero
+                      price: 5700200430
+                      quantity: 5460289891
+                    -
+                      account_number:
+                        account_number: '506036383317'
+                      currency_id_in:
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\fdefb63d3553d16bbf325d7024e031fa.png'
+                        Abbrevation: ab
+                      currency_id_out:
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\1c351edd620006a321c4b09c9d312cb8.png'
+                        Abbrevation: quibusdam
+                      price: 2346239319
+                      quantity: 7262308600
                 properties:
                   data:
                     type: array
                     example:
                       -
                         account_number:
-                          account_number: '573623800121'
+                          account_number: '631433100064'
                         currency_id_in:
-                          logo: '0'
-                          Currency_name: et
-                          Abbrevation: qui
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\c4acd663f30bda41501cb43bbbead20e.png'
+                          Abbrevation: expedita
                         currency_id_out:
-                          logo: '0'
-                          Currency_name: exercitationem
-                          Abbrevation: dolore
-                        price: 9581396504
-                        quantity: 3874805511
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\6b0212ba1b769b44652d578b53e793dd.png'
+                          Abbrevation: et
+                        price: 8287331460
+                        quantity: 4465784260
                       -
                         account_number:
-                          account_number: '596092913470'
+                          account_number: '897487541449'
                         currency_id_in:
-                          logo: '0'
-                          Currency_name: molestiae
-                          Abbrevation: veniam
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\cc78cf51310f940d19834af81d85b498.png'
+                          Abbrevation: temporibus
                         currency_id_out:
-                          logo: '0'
-                          Currency_name: ad
-                          Abbrevation: dicta
-                        price: 5568521737
-                        quantity: 4946246060
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\8a03f6baa1913e34c738cc12e845abc4.png'
+                          Abbrevation: sed
+                        price: 3881628841
+                        quantity: 5918644687
                       -
                         account_number:
-                          account_number: '006328563817'
+                          account_number: '387122818417'
                         currency_id_in:
-                          logo: '0'
-                          Currency_name: ipsum
-                          Abbrevation: provident
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\92c7b7f3aaded2cae3b2cec953345ca1.png'
+                          Abbrevation: eum
                         currency_id_out:
-                          logo: '0'
-                          Currency_name: et
-                          Abbrevation: consequuntur
-                        price: 24944306
-                        quantity: 9686401760
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\35bf560084ce5466d4b4458f6e01a4e5.png'
+                          Abbrevation: saepe
+                        price: 1717615976
+                        quantity: 2289556894
                       -
                         account_number:
-                          account_number: '092957417865'
+                          account_number: '885384667390'
                         currency_id_in:
-                          logo: '0'
-                          Currency_name: nihil
-                          Abbrevation: cum
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\ec1aed334baead59e19231d9fe19840a.png'
+                          Abbrevation: doloremque
                         currency_id_out:
-                          logo: '0'
-                          Currency_name: similique
-                          Abbrevation: nihil
-                        price: 5479035114
-                        quantity: 3374613385
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\a1a25074b64ec1ce11547852fa97a116.png'
+                          Abbrevation: dolores
+                        price: 9368041147
+                        quantity: 8746741734
                       -
                         account_number:
-                          account_number: '468626694724'
+                          account_number: '338051858927'
                         currency_id_in:
-                          logo: '0'
-                          Currency_name: nostrum
-                          Abbrevation: similique
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\ce6551f36691c479cf58c79bdebebb65.png'
+                          Abbrevation: eos
                         currency_id_out:
-                          logo: '0'
-                          Currency_name: placeat
-                          Abbrevation: illum
-                        price: 1369525157
-                        quantity: 6893024321
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\e7f780c01b9d1955d4b0a688d6f04948.png'
+                          Abbrevation: adipisci
+                        price: 1162410519
+                        quantity: 2184789456
                       -
                         account_number:
-                          account_number: '097988405521'
+                          account_number: '920673369624'
                         currency_id_in:
-                          logo: '0'
-                          Currency_name: sit
-                          Abbrevation: error
-                        currency_id_out:
-                          logo: '0'
-                          Currency_name: est
-                          Abbrevation: reiciendis
-                        price: 3563100199
-                        quantity: 4141194859
-                      -
-                        account_number:
-                          account_number: '480249471449'
-                        currency_id_in:
-                          logo: '0'
-                          Currency_name: explicabo
-                          Abbrevation: reiciendis
-                        currency_id_out:
-                          logo: '0'
-                          Currency_name: eaque
-                          Abbrevation: quibusdam
-                        price: 2596054707
-                        quantity: 6382356992
-                      -
-                        account_number:
-                          account_number: '850297625960'
-                        currency_id_in:
-                          logo: '0'
-                          Currency_name: quibusdam
-                          Abbrevation: molestiae
-                        currency_id_out:
-                          logo: '0'
-                          Currency_name: assumenda
-                          Abbrevation: voluptatem
-                        price: 5732848395
-                        quantity: 8747427695
-                      -
-                        account_number:
-                          account_number: '419337021422'
-                        currency_id_in:
-                          logo: '0'
-                          Currency_name: quis
-                          Abbrevation: nesciunt
-                        currency_id_out:
-                          logo: '0'
-                          Currency_name: ea
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\8d4973814d8683a8f2f347fd2f7a8c85.png'
                           Abbrevation: est
-                        price: 7665686987
-                        quantity: 7282685230
+                        currency_id_out:
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\81cfbb4646498e5204d30d392252839c.png'
+                          Abbrevation: consectetur
+                        price: 6470199463
+                        quantity: 7775411935
                       -
                         account_number:
-                          account_number: '970534005760'
+                          account_number: '617907952767'
                         currency_id_in:
-                          logo: '0'
-                          Currency_name: ipsa
-                          Abbrevation: non
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\ef0126627a87edec80b1414f102cd32c.png'
+                          Abbrevation: quia
                         currency_id_out:
-                          logo: '0'
-                          Currency_name: vero
-                          Abbrevation: corporis
-                        price: 9627875130
-                        quantity: 3355948288
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\f29128a9cb90f2c96fbd3a71acec09f8.png'
+                          Abbrevation: sequi
+                        price: 2826498371
+                        quantity: 2650452220
+                      -
+                        account_number:
+                          account_number: '424684721050'
+                        currency_id_in:
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\31f0783c1f019505552817c52ce58396.png'
+                          Abbrevation: omnis
+                        currency_id_out:
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\b62091a58331a44dfb2a7abcad08ea90.png'
+                          Abbrevation: a
+                        price: 5200727928
+                        quantity: 4516295508
+                      -
+                        account_number:
+                          account_number: '006974163383'
+                        currency_id_in:
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\1d915f7f28746aac4cc92d5d4d04bd97.png'
+                          Abbrevation: iste
+                        currency_id_out:
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\583877926d3a8aa024ca2f975e94d9f2.png'
+                          Abbrevation: vero
+                        price: 5700200430
+                        quantity: 5460289891
+                      -
+                        account_number:
+                          account_number: '506036383317'
+                        currency_id_in:
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\fdefb63d3553d16bbf325d7024e031fa.png'
+                          Abbrevation: ab
+                        currency_id_out:
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\1c351edd620006a321c4b09c9d312cb8.png'
+                          Abbrevation: quibusdam
+                        price: 2346239319
+                        quantity: 7262308600
                     items:
                       type: object
                       properties:
@@ -2915,37 +2363,31 @@ paths:
                           properties:
                             account_number:
                               type: string
-                              example: '573623800121'
+                              example: '631433100064'
                         currency_id_in:
                           type: object
                           properties:
                             logo:
                               type: string
-                              example: '0'
-                            Currency_name:
-                              type: string
-                              example: et
+                              example: 'C:\Users\LENOVO\AppData\Local\Temp\c4acd663f30bda41501cb43bbbead20e.png'
                             Abbrevation:
                               type: string
-                              example: qui
+                              example: expedita
                         currency_id_out:
                           type: object
                           properties:
                             logo:
                               type: string
-                              example: '0'
-                            Currency_name:
-                              type: string
-                              example: exercitationem
+                              example: 'C:\Users\LENOVO\AppData\Local\Temp\6b0212ba1b769b44652d578b53e793dd.png'
                             Abbrevation:
                               type: string
-                              example: dolore
+                              example: et
                         price:
                           type: integer
-                          example: 9581396504
+                          example: 8287331460
                         quantity:
                           type: integer
-                          example: 3874805511
+                          example: 4465784260
       tags:
         - Endpoints
       security: []
@@ -2967,23 +2409,23 @@ paths:
                 account_number:
                   type: string
                   description: ''
-                  example: voluptatem
+                  example: facilis
                 currency_id_in:
                   type: string
                   description: ''
-                  example: quos
+                  example: aliquam
                 currency_id_out:
                   type: string
                   description: ''
-                  example: ad
+                  example: asperiores
                 price:
                   type: string
                   description: ''
-                  example: ducimus
+                  example: dolor
                 quantity:
                   type: string
                   description: ''
-                  example: voluptatibus
+                  example: et
               required:
                 - account_number
                 - currency_id_in
@@ -3007,17 +2449,15 @@ paths:
                 example:
                   data:
                     account_number:
-                      account_number: '573623800121'
+                      account_number: '631433100064'
                     currency_id_in:
-                      logo: '0'
-                      Currency_name: et
-                      Abbrevation: qui
+                      logo: 'C:\Users\LENOVO\AppData\Local\Temp\c4acd663f30bda41501cb43bbbead20e.png'
+                      Abbrevation: expedita
                     currency_id_out:
-                      logo: '0'
-                      Currency_name: exercitationem
-                      Abbrevation: dolore
-                    price: 9581396504
-                    quantity: 3874805511
+                      logo: 'C:\Users\LENOVO\AppData\Local\Temp\6b0212ba1b769b44652d578b53e793dd.png'
+                      Abbrevation: et
+                    price: 8287331460
+                    quantity: 4465784260
                 properties:
                   data:
                     type: object
@@ -3027,37 +2467,31 @@ paths:
                         properties:
                           account_number:
                             type: string
-                            example: '573623800121'
+                            example: '631433100064'
                       currency_id_in:
                         type: object
                         properties:
                           logo:
                             type: string
-                            example: '0'
-                          Currency_name:
-                            type: string
-                            example: et
+                            example: 'C:\Users\LENOVO\AppData\Local\Temp\c4acd663f30bda41501cb43bbbead20e.png'
                           Abbrevation:
                             type: string
-                            example: qui
+                            example: expedita
                       currency_id_out:
                         type: object
                         properties:
                           logo:
                             type: string
-                            example: '0'
-                          Currency_name:
-                            type: string
-                            example: exercitationem
+                            example: 'C:\Users\LENOVO\AppData\Local\Temp\6b0212ba1b769b44652d578b53e793dd.png'
                           Abbrevation:
                             type: string
-                            example: dolore
+                            example: et
                       price:
                         type: integer
-                        example: 9581396504
+                        example: 8287331460
                       quantity:
                         type: integer
-                        example: 3874805511
+                        example: 4465784260
       tags:
         - Endpoints
       security: []
@@ -3105,128 +2539,128 @@ paths:
                   data:
                     -
                       account_number:
-                        account_number: '471066719132'
+                        account_number: '975107312915'
                       currency_id_in:
-                        logo: '0'
-                        Currency_name: saepe
-                        Abbrevation: aperiam
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\fe654d481c3006116649ea71b9bb20a8.png'
+                        Currency_name: dolores
+                        Abbrevation: saepe
                       currency_id_out:
-                        logo: '0'
-                        Currency_name: perspiciatis
-                        Abbrevation: laudantium
-                      quantity: 5228972619
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\0c1369feee2add342b4a40c31585104e.png'
+                        Currency_name: dolore
+                        Abbrevation: provident
+                      quantity: 7344718676
                     -
                       account_number:
-                        account_number: '758278530996'
+                        account_number: '807063222027'
                       currency_id_in:
-                        logo: '0'
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\1f1a75c4317470d9ddf5e1e47c10562b.png'
                         Currency_name: quia
-                        Abbrevation: labore
+                        Abbrevation: quam
                       currency_id_out:
-                        logo: '0'
-                        Currency_name: officia
-                        Abbrevation: molestiae
-                      quantity: 7617425176
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\510ee4cc711fd0f4208ae1e37aa0d528.png'
+                        Currency_name: mollitia
+                        Abbrevation: nihil
+                      quantity: 6007396427
                     -
                       account_number:
-                        account_number: '787919623632'
+                        account_number: '878524569779'
                       currency_id_in:
-                        logo: '0'
-                        Currency_name: cum
-                        Abbrevation: omnis
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\62e513709ceb285615df0e097f3a62a2.png'
+                        Currency_name: quae
+                        Abbrevation: dolorem
                       currency_id_out:
-                        logo: '0'
-                        Currency_name: voluptatem
-                        Abbrevation: non
-                      quantity: 7980539811
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\ee0a2ab9a9f52470793488dddbf191ea.png'
+                        Currency_name: quasi
+                        Abbrevation: totam
+                      quantity: 7244445419
                     -
                       account_number:
-                        account_number: '397907426692'
+                        account_number: '275792449306'
                       currency_id_in:
-                        logo: '0'
-                        Currency_name: vel
-                        Abbrevation: minus
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\ca83b2a9e8dc59afdc7a49020987a6ac.png'
+                        Currency_name: rerum
+                        Abbrevation: qui
                       currency_id_out:
-                        logo: '0'
-                        Currency_name: aut
-                        Abbrevation: labore
-                      quantity: 9062309897
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\75e08f7518c95814716f0d76de1cbbb4.png'
+                        Currency_name: necessitatibus
+                        Abbrevation: quisquam
+                      quantity: 9458692091
                     -
                       account_number:
-                        account_number: '989517894608'
+                        account_number: '805246738426'
                       currency_id_in:
-                        logo: '0'
-                        Currency_name: tempore
-                        Abbrevation: quaerat
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\ae4e518a7a6e503f72881d9f3accb52c.png'
+                        Currency_name: autem
+                        Abbrevation: dignissimos
                       currency_id_out:
-                        logo: '0'
-                        Currency_name: provident
-                        Abbrevation: doloribus
-                      quantity: 1637160537
+                        logo: 'C:\Users\LENOVO\AppData\Local\Temp\746b2e28a4857084a43aca582abb2065.png'
+                        Currency_name: suscipit
+                        Abbrevation: amet
+                      quantity: 5074868926
                 properties:
                   data:
                     type: array
                     example:
                       -
                         account_number:
-                          account_number: '471066719132'
+                          account_number: '975107312915'
                         currency_id_in:
-                          logo: '0'
-                          Currency_name: saepe
-                          Abbrevation: aperiam
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\fe654d481c3006116649ea71b9bb20a8.png'
+                          Currency_name: dolores
+                          Abbrevation: saepe
                         currency_id_out:
-                          logo: '0'
-                          Currency_name: perspiciatis
-                          Abbrevation: laudantium
-                        quantity: 5228972619
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\0c1369feee2add342b4a40c31585104e.png'
+                          Currency_name: dolore
+                          Abbrevation: provident
+                        quantity: 7344718676
                       -
                         account_number:
-                          account_number: '758278530996'
+                          account_number: '807063222027'
                         currency_id_in:
-                          logo: '0'
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\1f1a75c4317470d9ddf5e1e47c10562b.png'
                           Currency_name: quia
-                          Abbrevation: labore
+                          Abbrevation: quam
                         currency_id_out:
-                          logo: '0'
-                          Currency_name: officia
-                          Abbrevation: molestiae
-                        quantity: 7617425176
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\510ee4cc711fd0f4208ae1e37aa0d528.png'
+                          Currency_name: mollitia
+                          Abbrevation: nihil
+                        quantity: 6007396427
                       -
                         account_number:
-                          account_number: '787919623632'
+                          account_number: '878524569779'
                         currency_id_in:
-                          logo: '0'
-                          Currency_name: cum
-                          Abbrevation: omnis
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\62e513709ceb285615df0e097f3a62a2.png'
+                          Currency_name: quae
+                          Abbrevation: dolorem
                         currency_id_out:
-                          logo: '0'
-                          Currency_name: voluptatem
-                          Abbrevation: non
-                        quantity: 7980539811
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\ee0a2ab9a9f52470793488dddbf191ea.png'
+                          Currency_name: quasi
+                          Abbrevation: totam
+                        quantity: 7244445419
                       -
                         account_number:
-                          account_number: '397907426692'
+                          account_number: '275792449306'
                         currency_id_in:
-                          logo: '0'
-                          Currency_name: vel
-                          Abbrevation: minus
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\ca83b2a9e8dc59afdc7a49020987a6ac.png'
+                          Currency_name: rerum
+                          Abbrevation: qui
                         currency_id_out:
-                          logo: '0'
-                          Currency_name: aut
-                          Abbrevation: labore
-                        quantity: 9062309897
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\75e08f7518c95814716f0d76de1cbbb4.png'
+                          Currency_name: necessitatibus
+                          Abbrevation: quisquam
+                        quantity: 9458692091
                       -
                         account_number:
-                          account_number: '989517894608'
+                          account_number: '805246738426'
                         currency_id_in:
-                          logo: '0'
-                          Currency_name: tempore
-                          Abbrevation: quaerat
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\ae4e518a7a6e503f72881d9f3accb52c.png'
+                          Currency_name: autem
+                          Abbrevation: dignissimos
                         currency_id_out:
-                          logo: '0'
-                          Currency_name: provident
-                          Abbrevation: doloribus
-                        quantity: 1637160537
+                          logo: 'C:\Users\LENOVO\AppData\Local\Temp\746b2e28a4857084a43aca582abb2065.png'
+                          Currency_name: suscipit
+                          Abbrevation: amet
+                        quantity: 5074868926
                     items:
                       type: object
                       properties:
@@ -3235,34 +2669,34 @@ paths:
                           properties:
                             account_number:
                               type: string
-                              example: '471066719132'
+                              example: '975107312915'
                         currency_id_in:
                           type: object
                           properties:
                             logo:
                               type: string
-                              example: '0'
+                              example: 'C:\Users\LENOVO\AppData\Local\Temp\fe654d481c3006116649ea71b9bb20a8.png'
                             Currency_name:
                               type: string
-                              example: saepe
+                              example: dolores
                             Abbrevation:
                               type: string
-                              example: aperiam
+                              example: saepe
                         currency_id_out:
                           type: object
                           properties:
                             logo:
                               type: string
-                              example: '0'
+                              example: 'C:\Users\LENOVO\AppData\Local\Temp\0c1369feee2add342b4a40c31585104e.png'
                             Currency_name:
                               type: string
-                              example: perspiciatis
+                              example: dolore
                             Abbrevation:
                               type: string
-                              example: laudantium
+                              example: provident
                         quantity:
                           type: integer
-                          example: 5228972619
+                          example: 7344718676
       tags:
         - Endpoints
       security: []
@@ -3284,15 +2718,15 @@ paths:
                 account_number:
                   type: string
                   description: ''
-                  example: eligendi
+                  example: dolores
                 currency_id_in:
                   type: string
                   description: ''
-                  example: ut
+                  example: dolor
                 currency_id_out:
                   type: string
                   description: ''
-                  example: explicabo
+                  example: error
                 quantity:
                   type: string
                   description: ''
@@ -3319,14 +2753,14 @@ paths:
                 example:
                   data:
                     currency_id_in:
-                      logo: '0'
-                      Currency_name: saepe
-                      Abbrevation: aperiam
+                      logo: 'C:\Users\LENOVO\AppData\Local\Temp\fe654d481c3006116649ea71b9bb20a8.png'
+                      Currency_name: dolores
+                      Abbrevation: saepe
                     currency_id_out:
-                      logo: '0'
-                      Currency_name: perspiciatis
-                      Abbrevation: laudantium
-                    quantity: 5228972619
+                      logo: 'C:\Users\LENOVO\AppData\Local\Temp\0c1369feee2add342b4a40c31585104e.png'
+                      Currency_name: dolore
+                      Abbrevation: provident
+                    quantity: 7344718676
                 properties:
                   data:
                     type: object
@@ -3336,28 +2770,28 @@ paths:
                         properties:
                           logo:
                             type: string
-                            example: '0'
+                            example: 'C:\Users\LENOVO\AppData\Local\Temp\fe654d481c3006116649ea71b9bb20a8.png'
                           Currency_name:
                             type: string
-                            example: saepe
+                            example: dolores
                           Abbrevation:
                             type: string
-                            example: aperiam
+                            example: saepe
                       currency_id_out:
                         type: object
                         properties:
                           logo:
                             type: string
-                            example: '0'
+                            example: 'C:\Users\LENOVO\AppData\Local\Temp\0c1369feee2add342b4a40c31585104e.png'
                           Currency_name:
                             type: string
-                            example: perspiciatis
+                            example: dolore
                           Abbrevation:
                             type: string
-                            example: laudantium
+                            example: provident
                       quantity:
                         type: integer
-                        example: 5228972619
+                        example: 7344718676
       tags:
         - Endpoints
       security: []
@@ -3405,138 +2839,138 @@ paths:
                   data:
                     -
                       User_out:
-                        user_name: Ladarius
-                        Profile_image: '0'
+                        Full_name: Cheyanne
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\e81ddd1b8edb00c768d280f8e985a8b3.png'
                       User_in:
-                        user_name: Keenan
-                        Profile_image: '0'
+                        Full_name: Dixie
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\2bbb10644afe6c20ead5a09c4ff93488.png'
                       trade_id:
-                        price: 3563100199
-                        quantity: 4141194859
+                        price: 6470199463
+                        quantity: 7775411935
                     -
                       User_out:
-                        user_name: Laila
-                        Profile_image: '0'
+                        Full_name: Jamey
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\6c9bcb9afea295e30cefaba65f1396e6.png'
                       User_in:
-                        user_name: Stan
-                        Profile_image: '0'
+                        Full_name: Darby
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\df2882423e5f8d9aaa960b2fa62f62ff.png'
                       trade_id:
-                        price: 2596054707
-                        quantity: 6382356992
+                        price: 2826498371
+                        quantity: 2650452220
                     -
                       User_out:
-                        user_name: Samantha
-                        Profile_image: '0'
+                        Full_name: Lizeth
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\80bb9b3baceb67a68e86cb0ea0c64475.png'
                       User_in:
-                        user_name: Kendrick
-                        Profile_image: '0'
+                        Full_name: Imelda
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\28aa7d428968922c53ebecc3fda8fcbe.png'
                       trade_id:
-                        price: 5732848395
-                        quantity: 8747427695
+                        price: 5200727928
+                        quantity: 4516295508
                     -
                       User_out:
-                        user_name: Gertrude
-                        Profile_image: '0'
+                        Full_name: Mattie
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\661fcb8447fa4c0e11fa6df09895b3de.png'
                       User_in:
-                        user_name: Aditya
-                        Profile_image: '0'
+                        Full_name: Sim
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\11e6e5a943736e4e3a8014d72fa160d3.png'
                       trade_id:
-                        price: 7665686987
-                        quantity: 7282685230
+                        price: 5700200430
+                        quantity: 5460289891
                     -
                       User_out:
-                        user_name: Eldred
-                        Profile_image: '0'
+                        Full_name: Elijah
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\5336e5fa7d515b163362a16fda757747.png'
                       User_in:
-                        user_name: Annetta
-                        Profile_image: '0'
+                        Full_name: Victoria
+                        Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\4310ae59a59b83e47b218381a2163986.png'
                       trade_id:
-                        price: 9627875130
-                        quantity: 3355948288
+                        price: 2346239319
+                        quantity: 7262308600
                 properties:
                   data:
                     type: array
                     example:
                       -
                         User_out:
-                          user_name: Ladarius
-                          Profile_image: '0'
+                          Full_name: Cheyanne
+                          Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\e81ddd1b8edb00c768d280f8e985a8b3.png'
                         User_in:
-                          user_name: Keenan
-                          Profile_image: '0'
+                          Full_name: Dixie
+                          Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\2bbb10644afe6c20ead5a09c4ff93488.png'
                         trade_id:
-                          price: 3563100199
-                          quantity: 4141194859
+                          price: 6470199463
+                          quantity: 7775411935
                       -
                         User_out:
-                          user_name: Laila
-                          Profile_image: '0'
+                          Full_name: Jamey
+                          Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\6c9bcb9afea295e30cefaba65f1396e6.png'
                         User_in:
-                          user_name: Stan
-                          Profile_image: '0'
+                          Full_name: Darby
+                          Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\df2882423e5f8d9aaa960b2fa62f62ff.png'
                         trade_id:
-                          price: 2596054707
-                          quantity: 6382356992
+                          price: 2826498371
+                          quantity: 2650452220
                       -
                         User_out:
-                          user_name: Samantha
-                          Profile_image: '0'
+                          Full_name: Lizeth
+                          Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\80bb9b3baceb67a68e86cb0ea0c64475.png'
                         User_in:
-                          user_name: Kendrick
-                          Profile_image: '0'
+                          Full_name: Imelda
+                          Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\28aa7d428968922c53ebecc3fda8fcbe.png'
                         trade_id:
-                          price: 5732848395
-                          quantity: 8747427695
+                          price: 5200727928
+                          quantity: 4516295508
                       -
                         User_out:
-                          user_name: Gertrude
-                          Profile_image: '0'
+                          Full_name: Mattie
+                          Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\661fcb8447fa4c0e11fa6df09895b3de.png'
                         User_in:
-                          user_name: Aditya
-                          Profile_image: '0'
+                          Full_name: Sim
+                          Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\11e6e5a943736e4e3a8014d72fa160d3.png'
                         trade_id:
-                          price: 7665686987
-                          quantity: 7282685230
+                          price: 5700200430
+                          quantity: 5460289891
                       -
                         User_out:
-                          user_name: Eldred
-                          Profile_image: '0'
+                          Full_name: Elijah
+                          Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\5336e5fa7d515b163362a16fda757747.png'
                         User_in:
-                          user_name: Annetta
-                          Profile_image: '0'
+                          Full_name: Victoria
+                          Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\4310ae59a59b83e47b218381a2163986.png'
                         trade_id:
-                          price: 9627875130
-                          quantity: 3355948288
+                          price: 2346239319
+                          quantity: 7262308600
                     items:
                       type: object
                       properties:
                         User_out:
                           type: object
                           properties:
-                            user_name:
+                            Full_name:
                               type: string
-                              example: Ladarius
+                              example: Cheyanne
                             Profile_image:
                               type: string
-                              example: '0'
+                              example: 'C:\Users\LENOVO\AppData\Local\Temp\e81ddd1b8edb00c768d280f8e985a8b3.png'
                         User_in:
                           type: object
                           properties:
-                            user_name:
+                            Full_name:
                               type: string
-                              example: Keenan
+                              example: Dixie
                             Profile_image:
                               type: string
-                              example: '0'
+                              example: 'C:\Users\LENOVO\AppData\Local\Temp\2bbb10644afe6c20ead5a09c4ff93488.png'
                         trade_id:
                           type: object
                           properties:
                             price:
                               type: integer
-                              example: 3563100199
+                              example: 6470199463
                             quantity:
                               type: integer
-                              example: 4141194859
+                              example: 7775411935
       tags:
         - Endpoints
       security: []
@@ -3565,14 +2999,14 @@ paths:
                 example:
                   data:
                     User_out:
-                      user_name: Ladarius
-                      Profile_image: '0'
+                      Full_name: Cheyanne
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\e81ddd1b8edb00c768d280f8e985a8b3.png'
                     User_in:
-                      user_name: Keenan
-                      Profile_image: '0'
+                      Full_name: Dixie
+                      Profile_image: 'C:\Users\LENOVO\AppData\Local\Temp\2bbb10644afe6c20ead5a09c4ff93488.png'
                     trade_id:
-                      price: 3563100199
-                      quantity: 4141194859
+                      price: 6470199463
+                      quantity: 7775411935
                 properties:
                   data:
                     type: object
@@ -3580,30 +3014,30 @@ paths:
                       User_out:
                         type: object
                         properties:
-                          user_name:
+                          Full_name:
                             type: string
-                            example: Ladarius
+                            example: Cheyanne
                           Profile_image:
                             type: string
-                            example: '0'
+                            example: 'C:\Users\LENOVO\AppData\Local\Temp\e81ddd1b8edb00c768d280f8e985a8b3.png'
                       User_in:
                         type: object
                         properties:
-                          user_name:
+                          Full_name:
                             type: string
-                            example: Keenan
+                            example: Dixie
                           Profile_image:
                             type: string
-                            example: '0'
+                            example: 'C:\Users\LENOVO\AppData\Local\Temp\2bbb10644afe6c20ead5a09c4ff93488.png'
                       trade_id:
                         type: object
                         properties:
                           price:
                             type: integer
-                            example: 3563100199
+                            example: 6470199463
                           quantity:
                             type: integer
-                            example: 4141194859
+                            example: 7775411935
       tags:
         - Endpoints
       security: []
@@ -3670,11 +3104,11 @@ paths:
                 currency_id:
                   type: string
                   description: ''
-                  example: deserunt
+                  example: et
                 User_id:
                   type: string
                   description: ''
-                  example: modi
+                  example: rerum
               required:
                 - currency_id
                 - User_id
@@ -4528,7 +3962,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the bestCurrency.'
-        example: possimus
+        example: sequi
         required: true
         schema:
           type: string
@@ -4556,8 +3990,8 @@ paths:
       security: []
   '/api/getCurrencyPrice/{curName}':
     get:
-      summary: ''
-      operationId: getApiGetCurrencyPriceCurName
+      summary: 'Get a currency price and details from name of currency'
+      operationId: getACurrencyPriceAndDetailsFromNameOfCurrency
       description: ''
       parameters: []
       responses:
@@ -4576,7 +4010,7 @@ paths:
         in: path
         name: curName
         description: ''
-        example: nihil
+        example: ipsam
         required: true
         schema:
           type: string

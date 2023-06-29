@@ -13,8 +13,6 @@ use App\Http\Controllers\Resources\CurrencyResource;
 use App\Http\Requests\Request\api\PriceRequest;
 
 
-
-
 class CurrencyPriceController extends Controller
 {
     /**

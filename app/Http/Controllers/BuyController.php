@@ -8,6 +8,7 @@ use App\Models\Account;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Resources\BuyResource;
 use App\Http\Requests\Request\api\BuyRequest;
+
 class BuyController extends Controller
 {
     /**

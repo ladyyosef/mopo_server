@@ -20,8 +20,10 @@ class UserFactory extends Factory
     {
         return [
             'email' => fake()->unique()->safeEmail(),
-            'user_name' => fake()->firstName(),
+            'Full_name' => fake()->firstName(),
             'postal_code' => fake()->postcode(),
+            'Nationality' =>  $this->faker->word(),
+            'Birth_date' => fake()->date(),
             'Profile_image'  => $this->faker->image(),
             'City' => fake()->City(),
             'phone' => fake()->phoneNumber(),
