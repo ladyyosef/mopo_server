@@ -16,6 +16,11 @@ class AccountCardResource extends JsonResource
     {
         return [
             'account_number' => $this->account_number,
+            'Full_name' => $this->Full_name,
+            'email'  => $this->email,
+            'phone'  => $this->phone,
+            'Profile_image' =>$this->Profile_image,
+       
         ];
     }
 }

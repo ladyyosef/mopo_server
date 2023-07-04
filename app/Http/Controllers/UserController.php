@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Resources\UserResource;
+use App\Http\Controllers\Resources\AccountCardResource;
 use App\Http\Controllers\UserCollection;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Sanctum\PersonalAccessToken;
@@ -33,9 +34,13 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        return new UserResource($user);
-    }
 
+    }
+    public function Pofile(User $ur)
+    {
+        $ur=Auth::user();
+        return  new AccountCardResource($ur);
+    }
     /**
      * Update the specified resource in storage.
      */
@@ -51,4 +56,5 @@ class UserController extends Controller
     {
         //
     }
+
 }
