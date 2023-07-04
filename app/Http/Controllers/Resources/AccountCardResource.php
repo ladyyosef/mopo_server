@@ -15,12 +15,11 @@ class AccountCardResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'account_number' => $this->account_number,
             'Full_name' => $this->Full_name,
             'email'  => $this->email,
             'phone'  => $this->phone,
             'Profile_image' =>$this->Profile_image,
-       
+
         ];
     }
 }
