@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class  Wallet extends Model
+class Wallet extends Model
 {
     use HasFactory;
 
@@ -50,5 +50,4 @@ class  Wallet extends Model
     {
         return $this->hasMany(Currency::class);
     }
-
 }

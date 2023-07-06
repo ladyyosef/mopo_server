@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Wallet;
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -23,10 +24,10 @@ class DatabaseSeeder extends Seeder
         $this->call([
 
             UsertypeSeeder::class,
-            UsersSeeder :: class,
-            CurrencySeeder :: class,
-            walletSeeder :: class,
-            AccountSeeder :: class,
+            UsersSeeder::class,
+            CurrencySeeder::class,
+            WalletSeeder::class,
+            AccountSeeder::class,
             CardSeeder::class,
             CurrencypriceSeeder::class,
             TradeSeeder::class,
@@ -36,6 +37,6 @@ class DatabaseSeeder extends Seeder
             BestCurrencySeeder::class
 
 
-      ]);
+        ]);
     }
 }

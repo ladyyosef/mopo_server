@@ -13,14 +13,12 @@ class UsertypeSeeder extends Seeder
      */
     public function run(): void
     {
-       $userty = usertype :: create([
-        'name' => 'Admain'
-       ]);
+        $userty = usertype::create([
+            'name' => 'admin'
+        ]);
 
-       $userty = usertype :: create([
-        'name' => 'User'
-       ]);
-
+        $userty = usertype::create([
+            'name' => 'user'
+        ]);
+    }
 }
-}
-
