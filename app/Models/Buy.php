@@ -38,11 +38,6 @@ class Buy extends Model
 
     ];
 
-    public function accounts(): HasMany
-    {
-        return $this->hasMany(Account::class);
-    }
-
     public function currency(): BelongsTo
     {
         return $this->belongsTo(Currency::class, 'currency_id_in');
@@ -55,11 +50,6 @@ class Buy extends Model
     {
         return $this->belongsTo(Account::class, 'account_number');
     }
-
-
-
-
-
 
     public function trade(): BelongsTo
     {

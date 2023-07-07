@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -30,13 +31,24 @@ class Currency extends Model
         'id' => 'integer',
     ];
 
-    public static function trending($perPage = 100, $priceCount = 0)
+
+    protected function  logo(): Attribute
+    {
+        return Attribute::make(
+            get: fn ($value) => request()->expectsJson() ? asset('storage/' . $value) : $value,
+        );
+    }
+
+    public static function trending($perPage = 100, $priceCount = 0, $search = false)
     {
         $query = Currency::withCount('sends')
             ->withCount('trades')
             ->withCount('buys');
         if ($priceCount) {
             $query = $query->with('prices', fn ($query) => $query->limit($priceCount)->orderBy('id', 'desc'));
+        }
+        if ($search) {
+            $query = $query->whereRaw('LOWER(Currency_name) LIKE (?)', ['%' . $search . '%']);
         }
         return $query
             ->limit($perPage)

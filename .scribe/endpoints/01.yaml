@@ -1,0 +1,188 @@
+name: Home
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/home
+    metadata:
+      groupName: Home
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":1,"logo":"\/tmp\/7c0969ce61aefa02f53e07b74c9bc5ea.png","Currency_name":"voluptates","Abbrevation":"deserunt","new_price":162,"old_price":162,"percentage":0},{"id":2,"logo":"\/tmp\/ac04d242c771bed3da3d6381c449b3fe.png","Currency_name":"omnis","Abbrevation":"quis","new_price":153,"old_price":569,"percentage":-4.2}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '40'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/home/watchlist
+    metadata:
+      groupName: Home
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      search:
+        name: search
+        description: ''
+        required: false
+        example: null
+        type: string
+        custom: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":1,"logo":"\/tmp\/7c0969ce61aefa02f53e07b74c9bc5ea.png","Currency_name":"voluptates","Abbrevation":"deserunt","new_price":null,"old_price":null,"percentage":0},{"id":2,"logo":"\/tmp\/ac04d242c771bed3da3d6381c449b3fe.png","Currency_name":"omnis","Abbrevation":"quis","new_price":153,"old_price":153,"percentage":0},{"id":3,"logo":"\/tmp\/402dd391157eaa7d0dc9baf80a21f510.png","Currency_name":"modi","Abbrevation":"voluptas","new_price":488,"old_price":150,"percentage":3.4},{"id":4,"logo":"\/tmp\/245fbdd12c8490a291bbcd0491816f72.png","Currency_name":"impedit","Abbrevation":"eos","new_price":null,"old_price":null,"percentage":0},{"id":5,"logo":"\/tmp\/a7929489641b88612a5c950eb2a8f3e4.png","Currency_name":"doloremque","Abbrevation":"occaecati","new_price":null,"old_price":null,"percentage":0}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '39'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/home/best-value
+    metadata:
+      groupName: Home
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      search:
+        name: search
+        description: ''
+        required: false
+        example: null
+        type: string
+        custom: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":2,"logo":"\/tmp\/ac04d242c771bed3da3d6381c449b3fe.png","Currency_name":"omnis","Abbrevation":"quis","new_price":153,"old_price":153,"percentage":0},{"id":3,"logo":"\/tmp\/402dd391157eaa7d0dc9baf80a21f510.png","Currency_name":"modi","Abbrevation":"voluptas","new_price":488,"old_price":150,"percentage":3.4},{"id":1,"logo":"\/tmp\/7c0969ce61aefa02f53e07b74c9bc5ea.png","Currency_name":"voluptates","Abbrevation":"deserunt","new_price":null,"old_price":null,"percentage":0},{"id":4,"logo":"\/tmp\/245fbdd12c8490a291bbcd0491816f72.png","Currency_name":"impedit","Abbrevation":"eos","new_price":null,"old_price":null,"percentage":0},{"id":5,"logo":"\/tmp\/a7929489641b88612a5c950eb2a8f3e4.png","Currency_name":"doloremque","Abbrevation":"occaecati","new_price":null,"old_price":null,"percentage":0}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '38'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/home/trending
+    metadata:
+      groupName: Home
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      search:
+        name: search
+        description: ''
+        required: false
+        example: null
+        type: string
+        custom: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":4,"logo":"\/tmp\/245fbdd12c8490a291bbcd0491816f72.png","Currency_name":"impedit","Abbrevation":"eos","new_price":null,"old_price":null,"percentage":0},{"id":3,"logo":"\/tmp\/402dd391157eaa7d0dc9baf80a21f510.png","Currency_name":"modi","Abbrevation":"voluptas","new_price":488,"old_price":150,"percentage":3.4},{"id":1,"logo":"\/tmp\/7c0969ce61aefa02f53e07b74c9bc5ea.png","Currency_name":"voluptates","Abbrevation":"deserunt","new_price":null,"old_price":null,"percentage":0},{"id":5,"logo":"\/tmp\/a7929489641b88612a5c950eb2a8f3e4.png","Currency_name":"doloremque","Abbrevation":"occaecati","new_price":null,"old_price":null,"percentage":0},{"id":2,"logo":"\/tmp\/ac04d242c771bed3da3d6381c449b3fe.png","Currency_name":"omnis","Abbrevation":"quis","new_price":153,"old_price":153,"percentage":0}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '37'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
