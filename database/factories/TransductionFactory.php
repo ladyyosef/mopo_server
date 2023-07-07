@@ -24,10 +24,10 @@ class TransductionFactory extends Factory
     public function definition(): array
     {
         return [
-            'User_out' => User::factory(),
-            'User_in' => User::factory(),
-            'trade_id' => Trade::factory(),
-            'Wallet_id' => Wallet::factory(),
+            'User_out' => rand(1, User::count()),
+            'User_in' => rand(1, User::count()),
+            'trade_id' => rand(1, Trade::count()),
+            'Wallet_id' => rand(1, Wallet::count()),
         ];
     }
 }

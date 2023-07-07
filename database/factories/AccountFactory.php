@@ -22,7 +22,7 @@ class AccountFactory extends Factory
     public function definition(): array
     {
         return [
-            'User_id' => User::factory(),
+            'User_id' => rand(2, User::where('User_Type_id', 2)->count()),
             'Status' => $this->faker->boolean,
             'account_number' => $this->faker->unique->regexify('[0-9]{12}'),
 

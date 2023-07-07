@@ -22,7 +22,7 @@ class SendFactory extends Factory
     {
         return [
             'quantity' => $this->faker->randomFloat(0, 0, 9999999999.),
-            'currency_id' => Currency::factory(),
+            'currency_id' => rand(1, Currency::count()),
             'email' => fake()->unique()->safeEmail(),
             'account_number' => $this->faker->unique->regexify('[0-9]{12}'),
         ];

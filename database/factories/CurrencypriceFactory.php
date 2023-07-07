@@ -22,11 +22,8 @@ class CurrencypriceFactory extends Factory
     public function definition(): array
     {
         return [
-            'today_price' => $this->faker->randomFloat(0, 0, 9999999999.),
-            'yesterday_price' => $this->faker->randomFloat(0, 0, 9999999999.),
-            'percentage' => $this->faker->word,
-            'Date_Time' => $this->faker->date(),
-            'currency_id' => Currency::factory(),
+            'price' => $this->faker->randomFloat(0, 0, 1000),
+            'currency_id' => rand(1, Currency::count()),
         ];
     }
 }

@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use App\Models\card;
 use App\Models\wallet;
 use Carbon\carbon;
+
 class CardFactory extends Factory
 {
     /**
@@ -27,7 +28,7 @@ class CardFactory extends Factory
             'Card_image'  => $this->faker->image(),
             'Cvc' => $this->faker->numberBetween(-10000, 10000),
             'Expire_Date' => Carbon::parse($this->faker->date()),
-            'Wallet_id' => Wallet::factory(),
+            'Wallet_id' => rand(1, wallet::count()),
         ];
     }
 }

@@ -17,10 +17,7 @@ class Currencyprice extends Model
      * @var array
      */
     protected $fillable = [
-        'today_price',
-        'yesterday_price',
-        'percentage',
-        'Date_Time',
+        'price',
         'currency_id',
     ];
 
@@ -31,16 +28,9 @@ class Currencyprice extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'today_price' => 'double',
-        'yesterday_price' => 'double',
-        'percentage' => 'string',
+        'price' => 'double',
         'currency_id' => 'integer',
     ];
-
-    public function currencies(): HasMany
-    {
-        return $this->hasMany(Currency::class);
-    }
 
     public function currency(): BelongsTo
     {

@@ -45,21 +45,17 @@ class Trade extends Model
         return $this->hasMany(Account::class);
     }
 
-    public function currencies(): HasMany
-    {
-        return $this->hasMany(Currency::class);
-    }
+
     public function currency(): BelongsTo
     {
-        return $this->belongsTo(Currency::class,'currency_id_in');
+        return $this->belongsTo(Currency::class, 'currency_id_in');
     }
     public function currencyOut(): BelongsTo
     {
-        return $this->belongsTo(Currency::class,'currency_id_out');
+        return $this->belongsTo(Currency::class, 'currency_id_out');
     }
     public function account(): BelongsTo
     {
-        return $this->belongsTo(Account::class,'account_number');
+        return $this->belongsTo(Account::class, 'account_number');
     }
-
 }

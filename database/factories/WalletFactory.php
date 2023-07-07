@@ -24,8 +24,8 @@ class WalletFactory extends Factory
     {
         return [
             'Quantity' => $this->faker->randomFloat(0, 0, 9999999999.),
-            'User_id' => User::factory(),
-            'currency_id' => Currency::factory(),
+            'User_id' => rand(1, User::count()),
+            'currency_id' => rand(1, Currency::count()),
         ];
     }
 }

@@ -5,17 +5,25 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Filament\Models\Contracts\FilamentUser;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Storage;
 use Laravel\Sanctum\HasApiTokens;
+use Filament\Models\Contracts\HasName;
 
-class User extends Authenticatable  implements MustVerifyEmail, FilamentUser
+class User extends Authenticatable  implements MustVerifyEmail, FilamentUser, HasName
 {
     use HasApiTokens, HasFactory, Notifiable;
 
     public function canAccessFilament(): bool
     {
         return $this->usertype->name == 'admin';
+    }
+
+    public function getFilamentName(): string
+    {
+        return "{$this->Full_name}";
     }
 
     /**
@@ -56,7 +64,7 @@ class User extends Authenticatable  implements MustVerifyEmail, FilamentUser
 
     public function usertype(): BelongsTo
     {
-        return $this->belongsTo(Usertype::class);
+        return $this->belongsTo(usertype::class, 'User_Type_id');
     }
     public function getProfileImageUrlAttribute()
     {

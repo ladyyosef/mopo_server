@@ -15,10 +15,7 @@ return new class extends Migration
 
         Schema::create('currencyprices', function (Blueprint $table) {
             $table->id();
-            $table->double('today_price');
-            $table->double('yesterday_price');
-            $table->string('percentage');
-            $table->date('Date_Time');
+            $table->double('price');
             $table->foreignId('currency_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });

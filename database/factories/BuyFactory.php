@@ -3,10 +3,9 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 use App\Models\Account;
+use App\Models\Buy;
 use App\Models\Currency;
-use App\Models\buy;
 
 class BuyFactory extends Factory
 {
@@ -23,9 +22,9 @@ class BuyFactory extends Factory
     public function definition(): array
     {
         return [
-            'account_number' => Account::factory(),
-            'currency_id_in' => Currency::factory(),
-            'currency_id_out' => Currency::factory(),
+            'account_number' => rand(1, Account::count()),
+            'currency_id_in' => rand(1, Currency::count()),
+            'currency_id_out' => rand(1, Currency::count()),
             'quantity' => $this->faker->randomFloat(0, 0, 9999999999.),
         ];
     }

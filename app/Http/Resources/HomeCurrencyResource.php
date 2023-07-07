@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Resources;
+namespace App\Http\Resources;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class CurrencyResource extends JsonResource
+class HomeCurrencyResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -15,11 +15,13 @@ class CurrencyResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-
+            'id' => $this->id,
             'logo' => $this->logo,
             'Currency_name' => $this->Currency_name,
             'Abbrevation' => $this->Abbrevation,
-            'prices' => CurrencyPriceResource::collection($this->whenLoaded('prices')),
+            'new_price' => $this->prices->first()?->price,
+            'old_price' => $this->prices->last()?->price,
+            'percentage' => round(($this->prices->first()?->price - $this->prices->last()?->price) / 100, 1),
         ];
     }
 }
