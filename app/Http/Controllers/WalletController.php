@@ -9,10 +9,33 @@ use Illuminate\Http\Request;
 use App\Http\Requests\Request\api\WalletRequest;
 use App\Http\Controllers\Resources\WalletResource;
 
+/**
+ * @group Wallet
+ *  */
 class WalletController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * get wallets of a user
+     * @response {
+    "data": [
+        {
+            "id": 2,
+            "quantity": 9212735699,
+            "name": "deleniti",
+            "Abbrevation": "consequatur",
+            "price": 248,
+            "percentage": 0
+        },
+        {
+            "id": 4,
+            "quantity": 7534749832,
+            "name": "quaerat",
+            "Abbrevation": "facilis",
+            "price": 719,
+            "percentage": 0
+        }
+    ]
+}
      */
     public function index()
     {

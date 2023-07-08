@@ -1,16 +1,16 @@
-name: Home
+name: Wallet
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: api/home
+    uri: api/wallet
     metadata:
-      groupName: Home
+      groupName: Wallet
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'get wallets of a user'
       description: ''
       authenticated: false
       custom: []
@@ -27,14 +27,29 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":2,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/9c4bbffd2e0ef8accb9b3c6905c6406e.png","Currency_name":"velit","Abbrevation":"earum","new_price":null,"old_price":null,"percentage":0},{"id":1,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/baf61469b5a0cc7e72ac0dbb6836e112.png","Currency_name":"voluptas","Abbrevation":"quod","new_price":31,"old_price":443,"percentage":-4.1}]}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '42'
-          access-control-allow-origin: '*'
-        description: null
+        content: |-
+          {
+          "data": [
+          {
+          "id": 2,
+          "quantity": 9212735699,
+          "name": "deleniti",
+          "Abbrevation": "consequatur",
+          "price": 248,
+          "percentage": 0
+          },
+          {
+          "id": 4,
+          "quantity": 7534749832,
+          "name": "quaerat",
+          "Abbrevation": "facilis",
+          "price": 719,
+          "percentage": 0
+          }
+          ]
+          }
+        headers: []
+        description: ''
         custom: []
     responseFields: []
     auth: []
@@ -44,14 +59,14 @@ endpoints:
     custom: []
   -
     httpMethods:
-      - GET
-    uri: api/home/watchlist
+      - POST
+    uri: api/wallet
     metadata:
-      groupName: Home
+      groupName: Wallet
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Store a newly created resource in storage.'
       description: ''
       authenticated: false
       custom: []
@@ -63,24 +78,77 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      search:
-        name: search
+      currency_id:
+        name: currency_id
         description: ''
-        required: false
-        example: null
+        required: true
+        example: qui
         type: string
         custom: []
+      Quantity:
+        name: Quantity
+        description: ''
+        required: true
+        example: aut
+        type: string
+        custom: []
+      User_id:
+        name: User_id
+        description: ''
+        required: true
+        example: hic
+        type: string
+        custom: []
+    cleanBodyParameters:
+      currency_id: qui
+      Quantity: aut
+      User_id: hic
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/wallet/{id}'
+    metadata:
+      groupName: Wallet
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the wallet.'
+        required: true
+        example: et
+        type: string
+        custom: []
+    cleanUrlParameters:
+      id: et
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
-        status: 200
-        content: '{"data":[{"id":1,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/baf61469b5a0cc7e72ac0dbb6836e112.png","Currency_name":"voluptas","Abbrevation":"quod","new_price":31,"old_price":443,"percentage":-4.1},{"id":2,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/9c4bbffd2e0ef8accb9b3c6905c6406e.png","Currency_name":"velit","Abbrevation":"earum","new_price":null,"old_price":null,"percentage":0},{"id":3,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/bd0de8ea47051071f631cd01286a4b5a.png","Currency_name":"commodi","Abbrevation":"fuga","new_price":null,"old_price":null,"percentage":0},{"id":4,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/c4eee9c5e94ebe09b316f619e03e1bf7.png","Currency_name":"ex","Abbrevation":"odit","new_price":null,"old_price":null,"percentage":0},{"id":5,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/ae659f26be7bdd3a67dc5c0a245ad5a1.png","Currency_name":"a","Abbrevation":"vel","new_price":null,"old_price":null,"percentage":0}]}'
+        status: 401
+        content: '{"message":"Unauthenticated."}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '41'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -92,46 +160,37 @@ endpoints:
     custom: []
   -
     httpMethods:
-      - GET
-    uri: api/home/best-value
+      - PUT
+      - PATCH
+    uri: 'api/wallet/{id}'
     metadata:
-      groupName: Home
+      groupName: Wallet
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Update the specified resource in storage.'
       description: ''
       authenticated: false
       custom: []
     headers:
       Content-Type: application/json
       Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      search:
-        name: search
-        description: ''
-        required: false
-        example: null
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the wallet.'
+        required: true
+        example: est
         type: string
         custom: []
+    cleanUrlParameters:
+      id: est
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"data":[{"id":1,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/baf61469b5a0cc7e72ac0dbb6836e112.png","Currency_name":"voluptas","Abbrevation":"quod","new_price":31,"old_price":443,"percentage":-4.1},{"id":4,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/c4eee9c5e94ebe09b316f619e03e1bf7.png","Currency_name":"ex","Abbrevation":"odit","new_price":null,"old_price":null,"percentage":0},{"id":2,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/9c4bbffd2e0ef8accb9b3c6905c6406e.png","Currency_name":"velit","Abbrevation":"earum","new_price":null,"old_price":null,"percentage":0},{"id":3,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/bd0de8ea47051071f631cd01286a4b5a.png","Currency_name":"commodi","Abbrevation":"fuga","new_price":null,"old_price":null,"percentage":0},{"id":5,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/ae659f26be7bdd3a67dc5c0a245ad5a1.png","Currency_name":"a","Abbrevation":"vel","new_price":null,"old_price":null,"percentage":0}]}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '40'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
+    responses: []
     responseFields: []
     auth: []
     controller: null
@@ -140,46 +199,36 @@ endpoints:
     custom: []
   -
     httpMethods:
-      - GET
-    uri: api/home/trending
+      - DELETE
+    uri: 'api/wallet/{id}'
     metadata:
-      groupName: Home
+      groupName: Wallet
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Remove the specified resource from storage.'
       description: ''
       authenticated: false
       custom: []
     headers:
       Content-Type: application/json
       Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      search:
-        name: search
-        description: ''
-        required: false
-        example: null
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the wallet.'
+        required: true
+        example: sed
         type: string
         custom: []
+    cleanUrlParameters:
+      id: sed
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"data":[{"id":4,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/c4eee9c5e94ebe09b316f619e03e1bf7.png","Currency_name":"ex","Abbrevation":"odit","new_price":null,"old_price":null,"percentage":0},{"id":5,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/ae659f26be7bdd3a67dc5c0a245ad5a1.png","Currency_name":"a","Abbrevation":"vel","new_price":null,"old_price":null,"percentage":0},{"id":2,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/9c4bbffd2e0ef8accb9b3c6905c6406e.png","Currency_name":"velit","Abbrevation":"earum","new_price":null,"old_price":null,"percentage":0},{"id":3,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/bd0de8ea47051071f631cd01286a4b5a.png","Currency_name":"commodi","Abbrevation":"fuga","new_price":null,"old_price":null,"percentage":0},{"id":1,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/baf61469b5a0cc7e72ac0dbb6836e112.png","Currency_name":"voluptas","Abbrevation":"quod","new_price":31,"old_price":443,"percentage":-4.1}]}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '39'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
+    responses: []
     responseFields: []
     auth: []
     controller: null

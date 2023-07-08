@@ -26,19 +26,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: vkling@example.com
+        example: spouros@example.com
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: unde
+        example: nisi
         type: string
         custom: []
     cleanBodyParameters:
-      email: vkling@example.com
-      password: unde
+      email: spouros@example.com
+      password: nisi
     fileParameters: []
     responses:
       -
@@ -115,19 +115,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: tturcotte@example.net
+        example: ernestine.kub@example.net
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: sit
+        example: quia
         type: string
         custom: []
     cleanBodyParameters:
-      email: tturcotte@example.net
-      password: sit
+      email: ernestine.kub@example.net
+      password: quia
     fileParameters: []
     responses:
       -
@@ -204,75 +204,75 @@ endpoints:
         name: Full_name
         description: 'Must not be greater than 25 characters.'
         required: true
-        example: isnt
+        example: omqw
         type: string
         custom: []
       phone:
         name: phone
         description: ''
         required: true
-        example: eaque
+        example: harum
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: leilani.rau@example.net
+        example: aric.zboncak@example.net
         type: string
         custom: []
       password:
         name: password
         description: 'Must be at least 8 characters.'
         required: true
-        example: DrUnw-%JD6=
+        example: '>9/*oXjSfjI0v@b'
         type: string
         custom: []
       postal_code:
         name: postal_code
         description: ''
         required: true
-        example: et
+        example: pariatur
         type: string
         custom: []
       City:
         name: City
         description: ''
         required: true
-        example: voluptatem
+        example: nihil
         type: string
         custom: []
       Birth_date:
         name: Birth_date
         description: ''
         required: true
-        example: quidem
+        example: vel
         type: string
         custom: []
       Nationality:
         name: Nationality
         description: ''
         required: true
-        example: quisquam
+        example: sit
         type: string
         custom: []
       place_of_residence:
         name: place_of_residence
         description: ''
         required: true
-        example: sit
+        example: non
         type: string
         custom: []
     cleanBodyParameters:
-      Full_name: isnt
-      phone: eaque
-      email: leilani.rau@example.net
-      password: DrUnw-%JD6=
-      postal_code: et
-      City: voluptatem
-      Birth_date: quidem
-      Nationality: quisquam
-      place_of_residence: sit
+      Full_name: omqw
+      phone: harum
+      email: aric.zboncak@example.net
+      password: '>9/*oXjSfjI0v@b'
+      postal_code: pariatur
+      City: nihil
+      Birth_date: vel
+      Nationality: sit
+      place_of_residence: non
     fileParameters: []
     responses:
       -
@@ -404,11 +404,11 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: assumenda
+        example: et
         type: string
         custom: []
     cleanBodyParameters:
-      password: assumenda
+      password: et
     fileParameters: []
     responses:
       -
@@ -449,11 +449,11 @@ endpoints:
         name: account
         description: ''
         required: false
-        example: 1
+        example: 13
         type: integer
         custom: []
     cleanQueryParameters:
-      account: 1
+      account: 13
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -566,21 +566,21 @@ endpoints:
         name: id
         description: 'The ID of the account.'
         required: true
-        example: eaque
+        example: omnis
         type: string
         custom: []
     cleanUrlParameters:
-      id: eaque
+      id: omnis
     queryParameters:
       account:
         name: account
         description: int
         required: true
-        example: tempora
+        example: inventore
         type: string
         custom: []
     cleanQueryParameters:
-      account: tempora
+      account: inventore
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -751,7 +751,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"Full_name":"Admin admin","email":"admin@admin.com","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"0977584398","Profile_image":"C:\\Users\\LENOVO\\Downloads\\image1\\undraw_Designer_re_5v95 (1)"},{"Full_name":"User userr ","email":"user@gmail.com","password":"$2y$10$m.EHogOv0WDbhG3vCIIiweuNHjhyjdVFK\/Fizjfp.Nd8aQKKJSxE.","phone":"0966433721","Profile_image":"C:\\Users\\LENOVO\\Downloads\\image1\\undraw_Designer_re_5v95 (1)"},{"Full_name":"Reem Naif","email":"reemsalem@gmail.com","password":"$2y$10$7NRz0TyyDcXuBtxVgIcXiOOu5uhwPxuR2gdJGWPJiGF0TBTrr3\/X6","phone":"09775290133","Profile_image":"C:\\Users\\LENOVO\\Downloads\\image1\\undraw_Multitasking_re_ffpb"}]}'
+        content: '{"data":[{"Full_name":"Admin admin","email":"admin@admin.com","password":"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi","phone":"0977584398","Profile_image":"C:\\Users\\LENOVO\\Downloads\\image1\\undraw_Designer_re_5v95 (1)"},{"Full_name":"User userr ","email":"user@gmail.com","password":"$2y$10$fubxPNJFU8sYPeq65D\/WbeWRFJCagMSE2oLHrpo9oymkw8n7H5M1u","phone":"0966433721","Profile_image":"C:\\Users\\LENOVO\\Downloads\\image1\\undraw_Designer_re_5v95 (1)"},{"Full_name":"Reem Naif","email":"reemsalem@gmail.com","password":"$2y$10$WyvCrn4WhrHwQgtvWQO4j.RmjB0NZBMvrIABUV8hhV94Jwyjz\/SB6","phone":"09775290133","Profile_image":"C:\\Users\\LENOVO\\Downloads\\image1\\undraw_Multitasking_re_ffpb"}]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -1500,27 +1500,27 @@ endpoints:
         name: logo
         description: ''
         required: true
-        example: pariatur
+        example: voluptas
         type: string
         custom: []
       Currency_name:
         name: Currency_name
         description: ''
         required: true
-        example: ipsam
+        example: voluptatibus
         type: string
         custom: []
       Abbrevation:
         name: Abbrevation
         description: ''
         required: true
-        example: ut
+        example: autem
         type: string
         custom: []
     cleanBodyParameters:
-      logo: pariatur
-      Currency_name: ipsam
-      Abbrevation: ut
+      logo: voluptas
+      Currency_name: voluptatibus
+      Abbrevation: autem
     fileParameters: []
     responses: []
     responseFields: []
@@ -1563,7 +1563,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/baf61469b5a0cc7e72ac0dbb6836e112.png","Currency_name":"voluptas","Abbrevation":"quod"}}'
+        content: '{"data":{"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/cf6c5e1aa69795917bb3bce706e447de.png","Currency_name":"odit","Abbrevation":"qui"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -1721,43 +1721,43 @@ endpoints:
         name: today_price
         description: ''
         required: true
-        example: et
+        example: deleniti
         type: string
         custom: []
       percentage:
         name: percentage
         description: ''
         required: true
-        example: deserunt
+        example: saepe
         type: string
         custom: []
       yesterday_price:
         name: yesterday_price
         description: ''
         required: true
-        example: voluptas
+        example: tenetur
         type: string
         custom: []
       Date_Time:
         name: Date_Time
         description: ''
         required: true
-        example: dolorem
+        example: est
         type: string
         custom: []
       currency_id:
         name: currency_id
         description: ''
         required: true
-        example: consequatur
+        example: rerum
         type: string
         custom: []
     cleanBodyParameters:
-      today_price: et
-      percentage: deserunt
-      yesterday_price: voluptas
-      Date_Time: dolorem
-      currency_id: consequatur
+      today_price: deleniti
+      percentage: saepe
+      yesterday_price: tenetur
+      Date_Time: est
+      currency_id: rerum
     fileParameters: []
     responses: []
     responseFields: []
@@ -1800,7 +1800,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"today_price":null,"yesterday_price":null,"percentage":null,"Date_Time":null,"currency_id":{"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/c4eee9c5e94ebe09b316f619e03e1bf7.png","Currency_name":"ex","Abbrevation":"odit"}}}'
+        content: '{"data":{"today_price":null,"yesterday_price":null,"percentage":null,"Date_Time":null,"currency_id":{"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/cf6c5e1aa69795917bb3bce706e447de.png","Currency_name":"odit","Abbrevation":"qui"}}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -1963,36 +1963,36 @@ endpoints:
         name: Card_number
         description: ''
         required: true
-        example: dolorem
+        example: facere
         type: string
         custom: []
       Holder_Name:
         name: Holder_Name
         description: ''
         required: true
-        example: placeat
+        example: fuga
         type: string
         custom: []
       Cvc:
         name: Cvc
         description: ''
         required: true
-        example: ea
+        example: voluptas
         type: string
         custom: []
       Expire_Date:
         name: Expire_Date
         description: ''
         required: true
-        example: aut
+        example: officia
         type: string
         custom: []
     cleanBodyParameters:
       type: visa
-      Card_number: dolorem
-      Holder_Name: placeat
-      Cvc: ea
-      Expire_Date: aut
+      Card_number: facere
+      Holder_Name: fuga
+      Cvc: voluptas
+      Expire_Date: officia
     fileParameters: []
     responses: []
     responseFields: []
@@ -2151,7 +2151,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"currency_id":{"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/baf61469b5a0cc7e72ac0dbb6836e112.png","Currency_name":"voluptas","Abbrevation":"quod"},"email":"user133@gmail.com","quantity":112.399},{"currency_id":{"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/bd0de8ea47051071f631cd01286a4b5a.png","Currency_name":"commodi","Abbrevation":"fuga"},"email":"user453@gmail.com","quantity":123.455},{"currency_id":{"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/c4eee9c5e94ebe09b316f619e03e1bf7.png","Currency_name":"ex","Abbrevation":"odit"},"email":"user443@gmail.com","quantity":345.67}]}'
+        content: '{"data":[{"currency_id":{"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/cf6c5e1aa69795917bb3bce706e447de.png","Currency_name":"odit","Abbrevation":"qui"},"email":"user133@gmail.com","quantity":112.399},{"currency_id":{"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/a9afa87d7a6a44b04316a78c56b14bb2.png","Currency_name":"delectus","Abbrevation":"ea"},"email":"user453@gmail.com","quantity":123.455},{"currency_id":{"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/cb2963263f3f287b95ed31b315598ac7.png","Currency_name":"rerum","Abbrevation":"eius"},"email":"user443@gmail.com","quantity":345.67}]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -2187,39 +2187,31 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      account_number:
-        name: account_number
+      email:
+        name: email
         description: ''
         required: true
-        example: eum
+        example: maiores
+        type: string
+        custom: []
+      amount:
+        name: amount
+        description: ''
+        required: true
+        example: eius
         type: string
         custom: []
       currency_id:
         name: currency_id
         description: ''
         required: true
-        example: distinctio
-        type: string
-        custom: []
-      email:
-        name: email
-        description: ''
-        required: true
-        example: nihil
-        type: string
-        custom: []
-      quantity:
-        name: quantity
-        description: ''
-        required: true
-        example: voluptatum
+        example: commodi
         type: string
         custom: []
     cleanBodyParameters:
-      account_number: eum
-      currency_id: distinctio
-      email: nihil
-      quantity: voluptatum
+      email: maiores
+      amount: eius
+      currency_id: commodi
     fileParameters: []
     responses: []
     responseFields: []
@@ -2262,7 +2254,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"currency_id":{"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/baf61469b5a0cc7e72ac0dbb6836e112.png","Currency_name":"voluptas","Abbrevation":"quod"},"email":"user133@gmail.com","quantity":112.399}}'
+        content: '{"data":{"currency_id":{"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/cf6c5e1aa69795917bb3bce706e447de.png","Currency_name":"odit","Abbrevation":"qui"},"email":"user133@gmail.com","quantity":112.399}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -2357,7 +2349,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: api/wallet
+    uri: api/trade
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -2382,16 +2374,16 @@ endpoints:
         status: 500
         content: |-
           {
-              "message": "Class \"App\\Models\\wallet\" not found",
+              "message": "Class \"App\\Models\\trade\" not found",
               "exception": "Error",
-              "file": "/home/loaidev/Projects/Laravel/mopo_server/app/Http/Controllers/WalletController.php",
-              "line": 19,
+              "file": "/home/loaidev/Projects/Laravel/mopo_server/app/Http/Controllers/TradeController.php",
+              "line": 17,
               "trace": [
                   {
                       "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Controller.php",
                       "line": 54,
                       "function": "index",
-                      "class": "App\\Http\\Controllers\\WalletController",
+                      "class": "App\\Http\\Controllers\\TradeController",
                       "type": "->"
                   },
                   {
@@ -2847,7 +2839,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/wallet
+    uri: api/trade
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -2865,31 +2857,39 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      currency_id:
-        name: currency_id
+      currency_id_in:
+        name: currency_id_in
         description: ''
         required: true
-        example: delectus
+        example: blanditiis
         type: string
         custom: []
-      Quantity:
-        name: Quantity
+      currency_id_out:
+        name: currency_id_out
         description: ''
         required: true
-        example: qui
+        example: et
         type: string
         custom: []
-      User_id:
-        name: User_id
+      quantity_in:
+        name: quantity_in
         description: ''
         required: true
-        example: aut
+        example: explicabo
+        type: string
+        custom: []
+      quantity_out:
+        name: quantity_out
+        description: ''
+        required: true
+        example: soluta
         type: string
         custom: []
     cleanBodyParameters:
-      currency_id: delectus
-      Quantity: qui
-      User_id: aut
+      currency_id_in: blanditiis
+      currency_id_out: et
+      quantity_in: explicabo
+      quantity_out: soluta
     fileParameters: []
     responses: []
     responseFields: []
@@ -2901,7 +2901,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/wallet/{id}'
+    uri: 'api/trade/{id}'
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -2917,13 +2917,13 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the wallet.'
+        description: 'The ID of the trade.'
         required: true
-        example: aut
+        example: est
         type: string
         custom: []
     cleanUrlParameters:
-      id: aut
+      id: est
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -2934,16 +2934,16 @@ endpoints:
         status: 500
         content: |-
           {
-              "message": "Class \"App\\Models\\wallet\" not found",
+              "message": "Class \"App\\Models\\trade\" not found",
               "exception": "Error",
-              "file": "/home/loaidev/Projects/Laravel/mopo_server/app/Http/Controllers/WalletController.php",
-              "line": 38,
+              "file": "/home/loaidev/Projects/Laravel/mopo_server/app/Http/Controllers/TradeController.php",
+              "line": 37,
               "trace": [
                   {
                       "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Controller.php",
                       "line": 54,
                       "function": "show",
-                      "class": "App\\Http\\Controllers\\WalletController",
+                      "class": "App\\Http\\Controllers\\TradeController",
                       "type": "->"
                   },
                   {
@@ -3400,7 +3400,7 @@ endpoints:
     httpMethods:
       - PUT
       - PATCH
-    uri: 'api/wallet/{id}'
+    uri: 'api/trade/{id}'
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -3416,13 +3416,13 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the wallet.'
+        description: 'The ID of the trade.'
         required: true
-        example: distinctio
+        example: consectetur
         type: string
         custom: []
     cleanUrlParameters:
-      id: distinctio
+      id: consectetur
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -3438,7 +3438,7 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'api/wallet/{id}'
+    uri: 'api/trade/{id}'
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -3454,13 +3454,13 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the wallet.'
+        description: 'The ID of the trade.'
         required: true
-        example: ipsum
+        example: fugiat
         type: string
         custom: []
     cleanUrlParameters:
-      id: ipsum
+      id: fugiat
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -3476,7 +3476,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: api/trade
+    uri: api/buy
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -3498,462 +3498,11 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Class \"App\\Models\\trade\" not found",
-              "exception": "Error",
-              "file": "/home/loaidev/Projects/Laravel/mopo_server/app/Http/Controllers/TradeController.php",
-              "line": 18,
-              "trace": [
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Controller.php",
-                      "line": 54,
-                      "function": "index",
-                      "class": "App\\Http\\Controllers\\TradeController",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php",
-                      "line": 43,
-                      "function": "callAction",
-                      "class": "Illuminate\\Routing\\Controller",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Route.php",
-                      "line": 260,
-                      "function": "dispatch",
-                      "class": "Illuminate\\Routing\\ControllerDispatcher",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Route.php",
-                      "line": 205,
-                      "function": "runController",
-                      "class": "Illuminate\\Routing\\Route",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 799,
-                      "function": "run",
-                      "class": "Illuminate\\Routing\\Route",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 141,
-                      "function": "Illuminate\\Routing\\{closure}",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php",
-                      "line": 50,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
-                      "line": 159,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
-                      "line": 135,
-                      "function": "handleRequest",
-                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
-                      "line": 87,
-                      "function": "handleRequestUsingNamedLimiter",
-                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 116,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 800,
-                      "function": "then",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 777,
-                      "function": "runRouteWithinStack",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 741,
-                      "function": "runRoute",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 730,
-                      "function": "dispatchToRoute",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
-                      "line": 200,
-                      "function": "dispatch",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 141,
-                      "function": "Illuminate\\Foundation\\Http\\{closure}",
-                      "class": "Illuminate\\Foundation\\Http\\Kernel",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/livewire/livewire/src/DisableBrowserCache.php",
-                      "line": 19,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Livewire\\DisableBrowserCache",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
-                      "line": 21,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php",
-                      "line": 31,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
-                      "line": 21,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php",
-                      "line": 40,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php",
-                      "line": 27,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php",
-                      "line": 86,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php",
-                      "line": 62,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Http\\Middleware\\HandleCors",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php",
-                      "line": 39,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Http\\Middleware\\TrustProxies",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 116,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
-                      "line": 175,
-                      "function": "then",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
-                      "line": 144,
-                      "function": "sendRequestThroughRouter",
-                      "class": "Illuminate\\Foundation\\Http\\Kernel",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 299,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Kernel",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 287,
-                      "function": "callLaravelOrLumenRoute",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 92,
-                      "function": "makeApiCall",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 45,
-                      "function": "makeResponseCall",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 35,
-                      "function": "makeResponseCallIfConditionsPass",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
-                      "line": 209,
-                      "function": "__invoke",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
-                      "line": 166,
-                      "function": "iterateThroughStrategies",
-                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
-                      "line": 95,
-                      "function": "fetchResponses",
-                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
-                      "line": 124,
-                      "function": "processRoute",
-                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
-                      "line": 71,
-                      "function": "extractEndpointsInfoFromLaravelApp",
-                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
-                      "line": 49,
-                      "function": "extractEndpointsInfoAndWriteToDisk",
-                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php",
-                      "line": 51,
-                      "function": "get",
-                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
-                      "line": 36,
-                      "function": "handle",
-                      "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Container/Util.php",
-                      "line": 41,
-                      "function": "Illuminate\\Container\\{closure}",
-                      "class": "Illuminate\\Container\\BoundMethod",
-                      "type": "::"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
-                      "line": 93,
-                      "function": "unwrapIfClosure",
-                      "class": "Illuminate\\Container\\Util",
-                      "type": "::"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
-                      "line": 37,
-                      "function": "callBoundMethod",
-                      "class": "Illuminate\\Container\\BoundMethod",
-                      "type": "::"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Container/Container.php",
-                      "line": 662,
-                      "function": "call",
-                      "class": "Illuminate\\Container\\BoundMethod",
-                      "type": "::"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Console/Command.php",
-                      "line": 208,
-                      "function": "call",
-                      "class": "Illuminate\\Container\\Container",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/symfony/console/Command/Command.php",
-                      "line": 326,
-                      "function": "execute",
-                      "class": "Illuminate\\Console\\Command",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Console/Command.php",
-                      "line": 178,
-                      "function": "run",
-                      "class": "Symfony\\Component\\Console\\Command\\Command",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/symfony/console/Application.php",
-                      "line": 1081,
-                      "function": "run",
-                      "class": "Illuminate\\Console\\Command",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/symfony/console/Application.php",
-                      "line": 320,
-                      "function": "doRunCommand",
-                      "class": "Symfony\\Component\\Console\\Application",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/symfony/console/Application.php",
-                      "line": 174,
-                      "function": "doRun",
-                      "class": "Symfony\\Component\\Console\\Application",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php",
-                      "line": 200,
-                      "function": "run",
-                      "class": "Symfony\\Component\\Console\\Application",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/artisan",
-                      "line": 37,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Console\\Kernel",
-                      "type": "->"
-                  }
-              ]
-          }
+        status: 401
+        content: '{"message":"Unauthenticated."}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '49'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -3966,7 +3515,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/trade
+    uri: api/buy
     metadata:
       groupName: Endpoints
       groupDescription: ''
@@ -3984,725 +3533,31 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      account_number:
-        name: account_number
-        description: ''
-        required: true
-        example: cumque
-        type: string
-        custom: []
       currency_id_in:
         name: currency_id_in
         description: ''
         required: true
-        example: aperiam
+        example: iure
         type: string
         custom: []
       currency_id_out:
         name: currency_id_out
         description: ''
         required: true
-        example: atque
-        type: string
-        custom: []
-      price:
-        name: price
-        description: ''
-        required: true
-        example: autem
+        example: recusandae
         type: string
         custom: []
       quantity:
         name: quantity
-        description: ''
-        required: true
-        example: aspernatur
-        type: string
-        custom: []
-    cleanBodyParameters:
-      account_number: cumque
-      currency_id_in: aperiam
-      currency_id_out: atque
-      price: autem
-      quantity: aspernatur
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/trade/{id}'
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Display the specified resource.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the trade.'
-        required: true
-        example: accusamus
-        type: string
-        custom: []
-    cleanUrlParameters:
-      id: accusamus
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 500
-        content: |-
-          {
-              "message": "Class \"App\\Models\\trade\" not found",
-              "exception": "Error",
-              "file": "/home/loaidev/Projects/Laravel/mopo_server/app/Http/Controllers/TradeController.php",
-              "line": 35,
-              "trace": [
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Controller.php",
-                      "line": 54,
-                      "function": "show",
-                      "class": "App\\Http\\Controllers\\TradeController",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php",
-                      "line": 43,
-                      "function": "callAction",
-                      "class": "Illuminate\\Routing\\Controller",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Route.php",
-                      "line": 260,
-                      "function": "dispatch",
-                      "class": "Illuminate\\Routing\\ControllerDispatcher",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Route.php",
-                      "line": 205,
-                      "function": "runController",
-                      "class": "Illuminate\\Routing\\Route",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 799,
-                      "function": "run",
-                      "class": "Illuminate\\Routing\\Route",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 141,
-                      "function": "Illuminate\\Routing\\{closure}",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php",
-                      "line": 50,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
-                      "line": 159,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
-                      "line": 135,
-                      "function": "handleRequest",
-                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
-                      "line": 87,
-                      "function": "handleRequestUsingNamedLimiter",
-                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 116,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 800,
-                      "function": "then",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 777,
-                      "function": "runRouteWithinStack",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 741,
-                      "function": "runRoute",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 730,
-                      "function": "dispatchToRoute",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
-                      "line": 200,
-                      "function": "dispatch",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 141,
-                      "function": "Illuminate\\Foundation\\Http\\{closure}",
-                      "class": "Illuminate\\Foundation\\Http\\Kernel",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/livewire/livewire/src/DisableBrowserCache.php",
-                      "line": 19,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Livewire\\DisableBrowserCache",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
-                      "line": 21,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php",
-                      "line": 31,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
-                      "line": 21,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php",
-                      "line": 40,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php",
-                      "line": 27,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php",
-                      "line": 86,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php",
-                      "line": 62,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Http\\Middleware\\HandleCors",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php",
-                      "line": 39,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Http\\Middleware\\TrustProxies",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 116,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
-                      "line": 175,
-                      "function": "then",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
-                      "line": 144,
-                      "function": "sendRequestThroughRouter",
-                      "class": "Illuminate\\Foundation\\Http\\Kernel",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 299,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Kernel",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 287,
-                      "function": "callLaravelOrLumenRoute",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 92,
-                      "function": "makeApiCall",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 45,
-                      "function": "makeResponseCall",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 35,
-                      "function": "makeResponseCallIfConditionsPass",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
-                      "line": 209,
-                      "function": "__invoke",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
-                      "line": 166,
-                      "function": "iterateThroughStrategies",
-                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
-                      "line": 95,
-                      "function": "fetchResponses",
-                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
-                      "line": 124,
-                      "function": "processRoute",
-                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
-                      "line": 71,
-                      "function": "extractEndpointsInfoFromLaravelApp",
-                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
-                      "line": 49,
-                      "function": "extractEndpointsInfoAndWriteToDisk",
-                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php",
-                      "line": 51,
-                      "function": "get",
-                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
-                      "line": 36,
-                      "function": "handle",
-                      "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Container/Util.php",
-                      "line": 41,
-                      "function": "Illuminate\\Container\\{closure}",
-                      "class": "Illuminate\\Container\\BoundMethod",
-                      "type": "::"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
-                      "line": 93,
-                      "function": "unwrapIfClosure",
-                      "class": "Illuminate\\Container\\Util",
-                      "type": "::"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
-                      "line": 37,
-                      "function": "callBoundMethod",
-                      "class": "Illuminate\\Container\\BoundMethod",
-                      "type": "::"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Container/Container.php",
-                      "line": 662,
-                      "function": "call",
-                      "class": "Illuminate\\Container\\BoundMethod",
-                      "type": "::"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Console/Command.php",
-                      "line": 208,
-                      "function": "call",
-                      "class": "Illuminate\\Container\\Container",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/symfony/console/Command/Command.php",
-                      "line": 326,
-                      "function": "execute",
-                      "class": "Illuminate\\Console\\Command",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Console/Command.php",
-                      "line": 178,
-                      "function": "run",
-                      "class": "Symfony\\Component\\Console\\Command\\Command",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/symfony/console/Application.php",
-                      "line": 1081,
-                      "function": "run",
-                      "class": "Illuminate\\Console\\Command",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/symfony/console/Application.php",
-                      "line": 320,
-                      "function": "doRunCommand",
-                      "class": "Symfony\\Component\\Console\\Application",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/symfony/console/Application.php",
-                      "line": 174,
-                      "function": "doRun",
-                      "class": "Symfony\\Component\\Console\\Application",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php",
-                      "line": 200,
-                      "function": "run",
-                      "class": "Symfony\\Component\\Console\\Application",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/home/loaidev/Projects/Laravel/mopo_server/artisan",
-                      "line": 37,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Console\\Kernel",
-                      "type": "->"
-                  }
-              ]
-          }
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '48'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - PUT
-      - PATCH
-    uri: 'api/trade/{id}'
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Update the specified resource in storage.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the trade.'
-        required: true
-        example: quibusdam
-        type: string
-        custom: []
-    cleanUrlParameters:
-      id: quibusdam
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - DELETE
-    uri: 'api/trade/{id}'
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Remove the specified resource from storage.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the trade.'
-        required: true
-        example: repellendus
-        type: string
-        custom: []
-    cleanUrlParameters:
-      id: repellendus
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: api/buy
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Display a listing of the resource.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"data":[{"account_number":{"account_number":"491816145641"},"currency_id_in":{"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/9c4bbffd2e0ef8accb9b3c6905c6406e.png","Currency_name":"velit","Abbrevation":"earum"},"currency_id_out":{"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/ae659f26be7bdd3a67dc5c0a245ad5a1.png","Currency_name":"a","Abbrevation":"vel"},"quantity":4171831656},{"account_number":{"account_number":"233244725861"},"currency_id_in":{"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/c4eee9c5e94ebe09b316f619e03e1bf7.png","Currency_name":"ex","Abbrevation":"odit"},"currency_id_out":{"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/baf61469b5a0cc7e72ac0dbb6836e112.png","Currency_name":"voluptas","Abbrevation":"quod"},"quantity":1720763078},{"account_number":{"account_number":"614142947757"},"currency_id_in":{"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/c4eee9c5e94ebe09b316f619e03e1bf7.png","Currency_name":"ex","Abbrevation":"odit"},"currency_id_out":{"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/ae659f26be7bdd3a67dc5c0a245ad5a1.png","Currency_name":"a","Abbrevation":"vel"},"quantity":8910218038},{"account_number":{"account_number":"717338656315"},"currency_id_in":{"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/bd0de8ea47051071f631cd01286a4b5a.png","Currency_name":"commodi","Abbrevation":"fuga"},"currency_id_out":{"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/baf61469b5a0cc7e72ac0dbb6836e112.png","Currency_name":"voluptas","Abbrevation":"quod"},"quantity":1096086014},{"account_number":{"account_number":"233244725861"},"currency_id_in":{"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/ae659f26be7bdd3a67dc5c0a245ad5a1.png","Currency_name":"a","Abbrevation":"vel"},"currency_id_out":{"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/ae659f26be7bdd3a67dc5c0a245ad5a1.png","Currency_name":"a","Abbrevation":"vel"},"quantity":4270174742}]}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '47'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/buy
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Store a newly created resource in storage.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      account_number:
-        name: account_number
-        description: ''
-        required: true
-        example: quia
-        type: string
-        custom: []
-      currency_id_in:
-        name: currency_id_in
         description: ''
         required: true
         example: molestiae
         type: string
         custom: []
-      currency_id_out:
-        name: currency_id_out
-        description: ''
-        required: true
-        example: cupiditate
-        type: string
-        custom: []
-      quantity:
-        name: quantity
-        description: ''
-        required: true
-        example: corrupti
-        type: string
-        custom: []
     cleanBodyParameters:
-      account_number: quia
-      currency_id_in: molestiae
-      currency_id_out: cupiditate
-      quantity: corrupti
+      currency_id_in: iure
+      currency_id_out: recusandae
+      quantity: molestiae
     fileParameters: []
     responses: []
     responseFields: []
@@ -4732,11 +3587,11 @@ endpoints:
         name: id
         description: 'The ID of the buy.'
         required: true
-        example: 1
-        type: integer
+        example: voluptatibus
+        type: string
         custom: []
     cleanUrlParameters:
-      id: 1
+      id: voluptatibus
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -4744,13 +3599,11 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 200
-        content: '{"data":{"currency_id_in":{"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/9c4bbffd2e0ef8accb9b3c6905c6406e.png","Currency_name":"velit","Abbrevation":"earum"},"currency_id_out":{"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/ae659f26be7bdd3a67dc5c0a245ad5a1.png","Currency_name":"a","Abbrevation":"vel"},"quantity":4171831656}}'
+        status: 401
+        content: '{"message":"Unauthenticated."}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '46'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -4782,11 +3635,11 @@ endpoints:
         name: id
         description: 'The ID of the buy.'
         required: true
-        example: 1
+        example: 13
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 1
+      id: 13
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -4820,11 +3673,11 @@ endpoints:
         name: id
         description: 'The ID of the buy.'
         required: true
-        example: 1
+        example: 3
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 1
+      id: 3
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -5317,7 +4170,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '45'
+          x-ratelimit-remaining: '49'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -5378,11 +4231,11 @@ endpoints:
         name: id
         description: 'The ID of the transduction.'
         required: true
-        example: doloribus
+        example: autem
         type: string
         custom: []
     cleanUrlParameters:
-      id: doloribus
+      id: autem
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -5845,7 +4698,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '44'
+          x-ratelimit-remaining: '48'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -5877,11 +4730,11 @@ endpoints:
         name: id
         description: 'The ID of the transduction.'
         required: true
-        example: magnam
+        example: est
         type: string
         custom: []
     cleanUrlParameters:
-      id: magnam
+      id: est
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -5915,11 +4768,11 @@ endpoints:
         name: id
         description: 'The ID of the transduction.'
         required: true
-        example: et
+        example: rerum
         type: string
         custom: []
     cleanUrlParameters:
-      id: et
+      id: rerum
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -5993,19 +4846,19 @@ endpoints:
         name: currency_id
         description: ''
         required: true
-        example: libero
+        example: est
         type: string
         custom: []
       User_id:
         name: User_id
         description: ''
         required: true
-        example: porro
+        example: quos
         type: string
         custom: []
     cleanBodyParameters:
-      currency_id: libero
-      User_id: porro
+      currency_id: est
+      User_id: quos
     fileParameters: []
     responses: []
     responseFields: []
@@ -6035,11 +4888,11 @@ endpoints:
         name: id
         description: 'The ID of the bestCurrency.'
         required: true
-        example: temporibus
+        example: aperiam
         type: string
         custom: []
     cleanUrlParameters:
-      id: temporibus
+      id: aperiam
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -6516,7 +5369,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '43'
+          x-ratelimit-remaining: '47'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -6548,11 +5401,11 @@ endpoints:
         name: id
         description: 'The ID of the bestCurrency.'
         required: true
-        example: 2
+        example: 16
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 2
+      id: 16
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -6586,11 +5439,11 @@ endpoints:
         name: id
         description: 'The ID of the bestCurrency.'
         required: true
-        example: 16
+        example: 20
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 20
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -6669,11 +5522,11 @@ endpoints:
         name: curName
         description: ''
         required: true
-        example: voluptatem
+        example: quaerat
         type: string
         custom: []
     cleanUrlParameters:
-      curName: voluptatem
+      curName: quaerat
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -6682,12 +5535,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: ''
+        content: '{"id":4,"Currency_name":"quaerat","logo":"http:\/\/localhost:8000\/storage\/\/tmp\/41fcb019e899646621ccc8dc9002e92a.png","Abbrevation":"facilis","created_at":"2023-07-08T18:41:05.000000Z","updated_at":"2023-07-08T18:41:05.000000Z","price":719,"currency_id":2}'
         headers:
-          content-type: 'text/html; charset=UTF-8'
           cache-control: 'no-cache, private'
+          content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '38'
+          x-ratelimit-remaining: '42'
           access-control-allow-origin: '*'
         description: null
         custom: []
