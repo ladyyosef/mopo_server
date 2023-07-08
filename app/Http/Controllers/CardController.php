@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\User;
+
 use App\Models\card;
-use App\Models\wallet;
+use App\Models\Wallet;
 use Illuminate\Http\Request;
 use App\Http\Controllers\WalletController;
 use App\Http\Controllers\Resources\CardResource;
@@ -27,7 +27,9 @@ class CardController extends Controller
      */
     public function store(StoreRequest $request)
     {
-      return new CardResource(card::create($request->all()));
+        $wallet = Wallet::create([]);
+        $card = card::create($request->validated());
+        return new CardResource($card);
     }
 
 
@@ -37,7 +39,6 @@ class CardController extends Controller
     public function show(card $card)
     {
         return new CardResource($card);
-
     }
 
     /**
@@ -45,7 +46,6 @@ class CardController extends Controller
      */
     public function update(Request $request, card $card)
     {
-
     }
 
     /**
@@ -54,9 +54,6 @@ class CardController extends Controller
     public function destroy(card $card)
     {
         $card->delete();
-        return response(null,204);
+        return response(null, 204);
     }
-
-
-
 }

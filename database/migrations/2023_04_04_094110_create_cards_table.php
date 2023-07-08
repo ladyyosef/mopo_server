@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -20,7 +21,9 @@ return new class extends Migration
             $table->text('Card_image');
             $table->integer('Cvc');
             $table->date('Expire_Date');
-            $table->foreignId('Wallet_id')->constrained()->onDelete('cascade');
+            $table->string('password')->nullable();
+            $table->boolean('approved')->default(false);
+            $table->foreignIdFor(User::class)->constrained()->cascadeOnDelete();
 
             $table->timestamps();
         });

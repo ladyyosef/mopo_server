@@ -18,7 +18,7 @@ class Wallet extends Model
      */
     protected $fillable = [
         'Quantity',
-        'User_id',
+        'user_id',
         'currency_id',
     ];
 
@@ -30,7 +30,7 @@ class Wallet extends Model
     protected $casts = [
         'id' => 'integer',
         'Quantity' => 'double',
-        'User_id' => 'integer',
+        'user_id' => 'integer',
         'currency_id' => 'integer',
     ];
 
@@ -39,15 +39,8 @@ class Wallet extends Model
         return $this->belongsTo(User::class);
     }
 
-
-
     public function currency(): BelongsTo
     {
         return $this->belongsTo(Currency::class);
-    }
-
-    public function currencies(): HasMany
-    {
-        return $this->hasMany(Currency::class);
     }
 }

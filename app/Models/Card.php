@@ -18,10 +18,12 @@ class Card extends Model
     protected $fillable = [
         'Card_number',
         'Holder_Name',
+        'password',
         'Cvc',
         'Expire_Date',
         'Card_image',
-        'Wallet_id'
+        'user_id',
+        'approved',
     ];
 
     /**
@@ -32,13 +34,11 @@ class Card extends Model
     protected $casts = [
         'id' => 'integer',
         'Expire_Date' => 'date',
-        'Wallet_id' => 'integer',
+        'approved' => 'boolean',
     ];
 
-
-
-    public function wallet(): BelongsTo
+    public function user(): BelongsTo
     {
-        return $this->belongsTo(wallet::class, 'Wallet_id');
+        return $this->belongsTo(User::class);
     }
 }

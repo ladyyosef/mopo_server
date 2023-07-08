@@ -5,6 +5,7 @@ namespace App\Http\Requests\Request\api;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 use App\Models\card;
+
 class StoreRequest extends FormRequest
 {
     /**
@@ -23,15 +24,12 @@ class StoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'Card_image'=>['required'],
-            'Card_number'=>['required'],
-            'Holder_Name'=>['required'],
-            'Cvc'=>['required'],
-            'Expire_Date'=>['required'],
-            'Wallet_id' => ['required','integer']
+            'Card_image' => ['required'],
+            'Card_number' => ['required'],
+            'Holder_Name' => ['required'],
+            'Cvc' => ['required'],
+            'Expire_Date' => ['required'],
+            'password' => ['required']
         ];
-
     }
-
-
 }

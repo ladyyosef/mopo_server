@@ -20,7 +20,7 @@ class CurrencypriceResource extends Resource
 
     protected static ?string $modelLabel = 'Price';
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-currency-yen';
 
     protected static ?string $navigationLabel = 'Prices';
 

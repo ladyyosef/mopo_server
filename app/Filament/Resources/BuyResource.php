@@ -19,7 +19,7 @@ class BuyResource extends Resource
 {
     protected static ?string $model = Buy::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-currency-euro';
 
     public static function form(Form $form): Form
     {

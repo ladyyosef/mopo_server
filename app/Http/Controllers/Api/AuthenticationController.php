@@ -141,12 +141,8 @@ class AuthenticationController extends Controller
             'password' => Hash::make($request->password),
             'User_Type_id' => 2
         ]);
-        (!Auth::attempt([
-            'email' => $request->email, 'password' => $request->password, 'Full_name' => $request->Full_name,
-            'phone' => $request->phone, 'Birth_date' => $request->Birth_date, 'Nationality' => $request->Nationality,
-            'postal_code' => $request->postal_code, 'City' => $request->City
-        ]));
-        $token = auth()->user()->createToken("token")->plainTextToken;
+
+        $token = $user->createToken("token")->plainTextToken;
         return response([
             "token" => $token,
         ]);
