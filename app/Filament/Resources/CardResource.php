@@ -14,6 +14,7 @@ use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Tables\Actions\Action;
+use Filament\Tables\Filters\SelectFilter;
 
 class CardResource extends Resource
 {
@@ -45,13 +46,20 @@ class CardResource extends Resource
                 Tables\Columns\TextColumn::make('user.Full_name'),
                 Tables\Columns\TextColumn::make('Card_number'),
                 Tables\Columns\TextColumn::make('Holder_Name'),
-                Tables\Columns\ImageColumn::make('Card_image'),
+                Tables\Columns\TextColumn::make('type')->enum([
+                    'visa' => 'Visa',
+                    'master' => 'Master',
+                ]),
                 Tables\Columns\TextColumn::make('Cvc'),
                 Tables\Columns\TextColumn::make('Expire_Date')
                     ->date(),
             ])
             ->filters([
-                //
+                SelectFilter::make('type')
+                    ->options([
+                        'visa' => 'Visa',
+                        'master' => 'Master',
+                    ])
             ])
             ->actions([
                 // Tables\Actions\EditAction::make(),

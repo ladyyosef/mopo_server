@@ -21,7 +21,7 @@ class Card extends Model
         'password',
         'Cvc',
         'Expire_Date',
-        'Card_image',
+        'type',
         'user_id',
         'approved',
     ];

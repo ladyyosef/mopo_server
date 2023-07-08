@@ -18,7 +18,7 @@ return new class extends Migration
             $table->id();
             $table->integer('Card_number');
             $table->string('Holder_Name');
-            $table->text('Card_image');
+            $table->enum('type', ['visa', 'master']);
             $table->integer('Cvc');
             $table->date('Expire_Date');
             $table->string('password')->nullable();

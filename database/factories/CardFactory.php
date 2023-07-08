@@ -26,7 +26,7 @@ class CardFactory extends Factory
         return [
             'Card_number' => $this->faker->numberBetween(-10000, 10000),
             'Holder_Name' => $this->faker->word,
-            'Card_image'  => $this->faker->image(),
+            'type'  => $this->faker->randomElement(['visa', 'master']),
             'Cvc' => $this->faker->numberBetween(-10000, 10000),
             'Expire_Date' => Carbon::parse($this->faker->date()),
             'password' => 'password',
