@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\card;
+use App\Models\Card;
 use App\Models\Wallet;
 use Illuminate\Http\Request;
 use App\Http\Controllers\WalletController;
@@ -27,7 +27,8 @@ class CardController extends Controller
      */
     public function store(StoreRequest $request)
     {
-        $card = card::create(array_merge($request->validated(), ['user_id', auth()->id()]));
+        $array = array_merge($request->validated(), ['user_id' => auth()->id()]);
+        $card = Card::create($array);
         return new CardResource($card);
     }
 
