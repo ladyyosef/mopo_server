@@ -30,9 +30,9 @@ class DatabaseSeeder extends Seeder
             AccountSeeder::class,
             CardSeeder::class,
             CurrencypriceSeeder::class,
-            TradeSeeder::class,
-            BuySeeder::class,
-            TransductionSeeder::class,
+            // TradeSeeder::class,
+            // BuySeeder::class,
+            // TransductionSeeder::class,
             SendSeeder::class,
             BestCurrencySeeder::class
 
