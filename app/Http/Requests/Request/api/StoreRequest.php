@@ -24,12 +24,11 @@ class StoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'Card_image' => ['required'],
+            'type' => ['required', 'in:visa,master'],
             'Card_number' => ['required'],
             'Holder_Name' => ['required'],
             'Cvc' => ['required'],
             'Expire_Date' => ['required'],
-            'password' => ['required']
         ];
     }
 }
