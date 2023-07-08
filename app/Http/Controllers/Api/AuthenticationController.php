@@ -137,6 +137,7 @@ class AuthenticationController extends Controller
             'postal_code' => $request->postal_code,
             'City' => $request->City,
             'Nationality' => $request->Nationality,
+            'place_of_residence' => $request->place_of_residence,
             'Birth_date' => $request->Birth_date,
             'password' => Hash::make($request->password),
             'User_Type_id' => 2

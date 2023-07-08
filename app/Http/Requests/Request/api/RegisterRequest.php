@@ -32,7 +32,8 @@ class RegisterRequest extends FormRequest
             'postal_code' => ['required'],
             'City' => ['required'],
             'Birth_date' => ['required'],
-            'Nationality' => ['required']
+            'Nationality' => ['required'],
+            'place_of_residence' => ['required'],
         ];
     }
 }

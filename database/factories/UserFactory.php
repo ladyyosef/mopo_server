@@ -24,6 +24,7 @@ class UserFactory extends Factory
             'Full_name' => fake()->firstName(),
             'postal_code' => fake()->postcode(),
             'Nationality' =>  $this->faker->word(),
+            'place_of_residence' =>  $this->faker->word(),
             'Birth_date' => fake()->date(),
             'Profile_image'  => $this->faker->image(),
             'City' => fake()->City(),

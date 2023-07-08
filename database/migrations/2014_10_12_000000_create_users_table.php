@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('Profile_image')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('place_of_residence');
             $table->foreignId('User_Type_id')->references('id')->on('usertypes')->onDelete('cascade');
             $table->rememberToken();
             $table->timestamps();

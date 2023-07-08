@@ -41,6 +41,7 @@ class User extends Authenticatable  implements MustVerifyEmail, FilamentUser, Ha
         'postal_code',
         'City',
         'Nationality',
+        'place_of_residence',
         'Birth_date'
 
     ];
