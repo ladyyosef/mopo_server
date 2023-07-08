@@ -27,7 +27,6 @@ class CardController extends Controller
      */
     public function store(StoreRequest $request)
     {
-        $wallet = Wallet::create([]);
         $card = card::create($request->validated());
         return new CardResource($card);
     }
