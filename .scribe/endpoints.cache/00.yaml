@@ -28,19 +28,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: spouros@example.com
+        example: joyce74@example.org
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: nisi
+        example: suscipit
         type: string
         custom: []
     cleanBodyParameters:
-      email: spouros@example.com
-      password: nisi
+      email: joyce74@example.org
+      password: suscipit
     fileParameters: []
     responses:
       -
@@ -117,19 +117,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: ernestine.kub@example.net
+        example: tom.auer@example.net
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: quia
+        example: ducimus
         type: string
         custom: []
     cleanBodyParameters:
-      email: ernestine.kub@example.net
-      password: quia
+      email: tom.auer@example.net
+      password: ducimus
     fileParameters: []
     responses:
       -
@@ -206,75 +206,75 @@ endpoints:
         name: Full_name
         description: 'Must not be greater than 25 characters.'
         required: true
-        example: omqw
+        example: e
         type: string
         custom: []
       phone:
         name: phone
         description: ''
         required: true
-        example: harum
+        example: perferendis
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: aric.zboncak@example.net
+        example: bianka.mosciski@example.net
         type: string
         custom: []
       password:
         name: password
         description: 'Must be at least 8 characters.'
         required: true
-        example: '>9/*oXjSfjI0v@b'
+        example: '*h[X,*)'
         type: string
         custom: []
       postal_code:
         name: postal_code
         description: ''
         required: true
-        example: pariatur
+        example: non
         type: string
         custom: []
       City:
         name: City
         description: ''
         required: true
-        example: nihil
+        example: tempora
         type: string
         custom: []
       Birth_date:
         name: Birth_date
         description: ''
         required: true
-        example: vel
+        example: dolorum
         type: string
         custom: []
       Nationality:
         name: Nationality
         description: ''
         required: true
-        example: sit
+        example: eligendi
         type: string
         custom: []
       place_of_residence:
         name: place_of_residence
         description: ''
         required: true
-        example: non
+        example: deleniti
         type: string
         custom: []
     cleanBodyParameters:
-      Full_name: omqw
-      phone: harum
-      email: aric.zboncak@example.net
-      password: '>9/*oXjSfjI0v@b'
-      postal_code: pariatur
-      City: nihil
-      Birth_date: vel
-      Nationality: sit
-      place_of_residence: non
+      Full_name: e
+      phone: perferendis
+      email: bianka.mosciski@example.net
+      password: '*h[X,*)'
+      postal_code: non
+      City: tempora
+      Birth_date: dolorum
+      Nationality: eligendi
+      place_of_residence: deleniti
     fileParameters: []
     responses:
       -
@@ -406,11 +406,11 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: et
+        example: ipsa
         type: string
         custom: []
     cleanBodyParameters:
-      password: et
+      password: ipsa
     fileParameters: []
     responses:
       -
@@ -451,11 +451,11 @@ endpoints:
         name: account
         description: ''
         required: false
-        example: 13
+        example: 9
         type: integer
         custom: []
     cleanQueryParameters:
-      account: 13
+      account: 9
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -568,21 +568,21 @@ endpoints:
         name: id
         description: 'The ID of the account.'
         required: true
-        example: omnis
+        example: non
         type: string
         custom: []
     cleanUrlParameters:
-      id: omnis
+      id: non
     queryParameters:
       account:
         name: account
         description: int
         required: true
-        example: inventore
+        example: sit
         type: string
         custom: []
     cleanQueryParameters:
-      account: inventore
+      account: sit
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -1502,27 +1502,27 @@ endpoints:
         name: logo
         description: ''
         required: true
-        example: voluptas
+        example: ducimus
         type: string
         custom: []
       Currency_name:
         name: Currency_name
         description: ''
         required: true
-        example: voluptatibus
+        example: tempora
         type: string
         custom: []
       Abbrevation:
         name: Abbrevation
         description: ''
         required: true
-        example: autem
+        example: et
         type: string
         custom: []
     cleanBodyParameters:
-      logo: voluptas
-      Currency_name: voluptatibus
-      Abbrevation: autem
+      logo: ducimus
+      Currency_name: tempora
+      Abbrevation: et
     fileParameters: []
     responses: []
     responseFields: []
@@ -1723,43 +1723,43 @@ endpoints:
         name: today_price
         description: ''
         required: true
-        example: deleniti
+        example: qui
         type: string
         custom: []
       percentage:
         name: percentage
         description: ''
         required: true
-        example: saepe
+        example: vero
         type: string
         custom: []
       yesterday_price:
         name: yesterday_price
         description: ''
         required: true
-        example: tenetur
+        example: accusantium
         type: string
         custom: []
       Date_Time:
         name: Date_Time
         description: ''
         required: true
-        example: est
+        example: quia
         type: string
         custom: []
       currency_id:
         name: currency_id
         description: ''
         required: true
-        example: rerum
+        example: natus
         type: string
         custom: []
     cleanBodyParameters:
-      today_price: deleniti
-      percentage: saepe
-      yesterday_price: tenetur
-      Date_Time: est
-      currency_id: rerum
+      today_price: qui
+      percentage: vero
+      yesterday_price: accusantium
+      Date_Time: quia
+      currency_id: natus
     fileParameters: []
     responses: []
     responseFields: []
@@ -1897,239 +1897,6 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: api/card
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Display a listing of the resource.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/card
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Store a newly created resource in storage.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      type:
-        name: type
-        description: 'Must be one of <code>visa</code> or <code>master</code>.'
-        required: true
-        example: visa
-        type: string
-        custom: []
-      Card_number:
-        name: Card_number
-        description: ''
-        required: true
-        example: facere
-        type: string
-        custom: []
-      Holder_Name:
-        name: Holder_Name
-        description: ''
-        required: true
-        example: fuga
-        type: string
-        custom: []
-      Cvc:
-        name: Cvc
-        description: ''
-        required: true
-        example: voluptas
-        type: string
-        custom: []
-      Expire_Date:
-        name: Expire_Date
-        description: ''
-        required: true
-        example: officia
-        type: string
-        custom: []
-    cleanBodyParameters:
-      type: visa
-      Card_number: facere
-      Holder_Name: fuga
-      Cvc: voluptas
-      Expire_Date: officia
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/card/{id}'
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Display the specified resource.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the card.'
-        required: true
-        example: 1
-        type: integer
-        custom: []
-    cleanUrlParameters:
-      id: 1
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - PUT
-      - PATCH
-    uri: 'api/card/{id}'
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Update the specified resource in storage.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the card.'
-        required: true
-        example: 1
-        type: integer
-        custom: []
-    cleanUrlParameters:
-      id: 1
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - DELETE
-    uri: 'api/card/{id}'
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Remove the specified resource from storage.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the card.'
-        required: true
-        example: 1
-        type: integer
-        custom: []
-    cleanUrlParameters:
-      id: 1
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
     uri: api/send
     metadata:
       groupName: Endpoints
@@ -2193,27 +1960,27 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: maiores
+        example: dolore
         type: string
         custom: []
       amount:
         name: amount
         description: ''
         required: true
-        example: eius
+        example: distinctio
         type: string
         custom: []
       currency_id:
         name: currency_id
         description: ''
         required: true
-        example: commodi
+        example: hic
         type: string
         custom: []
     cleanBodyParameters:
-      email: maiores
-      amount: eius
-      currency_id: commodi
+      email: dolore
+      amount: distinctio
+      currency_id: hic
     fileParameters: []
     responses: []
     responseFields: []
@@ -2863,35 +2630,35 @@ endpoints:
         name: currency_id_in
         description: ''
         required: true
-        example: blanditiis
+        example: nemo
         type: string
         custom: []
       currency_id_out:
         name: currency_id_out
         description: ''
         required: true
-        example: et
+        example: numquam
         type: string
         custom: []
       quantity_in:
         name: quantity_in
         description: ''
         required: true
-        example: explicabo
+        example: possimus
         type: string
         custom: []
       quantity_out:
         name: quantity_out
         description: ''
         required: true
-        example: soluta
+        example: quia
         type: string
         custom: []
     cleanBodyParameters:
-      currency_id_in: blanditiis
-      currency_id_out: et
-      quantity_in: explicabo
-      quantity_out: soluta
+      currency_id_in: nemo
+      currency_id_out: numquam
+      quantity_in: possimus
+      quantity_out: quia
     fileParameters: []
     responses: []
     responseFields: []
@@ -2921,11 +2688,11 @@ endpoints:
         name: id
         description: 'The ID of the trade.'
         required: true
-        example: est
+        example: magnam
         type: string
         custom: []
     cleanUrlParameters:
-      id: est
+      id: magnam
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -3420,11 +3187,11 @@ endpoints:
         name: id
         description: 'The ID of the trade.'
         required: true
-        example: consectetur
+        example: dolor
         type: string
         custom: []
     cleanUrlParameters:
-      id: consectetur
+      id: dolor
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -3458,11 +3225,11 @@ endpoints:
         name: id
         description: 'The ID of the trade.'
         required: true
-        example: fugiat
+        example: fugit
         type: string
         custom: []
     cleanUrlParameters:
-      id: fugiat
+      id: fugit
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -3539,27 +3306,27 @@ endpoints:
         name: currency_id_in
         description: ''
         required: true
-        example: iure
+        example: harum
         type: string
         custom: []
       currency_id_out:
         name: currency_id_out
         description: ''
         required: true
-        example: recusandae
+        example: sint
         type: string
         custom: []
       quantity:
         name: quantity
         description: ''
         required: true
-        example: molestiae
+        example: sit
         type: string
         custom: []
     cleanBodyParameters:
-      currency_id_in: iure
-      currency_id_out: recusandae
-      quantity: molestiae
+      currency_id_in: harum
+      currency_id_out: sint
+      quantity: sit
     fileParameters: []
     responses: []
     responseFields: []
@@ -3589,11 +3356,11 @@ endpoints:
         name: id
         description: 'The ID of the buy.'
         required: true
-        example: voluptatibus
+        example: commodi
         type: string
         custom: []
     cleanUrlParameters:
-      id: voluptatibus
+      id: commodi
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -3637,11 +3404,11 @@ endpoints:
         name: id
         description: 'The ID of the buy.'
         required: true
-        example: 13
+        example: 7
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 13
+      id: 7
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -3675,11 +3442,11 @@ endpoints:
         name: id
         description: 'The ID of the buy.'
         required: true
-        example: 3
+        example: 14
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 3
+      id: 14
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -4233,11 +4000,11 @@ endpoints:
         name: id
         description: 'The ID of the transduction.'
         required: true
-        example: autem
+        example: qui
         type: string
         custom: []
     cleanUrlParameters:
-      id: autem
+      id: qui
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -4732,11 +4499,11 @@ endpoints:
         name: id
         description: 'The ID of the transduction.'
         required: true
-        example: est
+        example: consequatur
         type: string
         custom: []
     cleanUrlParameters:
-      id: est
+      id: consequatur
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -4770,11 +4537,11 @@ endpoints:
         name: id
         description: 'The ID of the transduction.'
         required: true
-        example: rerum
+        example: et
         type: string
         custom: []
     cleanUrlParameters:
-      id: rerum
+      id: et
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -4848,19 +4615,19 @@ endpoints:
         name: currency_id
         description: ''
         required: true
-        example: est
+        example: ut
         type: string
         custom: []
       User_id:
         name: User_id
         description: ''
         required: true
-        example: quos
+        example: tenetur
         type: string
         custom: []
     cleanBodyParameters:
-      currency_id: est
-      User_id: quos
+      currency_id: ut
+      User_id: tenetur
     fileParameters: []
     responses: []
     responseFields: []
@@ -4890,11 +4657,11 @@ endpoints:
         name: id
         description: 'The ID of the bestCurrency.'
         required: true
-        example: aperiam
+        example: eos
         type: string
         custom: []
     cleanUrlParameters:
-      id: aperiam
+      id: eos
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -5403,11 +5170,11 @@ endpoints:
         name: id
         description: 'The ID of the bestCurrency.'
         required: true
-        example: 16
+        example: 3
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 3
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -5441,11 +5208,11 @@ endpoints:
         name: id
         description: 'The ID of the bestCurrency.'
         required: true
-        example: 20
+        example: 17
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 20
+      id: 17
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -5524,11 +5291,11 @@ endpoints:
         name: curName
         description: ''
         required: true
-        example: quaerat
+        example: rerum
         type: string
         custom: []
     cleanUrlParameters:
-      curName: quaerat
+      curName: rerum
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -5537,10 +5304,10 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"id":4,"Currency_name":"quaerat","logo":"http:\/\/localhost:8000\/storage\/\/tmp\/41fcb019e899646621ccc8dc9002e92a.png","Abbrevation":"facilis","created_at":"2023-07-08T18:41:05.000000Z","updated_at":"2023-07-08T18:41:05.000000Z","price":719,"currency_id":2}'
+        content: ''
         headers:
+          content-type: 'text/html; charset=UTF-8'
           cache-control: 'no-cache, private'
-          content-type: application/json
           x-ratelimit-limit: '60'
           x-ratelimit-remaining: '42'
           access-control-allow-origin: '*'

@@ -7,6 +7,154 @@ servers:
   -
     url: 'http://localhost:8000'
 paths:
+  /api/card:
+    get:
+      summary: 'get wallets of a user'
+      operationId: getWalletsOfAUser
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 4
+                      Holder_Name: dolorem
+                      type: master
+                      Expire_Date: '2010-04-17T00:00:00.000000Z'
+                    -
+                      id: 5
+                      Holder_Name: minima
+                      type: visa
+                      Expire_Date: '1979-03-25T00:00:00.000000Z'
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 4
+                        Holder_Name: dolorem
+                        type: master
+                        Expire_Date: '2010-04-17T00:00:00.000000Z'
+                      -
+                        id: 5
+                        Holder_Name: minima
+                        type: visa
+                        Expire_Date: '1979-03-25T00:00:00.000000Z'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 4
+                        Holder_Name:
+                          type: string
+                          example: dolorem
+                        type:
+                          type: string
+                          example: master
+                        Expire_Date:
+                          type: string
+                          example: '2010-04-17T00:00:00.000000Z'
+      tags:
+        - Card
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Card
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                type:
+                  type: string
+                  description: 'Must be one of <code>visa</code> or <code>master</code>.'
+                  example: master
+                Card_number:
+                  type: string
+                  description: ''
+                  example: consequatur
+                Holder_Name:
+                  type: string
+                  description: ''
+                  example: et
+                Cvc:
+                  type: string
+                  description: ''
+                  example: sequi
+                Expire_Date:
+                  type: string
+                  description: ''
+                  example: odio
+              required:
+                - type
+                - Card_number
+                - Holder_Name
+                - Cvc
+                - Expire_Date
+      security: []
+  '/api/card/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Card
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Card
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Card
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the card.'
+        example: 1
+        required: true
+        schema:
+          type: integer
   /api/login:
     post:
       summary: login
@@ -54,11 +202,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: spouros@example.com
+                  example: joyce74@example.org
                 password:
                   type: string
                   description: ''
-                  example: nisi
+                  example: suscipit
               required:
                 - email
                 - password
@@ -110,11 +258,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: ernestine.kub@example.net
+                  example: tom.auer@example.net
                 password:
                   type: string
                   description: ''
-                  example: quia
+                  example: ducimus
               required:
                 - email
                 - password
@@ -159,39 +307,39 @@ paths:
                 Full_name:
                   type: string
                   description: 'Must not be greater than 25 characters.'
-                  example: omqw
+                  example: e
                 phone:
                   type: string
                   description: ''
-                  example: harum
+                  example: perferendis
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: aric.zboncak@example.net
+                  example: bianka.mosciski@example.net
                 password:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: '>9/*oXjSfjI0v@b'
+                  example: '*h[X,*)'
                 postal_code:
                   type: string
                   description: ''
-                  example: pariatur
+                  example: non
                 City:
                   type: string
                   description: ''
-                  example: nihil
+                  example: tempora
                 Birth_date:
                   type: string
                   description: ''
-                  example: vel
+                  example: dolorum
                 Nationality:
                   type: string
                   description: ''
-                  example: sit
+                  example: eligendi
                 place_of_residence:
                   type: string
                   description: ''
-                  example: non
+                  example: deleniti
               required:
                 - Full_name
                 - phone
@@ -246,7 +394,7 @@ paths:
                 password:
                   type: string
                   description: ''
-                  example: et
+                  example: ipsa
               required:
                 - password
       security: []
@@ -260,12 +408,12 @@ paths:
           in: query
           name: account
           description: ''
-          example: 13
+          example: 9
           required: false
           schema:
             type: integer
             description: ''
-            example: 13
+            example: 9
       responses:
         200:
           description: ''
@@ -296,12 +444,12 @@ paths:
           in: query
           name: account
           description: int
-          example: inventore
+          example: sit
           required: true
           schema:
             type: string
             description: int
-            example: inventore
+            example: sit
       responses:
         200:
           description: ''
@@ -336,7 +484,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the account.'
-        example: omnis
+        example: non
         required: true
         schema:
           type: string
@@ -1429,15 +1577,15 @@ paths:
                 logo:
                   type: string
                   description: ''
-                  example: voluptas
+                  example: ducimus
                 Currency_name:
                   type: string
                   description: ''
-                  example: voluptatibus
+                  example: tempora
                 Abbrevation:
                   type: string
                   description: ''
-                  example: autem
+                  example: et
               required:
                 - logo
                 - Currency_name
@@ -1609,23 +1757,23 @@ paths:
                 today_price:
                   type: string
                   description: ''
-                  example: deleniti
+                  example: qui
                 percentage:
                   type: string
                   description: ''
-                  example: saepe
+                  example: vero
                 yesterday_price:
                   type: string
                   description: ''
-                  example: tenetur
+                  example: accusantium
                 Date_Time:
                   type: string
                   description: ''
-                  example: est
+                  example: quia
                 currency_id:
                   type: string
                   description: ''
-                  example: rerum
+                  example: natus
               required:
                 - today_price
                 - percentage
@@ -1710,119 +1858,6 @@ paths:
         in: path
         name: id
         description: 'The ID of the currencyprice.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-  /api/card:
-    get:
-      summary: 'Display a listing of the resource.'
-      operationId: displayAListingOfTheResource
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Endpoints
-      security: []
-    post:
-      summary: 'Store a newly created resource in storage.'
-      operationId: storeANewlyCreatedResourceInStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                type:
-                  type: string
-                  description: 'Must be one of <code>visa</code> or <code>master</code>.'
-                  example: visa
-                Card_number:
-                  type: string
-                  description: ''
-                  example: facere
-                Holder_Name:
-                  type: string
-                  description: ''
-                  example: fuga
-                Cvc:
-                  type: string
-                  description: ''
-                  example: voluptas
-                Expire_Date:
-                  type: string
-                  description: ''
-                  example: officia
-              required:
-                - type
-                - Card_number
-                - Holder_Name
-                - Cvc
-                - Expire_Date
-      security: []
-  '/api/card/{id}':
-    get:
-      summary: 'Display the specified resource.'
-      operationId: displayTheSpecifiedResource
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Endpoints
-      security: []
-    put:
-      summary: 'Update the specified resource in storage.'
-      operationId: updateTheSpecifiedResourceInStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      security: []
-    delete:
-      summary: 'Remove the specified resource from storage.'
-      operationId: removeTheSpecifiedResourceFromStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: id
-        description: 'The ID of the card.'
         example: 1
         required: true
         schema:
@@ -1930,15 +1965,15 @@ paths:
                 email:
                   type: string
                   description: ''
-                  example: maiores
+                  example: dolore
                 amount:
                   type: string
                   description: ''
-                  example: eius
+                  example: distinctio
                 currency_id:
                   type: string
                   description: ''
-                  example: commodi
+                  example: hic
               required:
                 - email
                 - amount
@@ -2847,19 +2882,19 @@ paths:
                 currency_id_in:
                   type: string
                   description: ''
-                  example: blanditiis
+                  example: nemo
                 currency_id_out:
                   type: string
                   description: ''
-                  example: et
+                  example: numquam
                 quantity_in:
                   type: string
                   description: ''
-                  example: explicabo
+                  example: possimus
                 quantity_out:
                   type: string
                   description: ''
-                  example: soluta
+                  example: quia
               required:
                 - currency_id_in
                 - currency_id_out
@@ -3701,7 +3736,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the trade.'
-        example: est
+        example: magnam
         required: true
         schema:
           type: string
@@ -3745,15 +3780,15 @@ paths:
                 currency_id_in:
                   type: string
                   description: ''
-                  example: iure
+                  example: harum
                 currency_id_out:
                   type: string
                   description: ''
-                  example: recusandae
+                  example: sint
                 quantity:
                   type: string
                   description: ''
-                  example: molestiae
+                  example: sit
               required:
                 - currency_id_in
                 - currency_id_out
@@ -3804,7 +3839,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the buy.'
-        example: voluptatibus
+        example: commodi
         required: true
         schema:
           type: string
@@ -5464,7 +5499,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the transduction.'
-        example: autem
+        example: qui
         required: true
         schema:
           type: string
@@ -5504,11 +5539,11 @@ paths:
                 currency_id:
                   type: string
                   description: ''
-                  example: est
+                  example: ut
                 User_id:
                   type: string
                   description: ''
-                  example: quos
+                  example: tenetur
               required:
                 - currency_id
                 - User_id
@@ -6374,7 +6409,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the bestCurrency.'
-        example: aperiam
+        example: eos
         required: true
         schema:
           type: string
@@ -6410,43 +6445,10 @@ paths:
         200:
           description: ''
           content:
-            application/json:
+            text/plain:
               schema:
-                type: object
-                example:
-                  id: 4
-                  Currency_name: quaerat
-                  logo: 'http://localhost:8000/storage//tmp/41fcb019e899646621ccc8dc9002e92a.png'
-                  Abbrevation: facilis
-                  created_at: '2023-07-08T18:41:05.000000Z'
-                  updated_at: '2023-07-08T18:41:05.000000Z'
-                  price: 719
-                  currency_id: 2
-                properties:
-                  id:
-                    type: integer
-                    example: 4
-                  Currency_name:
-                    type: string
-                    example: quaerat
-                  logo:
-                    type: string
-                    example: 'http://localhost:8000/storage//tmp/41fcb019e899646621ccc8dc9002e92a.png'
-                  Abbrevation:
-                    type: string
-                    example: facilis
-                  created_at:
-                    type: string
-                    example: '2023-07-08T18:41:05.000000Z'
-                  updated_at:
-                    type: string
-                    example: '2023-07-08T18:41:05.000000Z'
-                  price:
-                    type: integer
-                    example: 719
-                  currency_id:
-                    type: integer
-                    example: 2
+                type: string
+                example: ''
       tags:
         - Endpoints
       security: []
@@ -6455,7 +6457,7 @@ paths:
         in: path
         name: curName
         description: ''
-        example: quaerat
+        example: rerum
         required: true
         schema:
           type: string
@@ -10277,15 +10279,15 @@ paths:
                 currency_id:
                   type: string
                   description: ''
-                  example: qui
+                  example: incidunt
                 Quantity:
                   type: string
                   description: ''
-                  example: aut
+                  example: fuga
                 User_id:
                   type: string
                   description: ''
-                  example: hic
+                  example: et
               required:
                 - currency_id
                 - Quantity
@@ -10336,11 +10338,14 @@ paths:
         in: path
         name: id
         description: 'The ID of the wallet.'
-        example: et
+        example: maxime
         required: true
         schema:
           type: string
 tags:
+  -
+    name: Card
+    description: ''
   -
     name: Endpoints
     description: ''

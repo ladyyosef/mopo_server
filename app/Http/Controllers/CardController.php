@@ -11,10 +11,29 @@ use App\Http\Controllers\Resources\UserResource;
 use App\Http\Requests\Request\api\StoreRequest;
 use Illuminate\Support\Facades\Auth;
 
+/**
+ * @group Card
+ *  */
 class CardController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * get wallets of a user
+     * @response {
+    "data": [
+        {
+            "id": 4,
+            "Holder_Name": "dolorem",
+            "type": "master",
+            "Expire_Date": "2010-04-17T00:00:00.000000Z"
+        },
+        {
+            "id": 5,
+            "Holder_Name": "minima",
+            "type": "visa",
+            "Expire_Date": "1979-03-25T00:00:00.000000Z"
+        }
+    ]
+}
      */
     public function index()
     {

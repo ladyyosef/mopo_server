@@ -10,11 +10,211 @@
     ],
     "info": {
         "name": "Mopo",
-        "_postman_id": "4317ac70-f202-487a-b7d4-4d5931777eb2",
+        "_postman_id": "301fe9a3-cb39-45ce-a7c6-be23a446be9b",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
+        {
+            "name": "Card",
+            "description": "",
+            "item": [
+                {
+                    "name": "get wallets of a user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/card",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/card"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"data\": [\n{\n\"id\": 4,\n\"Holder_Name\": \"dolorem\",\n\"type\": \"master\",\n\"Expire_Date\": \"2010-04-17T00:00:00.000000Z\"\n},\n{\n\"id\": 5,\n\"Holder_Name\": \"minima\",\n\"type\": \"visa\",\n\"Expire_Date\": \"1979-03-25T00:00:00.000000Z\"\n}\n]\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/card",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/card"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"type\":\"master\",\"Card_number\":\"consequatur\",\"Holder_Name\":\"et\",\"Cvc\":\"sequi\",\"Expire_Date\":\"odio\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/card\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/card\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the card."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/card\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/card\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the card."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/card\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/card\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the card."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
         {
             "name": "Endpoints",
             "description": "",
@@ -41,7 +241,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"spouros@example.com\",\"password\":\"nisi\"}"
+                            "raw": "{\"email\":\"joyce74@example.org\",\"password\":\"suscipit\"}"
                         },
                         "description": "",
                         "auth": {
@@ -97,7 +297,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"ernestine.kub@example.net\",\"password\":\"quia\"}"
+                            "raw": "{\"email\":\"tom.auer@example.net\",\"password\":\"ducimus\"}"
                         },
                         "description": "",
                         "auth": {
@@ -153,7 +353,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"Full_name\":\"omqw\",\"phone\":\"harum\",\"email\":\"aric.zboncak@example.net\",\"password\":\">9\\\/*oXjSfjI0v@b\",\"postal_code\":\"pariatur\",\"City\":\"nihil\",\"Birth_date\":\"vel\",\"Nationality\":\"sit\",\"place_of_residence\":\"non\"}"
+                            "raw": "{\"Full_name\":\"e\",\"phone\":\"perferendis\",\"email\":\"bianka.mosciski@example.net\",\"password\":\"*h[X,*)\",\"postal_code\":\"non\",\"City\":\"tempora\",\"Birth_date\":\"dolorum\",\"Nationality\":\"eligendi\",\"place_of_residence\":\"deleniti\"}"
                         },
                         "description": "",
                         "auth": {
@@ -238,7 +438,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"password\":\"et\"}"
+                            "raw": "{\"password\":\"ipsa\"}"
                         },
                         "description": "",
                         "auth": {
@@ -263,12 +463,12 @@
                             "query": [
                                 {
                                     "key": "account",
-                                    "value": "13",
+                                    "value": "9",
                                     "description": "",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/account?account=13"
+                            "raw": "{{baseUrl}}\/api\/account?account=9"
                         },
                         "method": "GET",
                         "header": [
@@ -333,17 +533,17 @@
                             "query": [
                                 {
                                     "key": "account",
-                                    "value": "inventore",
+                                    "value": "sit",
                                     "description": "int",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/account\/:id?account=inventore",
+                            "raw": "{{baseUrl}}\/api\/account\/:id?account=sit",
                             "variable": [
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "omnis",
+                                    "value": "non",
                                     "description": "The ID of the account."
                                 }
                             ]
@@ -792,7 +992,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"logo\":\"voluptas\",\"Currency_name\":\"voluptatibus\",\"Abbrevation\":\"autem\"}"
+                            "raw": "{\"logo\":\"ducimus\",\"Currency_name\":\"tempora\",\"Abbrevation\":\"et\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1015,7 +1215,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"today_price\":\"deleniti\",\"percentage\":\"saepe\",\"yesterday_price\":\"tenetur\",\"Date_Time\":\"est\",\"currency_id\":\"rerum\"}"
+                            "raw": "{\"today_price\":\"qui\",\"percentage\":\"vero\",\"yesterday_price\":\"accusantium\",\"Date_Time\":\"quia\",\"currency_id\":\"natus\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1165,213 +1365,6 @@
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/card",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/card"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "Store a newly created resource in storage.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/card",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/card"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"type\":\"visa\",\"Card_number\":\"facere\",\"Holder_Name\":\"fuga\",\"Cvc\":\"voluptas\",\"Expire_Date\":\"officia\"}"
-                        },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Display the specified resource.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/card\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/card\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "1",
-                                    "description": "The ID of the card."
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "Update the specified resource in storage.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/card\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/card\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "1",
-                                    "description": "The ID of the card."
-                                }
-                            ]
-                        },
-                        "method": "PUT",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Remove the specified resource from storage.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/card\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/card\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "1",
-                                    "description": "The ID of the card."
-                                }
-                            ]
-                        },
-                        "method": "DELETE",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Display a listing of the resource.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
                             "path": "api\/send",
                             "query": [],
                             "raw": "{{baseUrl}}\/api\/send"
@@ -1445,7 +1438,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"maiores\",\"amount\":\"eius\",\"currency_id\":\"commodi\"}"
+                            "raw": "{\"email\":\"dolore\",\"amount\":\"distinctio\",\"currency_id\":\"hic\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1668,7 +1661,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"currency_id_in\":\"blanditiis\",\"currency_id_out\":\"et\",\"quantity_in\":\"explicabo\",\"quantity_out\":\"soluta\"}"
+                            "raw": "{\"currency_id_in\":\"nemo\",\"currency_id_out\":\"numquam\",\"quantity_in\":\"possimus\",\"quantity_out\":\"quia\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1689,7 +1682,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "est",
+                                    "value": "magnam",
                                     "description": "The ID of the trade."
                                 }
                             ]
@@ -1753,7 +1746,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "consectetur",
+                                    "value": "dolor",
                                     "description": "The ID of the trade."
                                 }
                             ]
@@ -1789,7 +1782,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "fugiat",
+                                    "value": "fugit",
                                     "description": "The ID of the trade."
                                 }
                             ]
@@ -1883,7 +1876,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"currency_id_in\":\"iure\",\"currency_id_out\":\"recusandae\",\"quantity\":\"molestiae\"}"
+                            "raw": "{\"currency_id_in\":\"harum\",\"currency_id_out\":\"sint\",\"quantity\":\"sit\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1904,7 +1897,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "voluptatibus",
+                                    "value": "commodi",
                                     "description": "The ID of the buy."
                                 }
                             ]
@@ -1960,7 +1953,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "13",
+                                    "value": "7",
                                     "description": "The ID of the buy."
                                 }
                             ]
@@ -1996,7 +1989,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "3",
+                                    "value": "14",
                                     "description": "The ID of the buy."
                                 }
                             ]
@@ -2116,7 +2109,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "autem",
+                                    "value": "qui",
                                     "description": "The ID of the transduction."
                                 }
                             ]
@@ -2180,7 +2173,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "est",
+                                    "value": "consequatur",
                                     "description": "The ID of the transduction."
                                 }
                             ]
@@ -2216,7 +2209,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "rerum",
+                                    "value": "et",
                                     "description": "The ID of the transduction."
                                 }
                             ]
@@ -2297,7 +2290,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"currency_id\":\"est\",\"User_id\":\"quos\"}"
+                            "raw": "{\"currency_id\":\"ut\",\"User_id\":\"tenetur\"}"
                         },
                         "description": "",
                         "auth": {
@@ -2318,7 +2311,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "aperiam",
+                                    "value": "eos",
                                     "description": "The ID of the bestCurrency."
                                 }
                             ]
@@ -2382,7 +2375,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "16",
+                                    "value": "3",
                                     "description": "The ID of the bestCurrency."
                                 }
                             ]
@@ -2418,7 +2411,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "20",
+                                    "value": "17",
                                     "description": "The ID of the bestCurrency."
                                 }
                             ]
@@ -2509,7 +2502,7 @@
                                 {
                                     "id": "curName",
                                     "key": "curName",
-                                    "value": "quaerat",
+                                    "value": "rerum",
                                     "description": ""
                                 }
                             ]
@@ -2535,12 +2528,12 @@
                         {
                             "header": [
                                 {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
+                                    "key": "content-type",
+                                    "value": "text\/html; charset=UTF-8"
                                 },
                                 {
-                                    "key": "content-type",
-                                    "value": "application\/json"
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
                                 },
                                 {
                                     "key": "x-ratelimit-limit",
@@ -2556,7 +2549,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"id\":4,\"Currency_name\":\"quaerat\",\"logo\":\"http:\\\/\\\/localhost:8000\\\/storage\\\/\\\/tmp\\\/41fcb019e899646621ccc8dc9002e92a.png\",\"Abbrevation\":\"facilis\",\"created_at\":\"2023-07-08T18:41:05.000000Z\",\"updated_at\":\"2023-07-08T18:41:05.000000Z\",\"price\":719,\"currency_id\":2}",
+                            "body": "",
                             "name": ""
                         }
                     ]
@@ -2863,7 +2856,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"currency_id\":\"qui\",\"Quantity\":\"aut\",\"User_id\":\"hic\"}"
+                            "raw": "{\"currency_id\":\"incidunt\",\"Quantity\":\"fuga\",\"User_id\":\"et\"}"
                         },
                         "description": "",
                         "auth": {
@@ -2884,7 +2877,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "et",
+                                    "value": "maxime",
                                     "description": "The ID of the wallet."
                                 }
                             ]
@@ -2940,7 +2933,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "est",
+                                    "value": "sunt",
                                     "description": "The ID of the wallet."
                                 }
                             ]
@@ -2976,7 +2969,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "sed",
+                                    "value": "libero",
                                     "description": "The ID of the wallet."
                                 }
                             ]
