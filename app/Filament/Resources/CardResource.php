@@ -19,6 +19,8 @@ class CardResource extends Resource
 {
     protected static ?string $model = Card::class;
 
+    protected static ?string $modelLabel = 'Credit Card';
+
     protected static ?string $navigationIcon = 'heroicon-o-credit-card';
 
     public static function form(Form $form): Form
