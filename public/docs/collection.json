@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Mopo",
-        "_postman_id": "301fe9a3-cb39-45ce-a7c6-be23a446be9b",
+        "_postman_id": "8a50c8d0-0064-4985-82e9-90ef7361a657",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -76,7 +76,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"type\":\"master\",\"Card_number\":\"consequatur\",\"Holder_Name\":\"et\",\"Cvc\":\"sequi\",\"Expire_Date\":\"odio\"}"
+                            "raw": "{\"type\":\"visa\",\"Card_number\":\"ipsum\",\"Holder_Name\":\"rerum\",\"Cvc\":\"iusto\",\"Expire_Date\":\"deleniti\"}"
                         },
                         "description": "",
                         "auth": {
@@ -241,7 +241,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"joyce74@example.org\",\"password\":\"suscipit\"}"
+                            "raw": "{\"email\":\"marge12@example.net\",\"password\":\"dolorem\"}"
                         },
                         "description": "",
                         "auth": {
@@ -297,7 +297,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"tom.auer@example.net\",\"password\":\"ducimus\"}"
+                            "raw": "{\"email\":\"ehand@example.org\",\"password\":\"ea\"}"
                         },
                         "description": "",
                         "auth": {
@@ -353,7 +353,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"Full_name\":\"e\",\"phone\":\"perferendis\",\"email\":\"bianka.mosciski@example.net\",\"password\":\"*h[X,*)\",\"postal_code\":\"non\",\"City\":\"tempora\",\"Birth_date\":\"dolorum\",\"Nationality\":\"eligendi\",\"place_of_residence\":\"deleniti\"}"
+                            "raw": "{\"Full_name\":\"bxe\",\"phone\":\"sint\",\"email\":\"franecki.anabelle@example.net\",\"password\":\"xDKFLg'PP%^[\",\"postal_code\":\"qui\",\"City\":\"fugit\",\"Birth_date\":\"dolorem\",\"Nationality\":\"labore\",\"place_of_residence\":\"eius\"}"
                         },
                         "description": "",
                         "auth": {
@@ -438,7 +438,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"password\":\"ipsa\"}"
+                            "raw": "{\"password\":\"aliquid\"}"
                         },
                         "description": "",
                         "auth": {
@@ -463,12 +463,12 @@
                             "query": [
                                 {
                                     "key": "account",
-                                    "value": "9",
+                                    "value": "3",
                                     "description": "",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/account?account=9"
+                            "raw": "{{baseUrl}}\/api\/account?account=3"
                         },
                         "method": "GET",
                         "header": [
@@ -543,7 +543,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "non",
+                                    "value": "aut",
                                     "description": "The ID of the account."
                                 }
                             ]
@@ -992,7 +992,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"logo\":\"ducimus\",\"Currency_name\":\"tempora\",\"Abbrevation\":\"et\"}"
+                            "raw": "{\"logo\":\"quia\",\"Currency_name\":\"architecto\",\"Abbrevation\":\"esse\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1215,7 +1215,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"today_price\":\"qui\",\"percentage\":\"vero\",\"yesterday_price\":\"accusantium\",\"Date_Time\":\"quia\",\"currency_id\":\"natus\"}"
+                            "raw": "{\"today_price\":\"eaque\",\"percentage\":\"doloremque\",\"yesterday_price\":\"reprehenderit\",\"Date_Time\":\"omnis\",\"currency_id\":\"et\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1438,7 +1438,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"dolore\",\"amount\":\"distinctio\",\"currency_id\":\"hic\"}"
+                            "raw": "{\"email\":\"suscipit\",\"amount\":\"nobis\",\"currency_id\":\"repellat\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1661,7 +1661,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"currency_id_in\":\"nemo\",\"currency_id_out\":\"numquam\",\"quantity_in\":\"possimus\",\"quantity_out\":\"quia\"}"
+                            "raw": "{\"currency_id_in\":\"modi\",\"currency_id_out\":\"ratione\",\"quantity_in\":\"illum\",\"quantity_out\":\"ut\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1682,7 +1682,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "magnam",
+                                    "value": "tenetur",
                                     "description": "The ID of the trade."
                                 }
                             ]
@@ -1746,7 +1746,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "dolor",
+                                    "value": "ut",
                                     "description": "The ID of the trade."
                                 }
                             ]
@@ -1782,7 +1782,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "fugit",
+                                    "value": "expedita",
                                     "description": "The ID of the trade."
                                 }
                             ]
@@ -1876,7 +1876,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"currency_id_in\":\"harum\",\"currency_id_out\":\"sint\",\"quantity\":\"sit\"}"
+                            "raw": "{\"currency_id_in\":\"et\",\"currency_id_out\":\"cum\",\"quantity\":\"dolorem\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1897,7 +1897,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "commodi",
+                                    "value": "aut",
                                     "description": "The ID of the buy."
                                 }
                             ]
@@ -1953,7 +1953,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "7",
+                                    "value": "8",
                                     "description": "The ID of the buy."
                                 }
                             ]
@@ -1989,7 +1989,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "14",
+                                    "value": "16",
                                     "description": "The ID of the buy."
                                 }
                             ]
@@ -2109,7 +2109,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "qui",
+                                    "value": "id",
                                     "description": "The ID of the transduction."
                                 }
                             ]
@@ -2173,7 +2173,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "consequatur",
+                                    "value": "vel",
                                     "description": "The ID of the transduction."
                                 }
                             ]
@@ -2209,7 +2209,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "et",
+                                    "value": "expedita",
                                     "description": "The ID of the transduction."
                                 }
                             ]
@@ -2290,7 +2290,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"currency_id\":\"ut\",\"User_id\":\"tenetur\"}"
+                            "raw": "{\"currency_id\":\"sit\",\"User_id\":\"tenetur\"}"
                         },
                         "description": "",
                         "auth": {
@@ -2311,7 +2311,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "eos",
+                                    "value": "adipisci",
                                     "description": "The ID of the bestCurrency."
                                 }
                             ]
@@ -2375,7 +2375,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "3",
+                                    "value": "17",
                                     "description": "The ID of the bestCurrency."
                                 }
                             ]
@@ -2411,7 +2411,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "17",
+                                    "value": "1",
                                     "description": "The ID of the bestCurrency."
                                 }
                             ]
@@ -2502,7 +2502,7 @@
                                 {
                                     "id": "curName",
                                     "key": "curName",
-                                    "value": "rerum",
+                                    "value": "est",
                                     "description": ""
                                 }
                             ]
@@ -2829,7 +2829,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\n\"data\": [\n{\n\"id\": 2,\n\"quantity\": 9212735699,\n\"name\": \"deleniti\",\n\"Abbrevation\": \"consequatur\",\n\"price\": 248,\n\"percentage\": 0\n},\n{\n\"id\": 4,\n\"quantity\": 7534749832,\n\"name\": \"quaerat\",\n\"Abbrevation\": \"facilis\",\n\"price\": 719,\n\"percentage\": 0\n}\n]\n}",
+                            "body": "{\n\"data\": [\n{\n\"id\": 2,\n\"quantity\": 9212735699,\n\"name\": \"deleniti\",\n\"logo\": \"http:\/\/localhost:8000\/storage\/\/tmp\/9c963e9d725aecb022d022b8103f7b15.png\",\n\"Abbrevation\": \"consequatur\",\n\"price\": 248,\n\"percentage\": 0\n},\n{\n\"id\": 4,\n\"quantity\": 7534749832,\n\"name\": \"quaerat\",\n\"logo\": \"http:\/\/localhost:8000\/storage\/\/tmp\/41fcb019e899646621ccc8dc9002e92a.png\",\n\"Abbrevation\": \"facilis\",\n\"price\": 719,\n\"percentage\": 0\n}\n]\n}",
                             "name": ""
                         }
                     ]
@@ -2856,7 +2856,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"currency_id\":\"incidunt\",\"Quantity\":\"fuga\",\"User_id\":\"et\"}"
+                            "raw": "{\"currency_id\":\"fugit\",\"Quantity\":\"consequatur\",\"User_id\":\"et\"}"
                         },
                         "description": "",
                         "auth": {
@@ -2877,7 +2877,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "maxime",
+                                    "value": "velit",
                                     "description": "The ID of the wallet."
                                 }
                             ]
@@ -2933,7 +2933,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "sunt",
+                                    "value": "fuga",
                                     "description": "The ID of the wallet."
                                 }
                             ]
@@ -2969,7 +2969,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "libero",
+                                    "value": "tempora",
                                     "description": "The ID of the wallet."
                                 }
                             ]

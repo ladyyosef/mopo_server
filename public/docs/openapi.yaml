@@ -82,23 +82,23 @@ paths:
                 type:
                   type: string
                   description: 'Must be one of <code>visa</code> or <code>master</code>.'
-                  example: master
+                  example: visa
                 Card_number:
                   type: string
                   description: ''
-                  example: consequatur
+                  example: ipsum
                 Holder_Name:
                   type: string
                   description: ''
-                  example: et
+                  example: rerum
                 Cvc:
                   type: string
                   description: ''
-                  example: sequi
+                  example: iusto
                 Expire_Date:
                   type: string
                   description: ''
-                  example: odio
+                  example: deleniti
               required:
                 - type
                 - Card_number
@@ -202,11 +202,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: joyce74@example.org
+                  example: marge12@example.net
                 password:
                   type: string
                   description: ''
-                  example: suscipit
+                  example: dolorem
               required:
                 - email
                 - password
@@ -258,11 +258,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: tom.auer@example.net
+                  example: ehand@example.org
                 password:
                   type: string
                   description: ''
-                  example: ducimus
+                  example: ea
               required:
                 - email
                 - password
@@ -307,39 +307,39 @@ paths:
                 Full_name:
                   type: string
                   description: 'Must not be greater than 25 characters.'
-                  example: e
+                  example: bxe
                 phone:
                   type: string
                   description: ''
-                  example: perferendis
+                  example: sint
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: bianka.mosciski@example.net
+                  example: franecki.anabelle@example.net
                 password:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: '*h[X,*)'
+                  example: "xDKFLg'PP%^["
                 postal_code:
                   type: string
                   description: ''
-                  example: non
+                  example: qui
                 City:
                   type: string
                   description: ''
-                  example: tempora
+                  example: fugit
                 Birth_date:
                   type: string
                   description: ''
-                  example: dolorum
+                  example: dolorem
                 Nationality:
                   type: string
                   description: ''
-                  example: eligendi
+                  example: labore
                 place_of_residence:
                   type: string
                   description: ''
-                  example: deleniti
+                  example: eius
               required:
                 - Full_name
                 - phone
@@ -394,7 +394,7 @@ paths:
                 password:
                   type: string
                   description: ''
-                  example: ipsa
+                  example: aliquid
               required:
                 - password
       security: []
@@ -408,12 +408,12 @@ paths:
           in: query
           name: account
           description: ''
-          example: 9
+          example: 3
           required: false
           schema:
             type: integer
             description: ''
-            example: 9
+            example: 3
       responses:
         200:
           description: ''
@@ -484,7 +484,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the account.'
-        example: non
+        example: aut
         required: true
         schema:
           type: string
@@ -1577,15 +1577,15 @@ paths:
                 logo:
                   type: string
                   description: ''
-                  example: ducimus
+                  example: quia
                 Currency_name:
                   type: string
                   description: ''
-                  example: tempora
+                  example: architecto
                 Abbrevation:
                   type: string
                   description: ''
-                  example: et
+                  example: esse
               required:
                 - logo
                 - Currency_name
@@ -1757,23 +1757,23 @@ paths:
                 today_price:
                   type: string
                   description: ''
-                  example: qui
+                  example: eaque
                 percentage:
                   type: string
                   description: ''
-                  example: vero
+                  example: doloremque
                 yesterday_price:
                   type: string
                   description: ''
-                  example: accusantium
+                  example: reprehenderit
                 Date_Time:
                   type: string
                   description: ''
-                  example: quia
+                  example: omnis
                 currency_id:
                   type: string
                   description: ''
-                  example: natus
+                  example: et
               required:
                 - today_price
                 - percentage
@@ -1965,15 +1965,15 @@ paths:
                 email:
                   type: string
                   description: ''
-                  example: dolore
+                  example: suscipit
                 amount:
                   type: string
                   description: ''
-                  example: distinctio
+                  example: nobis
                 currency_id:
                   type: string
                   description: ''
-                  example: hic
+                  example: repellat
               required:
                 - email
                 - amount
@@ -2882,19 +2882,19 @@ paths:
                 currency_id_in:
                   type: string
                   description: ''
-                  example: nemo
+                  example: modi
                 currency_id_out:
                   type: string
                   description: ''
-                  example: numquam
+                  example: ratione
                 quantity_in:
                   type: string
                   description: ''
-                  example: possimus
+                  example: illum
                 quantity_out:
                   type: string
                   description: ''
-                  example: quia
+                  example: ut
               required:
                 - currency_id_in
                 - currency_id_out
@@ -3736,7 +3736,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the trade.'
-        example: magnam
+        example: tenetur
         required: true
         schema:
           type: string
@@ -3780,15 +3780,15 @@ paths:
                 currency_id_in:
                   type: string
                   description: ''
-                  example: harum
+                  example: et
                 currency_id_out:
                   type: string
                   description: ''
-                  example: sint
+                  example: cum
                 quantity:
                   type: string
                   description: ''
-                  example: sit
+                  example: dolorem
               required:
                 - currency_id_in
                 - currency_id_out
@@ -3839,7 +3839,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the buy.'
-        example: commodi
+        example: aut
         required: true
         schema:
           type: string
@@ -5499,7 +5499,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the transduction.'
-        example: qui
+        example: id
         required: true
         schema:
           type: string
@@ -5539,7 +5539,7 @@ paths:
                 currency_id:
                   type: string
                   description: ''
-                  example: ut
+                  example: sit
                 User_id:
                   type: string
                   description: ''
@@ -6409,7 +6409,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the bestCurrency.'
-        example: eos
+        example: adipisci
         required: true
         schema:
           type: string
@@ -6457,7 +6457,7 @@ paths:
         in: path
         name: curName
         description: ''
-        example: rerum
+        example: est
         required: true
         schema:
           type: string
@@ -10209,6 +10209,7 @@ paths:
                       id: 2
                       quantity: 9212735699
                       name: deleniti
+                      logo: 'http://localhost:8000/storage//tmp/9c963e9d725aecb022d022b8103f7b15.png'
                       Abbrevation: consequatur
                       price: 248
                       percentage: 0
@@ -10216,6 +10217,7 @@ paths:
                       id: 4
                       quantity: 7534749832
                       name: quaerat
+                      logo: 'http://localhost:8000/storage//tmp/41fcb019e899646621ccc8dc9002e92a.png'
                       Abbrevation: facilis
                       price: 719
                       percentage: 0
@@ -10227,6 +10229,7 @@ paths:
                         id: 2
                         quantity: 9212735699
                         name: deleniti
+                        logo: 'http://localhost:8000/storage//tmp/9c963e9d725aecb022d022b8103f7b15.png'
                         Abbrevation: consequatur
                         price: 248
                         percentage: 0
@@ -10234,6 +10237,7 @@ paths:
                         id: 4
                         quantity: 7534749832
                         name: quaerat
+                        logo: 'http://localhost:8000/storage//tmp/41fcb019e899646621ccc8dc9002e92a.png'
                         Abbrevation: facilis
                         price: 719
                         percentage: 0
@@ -10249,6 +10253,9 @@ paths:
                         name:
                           type: string
                           example: deleniti
+                        logo:
+                          type: string
+                          example: 'http://localhost:8000/storage//tmp/9c963e9d725aecb022d022b8103f7b15.png'
                         Abbrevation:
                           type: string
                           example: consequatur
@@ -10279,11 +10286,11 @@ paths:
                 currency_id:
                   type: string
                   description: ''
-                  example: incidunt
+                  example: fugit
                 Quantity:
                   type: string
                   description: ''
-                  example: fuga
+                  example: consequatur
                 User_id:
                   type: string
                   description: ''
@@ -10338,7 +10345,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the wallet.'
-        example: maxime
+        example: velit
         required: true
         schema:
           type: string

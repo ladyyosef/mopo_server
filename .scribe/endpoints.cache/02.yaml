@@ -36,6 +36,7 @@ endpoints:
           "id": 2,
           "quantity": 9212735699,
           "name": "deleniti",
+          "logo": "http://localhost:8000/storage//tmp/9c963e9d725aecb022d022b8103f7b15.png",
           "Abbrevation": "consequatur",
           "price": 248,
           "percentage": 0
@@ -44,6 +45,7 @@ endpoints:
           "id": 4,
           "quantity": 7534749832,
           "name": "quaerat",
+          "logo": "http://localhost:8000/storage//tmp/41fcb019e899646621ccc8dc9002e92a.png",
           "Abbrevation": "facilis",
           "price": 719,
           "percentage": 0
@@ -84,14 +86,14 @@ endpoints:
         name: currency_id
         description: ''
         required: true
-        example: incidunt
+        example: fugit
         type: string
         custom: []
       Quantity:
         name: Quantity
         description: ''
         required: true
-        example: fuga
+        example: consequatur
         type: string
         custom: []
       User_id:
@@ -102,8 +104,8 @@ endpoints:
         type: string
         custom: []
     cleanBodyParameters:
-      currency_id: incidunt
-      Quantity: fuga
+      currency_id: fugit
+      Quantity: consequatur
       User_id: et
     fileParameters: []
     responses: []
@@ -134,11 +136,11 @@ endpoints:
         name: id
         description: 'The ID of the wallet.'
         required: true
-        example: maxime
+        example: velit
         type: string
         custom: []
     cleanUrlParameters:
-      id: maxime
+      id: velit
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -182,11 +184,11 @@ endpoints:
         name: id
         description: 'The ID of the wallet.'
         required: true
-        example: sunt
+        example: fuga
         type: string
         custom: []
     cleanUrlParameters:
-      id: sunt
+      id: fuga
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -220,11 +222,11 @@ endpoints:
         name: id
         description: 'The ID of the wallet.'
         required: true
-        example: libero
+        example: tempora
         type: string
         custom: []
     cleanUrlParameters:
-      id: libero
+      id: tempora
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

@@ -78,43 +78,43 @@ endpoints:
         name: type
         description: 'Must be one of <code>visa</code> or <code>master</code>.'
         required: true
-        example: master
+        example: visa
         type: string
         custom: []
       Card_number:
         name: Card_number
         description: ''
         required: true
-        example: consequatur
+        example: ipsum
         type: string
         custom: []
       Holder_Name:
         name: Holder_Name
         description: ''
         required: true
-        example: et
+        example: rerum
         type: string
         custom: []
       Cvc:
         name: Cvc
         description: ''
         required: true
-        example: sequi
+        example: iusto
         type: string
         custom: []
       Expire_Date:
         name: Expire_Date
         description: ''
         required: true
-        example: odio
+        example: deleniti
         type: string
         custom: []
     cleanBodyParameters:
-      type: master
-      Card_number: consequatur
-      Holder_Name: et
-      Cvc: sequi
-      Expire_Date: odio
+      type: visa
+      Card_number: ipsum
+      Holder_Name: rerum
+      Cvc: iusto
+      Expire_Date: deleniti
     fileParameters: []
     responses: []
     responseFields: []

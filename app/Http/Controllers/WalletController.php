@@ -22,6 +22,7 @@ class WalletController extends Controller
             "id": 2,
             "quantity": 9212735699,
             "name": "deleniti",
+            "logo": "http://localhost:8000/storage//tmp/9c963e9d725aecb022d022b8103f7b15.png",
             "Abbrevation": "consequatur",
             "price": 248,
             "percentage": 0
@@ -30,6 +31,7 @@ class WalletController extends Controller
             "id": 4,
             "quantity": 7534749832,
             "name": "quaerat",
+            "logo": "http://localhost:8000/storage//tmp/41fcb019e899646621ccc8dc9002e92a.png",
             "Abbrevation": "facilis",
             "price": 719,
             "percentage": 0

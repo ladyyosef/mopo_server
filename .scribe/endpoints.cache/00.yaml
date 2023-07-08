@@ -28,19 +28,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: joyce74@example.org
+        example: marge12@example.net
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: suscipit
+        example: dolorem
         type: string
         custom: []
     cleanBodyParameters:
-      email: joyce74@example.org
-      password: suscipit
+      email: marge12@example.net
+      password: dolorem
     fileParameters: []
     responses:
       -
@@ -117,19 +117,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: tom.auer@example.net
+        example: ehand@example.org
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: ducimus
+        example: ea
         type: string
         custom: []
     cleanBodyParameters:
-      email: tom.auer@example.net
-      password: ducimus
+      email: ehand@example.org
+      password: ea
     fileParameters: []
     responses:
       -
@@ -206,75 +206,75 @@ endpoints:
         name: Full_name
         description: 'Must not be greater than 25 characters.'
         required: true
-        example: e
+        example: bxe
         type: string
         custom: []
       phone:
         name: phone
         description: ''
         required: true
-        example: perferendis
+        example: sint
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: bianka.mosciski@example.net
+        example: franecki.anabelle@example.net
         type: string
         custom: []
       password:
         name: password
         description: 'Must be at least 8 characters.'
         required: true
-        example: '*h[X,*)'
+        example: "xDKFLg'PP%^["
         type: string
         custom: []
       postal_code:
         name: postal_code
         description: ''
         required: true
-        example: non
+        example: qui
         type: string
         custom: []
       City:
         name: City
         description: ''
         required: true
-        example: tempora
+        example: fugit
         type: string
         custom: []
       Birth_date:
         name: Birth_date
         description: ''
         required: true
-        example: dolorum
+        example: dolorem
         type: string
         custom: []
       Nationality:
         name: Nationality
         description: ''
         required: true
-        example: eligendi
+        example: labore
         type: string
         custom: []
       place_of_residence:
         name: place_of_residence
         description: ''
         required: true
-        example: deleniti
+        example: eius
         type: string
         custom: []
     cleanBodyParameters:
-      Full_name: e
-      phone: perferendis
-      email: bianka.mosciski@example.net
-      password: '*h[X,*)'
-      postal_code: non
-      City: tempora
-      Birth_date: dolorum
-      Nationality: eligendi
-      place_of_residence: deleniti
+      Full_name: bxe
+      phone: sint
+      email: franecki.anabelle@example.net
+      password: "xDKFLg'PP%^["
+      postal_code: qui
+      City: fugit
+      Birth_date: dolorem
+      Nationality: labore
+      place_of_residence: eius
     fileParameters: []
     responses:
       -
@@ -406,11 +406,11 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: ipsa
+        example: aliquid
         type: string
         custom: []
     cleanBodyParameters:
-      password: ipsa
+      password: aliquid
     fileParameters: []
     responses:
       -
@@ -451,11 +451,11 @@ endpoints:
         name: account
         description: ''
         required: false
-        example: 9
+        example: 3
         type: integer
         custom: []
     cleanQueryParameters:
-      account: 9
+      account: 3
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -568,11 +568,11 @@ endpoints:
         name: id
         description: 'The ID of the account.'
         required: true
-        example: non
+        example: aut
         type: string
         custom: []
     cleanUrlParameters:
-      id: non
+      id: aut
     queryParameters:
       account:
         name: account
@@ -1502,27 +1502,27 @@ endpoints:
         name: logo
         description: ''
         required: true
-        example: ducimus
+        example: quia
         type: string
         custom: []
       Currency_name:
         name: Currency_name
         description: ''
         required: true
-        example: tempora
+        example: architecto
         type: string
         custom: []
       Abbrevation:
         name: Abbrevation
         description: ''
         required: true
-        example: et
+        example: esse
         type: string
         custom: []
     cleanBodyParameters:
-      logo: ducimus
-      Currency_name: tempora
-      Abbrevation: et
+      logo: quia
+      Currency_name: architecto
+      Abbrevation: esse
     fileParameters: []
     responses: []
     responseFields: []
@@ -1723,43 +1723,43 @@ endpoints:
         name: today_price
         description: ''
         required: true
-        example: qui
+        example: eaque
         type: string
         custom: []
       percentage:
         name: percentage
         description: ''
         required: true
-        example: vero
+        example: doloremque
         type: string
         custom: []
       yesterday_price:
         name: yesterday_price
         description: ''
         required: true
-        example: accusantium
+        example: reprehenderit
         type: string
         custom: []
       Date_Time:
         name: Date_Time
         description: ''
         required: true
-        example: quia
+        example: omnis
         type: string
         custom: []
       currency_id:
         name: currency_id
         description: ''
         required: true
-        example: natus
+        example: et
         type: string
         custom: []
     cleanBodyParameters:
-      today_price: qui
-      percentage: vero
-      yesterday_price: accusantium
-      Date_Time: quia
-      currency_id: natus
+      today_price: eaque
+      percentage: doloremque
+      yesterday_price: reprehenderit
+      Date_Time: omnis
+      currency_id: et
     fileParameters: []
     responses: []
     responseFields: []
@@ -1960,27 +1960,27 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: dolore
+        example: suscipit
         type: string
         custom: []
       amount:
         name: amount
         description: ''
         required: true
-        example: distinctio
+        example: nobis
         type: string
         custom: []
       currency_id:
         name: currency_id
         description: ''
         required: true
-        example: hic
+        example: repellat
         type: string
         custom: []
     cleanBodyParameters:
-      email: dolore
-      amount: distinctio
-      currency_id: hic
+      email: suscipit
+      amount: nobis
+      currency_id: repellat
     fileParameters: []
     responses: []
     responseFields: []
@@ -2630,35 +2630,35 @@ endpoints:
         name: currency_id_in
         description: ''
         required: true
-        example: nemo
+        example: modi
         type: string
         custom: []
       currency_id_out:
         name: currency_id_out
         description: ''
         required: true
-        example: numquam
+        example: ratione
         type: string
         custom: []
       quantity_in:
         name: quantity_in
         description: ''
         required: true
-        example: possimus
+        example: illum
         type: string
         custom: []
       quantity_out:
         name: quantity_out
         description: ''
         required: true
-        example: quia
+        example: ut
         type: string
         custom: []
     cleanBodyParameters:
-      currency_id_in: nemo
-      currency_id_out: numquam
-      quantity_in: possimus
-      quantity_out: quia
+      currency_id_in: modi
+      currency_id_out: ratione
+      quantity_in: illum
+      quantity_out: ut
     fileParameters: []
     responses: []
     responseFields: []
@@ -2688,11 +2688,11 @@ endpoints:
         name: id
         description: 'The ID of the trade.'
         required: true
-        example: magnam
+        example: tenetur
         type: string
         custom: []
     cleanUrlParameters:
-      id: magnam
+      id: tenetur
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -3187,11 +3187,11 @@ endpoints:
         name: id
         description: 'The ID of the trade.'
         required: true
-        example: dolor
+        example: ut
         type: string
         custom: []
     cleanUrlParameters:
-      id: dolor
+      id: ut
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -3225,11 +3225,11 @@ endpoints:
         name: id
         description: 'The ID of the trade.'
         required: true
-        example: fugit
+        example: expedita
         type: string
         custom: []
     cleanUrlParameters:
-      id: fugit
+      id: expedita
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -3306,27 +3306,27 @@ endpoints:
         name: currency_id_in
         description: ''
         required: true
-        example: harum
+        example: et
         type: string
         custom: []
       currency_id_out:
         name: currency_id_out
         description: ''
         required: true
-        example: sint
+        example: cum
         type: string
         custom: []
       quantity:
         name: quantity
         description: ''
         required: true
-        example: sit
+        example: dolorem
         type: string
         custom: []
     cleanBodyParameters:
-      currency_id_in: harum
-      currency_id_out: sint
-      quantity: sit
+      currency_id_in: et
+      currency_id_out: cum
+      quantity: dolorem
     fileParameters: []
     responses: []
     responseFields: []
@@ -3356,11 +3356,11 @@ endpoints:
         name: id
         description: 'The ID of the buy.'
         required: true
-        example: commodi
+        example: aut
         type: string
         custom: []
     cleanUrlParameters:
-      id: commodi
+      id: aut
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -3404,11 +3404,11 @@ endpoints:
         name: id
         description: 'The ID of the buy.'
         required: true
-        example: 7
+        example: 8
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 7
+      id: 8
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -3442,11 +3442,11 @@ endpoints:
         name: id
         description: 'The ID of the buy.'
         required: true
-        example: 14
+        example: 16
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 14
+      id: 16
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -4000,11 +4000,11 @@ endpoints:
         name: id
         description: 'The ID of the transduction.'
         required: true
-        example: qui
+        example: id
         type: string
         custom: []
     cleanUrlParameters:
-      id: qui
+      id: id
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -4499,11 +4499,11 @@ endpoints:
         name: id
         description: 'The ID of the transduction.'
         required: true
-        example: consequatur
+        example: vel
         type: string
         custom: []
     cleanUrlParameters:
-      id: consequatur
+      id: vel
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -4537,11 +4537,11 @@ endpoints:
         name: id
         description: 'The ID of the transduction.'
         required: true
-        example: et
+        example: expedita
         type: string
         custom: []
     cleanUrlParameters:
-      id: et
+      id: expedita
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -4615,7 +4615,7 @@ endpoints:
         name: currency_id
         description: ''
         required: true
-        example: ut
+        example: sit
         type: string
         custom: []
       User_id:
@@ -4626,7 +4626,7 @@ endpoints:
         type: string
         custom: []
     cleanBodyParameters:
-      currency_id: ut
+      currency_id: sit
       User_id: tenetur
     fileParameters: []
     responses: []
@@ -4657,11 +4657,11 @@ endpoints:
         name: id
         description: 'The ID of the bestCurrency.'
         required: true
-        example: eos
+        example: adipisci
         type: string
         custom: []
     cleanUrlParameters:
-      id: eos
+      id: adipisci
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -5170,11 +5170,11 @@ endpoints:
         name: id
         description: 'The ID of the bestCurrency.'
         required: true
-        example: 3
+        example: 17
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 3
+      id: 17
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -5208,11 +5208,11 @@ endpoints:
         name: id
         description: 'The ID of the bestCurrency.'
         required: true
-        example: 17
+        example: 1
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 17
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -5291,11 +5291,11 @@ endpoints:
         name: curName
         description: ''
         required: true
-        example: rerum
+        example: est
         type: string
         custom: []
     cleanUrlParameters:
-      curName: rerum
+      curName: est
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
