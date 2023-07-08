@@ -5,7 +5,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Trade extends Model
 {
@@ -17,12 +16,13 @@ class Trade extends Model
      * @var array
      */
     protected $fillable = [
-        'account_number',
+        'user_id_in',
+        'user_id_out',
         'currency_id_in',
         'currency_id_out',
-        'price',
-        'Status',
-        'quantity',
+        'quantity_in',
+        'status',
+        'quantity_out',
     ];
 
     /**
@@ -32,30 +32,32 @@ class Trade extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'account_number' => 'integer',
+        'user_id_in' => 'integer',
+        'user_id_out' => 'integer',
         'currency_id_in' => 'integer',
         'currency_id_out' => 'integer',
-        'price' => 'integer',
-        'Status' => 'boolean',
-        'quantity' => 'double',
+        'quantity_in' => 'integer',
+        'status' => 'boolean',
+        'quantity_out' => 'double',
     ];
-
-    public function accounts(): HasMany
-    {
-        return $this->hasMany(Account::class);
-    }
-
 
     public function currency(): BelongsTo
     {
         return $this->belongsTo(Currency::class, 'currency_id_in');
     }
+
     public function currencyOut(): BelongsTo
     {
         return $this->belongsTo(Currency::class, 'currency_id_out');
     }
-    public function account(): BelongsTo
+
+    public function userIn(): BelongsTo
     {
-        return $this->belongsTo(Account::class, 'account_number');
+        return $this->belongsTo(User::class, 'user_id_in');
+    }
+
+    public function userOut(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'user_id_in');
     }
 }

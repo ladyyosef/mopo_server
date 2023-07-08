@@ -14,10 +14,13 @@ class WalletResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return[
-            'Quantity' =>$this->Quantity,
-            'currency_id'=> new CurrencyResource($this->whenLoaded('Currency')),
+        return [
+            'id' => $this->id,
+            'quantity' => $this->Quantity,
+            'name' => $this->currency->Currency_name,
+            'Abbrevation' => $this->currency->Abbrevation,
+            'price' => $this->currency->prices?->first()?->price,
+            'percentage' => round(($this->currency->prices?->first()?->price - $this->currency->prices?->last()?->price), 1),
         ];
-
     }
 }

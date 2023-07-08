@@ -16,7 +16,7 @@ class WalletController extends Controller
      */
     public function index()
     {
-        $wallets = Wallet::with('Currency')->get();
+        $wallets = auth()->user()->wallets()->with(['currency', 'currency.prices' => fn ($query) => $query->limit(3)->orderBy('id', 'desc')])->get();
         return WalletResource::collection($wallets);
     }
 
@@ -25,19 +25,18 @@ class WalletController extends Controller
      */
     public function store(WalletRequest $request)
     {
-       return new WalletResource(Wallet::create($request->all()));
-
+        return new WalletResource(Wallet::create($request->all()));
     }
 
     /**
      * Display the specified resource.
      */
-   //
-   public function show($id)
-   {
-    $wallet = Wallet::with('Currency')->find($id);
-    return new WalletResource($wallet);
-   }
+    //
+    public function show(Wallet $wallet)
+    {
+        $wallet->load('currency');
+        return new WalletResource($wallet);
+    }
 
 
 
@@ -46,7 +45,6 @@ class WalletController extends Controller
      */
     public function update(Request $request)
     {
-
     }
 
     /**

@@ -6,6 +6,7 @@ use App\Models\Send;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Resources\SendResource;
 use App\Http\Requests\Request\api\SendRequest;
+
 class SendController extends Controller
 {
     /**
@@ -14,7 +15,7 @@ class SendController extends Controller
     public function index()
     {
         $send = Send::with('Currency')->get();
-        return SendResource::collection( $send);
+        return SendResource::collection($send);
     }
 
     /**
@@ -22,7 +23,8 @@ class SendController extends Controller
      */
     public function store(SendRequest $request)
     {
-        return new SendResource(Send::create($request->all()));
+        $send = Send::create($request->validated());
+        return new SendResource($send);
     }
 
     /**
@@ -48,6 +50,6 @@ class SendController extends Controller
     public function destroy(Send $send)
     {
         $send->delete();
-        return response(null,204);
+        return response(null, 204);
     }
 }

@@ -4,10 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\trade;
 use Illuminate\Http\Request;
-use App\Models\Account;
-use App\Models\Currency;
 use App\Http\Controllers\Resources\TradeResource;
 use App\Http\Requests\Request\api\TradeRequest;
+
 class TradeController extends Controller
 {
     /**
@@ -15,7 +14,10 @@ class TradeController extends Controller
      */
     public function index()
     {
-        $trade = Trade::with('currency','currencyOut','account')->get();
+        $trade = Trade::with([
+            'currency', 'currency.prices' => fn ($query) => $query->limit(3)->orderBy('id', 'desc'),
+            'currencyOut', 'currencyOut.prices' => fn ($query) => $query->limit(3)->orderBy('id', 'desc'), 'userIn'
+        ])->get();
         return TradeResource::collection($trade);
     }
 
@@ -24,17 +26,16 @@ class TradeController extends Controller
      */
     public function store(TradeRequest $request)
     {
-        return new TradeResource(Trade::create($request->all()));
+        return new TradeResource(Trade::create(array_merge($request->validated(), ['user_id' => auth()->id()])));
     }
 
     /**
      * Display the specified resource.
      */
-    public function show( $id)
+    public function show($id)
     {
-        $trade = Trade::with('currency','currencyOut','account')->find($id);
+        $trade = Trade::with('currency', 'currencyOut', 'account')->find($id);
         return new TradeResource($trade);
-
     }
 
     /**
@@ -51,6 +52,6 @@ class TradeController extends Controller
     public function destroy(trade $trade)
     {
         $trade->delete();
-        return response(null,204);
+        return response(null, 204);
     }
 }

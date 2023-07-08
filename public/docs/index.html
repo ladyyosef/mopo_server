@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Laravel Documentation</title>
+    <title>Mopo Documentation</title>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
@@ -26,7 +26,7 @@
             </style>
 
     <script>
-        var tryItOutBaseUrl = "http://localhost";
+        var tryItOutBaseUrl = "http://localhost:8000";
         var useCsrf = Boolean();
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
@@ -82,6 +82,10 @@
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-POSTapi-logout">
                                 <a href="#endpoints-POSTapi-logout">logout
+* @response 204</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-authenticate-card">
+                                <a href="#endpoints-POSTapi-authenticate-card">Authenticate Card
 * @response 204</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-account">
@@ -288,7 +292,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: July 7, 2023</li>
+        <li>Last updated: July 8, 2023</li>
     </ul>
 </div>
 
@@ -297,7 +301,7 @@
     <div class="content">
         <h1 id="introduction">Introduction</h1>
 <aside>
-    <strong>Base URL</strong>: <code>http://localhost</code>
+    <strong>Base URL</strong>: <code>http://localhost:8000</code>
 </aside>
 <p>This documentation aims to provide all the information you need to work with our API.</p>
 <aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
@@ -323,19 +327,19 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/login" \
+    "http://localhost:8000/api/login" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"nhand@example.net\",
-    \"password\": \"nulla\"
+    \"email\": \"vkling@example.com\",
+    \"password\": \"unde\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/login"
+    "http://localhost:8000/api/login"
 );
 
 const headers = {
@@ -344,8 +348,8 @@ const headers = {
 };
 
 let body = {
-    "email": "nhand@example.net",
-    "password": "nulla"
+    "email": "vkling@example.com",
+    "password": "unde"
 };
 
 fetch(url, {
@@ -477,10 +481,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-login"
-               value="nhand@example.net"
+               value="vkling@example.com"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>nhand@example.net</code></p>
+<p>Must be a valid email address. Example: <code>vkling@example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -488,10 +492,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-login"
-               value="nulla"
+               value="unde"
                data-component="body">
     <br>
-<p>Example: <code>nulla</code></p>
+<p>Example: <code>unde</code></p>
         </div>
         </form>
 
@@ -508,19 +512,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/login-admin" \
+    "http://localhost:8000/api/login-admin" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"haag.era@example.org\",
-    \"password\": \"eius\"
+    \"email\": \"tturcotte@example.net\",
+    \"password\": \"sit\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/login-admin"
+    "http://localhost:8000/api/login-admin"
 );
 
 const headers = {
@@ -529,8 +533,8 @@ const headers = {
 };
 
 let body = {
-    "email": "haag.era@example.org",
-    "password": "eius"
+    "email": "tturcotte@example.net",
+    "password": "sit"
 };
 
 fetch(url, {
@@ -662,10 +666,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-login-admin"
-               value="haag.era@example.org"
+               value="tturcotte@example.net"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>haag.era@example.org</code></p>
+<p>Must be a valid email address. Example: <code>tturcotte@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -673,10 +677,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-login-admin"
-               value="eius"
+               value="sit"
                data-component="body">
     <br>
-<p>Example: <code>eius</code></p>
+<p>Example: <code>sit</code></p>
         </div>
         </form>
 
@@ -693,25 +697,26 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/register" \
+    "http://localhost:8000/api/register" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"Full_name\": \"llhvaj\",
-    \"phone\": \"dolore\",
-    \"email\": \"beaulah.mcdermott@example.org\",
-    \"password\": \"OxD6.ZD.GaTg2:x\",
-    \"postal_code\": \"rem\",
-    \"City\": \"placeat\",
-    \"Birth_date\": \"consequatur\",
-    \"Nationality\": \"laboriosam\"
+    \"Full_name\": \"isnt\",
+    \"phone\": \"eaque\",
+    \"email\": \"leilani.rau@example.net\",
+    \"password\": \"DrUnw-%JD6=\",
+    \"postal_code\": \"et\",
+    \"City\": \"voluptatem\",
+    \"Birth_date\": \"quidem\",
+    \"Nationality\": \"quisquam\",
+    \"place_of_residence\": \"sit\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/register"
+    "http://localhost:8000/api/register"
 );
 
 const headers = {
@@ -720,14 +725,15 @@ const headers = {
 };
 
 let body = {
-    "Full_name": "llhvaj",
-    "phone": "dolore",
-    "email": "beaulah.mcdermott@example.org",
-    "password": "OxD6.ZD.GaTg2:x",
-    "postal_code": "rem",
-    "City": "placeat",
-    "Birth_date": "consequatur",
-    "Nationality": "laboriosam"
+    "Full_name": "isnt",
+    "phone": "eaque",
+    "email": "leilani.rau@example.net",
+    "password": "DrUnw-%JD6=",
+    "postal_code": "et",
+    "City": "voluptatem",
+    "Birth_date": "quidem",
+    "Nationality": "quisquam",
+    "place_of_residence": "sit"
 };
 
 fetch(url, {
@@ -871,10 +877,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="Full_name"                data-endpoint="POSTapi-register"
-               value="llhvaj"
+               value="isnt"
                data-component="body">
     <br>
-<p>Must not be greater than 25 characters. Example: <code>llhvaj</code></p>
+<p>Must not be greater than 25 characters. Example: <code>isnt</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone</code></b>&nbsp;&nbsp;
@@ -882,10 +888,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="phone"                data-endpoint="POSTapi-register"
-               value="dolore"
+               value="eaque"
                data-component="body">
     <br>
-<p>Example: <code>dolore</code></p>
+<p>Example: <code>eaque</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -893,10 +899,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-register"
-               value="beaulah.mcdermott@example.org"
+               value="leilani.rau@example.net"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>beaulah.mcdermott@example.org</code></p>
+<p>Must be a valid email address. Example: <code>leilani.rau@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -904,10 +910,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-register"
-               value="OxD6.ZD.GaTg2:x"
+               value="DrUnw-%JD6="
                data-component="body">
     <br>
-<p>Must be at least 8 characters. Example: <code>OxD6.ZD.GaTg2:x</code></p>
+<p>Must be at least 8 characters. Example: <code>DrUnw-%JD6=</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>postal_code</code></b>&nbsp;&nbsp;
@@ -915,10 +921,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="postal_code"                data-endpoint="POSTapi-register"
-               value="rem"
+               value="et"
                data-component="body">
     <br>
-<p>Example: <code>rem</code></p>
+<p>Example: <code>et</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>City</code></b>&nbsp;&nbsp;
@@ -926,10 +932,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="City"                data-endpoint="POSTapi-register"
-               value="placeat"
+               value="voluptatem"
                data-component="body">
     <br>
-<p>Example: <code>placeat</code></p>
+<p>Example: <code>voluptatem</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>Birth_date</code></b>&nbsp;&nbsp;
@@ -937,10 +943,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="Birth_date"                data-endpoint="POSTapi-register"
-               value="consequatur"
+               value="quidem"
                data-component="body">
     <br>
-<p>Example: <code>consequatur</code></p>
+<p>Example: <code>quidem</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>Nationality</code></b>&nbsp;&nbsp;
@@ -948,10 +954,21 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="Nationality"                data-endpoint="POSTapi-register"
-               value="laboriosam"
+               value="quisquam"
                data-component="body">
     <br>
-<p>Example: <code>laboriosam</code></p>
+<p>Example: <code>quisquam</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>place_of_residence</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="place_of_residence"                data-endpoint="POSTapi-register"
+               value="sit"
+               data-component="body">
+    <br>
+<p>Example: <code>sit</code></p>
         </div>
         </form>
 
@@ -969,14 +986,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/logout" \
+    "http://localhost:8000/api/logout" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/logout"
+    "http://localhost:8000/api/logout"
 );
 
 const headers = {
@@ -1073,6 +1090,145 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
+                    <h2 id="endpoints-POSTapi-authenticate-card">Authenticate Card
+* @response 204</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-authenticate-card">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/authenticate-card" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"password\": \"assumenda\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/authenticate-card"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "password": "assumenda"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-authenticate-card">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">scenario =&quot;user not logged in&quot;{
+&quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-authenticate-card" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-authenticate-card"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-authenticate-card"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-authenticate-card" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-authenticate-card">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-authenticate-card" data-method="POST"
+      data-path="api/authenticate-card"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-authenticate-card', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-authenticate-card"
+                    onclick="tryItOut('POSTapi-authenticate-card');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-authenticate-card"
+                    onclick="cancelTryOut('POSTapi-authenticate-card');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-authenticate-card"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/authenticate-card</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-authenticate-card"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-authenticate-card"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="password"                data-endpoint="POSTapi-authenticate-card"
+               value="assumenda"
+               data-component="body">
+    <br>
+<p>Example: <code>assumenda</code></p>
+        </div>
+        </form>
+
                     <h2 id="endpoints-GETapi-account">GET api/account</h2>
 
 <p>
@@ -1086,18 +1242,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/account?account=14" \
+    --get "http://localhost:8000/api/account?account=1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/account"
+    "http://localhost:8000/api/account"
 );
 
 const params = {
-    "account": "14",
+    "account": "1",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -1243,10 +1399,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="account"                data-endpoint="GETapi-account"
-               value="14"
+               value="1"
                data-component="query">
     <br>
-<p>Example: <code>14</code></p>
+<p>Example: <code>1</code></p>
             </div>
                 </form>
 
@@ -1263,14 +1419,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/account" \
+    "http://localhost:8000/api/account" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/account"
+    "http://localhost:8000/api/account"
 );
 
 const headers = {
@@ -1371,18 +1527,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/account/sed?account=id" \
+    --get "http://localhost:8000/api/account/eaque?account=tempora" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/account/sed"
+    "http://localhost:8000/api/account/eaque"
 );
 
 const params = {
-    "account": "id",
+    "account": "tempora",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -1495,10 +1651,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="GETapi-account--id-"
-               value="sed"
+               value="eaque"
                data-component="url">
     <br>
-<p>The ID of the account. Example: <code>sed</code></p>
+<p>The ID of the account. Example: <code>eaque</code></p>
             </div>
                         <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
                                     <div style="padding-left: 28px; clear: unset;">
@@ -1507,10 +1663,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="account"                data-endpoint="GETapi-account--id-"
-               value="id"
+               value="tempora"
                data-component="query">
     <br>
-<p>int Example: <code>id</code></p>
+<p>int Example: <code>tempora</code></p>
             </div>
                 </form>
 
@@ -1527,14 +1683,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/account/1" \
+    "http://localhost:8000/api/account/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/account/1"
+    "http://localhost:8000/api/account/1"
 );
 
 const headers = {
@@ -1651,14 +1807,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/account/1" \
+    "http://localhost:8000/api/account/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/account/1"
+    "http://localhost:8000/api/account/1"
 );
 
 const headers = {
@@ -1771,14 +1927,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/ur" \
+    --get "http://localhost:8000/api/ur" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/ur"
+    "http://localhost:8000/api/ur"
 );
 
 const headers = {
@@ -1895,14 +2051,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/user" \
+    --get "http://localhost:8000/api/user" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/user"
+    "http://localhost:8000/api/user"
 );
 
 const headers = {
@@ -1944,14 +2100,14 @@ access-control-allow-origin: *
         {
             &quot;Full_name&quot;: &quot;User userr &quot;,
             &quot;email&quot;: &quot;user@gmail.com&quot;,
-            &quot;password&quot;: &quot;$2y$10$6K6mZXZU2Mi7IiOBqWeX5O3WOE7x8c5Qpm..UBXlSJiCDMkRTpz6a&quot;,
+            &quot;password&quot;: &quot;$2y$10$m.EHogOv0WDbhG3vCIIiweuNHjhyjdVFK/Fizjfp.Nd8aQKKJSxE.&quot;,
             &quot;phone&quot;: &quot;0966433721&quot;,
             &quot;Profile_image&quot;: &quot;C:\\Users\\LENOVO\\Downloads\\image1\\undraw_Designer_re_5v95 (1)&quot;
         },
         {
             &quot;Full_name&quot;: &quot;Reem Naif&quot;,
             &quot;email&quot;: &quot;reemsalem@gmail.com&quot;,
-            &quot;password&quot;: &quot;$2y$10$5/hIPMAAYUo/6SnTaYn0kOAaxfol0oY.aDDM1R816TalWJccQ2GWa&quot;,
+            &quot;password&quot;: &quot;$2y$10$7NRz0TyyDcXuBtxVgIcXiOOu5uhwPxuR2gdJGWPJiGF0TBTrr3/X6&quot;,
             &quot;phone&quot;: &quot;09775290133&quot;,
             &quot;Profile_image&quot;: &quot;C:\\Users\\LENOVO\\Downloads\\image1\\undraw_Multitasking_re_ffpb&quot;
         }
@@ -2043,14 +2199,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/user" \
+    "http://localhost:8000/api/user" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/user"
+    "http://localhost:8000/api/user"
 );
 
 const headers = {
@@ -2151,14 +2307,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/user/1" \
+    --get "http://localhost:8000/api/user/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/user/1"
+    "http://localhost:8000/api/user/1"
 );
 
 const headers = {
@@ -2287,14 +2443,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/user/1" \
+    "http://localhost:8000/api/user/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/user/1"
+    "http://localhost:8000/api/user/1"
 );
 
 const headers = {
@@ -2411,14 +2567,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/user/1" \
+    "http://localhost:8000/api/user/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/user/1"
+    "http://localhost:8000/api/user/1"
 );
 
 const headers = {
@@ -2531,14 +2687,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/currency" \
+    --get "http://localhost:8000/api/currency" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/currency"
+    "http://localhost:8000/api/currency"
 );
 
 const headers = {
@@ -3166,20 +3322,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/currency" \
+    "http://localhost:8000/api/currency" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"logo\": \"aliquam\",
-    \"Currency_name\": \"aut\",
-    \"Abbrevation\": \"qui\"
+    \"logo\": \"pariatur\",
+    \"Currency_name\": \"ipsam\",
+    \"Abbrevation\": \"ut\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/currency"
+    "http://localhost:8000/api/currency"
 );
 
 const headers = {
@@ -3188,9 +3344,9 @@ const headers = {
 };
 
 let body = {
-    "logo": "aliquam",
-    "Currency_name": "aut",
-    "Abbrevation": "qui"
+    "logo": "pariatur",
+    "Currency_name": "ipsam",
+    "Abbrevation": "ut"
 };
 
 fetch(url, {
@@ -3279,10 +3435,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="logo"                data-endpoint="POSTapi-currency"
-               value="aliquam"
+               value="pariatur"
                data-component="body">
     <br>
-<p>Example: <code>aliquam</code></p>
+<p>Example: <code>pariatur</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>Currency_name</code></b>&nbsp;&nbsp;
@@ -3290,10 +3446,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="Currency_name"                data-endpoint="POSTapi-currency"
-               value="aut"
+               value="ipsam"
                data-component="body">
     <br>
-<p>Example: <code>aut</code></p>
+<p>Example: <code>ipsam</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>Abbrevation</code></b>&nbsp;&nbsp;
@@ -3301,10 +3457,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="Abbrevation"                data-endpoint="POSTapi-currency"
-               value="qui"
+               value="ut"
                data-component="body">
     <br>
-<p>Example: <code>qui</code></p>
+<p>Example: <code>ut</code></p>
         </div>
         </form>
 
@@ -3321,14 +3477,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/currency/1" \
+    --get "http://localhost:8000/api/currency/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/currency/1"
+    "http://localhost:8000/api/currency/1"
 );
 
 const headers = {
@@ -3360,9 +3516,9 @@ access-control-allow-origin: *
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;logo&quot;: &quot;/tmp/7c0969ce61aefa02f53e07b74c9bc5ea.png&quot;,
-        &quot;Currency_name&quot;: &quot;voluptates&quot;,
-        &quot;Abbrevation&quot;: &quot;deserunt&quot;
+        &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/baf61469b5a0cc7e72ac0dbb6836e112.png&quot;,
+        &quot;Currency_name&quot;: &quot;voluptas&quot;,
+        &quot;Abbrevation&quot;: &quot;quod&quot;
     }
 }</code>
  </pre>
@@ -3463,14 +3619,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/currency/1" \
+    "http://localhost:8000/api/currency/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/currency/1"
+    "http://localhost:8000/api/currency/1"
 );
 
 const headers = {
@@ -3587,14 +3743,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/currency/1" \
+    "http://localhost:8000/api/currency/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/currency/1"
+    "http://localhost:8000/api/currency/1"
 );
 
 const headers = {
@@ -3707,14 +3863,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/currencyprice" \
+    --get "http://localhost:8000/api/currencyprice" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/currencyprice"
+    "http://localhost:8000/api/currencyprice"
 );
 
 const headers = {
@@ -3864,22 +4020,22 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/currencyprice" \
+    "http://localhost:8000/api/currencyprice" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"today_price\": \"id\",
-    \"percentage\": \"molestiae\",
-    \"yesterday_price\": \"quis\",
-    \"Date_Time\": \"est\",
-    \"currency_id\": \"qui\"
+    \"today_price\": \"et\",
+    \"percentage\": \"deserunt\",
+    \"yesterday_price\": \"voluptas\",
+    \"Date_Time\": \"dolorem\",
+    \"currency_id\": \"consequatur\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/currencyprice"
+    "http://localhost:8000/api/currencyprice"
 );
 
 const headers = {
@@ -3888,11 +4044,11 @@ const headers = {
 };
 
 let body = {
-    "today_price": "id",
-    "percentage": "molestiae",
-    "yesterday_price": "quis",
-    "Date_Time": "est",
-    "currency_id": "qui"
+    "today_price": "et",
+    "percentage": "deserunt",
+    "yesterday_price": "voluptas",
+    "Date_Time": "dolorem",
+    "currency_id": "consequatur"
 };
 
 fetch(url, {
@@ -3981,10 +4137,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="today_price"                data-endpoint="POSTapi-currencyprice"
-               value="id"
+               value="et"
                data-component="body">
     <br>
-<p>Example: <code>id</code></p>
+<p>Example: <code>et</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>percentage</code></b>&nbsp;&nbsp;
@@ -3992,10 +4148,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="percentage"                data-endpoint="POSTapi-currencyprice"
-               value="molestiae"
+               value="deserunt"
                data-component="body">
     <br>
-<p>Example: <code>molestiae</code></p>
+<p>Example: <code>deserunt</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>yesterday_price</code></b>&nbsp;&nbsp;
@@ -4003,10 +4159,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="yesterday_price"                data-endpoint="POSTapi-currencyprice"
-               value="quis"
+               value="voluptas"
                data-component="body">
     <br>
-<p>Example: <code>quis</code></p>
+<p>Example: <code>voluptas</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>Date_Time</code></b>&nbsp;&nbsp;
@@ -4014,10 +4170,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="Date_Time"                data-endpoint="POSTapi-currencyprice"
-               value="est"
+               value="dolorem"
                data-component="body">
     <br>
-<p>Example: <code>est</code></p>
+<p>Example: <code>dolorem</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>currency_id</code></b>&nbsp;&nbsp;
@@ -4025,10 +4181,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="currency_id"                data-endpoint="POSTapi-currencyprice"
-               value="qui"
+               value="consequatur"
                data-component="body">
     <br>
-<p>Example: <code>qui</code></p>
+<p>Example: <code>consequatur</code></p>
         </div>
         </form>
 
@@ -4045,14 +4201,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/currencyprice/1" \
+    --get "http://localhost:8000/api/currencyprice/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/currencyprice/1"
+    "http://localhost:8000/api/currencyprice/1"
 );
 
 const headers = {
@@ -4089,9 +4245,9 @@ access-control-allow-origin: *
         &quot;percentage&quot;: null,
         &quot;Date_Time&quot;: null,
         &quot;currency_id&quot;: {
-            &quot;logo&quot;: &quot;/tmp/7c0969ce61aefa02f53e07b74c9bc5ea.png&quot;,
-            &quot;Currency_name&quot;: &quot;voluptates&quot;,
-            &quot;Abbrevation&quot;: &quot;deserunt&quot;
+            &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/c4eee9c5e94ebe09b316f619e03e1bf7.png&quot;,
+            &quot;Currency_name&quot;: &quot;ex&quot;,
+            &quot;Abbrevation&quot;: &quot;odit&quot;
         }
     }
 }</code>
@@ -4193,14 +4349,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/currencyprice/1" \
+    "http://localhost:8000/api/currencyprice/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/currencyprice/1"
+    "http://localhost:8000/api/currencyprice/1"
 );
 
 const headers = {
@@ -4317,14 +4473,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/currencyprice/1" \
+    "http://localhost:8000/api/currencyprice/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/currencyprice/1"
+    "http://localhost:8000/api/currencyprice/1"
 );
 
 const headers = {
@@ -4437,14 +4593,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/card" \
+    --get "http://localhost:8000/api/card" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/card"
+    "http://localhost:8000/api/card"
 );
 
 const headers = {
@@ -4461,7 +4617,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-card">
             <blockquote>
-            <p>Example response (500):</p>
+            <p>Example response (401):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -4469,459 +4625,11 @@ fetch(url, {
             </summary>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 53
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Class \&quot;App\\Models\\card\&quot; not found&quot;,
-    &quot;exception&quot;: &quot;Error&quot;,
-    &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/app/Http/Controllers/CardController.php&quot;,
-    &quot;line&quot;: 21,
-    &quot;trace&quot;: [
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Controller.php&quot;,
-            &quot;line&quot;: 54,
-            &quot;function&quot;: &quot;index&quot;,
-            &quot;class&quot;: &quot;App\\Http\\Controllers\\CardController&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php&quot;,
-            &quot;line&quot;: 43,
-            &quot;function&quot;: &quot;callAction&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Controller&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Route.php&quot;,
-            &quot;line&quot;: 260,
-            &quot;function&quot;: &quot;dispatch&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\ControllerDispatcher&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Route.php&quot;,
-            &quot;line&quot;: 205,
-            &quot;function&quot;: &quot;runController&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
-            &quot;line&quot;: 799,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 141,
-            &quot;function&quot;: &quot;Illuminate\\Routing\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php&quot;,
-            &quot;line&quot;: 50,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\SubstituteBindings&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
-            &quot;line&quot;: 159,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
-            &quot;line&quot;: 135,
-            &quot;function&quot;: &quot;handleRequest&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
-            &quot;line&quot;: 87,
-            &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 116,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
-            &quot;line&quot;: 800,
-            &quot;function&quot;: &quot;then&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
-            &quot;line&quot;: 777,
-            &quot;function&quot;: &quot;runRouteWithinStack&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
-            &quot;line&quot;: 741,
-            &quot;function&quot;: &quot;runRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
-            &quot;line&quot;: 730,
-            &quot;function&quot;: &quot;dispatchToRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
-            &quot;line&quot;: 200,
-            &quot;function&quot;: &quot;dispatch&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 141,
-            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/livewire/livewire/src/DisableBrowserCache.php&quot;,
-            &quot;line&quot;: 19,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Livewire\\DisableBrowserCache&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php&quot;,
-            &quot;line&quot;: 21,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php&quot;,
-            &quot;line&quot;: 31,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php&quot;,
-            &quot;line&quot;: 21,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php&quot;,
-            &quot;line&quot;: 40,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php&quot;,
-            &quot;line&quot;: 27,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php&quot;,
-            &quot;line&quot;: 86,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php&quot;,
-            &quot;line&quot;: 62,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php&quot;,
-            &quot;line&quot;: 39,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 116,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
-            &quot;line&quot;: 175,
-            &quot;function&quot;: &quot;then&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
-            &quot;line&quot;: 144,
-            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
-            &quot;line&quot;: 299,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
-            &quot;line&quot;: 287,
-            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
-            &quot;line&quot;: 92,
-            &quot;function&quot;: &quot;makeApiCall&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
-            &quot;line&quot;: 45,
-            &quot;function&quot;: &quot;makeResponseCall&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
-            &quot;line&quot;: 35,
-            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
-            &quot;line&quot;: 209,
-            &quot;function&quot;: &quot;__invoke&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
-            &quot;line&quot;: 166,
-            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
-            &quot;line&quot;: 95,
-            &quot;function&quot;: &quot;fetchResponses&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 124,
-            &quot;function&quot;: &quot;processRoute&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 71,
-            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 49,
-            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php&quot;,
-            &quot;line&quot;: 51,
-            &quot;function&quot;: &quot;get&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
-            &quot;line&quot;: 36,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Container/Util.php&quot;,
-            &quot;line&quot;: 41,
-            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
-            &quot;line&quot;: 93,
-            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
-            &quot;line&quot;: 37,
-            &quot;function&quot;: &quot;callBoundMethod&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Container/Container.php&quot;,
-            &quot;line&quot;: 662,
-            &quot;function&quot;: &quot;call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Console/Command.php&quot;,
-            &quot;line&quot;: 208,
-            &quot;function&quot;: &quot;call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/symfony/console/Command/Command.php&quot;,
-            &quot;line&quot;: 326,
-            &quot;function&quot;: &quot;execute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Console/Command.php&quot;,
-            &quot;line&quot;: 178,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/symfony/console/Application.php&quot;,
-            &quot;line&quot;: 1081,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/symfony/console/Application.php&quot;,
-            &quot;line&quot;: 320,
-            &quot;function&quot;: &quot;doRunCommand&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/symfony/console/Application.php&quot;,
-            &quot;line&quot;: 174,
-            &quot;function&quot;: &quot;doRun&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php&quot;,
-            &quot;line&quot;: 200,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/artisan&quot;,
-            &quot;line&quot;: 37,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        }
-    ]
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
 }</code>
  </pre>
     </span>
@@ -5009,23 +4717,22 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/card" \
+    "http://localhost:8000/api/card" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"Card_image\": \"quibusdam\",
-    \"Card_number\": \"aut\",
-    \"Holder_Name\": \"accusamus\",
-    \"Cvc\": \"et\",
-    \"Expire_Date\": \"occaecati\",
-    \"Wallet_id\": 10
+    \"type\": \"visa\",
+    \"Card_number\": \"dolorem\",
+    \"Holder_Name\": \"placeat\",
+    \"Cvc\": \"ea\",
+    \"Expire_Date\": \"aut\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/card"
+    "http://localhost:8000/api/card"
 );
 
 const headers = {
@@ -5034,12 +4741,11 @@ const headers = {
 };
 
 let body = {
-    "Card_image": "quibusdam",
-    "Card_number": "aut",
-    "Holder_Name": "accusamus",
-    "Cvc": "et",
-    "Expire_Date": "occaecati",
-    "Wallet_id": 10
+    "type": "visa",
+    "Card_number": "dolorem",
+    "Holder_Name": "placeat",
+    "Cvc": "ea",
+    "Expire_Date": "aut"
 };
 
 fetch(url, {
@@ -5123,15 +4829,15 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                                 <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>Card_image</code></b>&nbsp;&nbsp;
+            <b style="line-height: 2;"><code>type</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Card_image"                data-endpoint="POSTapi-card"
-               value="quibusdam"
+                              name="type"                data-endpoint="POSTapi-card"
+               value="visa"
                data-component="body">
     <br>
-<p>Example: <code>quibusdam</code></p>
+<p>Must be one of <code>visa</code> or <code>master</code>. Example: <code>visa</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>Card_number</code></b>&nbsp;&nbsp;
@@ -5139,10 +4845,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="Card_number"                data-endpoint="POSTapi-card"
-               value="aut"
+               value="dolorem"
                data-component="body">
     <br>
-<p>Example: <code>aut</code></p>
+<p>Example: <code>dolorem</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>Holder_Name</code></b>&nbsp;&nbsp;
@@ -5150,10 +4856,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="Holder_Name"                data-endpoint="POSTapi-card"
-               value="accusamus"
+               value="placeat"
                data-component="body">
     <br>
-<p>Example: <code>accusamus</code></p>
+<p>Example: <code>placeat</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>Cvc</code></b>&nbsp;&nbsp;
@@ -5161,10 +4867,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="Cvc"                data-endpoint="POSTapi-card"
-               value="et"
+               value="ea"
                data-component="body">
     <br>
-<p>Example: <code>et</code></p>
+<p>Example: <code>ea</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>Expire_Date</code></b>&nbsp;&nbsp;
@@ -5172,21 +4878,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="Expire_Date"                data-endpoint="POSTapi-card"
-               value="occaecati"
+               value="aut"
                data-component="body">
     <br>
-<p>Example: <code>occaecati</code></p>
-        </div>
-                <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>Wallet_id</code></b>&nbsp;&nbsp;
-<small>integer</small>&nbsp;
- &nbsp;
-                <input type="number" style="display: none"
-               step="any"               name="Wallet_id"                data-endpoint="POSTapi-card"
-               value="10"
-               data-component="body">
-    <br>
-<p>Example: <code>10</code></p>
+<p>Example: <code>aut</code></p>
         </div>
         </form>
 
@@ -5203,14 +4898,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/card/qui" \
+    --get "http://localhost:8000/api/card/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/card/qui"
+    "http://localhost:8000/api/card/1"
 );
 
 const headers = {
@@ -5227,7 +4922,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-card--id-">
             <blockquote>
-            <p>Example response (500):</p>
+            <p>Example response (401):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -5235,480 +4930,11 @@ fetch(url, {
             </summary>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 52
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Class \&quot;App\\Models\\card\&quot; does not exist&quot;,
-    &quot;exception&quot;: &quot;ReflectionException&quot;,
-    &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/ResolvesRouteDependencies.php&quot;,
-    &quot;line&quot;: 81,
-    &quot;trace&quot;: [
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/ResolvesRouteDependencies.php&quot;,
-            &quot;line&quot;: 81,
-            &quot;function&quot;: &quot;__construct&quot;,
-            &quot;class&quot;: &quot;ReflectionClass&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/ResolvesRouteDependencies.php&quot;,
-            &quot;line&quot;: 50,
-            &quot;function&quot;: &quot;transformDependency&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\ControllerDispatcher&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/ResolvesRouteDependencies.php&quot;,
-            &quot;line&quot;: 30,
-            &quot;function&quot;: &quot;resolveMethodDependencies&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\ControllerDispatcher&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php&quot;,
-            &quot;line&quot;: 60,
-            &quot;function&quot;: &quot;resolveClassMethodDependencies&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\ControllerDispatcher&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php&quot;,
-            &quot;line&quot;: 40,
-            &quot;function&quot;: &quot;resolveParameters&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\ControllerDispatcher&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Route.php&quot;,
-            &quot;line&quot;: 260,
-            &quot;function&quot;: &quot;dispatch&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\ControllerDispatcher&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Route.php&quot;,
-            &quot;line&quot;: 205,
-            &quot;function&quot;: &quot;runController&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
-            &quot;line&quot;: 799,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 141,
-            &quot;function&quot;: &quot;Illuminate\\Routing\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php&quot;,
-            &quot;line&quot;: 50,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\SubstituteBindings&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
-            &quot;line&quot;: 159,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
-            &quot;line&quot;: 135,
-            &quot;function&quot;: &quot;handleRequest&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php&quot;,
-            &quot;line&quot;: 87,
-            &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 116,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
-            &quot;line&quot;: 800,
-            &quot;function&quot;: &quot;then&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
-            &quot;line&quot;: 777,
-            &quot;function&quot;: &quot;runRouteWithinStack&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
-            &quot;line&quot;: 741,
-            &quot;function&quot;: &quot;runRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Routing/Router.php&quot;,
-            &quot;line&quot;: 730,
-            &quot;function&quot;: &quot;dispatchToRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
-            &quot;line&quot;: 200,
-            &quot;function&quot;: &quot;dispatch&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 141,
-            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/livewire/livewire/src/DisableBrowserCache.php&quot;,
-            &quot;line&quot;: 19,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Livewire\\DisableBrowserCache&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php&quot;,
-            &quot;line&quot;: 21,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php&quot;,
-            &quot;line&quot;: 31,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php&quot;,
-            &quot;line&quot;: 21,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php&quot;,
-            &quot;line&quot;: 40,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php&quot;,
-            &quot;line&quot;: 27,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php&quot;,
-            &quot;line&quot;: 86,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php&quot;,
-            &quot;line&quot;: 62,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php&quot;,
-            &quot;line&quot;: 39,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php&quot;,
-            &quot;line&quot;: 116,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
-            &quot;line&quot;: 175,
-            &quot;function&quot;: &quot;then&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php&quot;,
-            &quot;line&quot;: 144,
-            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
-            &quot;line&quot;: 299,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
-            &quot;line&quot;: 287,
-            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
-            &quot;line&quot;: 92,
-            &quot;function&quot;: &quot;makeApiCall&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
-            &quot;line&quot;: 45,
-            &quot;function&quot;: &quot;makeResponseCall&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php&quot;,
-            &quot;line&quot;: 35,
-            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
-            &quot;line&quot;: 209,
-            &quot;function&quot;: &quot;__invoke&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
-            &quot;line&quot;: 166,
-            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php&quot;,
-            &quot;line&quot;: 95,
-            &quot;function&quot;: &quot;fetchResponses&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 124,
-            &quot;function&quot;: &quot;processRoute&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 71,
-            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 49,
-            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php&quot;,
-            &quot;line&quot;: 51,
-            &quot;function&quot;: &quot;get&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
-            &quot;line&quot;: 36,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Container/Util.php&quot;,
-            &quot;line&quot;: 41,
-            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
-            &quot;line&quot;: 93,
-            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php&quot;,
-            &quot;line&quot;: 37,
-            &quot;function&quot;: &quot;callBoundMethod&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Container/Container.php&quot;,
-            &quot;line&quot;: 662,
-            &quot;function&quot;: &quot;call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Console/Command.php&quot;,
-            &quot;line&quot;: 208,
-            &quot;function&quot;: &quot;call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/symfony/console/Command/Command.php&quot;,
-            &quot;line&quot;: 326,
-            &quot;function&quot;: &quot;execute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Console/Command.php&quot;,
-            &quot;line&quot;: 178,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/symfony/console/Application.php&quot;,
-            &quot;line&quot;: 1081,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/symfony/console/Application.php&quot;,
-            &quot;line&quot;: 320,
-            &quot;function&quot;: &quot;doRunCommand&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/symfony/console/Application.php&quot;,
-            &quot;line&quot;: 174,
-            &quot;function&quot;: &quot;doRun&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php&quot;,
-            &quot;line&quot;: 200,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;/home/loaidev/Projects/Laravel/mopo_server/artisan&quot;,
-            &quot;line&quot;: 37,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        }
-    ]
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
 }</code>
  </pre>
     </span>
@@ -5784,14 +5010,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
                         <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
+<small>integer</small>&nbsp;
  &nbsp;
-                <input type="text" style="display: none"
-                              name="id"                data-endpoint="GETapi-card--id-"
-               value="qui"
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="GETapi-card--id-"
+               value="1"
                data-component="url">
     <br>
-<p>The ID of the card. Example: <code>qui</code></p>
+<p>The ID of the card. Example: <code>1</code></p>
             </div>
                     </form>
 
@@ -5808,14 +5034,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/card/qui" \
+    "http://localhost:8000/api/card/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/card/qui"
+    "http://localhost:8000/api/card/1"
 );
 
 const headers = {
@@ -5908,14 +5134,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
                         <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
+<small>integer</small>&nbsp;
  &nbsp;
-                <input type="text" style="display: none"
-                              name="id"                data-endpoint="PUTapi-card--id-"
-               value="qui"
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="PUTapi-card--id-"
+               value="1"
                data-component="url">
     <br>
-<p>The ID of the card. Example: <code>qui</code></p>
+<p>The ID of the card. Example: <code>1</code></p>
             </div>
                     </form>
 
@@ -5932,14 +5158,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/card/id" \
+    "http://localhost:8000/api/card/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/card/id"
+    "http://localhost:8000/api/card/1"
 );
 
 const headers = {
@@ -6028,14 +5254,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
                         <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
+<small>integer</small>&nbsp;
  &nbsp;
-                <input type="text" style="display: none"
-                              name="id"                data-endpoint="DELETEapi-card--id-"
-               value="id"
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="DELETEapi-card--id-"
+               value="1"
                data-component="url">
     <br>
-<p>The ID of the card. Example: <code>id</code></p>
+<p>The ID of the card. Example: <code>1</code></p>
             </div>
                     </form>
 
@@ -6052,14 +5278,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/send" \
+    --get "http://localhost:8000/api/send" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/send"
+    "http://localhost:8000/api/send"
 );
 
 const headers = {
@@ -6085,7 +5311,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 51
+x-ratelimit-remaining: 53
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
@@ -6093,27 +5319,27 @@ access-control-allow-origin: *
     &quot;data&quot;: [
         {
             &quot;currency_id&quot;: {
-                &quot;logo&quot;: &quot;/tmp/7c0969ce61aefa02f53e07b74c9bc5ea.png&quot;,
-                &quot;Currency_name&quot;: &quot;voluptates&quot;,
-                &quot;Abbrevation&quot;: &quot;deserunt&quot;
+                &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/baf61469b5a0cc7e72ac0dbb6836e112.png&quot;,
+                &quot;Currency_name&quot;: &quot;voluptas&quot;,
+                &quot;Abbrevation&quot;: &quot;quod&quot;
             },
             &quot;email&quot;: &quot;user133@gmail.com&quot;,
             &quot;quantity&quot;: 112.399
         },
         {
             &quot;currency_id&quot;: {
-                &quot;logo&quot;: &quot;/tmp/402dd391157eaa7d0dc9baf80a21f510.png&quot;,
-                &quot;Currency_name&quot;: &quot;modi&quot;,
-                &quot;Abbrevation&quot;: &quot;voluptas&quot;
+                &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/bd0de8ea47051071f631cd01286a4b5a.png&quot;,
+                &quot;Currency_name&quot;: &quot;commodi&quot;,
+                &quot;Abbrevation&quot;: &quot;fuga&quot;
             },
             &quot;email&quot;: &quot;user453@gmail.com&quot;,
             &quot;quantity&quot;: 123.455
         },
         {
             &quot;currency_id&quot;: {
-                &quot;logo&quot;: &quot;/tmp/245fbdd12c8490a291bbcd0491816f72.png&quot;,
-                &quot;Currency_name&quot;: &quot;impedit&quot;,
-                &quot;Abbrevation&quot;: &quot;eos&quot;
+                &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/c4eee9c5e94ebe09b316f619e03e1bf7.png&quot;,
+                &quot;Currency_name&quot;: &quot;ex&quot;,
+                &quot;Abbrevation&quot;: &quot;odit&quot;
             },
             &quot;email&quot;: &quot;user443@gmail.com&quot;,
             &quot;quantity&quot;: 345.67
@@ -6206,21 +5432,21 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/send" \
+    "http://localhost:8000/api/send" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"account_number\": \"est\",
-    \"currency_id\": \"omnis\",
-    \"email\": \"modi\",
-    \"quantity\": \"sunt\"
+    \"account_number\": \"eum\",
+    \"currency_id\": \"distinctio\",
+    \"email\": \"nihil\",
+    \"quantity\": \"voluptatum\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/send"
+    "http://localhost:8000/api/send"
 );
 
 const headers = {
@@ -6229,10 +5455,10 @@ const headers = {
 };
 
 let body = {
-    "account_number": "est",
-    "currency_id": "omnis",
-    "email": "modi",
-    "quantity": "sunt"
+    "account_number": "eum",
+    "currency_id": "distinctio",
+    "email": "nihil",
+    "quantity": "voluptatum"
 };
 
 fetch(url, {
@@ -6321,10 +5547,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="account_number"                data-endpoint="POSTapi-send"
-               value="est"
+               value="eum"
                data-component="body">
     <br>
-<p>Example: <code>est</code></p>
+<p>Example: <code>eum</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>currency_id</code></b>&nbsp;&nbsp;
@@ -6332,10 +5558,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="currency_id"                data-endpoint="POSTapi-send"
-               value="omnis"
+               value="distinctio"
                data-component="body">
     <br>
-<p>Example: <code>omnis</code></p>
+<p>Example: <code>distinctio</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -6343,10 +5569,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-send"
-               value="modi"
+               value="nihil"
                data-component="body">
     <br>
-<p>Example: <code>modi</code></p>
+<p>Example: <code>nihil</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>quantity</code></b>&nbsp;&nbsp;
@@ -6354,10 +5580,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="quantity"                data-endpoint="POSTapi-send"
-               value="sunt"
+               value="voluptatum"
                data-component="body">
     <br>
-<p>Example: <code>sunt</code></p>
+<p>Example: <code>voluptatum</code></p>
         </div>
         </form>
 
@@ -6374,14 +5600,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/send/1" \
+    --get "http://localhost:8000/api/send/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/send/1"
+    "http://localhost:8000/api/send/1"
 );
 
 const headers = {
@@ -6407,16 +5633,16 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 50
+x-ratelimit-remaining: 52
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
         &quot;currency_id&quot;: {
-            &quot;logo&quot;: &quot;/tmp/7c0969ce61aefa02f53e07b74c9bc5ea.png&quot;,
-            &quot;Currency_name&quot;: &quot;voluptates&quot;,
-            &quot;Abbrevation&quot;: &quot;deserunt&quot;
+            &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/baf61469b5a0cc7e72ac0dbb6836e112.png&quot;,
+            &quot;Currency_name&quot;: &quot;voluptas&quot;,
+            &quot;Abbrevation&quot;: &quot;quod&quot;
         },
         &quot;email&quot;: &quot;user133@gmail.com&quot;,
         &quot;quantity&quot;: 112.399
@@ -6520,14 +5746,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/send/1" \
+    "http://localhost:8000/api/send/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/send/1"
+    "http://localhost:8000/api/send/1"
 );
 
 const headers = {
@@ -6644,14 +5870,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/send/1" \
+    "http://localhost:8000/api/send/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/send/1"
+    "http://localhost:8000/api/send/1"
 );
 
 const headers = {
@@ -6764,14 +5990,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/wallet" \
+    --get "http://localhost:8000/api/wallet" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/wallet"
+    "http://localhost:8000/api/wallet"
 );
 
 const headers = {
@@ -6797,7 +6023,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 49
+x-ratelimit-remaining: 51
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
@@ -7336,20 +6562,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/wallet" \
+    "http://localhost:8000/api/wallet" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"currency_id\": \"aliquid\",
-    \"Quantity\": \"quis\",
-    \"User_id\": \"reprehenderit\"
+    \"currency_id\": \"delectus\",
+    \"Quantity\": \"qui\",
+    \"User_id\": \"aut\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/wallet"
+    "http://localhost:8000/api/wallet"
 );
 
 const headers = {
@@ -7358,9 +6584,9 @@ const headers = {
 };
 
 let body = {
-    "currency_id": "aliquid",
-    "Quantity": "quis",
-    "User_id": "reprehenderit"
+    "currency_id": "delectus",
+    "Quantity": "qui",
+    "User_id": "aut"
 };
 
 fetch(url, {
@@ -7449,10 +6675,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="currency_id"                data-endpoint="POSTapi-wallet"
-               value="aliquid"
+               value="delectus"
                data-component="body">
     <br>
-<p>Example: <code>aliquid</code></p>
+<p>Example: <code>delectus</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>Quantity</code></b>&nbsp;&nbsp;
@@ -7460,10 +6686,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="Quantity"                data-endpoint="POSTapi-wallet"
-               value="quis"
+               value="qui"
                data-component="body">
     <br>
-<p>Example: <code>quis</code></p>
+<p>Example: <code>qui</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>User_id</code></b>&nbsp;&nbsp;
@@ -7471,10 +6697,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="User_id"                data-endpoint="POSTapi-wallet"
-               value="reprehenderit"
+               value="aut"
                data-component="body">
     <br>
-<p>Example: <code>reprehenderit</code></p>
+<p>Example: <code>aut</code></p>
         </div>
         </form>
 
@@ -7491,14 +6717,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/wallet/alias" \
+    --get "http://localhost:8000/api/wallet/aut" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/wallet/alias"
+    "http://localhost:8000/api/wallet/aut"
 );
 
 const headers = {
@@ -7524,7 +6750,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 48
+x-ratelimit-remaining: 50
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
@@ -8055,10 +7281,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="GETapi-wallet--id-"
-               value="alias"
+               value="aut"
                data-component="url">
     <br>
-<p>The ID of the wallet. Example: <code>alias</code></p>
+<p>The ID of the wallet. Example: <code>aut</code></p>
             </div>
                     </form>
 
@@ -8075,14 +7301,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/wallet/ad" \
+    "http://localhost:8000/api/wallet/distinctio" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/wallet/ad"
+    "http://localhost:8000/api/wallet/distinctio"
 );
 
 const headers = {
@@ -8179,10 +7405,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="PUTapi-wallet--id-"
-               value="ad"
+               value="distinctio"
                data-component="url">
     <br>
-<p>The ID of the wallet. Example: <code>ad</code></p>
+<p>The ID of the wallet. Example: <code>distinctio</code></p>
             </div>
                     </form>
 
@@ -8199,14 +7425,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/wallet/ut" \
+    "http://localhost:8000/api/wallet/ipsum" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/wallet/ut"
+    "http://localhost:8000/api/wallet/ipsum"
 );
 
 const headers = {
@@ -8299,10 +7525,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="DELETEapi-wallet--id-"
-               value="ut"
+               value="ipsum"
                data-component="url">
     <br>
-<p>The ID of the wallet. Example: <code>ut</code></p>
+<p>The ID of the wallet. Example: <code>ipsum</code></p>
             </div>
                     </form>
 
@@ -8319,14 +7545,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/trade" \
+    --get "http://localhost:8000/api/trade" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/trade"
+    "http://localhost:8000/api/trade"
 );
 
 const headers = {
@@ -8352,7 +7578,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 47
+x-ratelimit-remaining: 49
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
@@ -8891,22 +8117,22 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/trade" \
+    "http://localhost:8000/api/trade" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"account_number\": \"tempore\",
-    \"currency_id_in\": \"vitae\",
-    \"currency_id_out\": \"quibusdam\",
-    \"price\": \"sunt\",
-    \"quantity\": \"aut\"
+    \"account_number\": \"cumque\",
+    \"currency_id_in\": \"aperiam\",
+    \"currency_id_out\": \"atque\",
+    \"price\": \"autem\",
+    \"quantity\": \"aspernatur\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/trade"
+    "http://localhost:8000/api/trade"
 );
 
 const headers = {
@@ -8915,11 +8141,11 @@ const headers = {
 };
 
 let body = {
-    "account_number": "tempore",
-    "currency_id_in": "vitae",
-    "currency_id_out": "quibusdam",
-    "price": "sunt",
-    "quantity": "aut"
+    "account_number": "cumque",
+    "currency_id_in": "aperiam",
+    "currency_id_out": "atque",
+    "price": "autem",
+    "quantity": "aspernatur"
 };
 
 fetch(url, {
@@ -9008,10 +8234,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="account_number"                data-endpoint="POSTapi-trade"
-               value="tempore"
+               value="cumque"
                data-component="body">
     <br>
-<p>Example: <code>tempore</code></p>
+<p>Example: <code>cumque</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>currency_id_in</code></b>&nbsp;&nbsp;
@@ -9019,10 +8245,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="currency_id_in"                data-endpoint="POSTapi-trade"
-               value="vitae"
+               value="aperiam"
                data-component="body">
     <br>
-<p>Example: <code>vitae</code></p>
+<p>Example: <code>aperiam</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>currency_id_out</code></b>&nbsp;&nbsp;
@@ -9030,10 +8256,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="currency_id_out"                data-endpoint="POSTapi-trade"
-               value="quibusdam"
+               value="atque"
                data-component="body">
     <br>
-<p>Example: <code>quibusdam</code></p>
+<p>Example: <code>atque</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>price</code></b>&nbsp;&nbsp;
@@ -9041,10 +8267,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="price"                data-endpoint="POSTapi-trade"
-               value="sunt"
+               value="autem"
                data-component="body">
     <br>
-<p>Example: <code>sunt</code></p>
+<p>Example: <code>autem</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>quantity</code></b>&nbsp;&nbsp;
@@ -9052,10 +8278,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="quantity"                data-endpoint="POSTapi-trade"
-               value="aut"
+               value="aspernatur"
                data-component="body">
     <br>
-<p>Example: <code>aut</code></p>
+<p>Example: <code>aspernatur</code></p>
         </div>
         </form>
 
@@ -9072,14 +8298,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/trade/labore" \
+    --get "http://localhost:8000/api/trade/accusamus" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/trade/labore"
+    "http://localhost:8000/api/trade/accusamus"
 );
 
 const headers = {
@@ -9105,7 +8331,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 46
+x-ratelimit-remaining: 48
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
@@ -9636,10 +8862,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="GETapi-trade--id-"
-               value="labore"
+               value="accusamus"
                data-component="url">
     <br>
-<p>The ID of the trade. Example: <code>labore</code></p>
+<p>The ID of the trade. Example: <code>accusamus</code></p>
             </div>
                     </form>
 
@@ -9656,14 +8882,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/trade/culpa" \
+    "http://localhost:8000/api/trade/quibusdam" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/trade/culpa"
+    "http://localhost:8000/api/trade/quibusdam"
 );
 
 const headers = {
@@ -9760,10 +8986,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="PUTapi-trade--id-"
-               value="culpa"
+               value="quibusdam"
                data-component="url">
     <br>
-<p>The ID of the trade. Example: <code>culpa</code></p>
+<p>The ID of the trade. Example: <code>quibusdam</code></p>
             </div>
                     </form>
 
@@ -9780,14 +9006,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/trade/deserunt" \
+    "http://localhost:8000/api/trade/repellendus" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/trade/deserunt"
+    "http://localhost:8000/api/trade/repellendus"
 );
 
 const headers = {
@@ -9880,10 +9106,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="DELETEapi-trade--id-"
-               value="deserunt"
+               value="repellendus"
                data-component="url">
     <br>
-<p>The ID of the trade. Example: <code>deserunt</code></p>
+<p>The ID of the trade. Example: <code>repellendus</code></p>
             </div>
                     </form>
 
@@ -9900,14 +9126,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/buy" \
+    --get "http://localhost:8000/api/buy" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/buy"
+    "http://localhost:8000/api/buy"
 );
 
 const headers = {
@@ -9933,7 +9159,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 45
+x-ratelimit-remaining: 47
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
@@ -9941,83 +9167,83 @@ access-control-allow-origin: *
     &quot;data&quot;: [
         {
             &quot;account_number&quot;: {
-                &quot;account_number&quot;: &quot;501479525196&quot;
+                &quot;account_number&quot;: &quot;491816145641&quot;
             },
             &quot;currency_id_in&quot;: {
-                &quot;logo&quot;: &quot;/tmp/a7929489641b88612a5c950eb2a8f3e4.png&quot;,
-                &quot;Currency_name&quot;: &quot;doloremque&quot;,
-                &quot;Abbrevation&quot;: &quot;occaecati&quot;
+                &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/9c4bbffd2e0ef8accb9b3c6905c6406e.png&quot;,
+                &quot;Currency_name&quot;: &quot;velit&quot;,
+                &quot;Abbrevation&quot;: &quot;earum&quot;
             },
             &quot;currency_id_out&quot;: {
-                &quot;logo&quot;: &quot;/tmp/245fbdd12c8490a291bbcd0491816f72.png&quot;,
-                &quot;Currency_name&quot;: &quot;impedit&quot;,
-                &quot;Abbrevation&quot;: &quot;eos&quot;
+                &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/ae659f26be7bdd3a67dc5c0a245ad5a1.png&quot;,
+                &quot;Currency_name&quot;: &quot;a&quot;,
+                &quot;Abbrevation&quot;: &quot;vel&quot;
             },
-            &quot;quantity&quot;: 4550301579
+            &quot;quantity&quot;: 4171831656
         },
         {
             &quot;account_number&quot;: {
-                &quot;account_number&quot;: &quot;535350596676&quot;
+                &quot;account_number&quot;: &quot;233244725861&quot;
             },
             &quot;currency_id_in&quot;: {
-                &quot;logo&quot;: &quot;/tmp/402dd391157eaa7d0dc9baf80a21f510.png&quot;,
-                &quot;Currency_name&quot;: &quot;modi&quot;,
-                &quot;Abbrevation&quot;: &quot;voluptas&quot;
+                &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/c4eee9c5e94ebe09b316f619e03e1bf7.png&quot;,
+                &quot;Currency_name&quot;: &quot;ex&quot;,
+                &quot;Abbrevation&quot;: &quot;odit&quot;
             },
             &quot;currency_id_out&quot;: {
-                &quot;logo&quot;: &quot;/tmp/ac04d242c771bed3da3d6381c449b3fe.png&quot;,
-                &quot;Currency_name&quot;: &quot;omnis&quot;,
-                &quot;Abbrevation&quot;: &quot;quis&quot;
+                &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/baf61469b5a0cc7e72ac0dbb6836e112.png&quot;,
+                &quot;Currency_name&quot;: &quot;voluptas&quot;,
+                &quot;Abbrevation&quot;: &quot;quod&quot;
             },
-            &quot;quantity&quot;: 5921853466
+            &quot;quantity&quot;: 1720763078
         },
         {
             &quot;account_number&quot;: {
-                &quot;account_number&quot;: &quot;535350596676&quot;
+                &quot;account_number&quot;: &quot;614142947757&quot;
             },
             &quot;currency_id_in&quot;: {
-                &quot;logo&quot;: &quot;/tmp/245fbdd12c8490a291bbcd0491816f72.png&quot;,
-                &quot;Currency_name&quot;: &quot;impedit&quot;,
-                &quot;Abbrevation&quot;: &quot;eos&quot;
+                &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/c4eee9c5e94ebe09b316f619e03e1bf7.png&quot;,
+                &quot;Currency_name&quot;: &quot;ex&quot;,
+                &quot;Abbrevation&quot;: &quot;odit&quot;
             },
             &quot;currency_id_out&quot;: {
-                &quot;logo&quot;: &quot;/tmp/402dd391157eaa7d0dc9baf80a21f510.png&quot;,
-                &quot;Currency_name&quot;: &quot;modi&quot;,
-                &quot;Abbrevation&quot;: &quot;voluptas&quot;
+                &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/ae659f26be7bdd3a67dc5c0a245ad5a1.png&quot;,
+                &quot;Currency_name&quot;: &quot;a&quot;,
+                &quot;Abbrevation&quot;: &quot;vel&quot;
             },
-            &quot;quantity&quot;: 9058098252
+            &quot;quantity&quot;: 8910218038
         },
         {
             &quot;account_number&quot;: {
-                &quot;account_number&quot;: &quot;535350596676&quot;
+                &quot;account_number&quot;: &quot;717338656315&quot;
             },
             &quot;currency_id_in&quot;: {
-                &quot;logo&quot;: &quot;/tmp/402dd391157eaa7d0dc9baf80a21f510.png&quot;,
-                &quot;Currency_name&quot;: &quot;modi&quot;,
-                &quot;Abbrevation&quot;: &quot;voluptas&quot;
+                &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/bd0de8ea47051071f631cd01286a4b5a.png&quot;,
+                &quot;Currency_name&quot;: &quot;commodi&quot;,
+                &quot;Abbrevation&quot;: &quot;fuga&quot;
             },
             &quot;currency_id_out&quot;: {
-                &quot;logo&quot;: &quot;/tmp/7c0969ce61aefa02f53e07b74c9bc5ea.png&quot;,
-                &quot;Currency_name&quot;: &quot;voluptates&quot;,
-                &quot;Abbrevation&quot;: &quot;deserunt&quot;
+                &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/baf61469b5a0cc7e72ac0dbb6836e112.png&quot;,
+                &quot;Currency_name&quot;: &quot;voluptas&quot;,
+                &quot;Abbrevation&quot;: &quot;quod&quot;
             },
-            &quot;quantity&quot;: 9660384794
+            &quot;quantity&quot;: 1096086014
         },
         {
             &quot;account_number&quot;: {
-                &quot;account_number&quot;: &quot;492616876632&quot;
+                &quot;account_number&quot;: &quot;233244725861&quot;
             },
             &quot;currency_id_in&quot;: {
-                &quot;logo&quot;: &quot;/tmp/245fbdd12c8490a291bbcd0491816f72.png&quot;,
-                &quot;Currency_name&quot;: &quot;impedit&quot;,
-                &quot;Abbrevation&quot;: &quot;eos&quot;
+                &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/ae659f26be7bdd3a67dc5c0a245ad5a1.png&quot;,
+                &quot;Currency_name&quot;: &quot;a&quot;,
+                &quot;Abbrevation&quot;: &quot;vel&quot;
             },
             &quot;currency_id_out&quot;: {
-                &quot;logo&quot;: &quot;/tmp/245fbdd12c8490a291bbcd0491816f72.png&quot;,
-                &quot;Currency_name&quot;: &quot;impedit&quot;,
-                &quot;Abbrevation&quot;: &quot;eos&quot;
+                &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/ae659f26be7bdd3a67dc5c0a245ad5a1.png&quot;,
+                &quot;Currency_name&quot;: &quot;a&quot;,
+                &quot;Abbrevation&quot;: &quot;vel&quot;
             },
-            &quot;quantity&quot;: 7403196290
+            &quot;quantity&quot;: 4270174742
         }
     ]
 }</code>
@@ -10107,21 +9333,21 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/buy" \
+    "http://localhost:8000/api/buy" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"account_number\": \"quas\",
-    \"currency_id_in\": \"autem\",
-    \"currency_id_out\": \"in\",
-    \"quantity\": \"similique\"
+    \"account_number\": \"quia\",
+    \"currency_id_in\": \"molestiae\",
+    \"currency_id_out\": \"cupiditate\",
+    \"quantity\": \"corrupti\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/buy"
+    "http://localhost:8000/api/buy"
 );
 
 const headers = {
@@ -10130,10 +9356,10 @@ const headers = {
 };
 
 let body = {
-    "account_number": "quas",
-    "currency_id_in": "autem",
-    "currency_id_out": "in",
-    "quantity": "similique"
+    "account_number": "quia",
+    "currency_id_in": "molestiae",
+    "currency_id_out": "cupiditate",
+    "quantity": "corrupti"
 };
 
 fetch(url, {
@@ -10222,10 +9448,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="account_number"                data-endpoint="POSTapi-buy"
-               value="quas"
+               value="quia"
                data-component="body">
     <br>
-<p>Example: <code>quas</code></p>
+<p>Example: <code>quia</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>currency_id_in</code></b>&nbsp;&nbsp;
@@ -10233,10 +9459,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="currency_id_in"                data-endpoint="POSTapi-buy"
-               value="autem"
+               value="molestiae"
                data-component="body">
     <br>
-<p>Example: <code>autem</code></p>
+<p>Example: <code>molestiae</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>currency_id_out</code></b>&nbsp;&nbsp;
@@ -10244,10 +9470,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="currency_id_out"                data-endpoint="POSTapi-buy"
-               value="in"
+               value="cupiditate"
                data-component="body">
     <br>
-<p>Example: <code>in</code></p>
+<p>Example: <code>cupiditate</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>quantity</code></b>&nbsp;&nbsp;
@@ -10255,10 +9481,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="quantity"                data-endpoint="POSTapi-buy"
-               value="similique"
+               value="corrupti"
                data-component="body">
     <br>
-<p>Example: <code>similique</code></p>
+<p>Example: <code>corrupti</code></p>
         </div>
         </form>
 
@@ -10275,14 +9501,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/buy/1" \
+    --get "http://localhost:8000/api/buy/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/buy/1"
+    "http://localhost:8000/api/buy/1"
 );
 
 const headers = {
@@ -10308,23 +9534,23 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 44
+x-ratelimit-remaining: 46
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
         &quot;currency_id_in&quot;: {
-            &quot;logo&quot;: &quot;/tmp/a7929489641b88612a5c950eb2a8f3e4.png&quot;,
-            &quot;Currency_name&quot;: &quot;doloremque&quot;,
-            &quot;Abbrevation&quot;: &quot;occaecati&quot;
+            &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/9c4bbffd2e0ef8accb9b3c6905c6406e.png&quot;,
+            &quot;Currency_name&quot;: &quot;velit&quot;,
+            &quot;Abbrevation&quot;: &quot;earum&quot;
         },
         &quot;currency_id_out&quot;: {
-            &quot;logo&quot;: &quot;/tmp/245fbdd12c8490a291bbcd0491816f72.png&quot;,
-            &quot;Currency_name&quot;: &quot;impedit&quot;,
-            &quot;Abbrevation&quot;: &quot;eos&quot;
+            &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/ae659f26be7bdd3a67dc5c0a245ad5a1.png&quot;,
+            &quot;Currency_name&quot;: &quot;a&quot;,
+            &quot;Abbrevation&quot;: &quot;vel&quot;
         },
-        &quot;quantity&quot;: 4550301579
+        &quot;quantity&quot;: 4171831656
     }
 }</code>
  </pre>
@@ -10425,14 +9651,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/buy/1" \
+    "http://localhost:8000/api/buy/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/buy/1"
+    "http://localhost:8000/api/buy/1"
 );
 
 const headers = {
@@ -10549,14 +9775,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/buy/1" \
+    "http://localhost:8000/api/buy/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/buy/1"
+    "http://localhost:8000/api/buy/1"
 );
 
 const headers = {
@@ -10669,14 +9895,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/transduction" \
+    --get "http://localhost:8000/api/transduction" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/transduction"
+    "http://localhost:8000/api/transduction"
 );
 
 const headers = {
@@ -10702,7 +9928,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 43
+x-ratelimit-remaining: 45
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
@@ -11241,14 +10467,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/transduction" \
+    "http://localhost:8000/api/transduction" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/transduction"
+    "http://localhost:8000/api/transduction"
 );
 
 const headers = {
@@ -11349,14 +10575,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/transduction/quia" \
+    --get "http://localhost:8000/api/transduction/doloribus" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/transduction/quia"
+    "http://localhost:8000/api/transduction/doloribus"
 );
 
 const headers = {
@@ -11382,7 +10608,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 42
+x-ratelimit-remaining: 44
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
@@ -11913,10 +11139,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="GETapi-transduction--id-"
-               value="quia"
+               value="doloribus"
                data-component="url">
     <br>
-<p>The ID of the transduction. Example: <code>quia</code></p>
+<p>The ID of the transduction. Example: <code>doloribus</code></p>
             </div>
                     </form>
 
@@ -11933,14 +11159,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/transduction/dolor" \
+    "http://localhost:8000/api/transduction/magnam" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/transduction/dolor"
+    "http://localhost:8000/api/transduction/magnam"
 );
 
 const headers = {
@@ -12037,10 +11263,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="PUTapi-transduction--id-"
-               value="dolor"
+               value="magnam"
                data-component="url">
     <br>
-<p>The ID of the transduction. Example: <code>dolor</code></p>
+<p>The ID of the transduction. Example: <code>magnam</code></p>
             </div>
                     </form>
 
@@ -12057,14 +11283,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/transduction/nam" \
+    "http://localhost:8000/api/transduction/et" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/transduction/nam"
+    "http://localhost:8000/api/transduction/et"
 );
 
 const headers = {
@@ -12157,10 +11383,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="DELETEapi-transduction--id-"
-               value="nam"
+               value="et"
                data-component="url">
     <br>
-<p>The ID of the transduction. Example: <code>nam</code></p>
+<p>The ID of the transduction. Example: <code>et</code></p>
             </div>
                     </form>
 
@@ -12177,14 +11403,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/bestCurrency" \
+    --get "http://localhost:8000/api/bestCurrency" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/bestCurrency"
+    "http://localhost:8000/api/bestCurrency"
 );
 
 const headers = {
@@ -12292,19 +11518,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/bestCurrency" \
+    "http://localhost:8000/api/bestCurrency" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"currency_id\": \"consectetur\",
-    \"User_id\": \"laborum\"
+    \"currency_id\": \"libero\",
+    \"User_id\": \"porro\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/bestCurrency"
+    "http://localhost:8000/api/bestCurrency"
 );
 
 const headers = {
@@ -12313,8 +11539,8 @@ const headers = {
 };
 
 let body = {
-    "currency_id": "consectetur",
-    "User_id": "laborum"
+    "currency_id": "libero",
+    "User_id": "porro"
 };
 
 fetch(url, {
@@ -12403,10 +11629,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="currency_id"                data-endpoint="POSTapi-bestCurrency"
-               value="consectetur"
+               value="libero"
                data-component="body">
     <br>
-<p>Example: <code>consectetur</code></p>
+<p>Example: <code>libero</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>User_id</code></b>&nbsp;&nbsp;
@@ -12414,10 +11640,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="User_id"                data-endpoint="POSTapi-bestCurrency"
-               value="laborum"
+               value="porro"
                data-component="body">
     <br>
-<p>Example: <code>laborum</code></p>
+<p>Example: <code>porro</code></p>
         </div>
         </form>
 
@@ -12434,14 +11660,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/bestCurrency/et" \
+    --get "http://localhost:8000/api/bestCurrency/temporibus" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/bestCurrency/et"
+    "http://localhost:8000/api/bestCurrency/temporibus"
 );
 
 const headers = {
@@ -12467,7 +11693,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 41
+x-ratelimit-remaining: 43
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
@@ -13012,10 +12238,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="GETapi-bestCurrency--id-"
-               value="et"
+               value="temporibus"
                data-component="url">
     <br>
-<p>The ID of the bestCurrency. Example: <code>et</code></p>
+<p>The ID of the bestCurrency. Example: <code>temporibus</code></p>
             </div>
                     </form>
 
@@ -13032,14 +12258,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/bestCurrency/13" \
+    "http://localhost:8000/api/bestCurrency/2" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/bestCurrency/13"
+    "http://localhost:8000/api/bestCurrency/2"
 );
 
 const headers = {
@@ -13136,10 +12362,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="PUTapi-bestCurrency--id-"
-               value="13"
+               value="2"
                data-component="url">
     <br>
-<p>The ID of the bestCurrency. Example: <code>13</code></p>
+<p>The ID of the bestCurrency. Example: <code>2</code></p>
             </div>
                     </form>
 
@@ -13156,14 +12382,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/bestCurrency/8" \
+    "http://localhost:8000/api/bestCurrency/16" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/bestCurrency/8"
+    "http://localhost:8000/api/bestCurrency/16"
 );
 
 const headers = {
@@ -13262,10 +12488,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="DELETEapi-bestCurrency--id-"
-               value="8"
+               value="16"
                data-component="url">
     <br>
-<p>The ID of the bestCurrency. Example: <code>8</code></p>
+<p>The ID of the bestCurrency. Example: <code>16</code></p>
             </div>
                     </form>
 
@@ -13282,14 +12508,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/User" \
+    --get "http://localhost:8000/api/User" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/User"
+    "http://localhost:8000/api/User"
 );
 
 const headers = {
@@ -13406,14 +12632,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/getCurrencyPrice/ab" \
+    --get "http://localhost:8000/api/getCurrencyPrice/voluptatem" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/getCurrencyPrice/ab"
+    "http://localhost:8000/api/getCurrencyPrice/voluptatem"
 );
 
 const headers = {
@@ -13439,7 +12665,7 @@ fetch(url, {
             <pre><code class="language-http">content-type: text/html; charset=UTF-8
 cache-control: no-cache, private
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 36
+x-ratelimit-remaining: 38
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
@@ -13522,10 +12748,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="curName"                data-endpoint="GETapi-getCurrencyPrice--curName-"
-               value="ab"
+               value="voluptatem"
                data-component="url">
     <br>
-<p>Example: <code>ab</code></p>
+<p>Example: <code>voluptatem</code></p>
             </div>
                     </form>
 
@@ -13546,14 +12772,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/home" \
+    --get "http://localhost:8000/api/home" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/home"
+    "http://localhost:8000/api/home"
 );
 
 const headers = {
@@ -13579,29 +12805,29 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 40
+x-ratelimit-remaining: 42
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 1,
-            &quot;logo&quot;: &quot;/tmp/7c0969ce61aefa02f53e07b74c9bc5ea.png&quot;,
-            &quot;Currency_name&quot;: &quot;voluptates&quot;,
-            &quot;Abbrevation&quot;: &quot;deserunt&quot;,
-            &quot;new_price&quot;: 162,
-            &quot;old_price&quot;: 162,
+            &quot;id&quot;: 2,
+            &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/9c4bbffd2e0ef8accb9b3c6905c6406e.png&quot;,
+            &quot;Currency_name&quot;: &quot;velit&quot;,
+            &quot;Abbrevation&quot;: &quot;earum&quot;,
+            &quot;new_price&quot;: null,
+            &quot;old_price&quot;: null,
             &quot;percentage&quot;: 0
         },
         {
-            &quot;id&quot;: 2,
-            &quot;logo&quot;: &quot;/tmp/ac04d242c771bed3da3d6381c449b3fe.png&quot;,
-            &quot;Currency_name&quot;: &quot;omnis&quot;,
-            &quot;Abbrevation&quot;: &quot;quis&quot;,
-            &quot;new_price&quot;: 153,
-            &quot;old_price&quot;: 569,
-            &quot;percentage&quot;: -4.2
+            &quot;id&quot;: 1,
+            &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/baf61469b5a0cc7e72ac0dbb6836e112.png&quot;,
+            &quot;Currency_name&quot;: &quot;voluptas&quot;,
+            &quot;Abbrevation&quot;: &quot;quod&quot;,
+            &quot;new_price&quot;: 31,
+            &quot;old_price&quot;: 443,
+            &quot;percentage&quot;: -4.1
         }
     ]
 }</code>
@@ -13691,7 +12917,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/home/watchlist" \
+    --get "http://localhost:8000/api/home/watchlist" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
 </code></pre></div>
@@ -13699,7 +12925,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/home/watchlist"
+    "http://localhost:8000/api/home/watchlist"
 );
 
 const headers = {
@@ -13725,7 +12951,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 39
+x-ratelimit-remaining: 41
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
@@ -13733,45 +12959,45 @@ access-control-allow-origin: *
     &quot;data&quot;: [
         {
             &quot;id&quot;: 1,
-            &quot;logo&quot;: &quot;/tmp/7c0969ce61aefa02f53e07b74c9bc5ea.png&quot;,
-            &quot;Currency_name&quot;: &quot;voluptates&quot;,
-            &quot;Abbrevation&quot;: &quot;deserunt&quot;,
+            &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/baf61469b5a0cc7e72ac0dbb6836e112.png&quot;,
+            &quot;Currency_name&quot;: &quot;voluptas&quot;,
+            &quot;Abbrevation&quot;: &quot;quod&quot;,
+            &quot;new_price&quot;: 31,
+            &quot;old_price&quot;: 443,
+            &quot;percentage&quot;: -4.1
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/9c4bbffd2e0ef8accb9b3c6905c6406e.png&quot;,
+            &quot;Currency_name&quot;: &quot;velit&quot;,
+            &quot;Abbrevation&quot;: &quot;earum&quot;,
             &quot;new_price&quot;: null,
             &quot;old_price&quot;: null,
             &quot;percentage&quot;: 0
         },
         {
-            &quot;id&quot;: 2,
-            &quot;logo&quot;: &quot;/tmp/ac04d242c771bed3da3d6381c449b3fe.png&quot;,
-            &quot;Currency_name&quot;: &quot;omnis&quot;,
-            &quot;Abbrevation&quot;: &quot;quis&quot;,
-            &quot;new_price&quot;: 153,
-            &quot;old_price&quot;: 153,
+            &quot;id&quot;: 3,
+            &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/bd0de8ea47051071f631cd01286a4b5a.png&quot;,
+            &quot;Currency_name&quot;: &quot;commodi&quot;,
+            &quot;Abbrevation&quot;: &quot;fuga&quot;,
+            &quot;new_price&quot;: null,
+            &quot;old_price&quot;: null,
             &quot;percentage&quot;: 0
         },
         {
-            &quot;id&quot;: 3,
-            &quot;logo&quot;: &quot;/tmp/402dd391157eaa7d0dc9baf80a21f510.png&quot;,
-            &quot;Currency_name&quot;: &quot;modi&quot;,
-            &quot;Abbrevation&quot;: &quot;voluptas&quot;,
-            &quot;new_price&quot;: 488,
-            &quot;old_price&quot;: 150,
-            &quot;percentage&quot;: 3.4
-        },
-        {
             &quot;id&quot;: 4,
-            &quot;logo&quot;: &quot;/tmp/245fbdd12c8490a291bbcd0491816f72.png&quot;,
-            &quot;Currency_name&quot;: &quot;impedit&quot;,
-            &quot;Abbrevation&quot;: &quot;eos&quot;,
+            &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/c4eee9c5e94ebe09b316f619e03e1bf7.png&quot;,
+            &quot;Currency_name&quot;: &quot;ex&quot;,
+            &quot;Abbrevation&quot;: &quot;odit&quot;,
             &quot;new_price&quot;: null,
             &quot;old_price&quot;: null,
             &quot;percentage&quot;: 0
         },
         {
             &quot;id&quot;: 5,
-            &quot;logo&quot;: &quot;/tmp/a7929489641b88612a5c950eb2a8f3e4.png&quot;,
-            &quot;Currency_name&quot;: &quot;doloremque&quot;,
-            &quot;Abbrevation&quot;: &quot;occaecati&quot;,
+            &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/ae659f26be7bdd3a67dc5c0a245ad5a1.png&quot;,
+            &quot;Currency_name&quot;: &quot;a&quot;,
+            &quot;Abbrevation&quot;: &quot;vel&quot;,
             &quot;new_price&quot;: null,
             &quot;old_price&quot;: null,
             &quot;percentage&quot;: 0
@@ -13876,7 +13102,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/home/best-value" \
+    --get "http://localhost:8000/api/home/best-value" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
 </code></pre></div>
@@ -13884,7 +13110,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/home/best-value"
+    "http://localhost:8000/api/home/best-value"
 );
 
 const headers = {
@@ -13910,53 +13136,53 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 38
+x-ratelimit-remaining: 40
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 2,
-            &quot;logo&quot;: &quot;/tmp/ac04d242c771bed3da3d6381c449b3fe.png&quot;,
-            &quot;Currency_name&quot;: &quot;omnis&quot;,
-            &quot;Abbrevation&quot;: &quot;quis&quot;,
-            &quot;new_price&quot;: 153,
-            &quot;old_price&quot;: 153,
-            &quot;percentage&quot;: 0
-        },
-        {
-            &quot;id&quot;: 3,
-            &quot;logo&quot;: &quot;/tmp/402dd391157eaa7d0dc9baf80a21f510.png&quot;,
-            &quot;Currency_name&quot;: &quot;modi&quot;,
-            &quot;Abbrevation&quot;: &quot;voluptas&quot;,
-            &quot;new_price&quot;: 488,
-            &quot;old_price&quot;: 150,
-            &quot;percentage&quot;: 3.4
-        },
-        {
             &quot;id&quot;: 1,
-            &quot;logo&quot;: &quot;/tmp/7c0969ce61aefa02f53e07b74c9bc5ea.png&quot;,
-            &quot;Currency_name&quot;: &quot;voluptates&quot;,
-            &quot;Abbrevation&quot;: &quot;deserunt&quot;,
+            &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/baf61469b5a0cc7e72ac0dbb6836e112.png&quot;,
+            &quot;Currency_name&quot;: &quot;voluptas&quot;,
+            &quot;Abbrevation&quot;: &quot;quod&quot;,
+            &quot;new_price&quot;: 31,
+            &quot;old_price&quot;: 443,
+            &quot;percentage&quot;: -4.1
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/c4eee9c5e94ebe09b316f619e03e1bf7.png&quot;,
+            &quot;Currency_name&quot;: &quot;ex&quot;,
+            &quot;Abbrevation&quot;: &quot;odit&quot;,
             &quot;new_price&quot;: null,
             &quot;old_price&quot;: null,
             &quot;percentage&quot;: 0
         },
         {
-            &quot;id&quot;: 4,
-            &quot;logo&quot;: &quot;/tmp/245fbdd12c8490a291bbcd0491816f72.png&quot;,
-            &quot;Currency_name&quot;: &quot;impedit&quot;,
-            &quot;Abbrevation&quot;: &quot;eos&quot;,
+            &quot;id&quot;: 2,
+            &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/9c4bbffd2e0ef8accb9b3c6905c6406e.png&quot;,
+            &quot;Currency_name&quot;: &quot;velit&quot;,
+            &quot;Abbrevation&quot;: &quot;earum&quot;,
+            &quot;new_price&quot;: null,
+            &quot;old_price&quot;: null,
+            &quot;percentage&quot;: 0
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/bd0de8ea47051071f631cd01286a4b5a.png&quot;,
+            &quot;Currency_name&quot;: &quot;commodi&quot;,
+            &quot;Abbrevation&quot;: &quot;fuga&quot;,
             &quot;new_price&quot;: null,
             &quot;old_price&quot;: null,
             &quot;percentage&quot;: 0
         },
         {
             &quot;id&quot;: 5,
-            &quot;logo&quot;: &quot;/tmp/a7929489641b88612a5c950eb2a8f3e4.png&quot;,
-            &quot;Currency_name&quot;: &quot;doloremque&quot;,
-            &quot;Abbrevation&quot;: &quot;occaecati&quot;,
+            &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/ae659f26be7bdd3a67dc5c0a245ad5a1.png&quot;,
+            &quot;Currency_name&quot;: &quot;a&quot;,
+            &quot;Abbrevation&quot;: &quot;vel&quot;,
             &quot;new_price&quot;: null,
             &quot;old_price&quot;: null,
             &quot;percentage&quot;: 0
@@ -14061,7 +13287,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/home/trending" \
+    --get "http://localhost:8000/api/home/trending" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
 </code></pre></div>
@@ -14069,7 +13295,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/home/trending"
+    "http://localhost:8000/api/home/trending"
 );
 
 const headers = {
@@ -14095,7 +13321,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 37
+x-ratelimit-remaining: 39
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
@@ -14103,48 +13329,48 @@ access-control-allow-origin: *
     &quot;data&quot;: [
         {
             &quot;id&quot;: 4,
-            &quot;logo&quot;: &quot;/tmp/245fbdd12c8490a291bbcd0491816f72.png&quot;,
-            &quot;Currency_name&quot;: &quot;impedit&quot;,
-            &quot;Abbrevation&quot;: &quot;eos&quot;,
-            &quot;new_price&quot;: null,
-            &quot;old_price&quot;: null,
-            &quot;percentage&quot;: 0
-        },
-        {
-            &quot;id&quot;: 3,
-            &quot;logo&quot;: &quot;/tmp/402dd391157eaa7d0dc9baf80a21f510.png&quot;,
-            &quot;Currency_name&quot;: &quot;modi&quot;,
-            &quot;Abbrevation&quot;: &quot;voluptas&quot;,
-            &quot;new_price&quot;: 488,
-            &quot;old_price&quot;: 150,
-            &quot;percentage&quot;: 3.4
-        },
-        {
-            &quot;id&quot;: 1,
-            &quot;logo&quot;: &quot;/tmp/7c0969ce61aefa02f53e07b74c9bc5ea.png&quot;,
-            &quot;Currency_name&quot;: &quot;voluptates&quot;,
-            &quot;Abbrevation&quot;: &quot;deserunt&quot;,
+            &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/c4eee9c5e94ebe09b316f619e03e1bf7.png&quot;,
+            &quot;Currency_name&quot;: &quot;ex&quot;,
+            &quot;Abbrevation&quot;: &quot;odit&quot;,
             &quot;new_price&quot;: null,
             &quot;old_price&quot;: null,
             &quot;percentage&quot;: 0
         },
         {
             &quot;id&quot;: 5,
-            &quot;logo&quot;: &quot;/tmp/a7929489641b88612a5c950eb2a8f3e4.png&quot;,
-            &quot;Currency_name&quot;: &quot;doloremque&quot;,
-            &quot;Abbrevation&quot;: &quot;occaecati&quot;,
+            &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/ae659f26be7bdd3a67dc5c0a245ad5a1.png&quot;,
+            &quot;Currency_name&quot;: &quot;a&quot;,
+            &quot;Abbrevation&quot;: &quot;vel&quot;,
             &quot;new_price&quot;: null,
             &quot;old_price&quot;: null,
             &quot;percentage&quot;: 0
         },
         {
             &quot;id&quot;: 2,
-            &quot;logo&quot;: &quot;/tmp/ac04d242c771bed3da3d6381c449b3fe.png&quot;,
-            &quot;Currency_name&quot;: &quot;omnis&quot;,
-            &quot;Abbrevation&quot;: &quot;quis&quot;,
-            &quot;new_price&quot;: 153,
-            &quot;old_price&quot;: 153,
+            &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/9c4bbffd2e0ef8accb9b3c6905c6406e.png&quot;,
+            &quot;Currency_name&quot;: &quot;velit&quot;,
+            &quot;Abbrevation&quot;: &quot;earum&quot;,
+            &quot;new_price&quot;: null,
+            &quot;old_price&quot;: null,
             &quot;percentage&quot;: 0
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/bd0de8ea47051071f631cd01286a4b5a.png&quot;,
+            &quot;Currency_name&quot;: &quot;commodi&quot;,
+            &quot;Abbrevation&quot;: &quot;fuga&quot;,
+            &quot;new_price&quot;: null,
+            &quot;old_price&quot;: null,
+            &quot;percentage&quot;: 0
+        },
+        {
+            &quot;id&quot;: 1,
+            &quot;logo&quot;: &quot;http://localhost:8000/storage//tmp/baf61469b5a0cc7e72ac0dbb6836e112.png&quot;,
+            &quot;Currency_name&quot;: &quot;voluptas&quot;,
+            &quot;Abbrevation&quot;: &quot;quod&quot;,
+            &quot;new_price&quot;: 31,
+            &quot;old_price&quot;: 443,
+            &quot;percentage&quot;: -4.1
         }
     ]
 }</code>

@@ -29,12 +29,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":1,"logo":"\/tmp\/7c0969ce61aefa02f53e07b74c9bc5ea.png","Currency_name":"voluptates","Abbrevation":"deserunt","new_price":162,"old_price":162,"percentage":0},{"id":2,"logo":"\/tmp\/ac04d242c771bed3da3d6381c449b3fe.png","Currency_name":"omnis","Abbrevation":"quis","new_price":153,"old_price":569,"percentage":-4.2}]}'
+        content: '{"data":[{"id":2,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/9c4bbffd2e0ef8accb9b3c6905c6406e.png","Currency_name":"velit","Abbrevation":"earum","new_price":null,"old_price":null,"percentage":0},{"id":1,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/baf61469b5a0cc7e72ac0dbb6836e112.png","Currency_name":"voluptas","Abbrevation":"quod","new_price":31,"old_price":443,"percentage":-4.1}]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '40'
+          x-ratelimit-remaining: '42'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -77,12 +77,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":1,"logo":"\/tmp\/7c0969ce61aefa02f53e07b74c9bc5ea.png","Currency_name":"voluptates","Abbrevation":"deserunt","new_price":null,"old_price":null,"percentage":0},{"id":2,"logo":"\/tmp\/ac04d242c771bed3da3d6381c449b3fe.png","Currency_name":"omnis","Abbrevation":"quis","new_price":153,"old_price":153,"percentage":0},{"id":3,"logo":"\/tmp\/402dd391157eaa7d0dc9baf80a21f510.png","Currency_name":"modi","Abbrevation":"voluptas","new_price":488,"old_price":150,"percentage":3.4},{"id":4,"logo":"\/tmp\/245fbdd12c8490a291bbcd0491816f72.png","Currency_name":"impedit","Abbrevation":"eos","new_price":null,"old_price":null,"percentage":0},{"id":5,"logo":"\/tmp\/a7929489641b88612a5c950eb2a8f3e4.png","Currency_name":"doloremque","Abbrevation":"occaecati","new_price":null,"old_price":null,"percentage":0}]}'
+        content: '{"data":[{"id":1,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/baf61469b5a0cc7e72ac0dbb6836e112.png","Currency_name":"voluptas","Abbrevation":"quod","new_price":31,"old_price":443,"percentage":-4.1},{"id":2,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/9c4bbffd2e0ef8accb9b3c6905c6406e.png","Currency_name":"velit","Abbrevation":"earum","new_price":null,"old_price":null,"percentage":0},{"id":3,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/bd0de8ea47051071f631cd01286a4b5a.png","Currency_name":"commodi","Abbrevation":"fuga","new_price":null,"old_price":null,"percentage":0},{"id":4,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/c4eee9c5e94ebe09b316f619e03e1bf7.png","Currency_name":"ex","Abbrevation":"odit","new_price":null,"old_price":null,"percentage":0},{"id":5,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/ae659f26be7bdd3a67dc5c0a245ad5a1.png","Currency_name":"a","Abbrevation":"vel","new_price":null,"old_price":null,"percentage":0}]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '39'
+          x-ratelimit-remaining: '41'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -125,12 +125,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":2,"logo":"\/tmp\/ac04d242c771bed3da3d6381c449b3fe.png","Currency_name":"omnis","Abbrevation":"quis","new_price":153,"old_price":153,"percentage":0},{"id":3,"logo":"\/tmp\/402dd391157eaa7d0dc9baf80a21f510.png","Currency_name":"modi","Abbrevation":"voluptas","new_price":488,"old_price":150,"percentage":3.4},{"id":1,"logo":"\/tmp\/7c0969ce61aefa02f53e07b74c9bc5ea.png","Currency_name":"voluptates","Abbrevation":"deserunt","new_price":null,"old_price":null,"percentage":0},{"id":4,"logo":"\/tmp\/245fbdd12c8490a291bbcd0491816f72.png","Currency_name":"impedit","Abbrevation":"eos","new_price":null,"old_price":null,"percentage":0},{"id":5,"logo":"\/tmp\/a7929489641b88612a5c950eb2a8f3e4.png","Currency_name":"doloremque","Abbrevation":"occaecati","new_price":null,"old_price":null,"percentage":0}]}'
+        content: '{"data":[{"id":1,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/baf61469b5a0cc7e72ac0dbb6836e112.png","Currency_name":"voluptas","Abbrevation":"quod","new_price":31,"old_price":443,"percentage":-4.1},{"id":4,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/c4eee9c5e94ebe09b316f619e03e1bf7.png","Currency_name":"ex","Abbrevation":"odit","new_price":null,"old_price":null,"percentage":0},{"id":2,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/9c4bbffd2e0ef8accb9b3c6905c6406e.png","Currency_name":"velit","Abbrevation":"earum","new_price":null,"old_price":null,"percentage":0},{"id":3,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/bd0de8ea47051071f631cd01286a4b5a.png","Currency_name":"commodi","Abbrevation":"fuga","new_price":null,"old_price":null,"percentage":0},{"id":5,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/ae659f26be7bdd3a67dc5c0a245ad5a1.png","Currency_name":"a","Abbrevation":"vel","new_price":null,"old_price":null,"percentage":0}]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '38'
+          x-ratelimit-remaining: '40'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -173,12 +173,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":4,"logo":"\/tmp\/245fbdd12c8490a291bbcd0491816f72.png","Currency_name":"impedit","Abbrevation":"eos","new_price":null,"old_price":null,"percentage":0},{"id":3,"logo":"\/tmp\/402dd391157eaa7d0dc9baf80a21f510.png","Currency_name":"modi","Abbrevation":"voluptas","new_price":488,"old_price":150,"percentage":3.4},{"id":1,"logo":"\/tmp\/7c0969ce61aefa02f53e07b74c9bc5ea.png","Currency_name":"voluptates","Abbrevation":"deserunt","new_price":null,"old_price":null,"percentage":0},{"id":5,"logo":"\/tmp\/a7929489641b88612a5c950eb2a8f3e4.png","Currency_name":"doloremque","Abbrevation":"occaecati","new_price":null,"old_price":null,"percentage":0},{"id":2,"logo":"\/tmp\/ac04d242c771bed3da3d6381c449b3fe.png","Currency_name":"omnis","Abbrevation":"quis","new_price":153,"old_price":153,"percentage":0}]}'
+        content: '{"data":[{"id":4,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/c4eee9c5e94ebe09b316f619e03e1bf7.png","Currency_name":"ex","Abbrevation":"odit","new_price":null,"old_price":null,"percentage":0},{"id":5,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/ae659f26be7bdd3a67dc5c0a245ad5a1.png","Currency_name":"a","Abbrevation":"vel","new_price":null,"old_price":null,"percentage":0},{"id":2,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/9c4bbffd2e0ef8accb9b3c6905c6406e.png","Currency_name":"velit","Abbrevation":"earum","new_price":null,"old_price":null,"percentage":0},{"id":3,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/bd0de8ea47051071f631cd01286a4b5a.png","Currency_name":"commodi","Abbrevation":"fuga","new_price":null,"old_price":null,"percentage":0},{"id":1,"logo":"http:\/\/localhost:8000\/storage\/\/tmp\/baf61469b5a0cc7e72ac0dbb6836e112.png","Currency_name":"voluptas","Abbrevation":"quod","new_price":31,"old_price":443,"percentage":-4.1}]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '37'
+          x-ratelimit-remaining: '39'
           access-control-allow-origin: '*'
         description: null
         custom: []

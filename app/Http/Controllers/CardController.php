@@ -18,8 +18,8 @@ class CardController extends Controller
      */
     public function index()
     {
-        $card = card::with('wallet')->get();
-        return CardResource::collection($card);
+        $cards = auth()->user()->cards;
+        return CardResource::collection($cards);
     }
 
     /**

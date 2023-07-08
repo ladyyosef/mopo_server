@@ -17,7 +17,7 @@ class Buy extends Model
      * @var array
      */
     protected $fillable = [
-        'account_number',
+        'user_id',
         'currency_id_in',
         'currency_id_out',
         'quantity',
@@ -31,7 +31,7 @@ class Buy extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'account_number' => 'integer',
+        'user_id' => 'integer',
         'currency_id_in' => 'integer',
         'currency_id_out' => 'integer',
         'quantity' => 'double',
@@ -46,9 +46,9 @@ class Buy extends Model
     {
         return $this->belongsTo(Currency::class, 'currency_id_out');
     }
-    public function account(): BelongsTo
+    public function user(): BelongsTo
     {
-        return $this->belongsTo(Account::class, 'account_number');
+        return $this->belongsTo(User::class);
     }
 
     public function trade(): BelongsTo

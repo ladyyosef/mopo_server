@@ -10,5 +10,4 @@ Route::middleware(caestmiddleware::class)->group(function () {
 });
 
 Route::middleware('auth:sanctum')->post('/logout', [App\Http\Controllers\Api\AuthenticationController::class , 'logout']);
-
-?>
+Route::middleware('auth:sanctum')->post('/authenticate-card', [App\Http\Controllers\Api\AuthenticationController::class , 'authenticateCard']);

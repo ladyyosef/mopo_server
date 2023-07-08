@@ -14,13 +14,11 @@ class CardResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return[
-            'Card_number'=>$this->Card_number,
-            'Holder_Name'=>$this->Holder_Name,
-            'Cvc'=>$this->Cvc,
-            'Card_image'=>$this->Card_image,
-            'Expire_Date'=>$this->Expire_Date,
-            'Wallet_id' => new WalletResource($this->whenLoaded('wallet'))
+        return [
+            'id' => $this->id,
+            'Holder_Name' => $this->Holder_Name,
+            'type' => $this->type,
+            'Expire_Date' => $this->Expire_Date,
         ];
     }
 }

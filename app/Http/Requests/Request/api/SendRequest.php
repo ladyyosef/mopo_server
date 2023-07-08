@@ -22,10 +22,9 @@ class SendRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'account_number'=>['required'],
-            'currency_id'=>['required'],
-            'email'=>['required'],
-            'quantity'=>['required'],
+            'email' => ['required', 'exists:users,email'],
+            'amount' => ['required'],
+            'currency_id' => ['required', 'exists:currencies,id'],
         ];
     }
 }

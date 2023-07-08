@@ -22,11 +22,10 @@ class TradeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'account_number' => ['required'],
             'currency_id_in' => ['required'],
             'currency_id_out' => ['required'],
-            'price' =>['required'] ,
-            'quantity' => ['required'],
+            'quantity_in' => ['required'],
+            'quantity_out' => ['required'],
         ];
     }
 }

@@ -11,6 +11,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Storage;
 use Laravel\Sanctum\HasApiTokens;
 use Filament\Models\Contracts\HasName;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class User extends Authenticatable  implements MustVerifyEmail, FilamentUser, HasName
 {
@@ -67,6 +68,17 @@ class User extends Authenticatable  implements MustVerifyEmail, FilamentUser, Ha
     {
         return $this->belongsTo(usertype::class, 'User_Type_id');
     }
+
+    public function wallets(): HasMany
+    {
+        return $this->hasMany(Wallet::class);
+    }
+
+    public function cards(): HasMany
+    {
+        return $this->hasMany(Card::class);
+    }
+
     public function getProfileImageUrlAttribute()
     {
         if ($this->Profile_image) {

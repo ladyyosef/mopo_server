@@ -16,7 +16,7 @@ class BuyController extends Controller
      */
     public function index()
     {
-        $buy = Buy::with('currency','currencyOut','account')->get();
+        $buy = Buy::with('currency', 'currencyOut', 'account')->get();
         return BuyResource::collection($buy);
     }
 
@@ -25,8 +25,8 @@ class BuyController extends Controller
      */
     public function store(BuyRequest $request)
     {
-        return new BuyResource(Buy::create($request->all()));
-
+        $buy = Buy::create(array_merge($request->validated(), ['user_id' => auth()->id()]));
+        return new BuyResource($buy);
     }
 
     /**
@@ -34,7 +34,7 @@ class BuyController extends Controller
      */
     public function show($id)
     {
-        $buy = Buy::with('currency','currencyOut')->find($id);
+        $buy = Buy::with('currency', 'currencyOut')->find($id);
         return new BuyResource($buy);
     }
 
@@ -52,6 +52,6 @@ class BuyController extends Controller
     public function destroy(Buy $buy)
     {
         $buy->delete();
-        return response(null,204);
+        return response(null, 204);
     }
 }

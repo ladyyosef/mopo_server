@@ -7,8 +7,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Requests\Request\api\loginRequest;
 use App\Http\Requests\Request\api\RegisterRequest;
+use App\Models\Card;
 use App\Models\User;
 use App\Models\Usertype;
+use Illuminate\Auth\AuthenticationException;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -158,6 +160,25 @@ class AuthenticationController extends Controller
     public function logout()
     {
         auth()->user()->currentAccessToken()->delete();
+        return response()->noContent();
+    }
+
+    /**
+     * Authenticate Card
+     ** @response 204
+     * @response 401 scenario ="user not logged in"{
+    "message": "Unauthenticated."
+     * }
+     */
+    public function authenticateCard(Card $card, Request $request)
+    {
+        $request->validate([
+            'password' => ['required']
+        ]);
+
+        if ($card->password !== $request->password) {
+            throw new AuthenticationException;
+        }
         return response()->noContent();
     }
 }
