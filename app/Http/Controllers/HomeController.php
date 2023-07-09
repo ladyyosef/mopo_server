@@ -18,6 +18,11 @@ class HomeController extends Controller
         return HomeCurrencyResource::collection($currencies);
     }
 
+    public function show(Currency $currency)
+    {
+        return new HomeCurrencyResource($currency);
+    }
+
     public function watchlist(HomeSearchRequest $request)
     {
         $currencies = Currency::with([

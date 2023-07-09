@@ -21,7 +21,8 @@ class HomeCurrencyResource extends JsonResource
             'Abbrevation' => $this->Abbrevation,
             'new_price' => $this->prices->first()?->price,
             'old_price' => $this->prices->last()?->price,
-            'percentage' => round(($this->currency->prices?->first()?->price - $this->currency->prices?->last()?->price), 1),
+            'percentage' => round(($this->prices?->first()?->price - $this->prices?->last()?->price), 1),
+            'created_at' => $this->created_at,
         ];
     }
 }

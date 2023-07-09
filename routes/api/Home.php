@@ -9,4 +9,5 @@ Route::prefix('/home')->group(function () {
     Route::get('/watchlist', [HomeController::class, 'watchlist']);
     Route::get('/best-value', [HomeController::class, 'bestValue']);
     Route::get('/trending', [HomeController::class, 'trending']);
+    Route::get('/currency/{currency}', [HomeController::class, 'show']);
 });
