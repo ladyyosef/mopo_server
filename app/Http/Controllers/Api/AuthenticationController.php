@@ -170,13 +170,13 @@ class AuthenticationController extends Controller
     "message": "Unauthenticated."
      * }
      */
-    public function authenticateCard(Card $card, Request $request)
+    public function authenticateCard(Request $request)
     {
         $request->validate([
             'password' => ['required']
         ]);
 
-        if ($card->password !== $request->password) {
+        if (!auth()->user()->cards()->where('password', $request->password)->first()) {
             return response([
                 'message' => 'Password is wrong',
             ], 400);
