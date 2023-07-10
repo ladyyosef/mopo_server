@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\trade;
+use App\Models\Trade;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Resources\TradeResource;
 use App\Http\Requests\Request\api\TradeRequest;
@@ -17,7 +17,17 @@ class TradeController extends Controller
         $trade = Trade::with([
             'currency', 'currency.prices' => fn ($query) => $query->limit(3)->orderBy('id', 'desc'),
             'currencyOut', 'currencyOut.prices' => fn ($query) => $query->limit(3)->orderBy('id', 'desc'), 'userIn'
-        ])->get();
+        ])->where('user_in_id', value: auth()->id())->get();
+        return TradeResource::collection($trade);
+    }
+
+
+    public function my_trades()
+    {
+        $trade = Trade::with([
+            'currency', 'currency.prices' => fn ($query) => $query->limit(3)->orderBy('id', 'desc'),
+            'currencyOut', 'currencyOut.prices' => fn ($query) => $query->limit(3)->orderBy('id', 'desc'), 'userIn'
+        ])->where('user_id_in', auth()->id())->get();
         return TradeResource::collection($trade);
     }
 
@@ -26,7 +36,7 @@ class TradeController extends Controller
      */
     public function store(TradeRequest $request)
     {
-        return new TradeResource(Trade::create(array_merge($request->validated(), ['user_id' => auth()->id()])));
+        return new TradeResource(Trade::create(array_merge($request->validated(), ['user_id_in' => auth()->id()])));
     }
 
     /**
@@ -49,7 +59,7 @@ class TradeController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(trade $trade)
+    public function destroy(Trade $trade)
     {
         $trade->delete();
         return response(null, 204);

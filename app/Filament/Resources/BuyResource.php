@@ -25,11 +25,9 @@ class BuyResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('account_number')
+                Forms\Components\TextInput::make('user_id')
                     ->required(),
-                Forms\Components\TextInput::make('currency_id_in')
-                    ->required(),
-                Forms\Components\TextInput::make('currency_id_out')
+                Forms\Components\TextInput::make('currency_id')
                     ->required(),
                 Forms\Components\TextInput::make('quantity')
                     ->required(),
@@ -40,9 +38,8 @@ class BuyResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('account.user.Full_name')->searchable(),
+                Tables\Columns\TextColumn::make('user.Full_name')->searchable(),
                 Tables\Columns\TextColumn::make('currency.Currency_name')->searchable()->sortable(),
-                Tables\Columns\TextColumn::make('currencyOut.Currency_name'),
                 Tables\Columns\TextColumn::make('quantity'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime(),

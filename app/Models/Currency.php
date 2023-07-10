@@ -70,7 +70,7 @@ class Currency extends Model
 
     public function buys(): HasMany
     {
-        return $this->hasMany(Buy::class, 'currency_id_in');
+        return $this->hasMany(Buy::class);
     }
 
     public function prices(): HasMany
