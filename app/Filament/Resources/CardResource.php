@@ -66,7 +66,14 @@ class CardResource extends Resource
                 Action::make('approve')
                     ->label('Approve')
                     ->color('success')
-                    ->url(fn ($record) => route('filament.resources.cards.edit', ['record' => $record])),
+                    ->action(function (Card $record) {
+                        $record->approved = true;
+                        $record->save();
+                        Notification::make()
+                            ->title('Approved successfuly')
+                            ->success()
+                            ->send();
+                    }),
                 Action::make('cancel')
                     ->label('Cancel')
                     ->color('danger')
