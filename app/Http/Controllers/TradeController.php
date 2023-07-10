@@ -15,8 +15,8 @@ class TradeController extends Controller
     public function index()
     {
         $trade = Trade::with([
-            'currency', 'currency.prices' => fn ($query) => $query->limit(3)->orderBy('id', 'desc'),
-            'currencyOut', 'currencyOut.prices' => fn ($query) => $query->limit(3)->orderBy('id', 'desc'), 'userIn'
+            'currency',
+            'currencyOut', 'userIn'
         ])->whereNot('user_in_id', auth()->id())->get();
         return TradeResource::collection($trade);
     }
@@ -37,6 +37,13 @@ class TradeController extends Controller
     public function store(TradeRequest $request)
     {
         return new TradeResource(Trade::create(array_merge($request->validated(), ['user_id_in' => auth()->id()])));
+    }
+
+    public function trade(Trade $trade)
+    {
+        $trade->update(['user_id_out' => auth()->id()]);
+        $trade->refresh();
+        return new TradeResource($trade);
     }
 
     /**
