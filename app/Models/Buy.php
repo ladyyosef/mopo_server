@@ -20,7 +20,6 @@ class Buy extends Model
         'user_id',
         'currency_id',
         'quantity',
-
     ];
 
     /**

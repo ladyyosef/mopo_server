@@ -17,7 +17,7 @@ class Wallet extends Model
      * @var array
      */
     protected $fillable = [
-        'Quantity',
+        'quantity',
         'user_id',
         'currency_id',
     ];
@@ -29,7 +29,7 @@ class Wallet extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'Quantity' => 'double',
+        'quantity' => 'double',
         'user_id' => 'integer',
         'currency_id' => 'integer',
     ];

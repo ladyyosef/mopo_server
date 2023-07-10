@@ -177,7 +177,9 @@ class AuthenticationController extends Controller
         ]);
 
         if ($card->password !== $request->password) {
-            throw new AuthenticationException;
+            return response([
+                'message' => 'Password is wrong',
+            ], 400);
         }
         return response()->noContent();
     }

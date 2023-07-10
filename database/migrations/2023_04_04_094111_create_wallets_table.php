@@ -18,7 +18,7 @@ return new class extends Migration
 
         Schema::create('wallets', function (Blueprint $table) {
             $table->id();
-            $table->double('Quantity');
+            $table->double('quantity');
             $table->foreignIdFor(User::class)->constrained()->onDelete('cascade');
             $table->foreignIdFor(Currency::class)->constrained()->onDelete('cascade');
             $table->timestamps();
