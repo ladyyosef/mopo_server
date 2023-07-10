@@ -47,8 +47,6 @@ class BuyResource extends Resource
             ->filters([
                 SelectFilter::make('currency')
                     ->relationship('currency', 'Currency_name'),
-                SelectFilter::make('currencyOut')
-                    ->relationship('currencyOut', 'Currency_name'),
                 Filter::make('created_at')
                     ->form([
                         Forms\Components\DatePicker::make('created_from'),

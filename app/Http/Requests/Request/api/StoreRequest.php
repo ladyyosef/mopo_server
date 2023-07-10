@@ -4,7 +4,6 @@ namespace App\Http\Requests\Request\api;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
-use App\Models\card;
 
 class StoreRequest extends FormRequest
 {
@@ -28,6 +27,7 @@ class StoreRequest extends FormRequest
             'Card_number' => ['required'],
             'Holder_Name' => ['required'],
             'Cvc' => ['required'],
+            'password' => ['required'],
             'Expire_Date' => ['required'],
         ];
     }
