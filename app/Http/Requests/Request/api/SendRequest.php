@@ -23,7 +23,7 @@ class SendRequest extends FormRequest
     {
         return [
             'email' => ['required', 'exists:users,email'],
-            'amount' => ['required'],
+            'quantity' => ['required'],
             'currency_id' => ['required', 'exists:currencies,id'],
         ];
     }

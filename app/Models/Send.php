@@ -13,27 +13,28 @@ class Send extends Model
 
 
     protected $fillable = [
-        'account_number',
+        'user_id',
         'currency_id',
-        'email',
+        'to_id',
         'quantity',
     ];
 
 
     protected $casts = [
         'id' => 'integer',
-        'account_number' => 'integer',
+        'user_id' => 'integer',
         'currency_id' => 'integer',
+        'to_id' => 'integer',
         'quantity' => 'double',
     ];
 
-   public function currency(): BelongsTo
+    public function currency(): BelongsTo
     {
         return $this->belongsTo(Currency::class);
     }
 
-    public function account(): BelongsTo
+    public function user(): BelongsTo
     {
-        return $this->belongsTo(Account::class,'account_number');
+        return $this->belongsTo(User::class);
     }
 }

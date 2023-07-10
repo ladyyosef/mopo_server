@@ -15,9 +15,10 @@ class SendResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-           
-            'currency_id' =>new CurrencyResource($this->whenLoaded('Currency')),
-            'email'=>$this->email,
+            'name' => $this->user->Full_name,
+            'email' => $this->user->email,
+            'abbrevation' => $this->currency->Abbrevation,
+            'created_at' => $this->created_at,
             'quantity' => $this->quantity,
         ];
     }

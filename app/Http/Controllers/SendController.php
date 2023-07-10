@@ -6,15 +6,21 @@ use App\Models\Send;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Resources\SendResource;
 use App\Http\Requests\Request\api\SendRequest;
+use App\Models\User;
 
 class SendController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $send = Send::with('Currency')->get();
+        $send = Send::with(['currency', 'user']);
+        if ($request->to) {
+            $send = $send->where('to_id', auth()->id());
+        }
+
+        $send = $send->get();
         return SendResource::collection($send);
     }
 
@@ -23,7 +29,20 @@ class SendController extends Controller
      */
     public function store(SendRequest $request)
     {
-        $send = Send::create($request->validated());
+        $user = auth()->user();
+        if (!$wallet = $user->wallets()->where('currency_id', $request->currency_id)->first()) {
+            return response([
+                'message' => 'You don\'t have any of this currency in your wallet',
+            ], 400);
+        }
+        if ($wallet->Quantity < $request->amount) {
+            return response([
+                'message' => 'You don\'t have enough amount in your wallet',
+            ], 400);
+        }
+        $to = User::where('email', $request->email)->first();
+        $send = Send::create(array_merge($request->validated(), ['user_id' => $user->id, 'to_id' => $to->id]));
+        $wallet->update(['Quantity' => $wallet->Quantity - $request->amount]);
         return new SendResource($send);
     }
 

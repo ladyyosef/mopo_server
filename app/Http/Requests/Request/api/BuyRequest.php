@@ -22,8 +22,7 @@ class BuyRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'currency_id_in' => ['required'],
-            'currency_id_out' => ['required'],
+            'currency_id' => ['required'],
             'quantity' => ['required'],
         ];
     }

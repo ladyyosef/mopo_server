@@ -33,7 +33,7 @@ class DatabaseSeeder extends Seeder
             // TradeSeeder::class,
             // BuySeeder::class,
             // TransductionSeeder::class,
-            SendSeeder::class,
+            // SendSeeder::class,
             BestCurrencySeeder::class
 
 

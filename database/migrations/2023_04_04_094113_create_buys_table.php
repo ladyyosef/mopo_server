@@ -17,8 +17,7 @@ return new class extends Migration
         Schema::create('buys', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(User::class)->constrained('accounts')->onDelete('cascade');
-            $table->foreignId('currency_id_in')->constrained()->onDelete('cascade');
-            $table->foreignId('currency_id_out')->constrained()->onDelete('cascade');
+            $table->foreignId('currency_id')->constrained()->onDelete('cascade');
             $table->double('quantity');
             $table->timestamps();
         });

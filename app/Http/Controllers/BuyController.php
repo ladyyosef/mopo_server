@@ -8,6 +8,7 @@ use App\Models\Account;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Resources\BuyResource;
 use App\Http\Requests\Request\api\BuyRequest;
+use App\Models\Wallet;
 
 class BuyController extends Controller
 {
@@ -16,7 +17,7 @@ class BuyController extends Controller
      */
     public function index()
     {
-        $buy = Buy::with('currency', 'currencyOut', 'account')->get();
+        $buy = Buy::with('currency', 'user')->get();
         return BuyResource::collection($buy);
     }
 
@@ -26,6 +27,7 @@ class BuyController extends Controller
     public function store(BuyRequest $request)
     {
         $buy = Buy::create(array_merge($request->validated(), ['user_id' => auth()->id()]));
+        Wallet::create(array_merge($request->validated(), ['user_id' => auth()->id()]));
         return new BuyResource($buy);
     }
 
