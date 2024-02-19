@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Resources\BuyResource;
 use App\Http\Requests\Request\api\BuyRequest;
 use App\Models\Wallet;
-
 class BuyController extends Controller
 {
     /**

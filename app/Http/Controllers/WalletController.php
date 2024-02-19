@@ -41,8 +41,11 @@ class WalletController extends Controller
      */
     public function index()
     {
-        $wallets = auth()->user()->wallets()->with(['currency', 'currency.prices' => fn ($query) => $query->limit(3)->orderBy('id', 'desc')])->get();
-        return WalletResource::collection($wallets);
+//        $wallets = auth()->user()->wallets()->with(['currency', 'currency.prices' => fn ($query) => $query->orderBy('id', 'desc')])->get();
+$wallets = auth()->user()->wallets();
+$x = $wallets->join('currencies','currencies.id','=','wallets.currency_id')->join('currencyprices','currencyprices.currency_id','=','currencies.id')->get(['*']);
+//return $x->json(['key' => NAN], 200, [], JSON_PARTIAL_OUTPUT_ON_ERROR);
+return WalletResource::collection($x);
     }
 
     /**

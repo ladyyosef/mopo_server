@@ -16,12 +16,13 @@ class WalletResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'quantity' => $this->quantity,
-            'name' => $this->currency->Currency_name,
-            'logo' => $this->currency->logo,
-            'Abbrevation' => $this->currency->Abbrevation,
-            'price' => $this->currency->prices?->first()?->price,
-            'percentage' => round(($this->currency->prices?->first()?->price - $this->currency->prices?->last()?->price), 1),
+            'quantity' => 12,//$this->quantity,
+            'name' =>'kkkk',// $this->currency->Currency_name,
+            //'logo' => 'kk',//$this->currency->logo,
+            'Abbrevation' =>'kkk',// $this->currency->Abbrevation,
+            'price' => 99,//$this->currency->prices?->first()?->price,
+            'percentage'=>0/*mai*/
+            //'percentage' => round(($this->currency->prices?->first()?->price - $this->currency->prices?->last()?->price), 1),
         ];
     }
 }

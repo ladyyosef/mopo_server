@@ -27,7 +27,7 @@ class HomeController extends Controller
     {
         $currencies = Currency::with([
             'prices'
-            => fn ($query) => $query->orderBy('id', 'desc')->limit(3)
+            => fn ($query) => $query->orderBy('id', 'desc')
         ])
             ->whereRaw('LOWER(Currency_name) LIKE (?)', ['%' . $request->search . '%'])
             ->get();
@@ -39,11 +39,11 @@ class HomeController extends Controller
     {
         $currencies = Currency::with([
             'prices'
-            => fn ($query) => $query->orderBy('id', 'desc')->limit(3)
+            => fn ($query) => $query->orderBy('id', 'desc')
         ])
             ->withSum([
                 'prices'
-                => fn ($query) => $query->orderBy('id', 'desc')->limit(2)
+                => fn ($query) => $query->orderBy('id', 'desc')
             ], 'price')
             ->orderBy('prices_sum_price', 'desc')
             ->whereRaw('LOWER(Currency_name) LIKE (?)', ['%' . $request->search . '%'])

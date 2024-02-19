@@ -25,8 +25,8 @@ class TradeController extends Controller
     public function my_trades()
     {
         $trade = Trade::with([
-            'currency', 'currency.prices' => fn ($query) => $query->limit(3)->orderBy('id', 'desc'),
-            'currencyOut', 'currencyOut.prices' => fn ($query) => $query->limit(3)->orderBy('id', 'desc'), 'userIn'
+            'currency', 'currency.prices' => fn ($query) => $query->orderBy('id', 'desc'),
+            'currencyOut', 'currencyOut.prices' => fn ($query) => $query->orderBy('id', 'desc'), 'userIn'
         ])->where('user_id_in', auth()->id())->get();
         return TradeResource::collection($trade);
     }

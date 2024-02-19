@@ -45,7 +45,7 @@ class Currency extends Model
             ->withCount('trades')
             ->withCount('buys');
         if ($priceCount) {
-            $query = $query->with('prices', fn ($query) => $query->limit($priceCount)->orderBy('id', 'desc'));
+            $query = $query->with('prices', fn ($query) => $query->orderBy('id', 'desc'));
         }
         if ($search) {
             $query = $query->whereRaw('LOWER(Currency_name) LIKE (?)', ['%' . $search . '%']);
